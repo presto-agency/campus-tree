@@ -14,3 +14,5 @@ const H = new Highway.Core({
 		default: Fade,
 	}
 });
+
+console.log('ready');

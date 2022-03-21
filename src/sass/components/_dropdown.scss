@@ -1,0 +1,110 @@
+.dropdown{
+	position: relative;
+	z-index: 1;
+		&-trigger{
+			cursor: pointer;
+			position: relative;
+				&-title{
+					display: block;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					font-size: 14px;
+					font-family: var(--font-base-medium);
+					color: var(--color-primary);
+					width: 120px;
+					padding-right: 10px;
+						&:after{
+						content: '';
+						position: absolute;
+						top: 5px;
+						right: 0;
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 6px 4px 0 4px;
+						border-color: var(--color-primary) transparent transparent transparent;
+						transition: all var(--hover-duration) var(--hover-ease);
+					}
+				}
+				&-label{
+					white-space: nowrap;
+					margin-bottom: 4px;
+				}
+		}
+		&-body{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			min-width: 100%;
+			display: block;
+			padding-top: 24px;
+			opacity: 0;
+			pointer-events: none;
+			z-index: -1;
+			transition: opacity var(--hover-duration) var(--hover-ease);
+				&-item{
+					display: block;
+					background-color: var(--color-white);
+					border: 1px var(--color-gray-700) solid;
+					border-radius: 20px;
+					padding: 24px;
+					min-width: 192px;
+					box-shadow: 0 6px 7px rgba(0,0,0,.05);
+				}
+		}
+		&-btn{
+			position: absolute;
+			padding: 5px;
+			display: inline-block;
+			cursor: pointer;
+				&-close{
+					right: 28px;
+					top: 30px;
+				}
+				.svg{
+					color: var(--color-black);
+				}
+				@include hover($md){
+					&:hover{
+						.svg{
+							color: var(--color-primary);
+						}
+					}
+				}
+		}
+		/*
+		Sizes
+		 */
+		&-lg{
+			.dropdown{
+					&-body{
+							&-item{
+								min-width: 416px;
+								background: linear-gradient(174.37deg, rgba(255, 255, 255, 0.4) 1.7%, rgba(255, 255, 255, 0.1) 96.97%);
+								backdrop-filter: blur(70px);
+								padding: 32px 30px 15px;
+							}
+					}
+			}
+		}
+		/*
+		Open theme
+		 */
+		&.is-active{
+			.dropdown{
+					&-trigger{
+							&:after{
+								top: 4px;
+								border-width: 0 4px 6px 4px;
+								border-color: transparent transparent var(--color-primary) transparent;
+							}
+					}
+					&-body{
+						opacity: 1;
+						pointer-events: auto;
+						z-index: 1;
+					}
+			}
+		}
+}

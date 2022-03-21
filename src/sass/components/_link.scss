@@ -1,0 +1,44 @@
+.link{
+	display: inline-flex;
+	align-items: center;
+	font-size: 14px;
+	line-height: 1.2em;
+	transition: color var(--hover-duration) var(--hover-ease);
+	font-family: var(--font-base-medium);
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	white-space: nowrap;
+	cursor: pointer;
+		&-icon{
+			display: inline-flex;
+			align-items: center;
+			color: var(--color-primary);
+				& ~ .link-title{
+					margin-left: 16px;
+				}
+		}
+		&-title{
+			text-transform: capitalize;
+			position: relative;
+		}
+		@include hover($md){
+			&:hover{
+				color: var(--color-primary);
+			}
+		}
+		/*
+		Sizes
+		 */
+		&-sm{
+			font-size: 12px;
+			font-family: var(--font-base);
+				.link{
+						&-icon{
+								& ~ .link-title{
+									margin-left: 11px;
+								}
+						}
+				}
+		}
+}

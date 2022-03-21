@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
 	entry: './src/js/index.js',
@@ -27,9 +28,15 @@ module.exports = {
 						loader: MiniCssExtractPlugin.loader,
 						options: { publicPath: '' },
 					},
-					'css-loader',
-					'postcss-loader',
-					'sass-loader'],
+					{
+						loader: 'css-loader',
+					},
+					{
+						loader: 'postcss-loader',
+					},
+					{
+						loader: 'sass-loader',
+					}]
 			},
 			/* Images */
 			{
@@ -41,6 +48,21 @@ module.exports = {
 				test: /\.(woff(2)?|eot|ttf|otf|)$/,
 				type: 'asset/resource',
 			},
+			{
+				test: /.\/src\/images\/icons\/.*\.svg$/,
+				use: [
+					{
+						loader: 'svg-sprite-loader',
+						options: {
+							extract: true,
+							outputPath: 'images/sprite/',
+							publicPath: 'images/sprite/',
+						}
+					},
+					'svg-transform-loader',
+					'svgo-loader'
+				]
+			}
 		],
 	},
 	// mode: 'development',
@@ -53,21 +75,28 @@ module.exports = {
 		port: 3000,
 	},
 	plugins: [
-		new HtmlWebpackPlugin({
-			template: path.resolve(__dirname, './src/html/index.html'),
-			filename: 'index.html',
-			minify: {
-				collapseWhitespace: false,
-				removeComments: true,
-				removeRedundantAttributes: true,
-				removeScriptTypeAttributes: true,
-				removeStyleLinkTypeAttributes: true
-			},
-		}),
+		...buildHTML(['index', 'branch', 'people', 'leaf']),
 		// new CleanWebpackPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new MiniCssExtractPlugin({
 			filename: 'styles.css',
 		}),
+		new SpriteLoaderPlugin(),
 	]
 };
+
+function buildHTML(list) {
+    const arr = [];
+    for (let i = 0; i < list.length; i++) {
+        arr.push(
+          new HtmlWebpackPlugin({
+              filename: `${list[i]}.html`,
+              template: path.resolve(__dirname, 'src/html', `${list[i]}.html`),
+              minify: {
+                  collapseWhitespace: false
+              },
+          })
+        );
+    }
+    return arr;
+}

@@ -11,7 +11,7 @@ class Fade extends Highway.Transition {
 			},
 			{
 				opacity: 0,
-				duration: transition.opacity.duration,
+				duration: 0.2,
 				ease: transition.opacity.ease,
 				onComplete: done,
 			});
@@ -26,8 +26,8 @@ class Fade extends Highway.Transition {
 				opacity: 0,
 			},
 			{
-				duration: transition.opacity.duration,
 				opacity: 1,
+				duration: 0.2,
 				ease: transition.opacity.ease,
 				onComplete: done,
 			});

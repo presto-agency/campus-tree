@@ -1,0 +1,9 @@
+.fieldset{
+		.input{
+				&-container {
+						&:not(:last-child) {
+							margin-bottom: 17px;
+						}
+				}
+		}
+}

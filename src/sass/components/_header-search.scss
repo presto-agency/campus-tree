@@ -1,0 +1,16 @@
+.search{
+		.input{
+			border-radius: 0;
+			border: none;
+			height: 46px;
+			background-color: transparent;
+			padding-left: 45px;
+			cursor: pointer;
+				&:focus{
+					color: var(--color-primary);
+				}
+		}
+		.svg{
+			color: var(--color-primary);
+		}
+}

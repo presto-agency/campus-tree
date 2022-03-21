@@ -1,0 +1,82 @@
+.tree{
+	position: relative;
+	margin-top: -33px;
+	margin-right: -27px;
+		&-title{
+			position: absolute;
+			top: 64px;
+			left: 0;
+			max-width: 150px;
+		}
+		&-links{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&-categories{
+			position: absolute;
+			inset: 0;
+			pointer-events: none;
+			z-index: 1;
+				&-item{
+					position: absolute;
+					text-transform: uppercase;
+					color: var(--color-white);
+						&[data-branch-id="branch-1"]{
+							top: 35.4%;
+							left: 34.2%;
+							transform: rotate(24deg);
+						}
+						&[data-branch-id="branch-2"]{
+							top: 40.6%;
+							left: 50.8%;
+							transform: rotate(-6deg);
+						}
+						&[data-branch-id="branch-3"]{
+							top: 58%;
+							left: 31.2%;
+							transform: rotate(14deg);
+						}
+						&[data-branch-id="branch-4"]{
+							top: 58.2%;
+							left: 58.8%;
+							transform: rotate(-16deg);
+						}
+						&[data-branch-id="branch-5"]{
+							left: 34.8%;
+							top: 79.2%;
+							transform: rotate(-13deg);
+						}
+						&[data-branch-id="branch-6"]{
+							top: 78%;
+							left: 61.4%;
+							transform: rotate(-11deg);
+						}
+				}
+		}
+		&-svg{
+			max-width: 892px;
+			width: 100%;
+			position: relative;
+		}
+		& + .pagination{
+			padding: 22px 0;
+				.pagination{
+						&-list{
+							padding-left: 53px;
+						}
+				}
+		}
+}
+
+.branch,
+.stem{
+	fill: var(--color-black-100);
+}
+
+.branch{
+	cursor: pointer;
+}
+.leaf{
+	cursor: pointer;
+}

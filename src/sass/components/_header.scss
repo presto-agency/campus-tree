@@ -1,0 +1,127 @@
+.header{
+	position: relative;
+	padding-top: 17px;
+	z-index: 3;
+		&-panel{
+			display: flex;
+			align-items: center;
+			margin-bottom: 12px;
+			position: relative;
+				&-search{
+					flex: 1;
+					padding-left: 66px;
+				}
+				&-nav{
+					flex: 1;
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					height: 64px;
+					position: relative;
+					padding-right: 40px;
+					padding-bottom: 5px;
+					transition: opacity var(--hover-duration) var(--hover-ease), transform var(--hover-duration) var(--hover-ease);
+						&:after{
+							content: '';
+							position: absolute;
+							width: 1px;
+							height: 100%;
+							top: 0;
+							right: 0;
+							background-color: var(--color-gray-700);
+						}
+						.link{
+							margin: 0 21px;
+								&:nth-child(1){
+									margin-left: 0;
+								}
+								&:last-child{
+									margin-right: 0;
+								}
+						}
+				}
+				&-action{
+					flex: 1;
+					display: flex;
+					align-items: center;
+					padding-left: 40px;
+					padding-bottom: 5px;
+					transition: opacity var(--hover-duration) var(--hover-ease), transform var(--hover-duration) var(--hover-ease);
+						& > .link, .btn{
+							margin: 0 20px;
+								&:nth-child(1){
+									margin-left: 0;
+								}
+								&:last-child{
+									margin-right: 0;
+								}
+						}
+						.personal-tree{
+							margin-right: 0;
+						}
+						.dropdown{
+							display: inherit;
+						}
+				}
+				&-filters{
+					position: absolute;
+					top: 0;
+					right: 0;
+					opacity: 0;
+					pointer-events: none;
+					height: 100%;
+					transform: translateY(-20px);
+					transition: opacity var(--hover-duration) var(--hover-ease), transform var(--hover-duration) var(--hover-ease);
+				}
+		}
+		/*
+		Active filters
+		 */
+		&.is-filters-active{
+			.header-panel{
+					&-nav,
+					&-action{
+						opacity: 0;
+						pointer-events: none;
+						transform: translateY(20px);
+					}
+					&-filters{
+						opacity: 1;
+						pointer-events: auto;
+						transform: translateY(0);
+					}
+			}
+		}
+		.filters{
+			padding-bottom: 5px;
+		}
+}
+
+.filters{
+	display: flex;
+	align-items: center;
+	height: 100%;
+		&-item{
+			flex: 1;
+			height: 64px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			padding: 0 32px;
+				&:not(:last-child){
+					&:after{
+						content: '';
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 1px;
+						height: 100%;
+						background-color: var(--color-gray-700);
+					}
+				}
+				&:last-child{
+					padding-right: 0;
+				}
+		}
+}

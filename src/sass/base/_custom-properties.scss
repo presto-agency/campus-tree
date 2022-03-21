@@ -1,11 +1,24 @@
 :root {
-  --color-black:                          #000000;
+  --color-black:                          #191919;
+  --color-black-100:                      #232323;
   --color-white:                          #FFFFFF;
-  --font-base:                            'ModernaSans-Regular';
+  --color-gray-800:                       #8C8C8C;
+  --color-gray-700:                       #D1D1D1;
+  --color-gray-600:                       #DDDDDD;
+  --color-gray-500:                       #E8E8E8;
+  --color-gray-400:                       #F3F3F3;
+  --color-gray-300:                       #F9F9F9;
+  --color-primary:                        #008037;
+  --color-alumni:                         #EC602D;
+  --color-alumni-dark:                    #CB4413;
+  --font-base:                            'ModernaSans-Regular', sans-serif;
+  --font-base-bold:                       'ModernaSans-Bold', sans-serif;
+  --font-base-medium:                     'ModernaSans-Medium', sans-serif;
+  --font-base-italic:                     'ModernaSans-RegularIt', sans-serif;
+  --hover-duration:                       .2s;
+  --hover-ease:                           ease;
 }
 
-$hoverWidth:                              991;
-$xlg:                                     1500;
 $lg:                                      1330;
 $xl:                                      1199;
 $md:                                      991;

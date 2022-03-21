@@ -1,0 +1,58 @@
+.pagination{
+		&-list{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+				&-item{
+					display: inline-block;
+					transition: color var(--hover-duration) var(--hover-ease), background-color var(--hover-duration) var(--hover-ease);
+				}
+		}
+		&-link{
+			width: 56px;
+			height: 56px;
+			line-height: 56px;
+			text-align: center;
+			border-radius: 50%;
+				&.is-active{
+					background-color: var(--color-primary);
+					color: var(--color-white);
+				}
+				@include hover($md){
+					&:hover{
+						background-color: var(--color-primary);
+						color: var(--color-white);
+					}
+				}
+		}
+		&-arrow{
+			width: 32px;
+			height: 32px;
+			position: relative;
+				&:before{
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					border-style: solid;
+				}
+				&:nth-child(1){
+					&:before{
+						border-width: 4px 6px 4px 0;
+						border-color: transparent currentColor transparent transparent;
+					}
+				}
+				&:last-child{
+					&:before{
+						border-width: 4px 0 4px 6px;
+						border-color: transparent transparent transparent currentColor;
+					}
+				}
+				@include hover($md){
+					&:hover{
+						color: var(--color-primary);
+					}
+				}
+		}
+}

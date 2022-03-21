@@ -21,3 +21,17 @@
 .h-6 {
   @extend h6;
 }
+
+.paragraph{
+  font-size: inherit;
+  line-height: inherit;
+    &-md{
+      font-size: 14px;
+      line-height: 1.4em;
+    }
+    &-italic{
+      font-size: 14px;
+      line-height: 1.4em;
+      font-family: var(--font-base-italic);
+    }
+}

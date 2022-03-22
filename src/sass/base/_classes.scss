@@ -26,12 +26,18 @@
   font-size: inherit;
   line-height: inherit;
     &-md{
-      font-size: 14px;
-      line-height: 1.4em;
+      font-size: 12px;
+      line-height: 1.31em;
     }
     &-italic{
       font-size: 14px;
       line-height: 1.4em;
       font-family: var(--font-base-italic);
+    }
+}
+
+.color{
+    &-primary{
+      color: var(--color-primary);
     }
 }

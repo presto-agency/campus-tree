@@ -56,3 +56,12 @@
 				}
 		}
 }
+
+[data-router-view="home"]{
+	.pagination{
+		padding-top: 8px;
+			&-list{
+				padding-left: 53px;
+			}
+	}
+}

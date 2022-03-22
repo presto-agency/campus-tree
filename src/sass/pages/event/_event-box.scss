@@ -1,0 +1,39 @@
+.event{
+	position: relative;
+	display: flex;
+	padding: 10px 0;
+		&-thumb{
+			width: 64px;
+			height: 64px;
+			min-width: 64px;
+			border-radius: 10px;
+			overflow: hidden;
+				img{
+					@include imageCover(center);
+				}
+		}
+		&-description{
+			padding: 0 5px 0 16px;
+			position: relative;
+				&-title{
+					font-family: var(--font-base-medium);
+				}
+				&-categories{
+					display: flex;
+					align-items: center;
+					flex-wrap: wrap;
+				}
+				&-date{
+					position: absolute;
+					top: 0;
+					right: 1px;
+				}
+				&-item{
+					margin: 8px 0;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 2;
+					overflow: hidden;
+				}
+		}
+}

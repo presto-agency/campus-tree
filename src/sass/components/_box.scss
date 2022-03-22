@@ -1,0 +1,44 @@
+.box{
+	position: relative;
+	border-radius: 20px;
+	background: linear-gradient(174.37deg, rgba(255, 255, 255, 0.4) 1.7%, rgba(255, 255, 255, 0.1) 96.97%);
+	box-shadow: 0 9px 18px -1px rgba(6, 73, 35, 0.12);
+	backdrop-filter: blur(10px);
+	padding: 25px 30px 15px;
+	overflow: hidden;
+	height: 100%;
+		&-bg{
+			&:before{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 123px;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: right top;
+				background-image: url(../images/abstract/box-trees.svg);
+				pointer-events: none;
+			}
+		}
+		&-header{
+			padding: 16px 0 26px;
+				.h-3{
+					margin-bottom: 3px;
+				}
+		}
+		&-body{
+			padding: 22px 0 10px;
+			height: calc(100% - 78px);
+		}
+		.event{
+			&:not(:last-child){
+				margin-bottom: 4px;
+			}
+		}
+		.scroll-wrap{
+			margin-right: -10px;
+			padding-right: 10px;
+		}
+}

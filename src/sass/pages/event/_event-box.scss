@@ -2,6 +2,8 @@
 	position: relative;
 	display: flex;
 	padding: 10px 0;
+	border: 1px transparent solid;
+	transition: border-color var(--hover-duration) var(--hover-ease), box-shadow var(--hover-duration) var(--hover-ease);
 		&-thumb{
 			width: 64px;
 			height: 64px;
@@ -17,6 +19,9 @@
 			position: relative;
 				&-title{
 					font-family: var(--font-base-medium);
+					padding-right: 140px;
+					line-height: 1em;
+					margin-bottom: 3px;
 				}
 				&-categories{
 					display: flex;
@@ -26,14 +31,26 @@
 				&-date{
 					position: absolute;
 					top: 0;
-					right: 1px;
+					right: -3px;
 				}
 				&-item{
-					margin: 8px 0;
+					margin-top: 8px;
 					display: -webkit-box;
 					-webkit-box-orient: vertical;
 					-webkit-line-clamp: 2;
 					overflow: hidden;
 				}
+		}
+		&.is-active{
+			border-color: var(--color-primary);
+			box-shadow: 0 5px 10px -1px rgba(6, 73, 35, 0.12);
+			border-radius: 10px;
+		}
+		@include hover($md){
+			&:hover{
+				border-color: var(--color-primary);
+				box-shadow: 0 5px 10px -1px rgba(6, 73, 35, 0.12);
+				border-radius: 10px;
+			}
 		}
 }

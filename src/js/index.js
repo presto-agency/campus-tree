@@ -1,6 +1,7 @@
 import Highway from '@dogstudio/highway';
 import '../sass/index.scss';
 import Fade from "./router-transitions/fade";
+import WithoutScrollToTop from "./router-transitions/withoutScrollToTop";
 import HomeRenderer from "./renderers/home";
 import BranchRenderer from "./renderers/branch";
 import PeopleRenderer from "./renderers/people";
@@ -22,6 +23,9 @@ const H = new Highway.Core({
 	},
 	transitions: {
 		default: Fade,
+		contextual: {
+			pagination: WithoutScrollToTop,
+		}
 	}
 });
 

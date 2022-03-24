@@ -2,10 +2,10 @@ export const updatePaginationNumbers = () => {
 	const pagination = document.querySelector('.pagination');
 	if (!!pagination) {
 		const url = new URL(window.location);
-		const currentPageNumber = url.searchParams.get('page');
+		const currentPageNumber = parseInt(url.searchParams.get('page'));
 		const paginationListNumbers = document.querySelector('.pagination-list-numbers');
 		/*
-		Set numbers
+		Set and append numbers
 		 */
 		const totalItemCount = parseInt(pagination.dataset.totalCount);
 		const visibleItemsCount = parseInt(pagination.dataset.visibleCount);
@@ -14,17 +14,44 @@ export const updatePaginationNumbers = () => {
 		for (let i = 0; i < paginationArray.length; i++) {
 			let link = document.createElement('a');
 			link.setAttribute('class', 'pagination-list-item pagination-link');
+			link.setAttribute('data-transition', 'pagination');
 			link.setAttribute('data-page', `${i+1}`);
 			typeof paginationArray[i] === 'number' ? link.setAttribute('href', generateURL(paginationArray[i])) : null;
 			link.innerHTML = `${paginationArray[i]}`;
 			paginationListNumbers.appendChild(link);
 		}
 		/*
+		Detect numbers click
+		 */
+		const links = document.querySelectorAll('.pagination-link');
+		const linkDefault = document.querySelector('#pagination-link');
+		if(!!links.length && !!linkDefault) {
+			for (let i = 0; i < links.length; i++) {
+				links[i].addEventListener('click', (e) => {
+					e.preventDefault();
+					let href = links[i].getAttribute('href');
+					linkDefault.setAttribute('href', href);
+					linkDefault.click();
+				});
+			}
+		}
+
+		/*
 		Arrows
 		 */
 		const paginationArrows = document.querySelectorAll('.pagination-arrow');
-		for (let i = 0; i < paginationArrows.length; i++) {
-
+		if (!currentPageNumber) {
+			paginationArrows[0].setAttribute('disabled', 'true');
+			paginationArrows[1].setAttribute('href', generateURL(2));
+		} else {
+			paginationArrows[0]
+				.setAttribute('href', !currentPageNumber || currentPageNumber === 1
+					? generateURL(1)
+					: generateURL(currentPageNumber - 1));
+			paginationArrows[1]
+				.setAttribute('href', !currentPageNumber || currentPageNumber === paginationArray.length
+					? generateURL(paginationArray.length)
+					: generateURL(currentPageNumber + 1));
 		}
 
 		/*
@@ -57,14 +84,16 @@ const generateURL = (pageNumber) => {
 	const search = window.location.search;
 	if (!!search) {
 		const searchArray = search.split('&');
-		console.log(searchArray);
-		let searchString = searchArray[0].replace('?','');
-		let searchValue = searchString.substring(searchString.indexOf('=') + 1);
-		let searchLabel = searchString.substring(0, searchString.indexOf('='));
-		if (searchLabel !== 'page') {
-			console.log(searchLabel, searchValue);
+		let params = '';
+		for (let i = 0; i < searchArray.length; i++) {
+			let searchString = searchArray[i].replace('?','');
+			let searchValue = searchString.substring(searchString.indexOf('=') + 1);
+			let searchLabel = searchString.substring(0, searchString.indexOf('='));
+			if (searchLabel !== 'page') {
+				params += `&${searchLabel}=${searchValue}`;
+			}
 		}
-		return `?`;
+		return `?page=${pageNumber}${params}`;
 	}
 	return `?page=${pageNumber}`;
 }

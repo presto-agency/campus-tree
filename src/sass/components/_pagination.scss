@@ -56,6 +56,9 @@
 						border-color: transparent transparent transparent currentColor;
 					}
 				}
+				&[disabled]{
+					pointer-events: none;
+				}
 				@include hover($md){
 					&:hover{
 						color: var(--color-primary);

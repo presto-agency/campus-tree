@@ -1,0 +1,28 @@
+.faq-cross{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+
+  span{
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    border-radius: 12px;
+    background:  var(--color-primary);
+    top: 50%;
+    left: 50%;
+    &:nth-child(1){
+      transform: translateY(-50%) translateX(-50%);
+    }
+    &:nth-child(2){
+      transform: translateY(-50%) translateX(-50%) rotate(90deg);
+      transition: 300ms;
+    }
+
+  }
+}

@@ -22,6 +22,7 @@
 					position: absolute;
 					text-transform: uppercase;
 					color: var(--color-white);
+					opacity: 0;
 						&[data-branch-id="branch-1"]{
 							top: 35.4%;
 							left: 34.2%;
@@ -51,6 +52,61 @@
 							top: 78%;
 							left: 61.4%;
 							transform: rotate(-11deg);
+						}
+				}
+		}
+		&-events{
+			position: absolute;
+			inset: 0;
+			pointer-events: none;
+			z-index: 1;
+				&-item{
+					position: absolute;
+					max-width: 90px;
+					text-align: center;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					opacity: 0;
+						span{
+							display: inline-block;
+							max-width: 80%;
+							word-break: break-word;
+						}
+						&:nth-child(1){
+							span{
+								transform: rotate(-50deg);
+							}
+						}
+						&:nth-child(3){
+							span{
+								transform: rotate(20deg);
+							}
+						}
+						&:nth-child(4){
+							span{
+								transform: rotate(-50deg);
+							}
+						}
+						&:nth-child(7){
+							span{
+								transform: rotate(-15deg);
+							}
+						}
+						&:nth-child(10){
+							span{
+								transform: rotate(-5deg);
+							}
+						}
+						&:nth-child(16){
+							span{
+								transform: rotate(-15deg);
+							}
+						}
+						&:nth-child(18){
+							span{
+								transform: rotate(32deg);
+							}
 						}
 				}
 		}

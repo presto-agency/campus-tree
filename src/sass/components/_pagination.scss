@@ -3,6 +3,11 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+				&-numbers{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
 				&-item{
 					display: inline-block;
 					transition: color var(--hover-duration) var(--hover-ease), background-color var(--hover-duration) var(--hover-ease);
@@ -18,10 +23,12 @@
 					background-color: var(--color-primary);
 					color: var(--color-white);
 				}
-				@include hover($md){
-					&:hover{
-						background-color: var(--color-primary);
-						color: var(--color-white);
+				&[href]{
+					@include hover($md){
+						&:hover{
+							background-color: var(--color-primary);
+							color: var(--color-white);
+						}
 					}
 				}
 		}

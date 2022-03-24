@@ -57,10 +57,11 @@ const generateURL = (pageNumber) => {
 	const search = window.location.search;
 	if (!!search) {
 		const searchArray = search.split('&');
-		for (let i = 0; i < searchArray.length; i++) {
-			let searchString = searchArray[i].replace('?','');
-			let searchValue = searchString.substring(searchString.indexOf('=') + 1);
-			let searchLabel = searchString.substring(0, searchString.indexOf('='));
+		console.log(searchArray);
+		let searchString = searchArray[0].replace('?','');
+		let searchValue = searchString.substring(searchString.indexOf('=') + 1);
+		let searchLabel = searchString.substring(0, searchString.indexOf('='));
+		if (searchLabel !== 'page') {
 			console.log(searchLabel, searchValue);
 		}
 		return `?`;

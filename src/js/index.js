@@ -10,6 +10,7 @@ import {initDropdowns} from "./common/dropdown/toggleDropdown";
 import {checkboxChangeLabel} from "./common/checkboxes/checkboxChangeLabel";
 import {searchDropdown} from "./common/dropdown/searchDropdown";
 import {treeNavigation} from "./common/tree/treeNavigation";
+import SearchResultRenderer from "./renderers/searchResult";
 
 /*
 Routing
@@ -20,6 +21,7 @@ const H = new Highway.Core({
 		branch: BranchRenderer,
 		people: PeopleRenderer,
 		leaf: LeafRenderer,
+		searchResult: SearchResultRenderer,
 	},
 	transitions: {
 		default: Fade,
@@ -42,13 +44,12 @@ requireAll(require.context('../images/icons/', true, /\.svg$/));
 Init scripts on Highway enter
  */
 H.on('NAVIGATE_IN', () => {
-	initDropdowns();
+	// initDropdowns();
 	checkboxChangeLabel();
-	searchDropdown();
+	// searchDropdown();
 	treeNavigation();
 	console.log('init highway');
 });
-
 
 /*
 Init scrips on DOM loaded

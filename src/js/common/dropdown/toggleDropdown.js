@@ -4,7 +4,9 @@ export const initDropdowns = () => {
 		const trigger = dropdowns[i].querySelector('.dropdown-trigger');
 		if (!!trigger) {
 			trigger.addEventListener('click', () => {
-				dropdowns[i].classList.contains('is-active') ? closeDropdown(dropdowns[i]) : openDropdown(dropdowns[i]);
+				dropdowns[i].classList.contains('is-active')
+					? dropdowns[i].classList.remove('is-active')
+					: dropdowns[i].classList.add('is-active')
 			});
 		}
 	}
@@ -31,6 +33,7 @@ export const initDropdowns = () => {
 };
 
 const openDropdown = (dropdown) => {
+	console.log(dropdown);
 	dropdown.classList.add('is-active');
 };
 

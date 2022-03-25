@@ -13,7 +13,7 @@
   }
   &__yellow-leaf{
     position: absolute;
-    bottom: 62px;
+    top: 470px;
     left: 565px;
     width: 180px;
     height: 180px;
@@ -36,6 +36,12 @@
     &__yellow-leaf{
       left: 240px;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .faq{
+    margin: 50px 0 30px 0;
   }
 }
 

@@ -10,6 +10,7 @@ import {initDropdowns} from "./common/dropdown/toggleDropdown";
 import {checkboxChangeLabel} from "./common/checkboxes/checkboxChangeLabel";
 import {searchDropdown} from "./common/dropdown/searchDropdown";
 import {treeNavigation} from "./common/tree/treeNavigation";
+import InnerRenderer from "./renderers/inner";
 import SearchResultRenderer from "./renderers/searchResult";
 
 /*
@@ -21,6 +22,7 @@ const H = new Highway.Core({
 		branch: BranchRenderer,
 		people: PeopleRenderer,
 		leaf: LeafRenderer,
+		inner: InnerRenderer,
 		searchResult: SearchResultRenderer,
 	},
 	transitions: {

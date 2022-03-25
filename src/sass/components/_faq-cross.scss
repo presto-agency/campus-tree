@@ -1,5 +1,6 @@
 .faq-cross{
   position: absolute;
+  cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
   right: 0;
@@ -7,6 +8,7 @@
   height: 24px;
   border-radius: 50%;
   border: 2px solid var(--color-primary);
+  transition: 300ms;
 
   span{
     position: absolute;
@@ -18,10 +20,10 @@
     left: 50%;
     &:nth-child(1){
       transform: translateY(-50%) translateX(-50%);
+      transition: 300ms;
     }
     &:nth-child(2){
       transform: translateY(-50%) translateX(-50%) rotate(90deg);
-      transition: 300ms;
     }
 
   }

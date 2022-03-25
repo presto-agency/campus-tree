@@ -1,0 +1,12 @@
+.section{
+	position: relative;
+		&-title{
+			position: relative;
+		}
+		/*
+		Types
+		 */
+		&-inner{
+			padding-top: 120px;
+		}
+}

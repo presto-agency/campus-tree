@@ -32,12 +32,14 @@
 			height: calc(100% - 78px);
 		}
 		.event{
-			&:not(:last-child){
-				margin-bottom: 4px;
-			}
+			margin: 0 -10px;
+			padding: 10px;
+				&:not(:last-child){
+					margin-bottom: 12px;
+				}
 		}
 		.scroll-wrap{
-			margin-right: -10px;
-			padding-right: 10px;
+			margin: 0 -20px;
+			padding: 0 20px;
 		}
 }

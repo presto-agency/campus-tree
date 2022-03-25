@@ -1,0 +1,33 @@
+.breadcrumbs{
+	position: absolute;
+	left: 0;
+	top: -27px;
+	display: flex;
+	align-items: center;
+		&-item{
+			display: inline-block;
+				&-link{
+					display: inline-flex;
+					align-items: center;
+					position: relative;
+					padding-left: 18px;
+					transition: color var(--hover-duration) var(--hover-ease);
+						&:before{
+							content: '';
+							position: absolute;
+							left: 0;
+							top: 5px;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 4px 6px 4px 0;
+							border-color: transparent var(--color-primary) transparent transparent;
+						}
+						@include hover($md){
+							&:hover{
+								color: var(--color-primary);
+							}
+						}
+				}
+		}
+}

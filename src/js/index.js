@@ -24,6 +24,7 @@ const H = new Highway.Core({
 		leaf: LeafRenderer,
 		inner: InnerRenderer,
 		searchResult: SearchResultRenderer,
+		editor: EditorRenderer,
 	},
 	transitions: {
 		default: Fade,

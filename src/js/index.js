@@ -11,6 +11,7 @@ import {checkboxChangeLabel} from "./common/checkboxes/checkboxChangeLabel";
 import {searchDropdown} from "./common/dropdown/searchDropdown";
 import {treeNavigation} from "./common/tree/treeNavigation";
 import InnerRenderer from "./renderers/inner";
+import EditorRenderer from "./renderers/editor";
 import SearchResultRenderer from "./renderers/searchResult";
 
 /*

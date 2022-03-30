@@ -13,6 +13,7 @@ import {treeNavigation} from "./common/tree/treeNavigation";
 import InnerRenderer from "./renderers/inner";
 import EditorRenderer from "./renderers/editor";
 import SearchResultRenderer from "./renderers/searchResult";
+import SignInRenderer from "./renderers/searchResult";
 
 /*
 Routing
@@ -26,6 +27,7 @@ const H = new Highway.Core({
 		inner: InnerRenderer,
 		searchResult: SearchResultRenderer,
 		editor: EditorRenderer,
+		signIn: SignInRenderer,
 	},
 	transitions: {
 		default: Fade,

@@ -1,15 +1,6 @@
-export const initDropdowns = () => {
-	const dropdowns = document.querySelectorAll('.dropdown');
-	for (let i = 0; i < dropdowns.length; i++) {
-		const trigger = dropdowns[i].querySelector('.dropdown-trigger');
-		if (!!trigger) {
-			trigger.addEventListener('click', () => {
-				dropdowns[i].classList.contains('is-active')
-					? dropdowns[i].classList.remove('is-active')
-					: dropdowns[i].classList.add('is-active')
-			});
-		}
-	}
+export const initStaticDropdowns = () => {
+	const dropdowns = document.querySelectorAll('.header .dropdown');
+	switchDropdowns(dropdowns);
 
 	/*
 	Close all dropdowns on click anywhere, exclude active trigger
@@ -32,13 +23,22 @@ export const initDropdowns = () => {
 	}
 };
 
-const openDropdown = (dropdown) => {
-	console.log(dropdown);
-	dropdown.classList.add('is-active');
+export const initInnerDropdowns = () => {
+	const dropdowns = document.querySelectorAll('[data-router-view] .dropdown');
+	switchDropdowns(dropdowns);
 };
 
-const closeDropdown = (dropdown) => {
-	dropdown.classList.remove('is-active');
+const switchDropdowns = (dropdowns) => {
+	for (let i = 0; i < dropdowns.length; i++) {
+		const trigger = dropdowns[i].querySelector('.dropdown-trigger');
+		if (!!trigger) {
+			trigger.addEventListener('click', () => {
+				dropdowns[i].classList.contains('is-active')
+					? dropdowns[i].classList.remove('is-active')
+					: dropdowns[i].classList.add('is-active')
+			});
+		}
+	}
 };
 
 export const closeAllDropdowns = () => {

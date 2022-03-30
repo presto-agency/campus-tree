@@ -7,7 +7,7 @@ class WithoutScrollToTop extends Highway.Transition {
 	in({ from, to, done }) {
 
 		from.remove();
-		setTimeout(() => done(), 100);
+		setTimeout(() => done(), 200);
 	}
 }
 

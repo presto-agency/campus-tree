@@ -52,6 +52,13 @@
 					}
 				}
 		}
+		/*
+		Button sizes
+		 */
+		&-md{
+			height: 32px;
+			line-height: 32px;
+		}
 		&[disabled]{
 			background-color: var(--color-gray-700);
 			border-color: var(--color-gray-700);

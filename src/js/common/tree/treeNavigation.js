@@ -19,7 +19,7 @@ export const treeNavigation = () => {
 				const branchUrlParam = branches[i].getAttribute('data-url-param');
 				if (!!branchUrlParam) {
 					branchLink.setAttribute('href', `${branchLinkHref}?${branchUrlParam}`);
-					branchLink.click();
+					document.querySelector('#branch-link').click();
 				}
 			});
 		}

@@ -64,3 +64,5 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	treeNavigation();
 	console.log('init DOM');
 });
+
+console.log('ready');

@@ -31,24 +31,67 @@
 
 </head>
 <body>
-<main id="wrapper">
-    <header class="header">
+<main class="wrapper-sign-in" id="wrapper">
+    <header class="header-s">
         <div class="container">
-            <div class="header-panel">
-                <div class="header-panel-logo">
+            <div class="header-s-panel">
+                <div class="header-s-panel-logo">
                     <a href="index.html" class="logo">
-                        <img src="../images/Logo.svg" alt="Campus Tree"/>
+                        <img src="../images/sign-in/logo-b.svg" alt="Campus Tree"/>
                     </a>
                 </div>
-                <div class="header-panel-link">
+                <div class="header-s-panel-link">
+                    <p class="h-4">
+                        Don’t have an account?
+                        <a href="#">
+                            Sign Up Now!
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
     </header>
     <div data-router-wrapper>
         <div data-router-view="signIn">
-            <section class="section faq">
-                <div class="container">
+            <section class="section sign-in">
+                <div class="sign-in-left-side">
+                    <div class="sign-in-img">
+                        <img src="../images/sign-in/bg-people.svg" alt="people">
+                    </div>
+                    <div class="section-title">
+                        <h2 class="h-2">
+                            Welcome to Campus Tree
+                        </h2>
+                    </div>
+                </div>
+                <div class="sign-in-right-side">
+                    <div class="sign-form">
+                        <div class="section-title">
+                            <h1 class="h-1">
+                                Sign in
+                            </h1>
+                        </div>
+                        <form class="sign-form-content">
+                            <div class="sign-form-input">
+                                <input placeholder="E-mail" type="email">
+                            </div>
+                            <div class="sign-form-input">
+                                <input placeholder="Password" type="password">
+                            </div>
+                            <div class="sign-form-buttons-group">
+                                <button class="btn">
+                                    <span>
+                                        Sign In
+                                    </span>
+                                </button>
+                                <a href="#" class="sign-form-btn-forgot">
+                                    <span class="h-4">
+                                        Forgot Password?
+                                    </span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
         </div>

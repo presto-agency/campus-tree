@@ -38,6 +38,7 @@ build/Release
 node_modules/
 jspm_packages/
 source/
+dist/bundle.js
 
 # Typescript v1 declaration files
 typings/

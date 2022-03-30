@@ -21,7 +21,8 @@ export const checkboxChangeLabel = () => {
 					if (value.toLocaleString() === 'all') {
 						switchAllCheckboxes(checkboxes, e.target.checked);
 					} else {
-						checkboxes[0].checked = false;
+						let checkboxAll = [...checkboxes].filter(checkbox => checkbox.value.toLocaleString() === 'all');
+						!!checkboxAll.length ? checkboxAll[0].checked = false : null;
 					}
 					/*
 					Set checked checkbox to label

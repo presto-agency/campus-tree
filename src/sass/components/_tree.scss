@@ -10,8 +10,9 @@
 		}
 		&-links{
 			position: absolute;
-			top: 0;
+			top: 40px;
 			left: 0;
+			z-index: 1;
 		}
 		&-categories{
 			position: absolute;

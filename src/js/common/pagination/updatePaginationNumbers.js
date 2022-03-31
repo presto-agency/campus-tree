@@ -15,7 +15,7 @@ export const updatePaginationNumbers = () => {
 			let link = document.createElement('a');
 			link.setAttribute('class', 'pagination-list-item pagination-link');
 			link.setAttribute('data-transition', 'pagination');
-			link.setAttribute('data-page', `${i+1}`);
+			// link.setAttribute('data-page', `${i+1}`);
 			typeof paginationArray[i] === 'number' ? link.setAttribute('href', generateURL(paginationArray[i])) : null;
 			link.innerHTML = `${paginationArray[i]}`;
 			paginationListNumbers.appendChild(link);
@@ -62,12 +62,12 @@ export const updatePaginationNumbers = () => {
 		Add active class to link of current page, or to first link
 		 */
 		if (!!currentPageNumber) {
-			let activeLink = pagination.querySelector(`.pagination-list-item[data-page="${currentPageNumber}"]`);
+			let activeLink = getActivePaginationLink(pagination, currentPageNumber)[0];
 			if (!!activeLink) {
 				activeLink.classList.add('is-active');
 			}
 		} else {
-			const firstLink = pagination.querySelector(`.pagination-list-item[data-page="1"]`);
+			const firstLink = pagination.querySelectorAll(`.pagination-list-numbers .pagination-list-item`)[0];
 			!!firstLink ? firstLink.classList.add('is-active') : null;
 		}
 	}
@@ -96,6 +96,16 @@ const generateURL = (pageNumber) => {
 		return `?page=${pageNumber}${params}`;
 	}
 	return `?page=${pageNumber}`;
+}
+
+const getActivePaginationLink = (pagination, currentPageNumber) => {
+	let links = pagination.querySelectorAll('.pagination-list-numbers .pagination-list-item');
+	let linksArray = [...links];
+	if (!!linksArray.length) {
+		return linksArray.filter(link => parseInt(link.innerHTML) === currentPageNumber);
+	} else {
+		return links[0];
+	}
 }
 
 function getRange(start, end) {

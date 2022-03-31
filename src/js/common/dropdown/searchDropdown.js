@@ -1,7 +1,7 @@
 export const searchDropdown = () => {
 	const searchInput = document.querySelector('.search .input');
 	const header = document.querySelector('.header');
-	const closeBtn = header.querySelector('.close-filters');
+	const closeBtn = document.querySelector('.close-filters');
 	const activeClassName = 'is-filters-active';
 	if (!!searchInput && !!header) {
 		/*

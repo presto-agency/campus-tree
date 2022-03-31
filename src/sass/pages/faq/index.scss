@@ -1,27 +1,26 @@
 @import "faq-list";
 .faq{
   margin: 119px 0 50px 0;
-  &__wrapper{
+  &-wrapper{
   position: relative;
   }
-  &__green-leaf{
+  &-green-leaf{
     position: absolute;
     top: 240px;
     left: 451px;
     width: 90px;
     height: 90px;
   }
-  &__yellow-leaf{
+  &-yellow-leaf{
     position: absolute;
     top: 470px;
     left: 565px;
     width: 180px;
     height: 180px;
   }
-  &__title{
-    margin: 0 0 40px 0;
+  .section-description{
     p{
-      margin: 6px 0 0 0;
+      margin: 6px 0 40px 0;
       font-size: 14px;
       line-height: 140%;
     }
@@ -30,10 +29,10 @@
 
 @media (max-width: 1023px) {
   .faq{
-    &__green-leaf{
+    &-green-leaf{
       left: 85px;
     }
-    &__yellow-leaf{
+    &-yellow-leaf{
       left: 240px;
     }
   }
@@ -47,7 +46,7 @@
 
 @media (max-width: 474px) {
   .faq{
-    &__yellow-leaf{
+    &-yellow-leaf{
       left: 150px;
     }
   }

@@ -75,7 +75,7 @@ module.exports = {
 		port: 3000,
 	},
 	plugins: [
-		...buildHTML(['index', 'branch', 'people', 'leaf', 'faq', 'search-result', 'editor', 'sign-in']),
+		...buildHTML(['index', 'branch', 'people', 'leaf', 'faq', 'search-result', 'editor']),
 		// new CleanWebpackPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new MiniCssExtractPlugin({
@@ -86,17 +86,17 @@ module.exports = {
 };
 
 function buildHTML(list) {
-	const arr = [];
-	for (let i = 0; i < list.length; i++) {
-		arr.push(
-			new HtmlWebpackPlugin({
-				filename: `${list[i]}.html`,
-				template: path.resolve(__dirname, 'src/html', `${list[i]}.html`),
-				minify: {
-					collapseWhitespace: false
-				},
-			})
-		);
-	}
-	return arr;
+    const arr = [];
+    for (let i = 0; i < list.length; i++) {
+        arr.push(
+          new HtmlWebpackPlugin({
+              filename: `${list[i]}.html`,
+              template: path.resolve(__dirname, 'src/html', `${list[i]}.html`),
+              minify: {
+                  collapseWhitespace: false
+              },
+          })
+        );
+    }
+    return arr;
 }

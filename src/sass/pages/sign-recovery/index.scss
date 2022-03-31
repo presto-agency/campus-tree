@@ -1,0 +1,26 @@
+.recovery{
+  .sign-form{
+    max-width: 760px;
+    &-img{
+      margin: 0 0 23px 0;
+    }
+    &-wrapper{
+      display: flex;
+      margin: 0 0 33px 0;
+    }
+    &-input{
+      flex: 0 1 304px;
+      margin: 0 32px 0 0;
+      &:last-child{
+        margin: 0;
+      }
+    }
+    .section-title{
+      margin: 0 0 18px 0;
+    }
+    .section-description{
+      margin: 0 0 22px 0;
+      padding: initial;
+    }
+  }
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Campus Tree | Sign in</title>
+    <title>Campus Tree | Password Recovery</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -47,8 +47,8 @@
         </div>
     </header>
     <div data-router-wrapper>
-        <div data-router-view="signIn">
-            <section class="section sign-in">
+        <div data-router-view="signRecovery">
+            <section class="section sign-in recovery">
                 <div class="sign-in-left-side">
                     <div class="sign-in-content">
                         <div class="sign-in-img">
@@ -63,18 +63,22 @@
                 </div>
                 <div class="sign-in-right-side">
                     <div class="sign-form">
+                        <div class="sign-form-img">
+                            <img src="../images/sign-in/approval.svg" alt="people">
+                        </div>
                         <div class="section-title">
                             <h1 class="h-1">
-                                Sign in
+                                Email approval
                             </h1>
+                        </div>
+                        <div class="section-description">
+                            <p class="h-4">
+                                Your application is under consideration. Wait for your email notification
+                            </p>
                         </div>
                         <form class="sign-form-content">
                             <div class="sign-form-input">
-                                <input placeholder="E-mail" type="email">
-                            </div>
-                            <div class="sign-form-input">
-                                <img class="eye-password" src="../images/sign-in/eye.svg" alt="picture">
-                                <input class="password-input" placeholder="Password" type="password">
+                                <input placeholder="Text" type="text">
                             </div>
                             <div class="sign-form-buttons-group">
                                 <button class="btn">
@@ -82,11 +86,6 @@
                                         Sign In
                                     </span>
                                 </button>
-                                <a href="#" class="sign-form-btn-forgot">
-                                    <span class="h-4">
-                                        Forgot Password?
-                                    </span>
-                                </a>
                             </div>
                         </form>
                     </div>

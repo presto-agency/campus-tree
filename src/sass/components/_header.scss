@@ -10,6 +10,15 @@
 				&-search{
 					flex: 1;
 					padding-left: 66px;
+						.search{
+							.input{
+								& ~ .input-container-icon{
+									.svg{
+										color: var(--color-primary);
+									}
+								}
+							}
+						}
 				}
 				&-nav{
 					flex: 1;

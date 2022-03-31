@@ -26,6 +26,38 @@
 					transform: translateY(-50%);
 					pointer-events: none;
 					height: 24px;
+						&.__16{
+							height: 16px;
+						}
+						&.__right{
+							left: auto;
+							right: 25px;
+						}
+				}
+		}
+		& ~ .input-container-icon{
+			.svg{
+				color: var(--color-gray-800);
+			}
+		}
+		/*
+		Types
+		 */
+		&-transparent{
+			border-radius: 0;
+			border: none;
+			height: 46px;
+			background-color: transparent;
+			padding-left: 45px;
+			cursor: pointer;
+			color: var(--color-gray-800);
+				&:focus{
+					color: var(--color-primary);
+						& ~ .input-container-icon{
+							.svg{
+								color: var(--color-primary);
+							}
+						}
 				}
 		}
 		/*
@@ -61,7 +93,6 @@
 				&-title{
 					display: inline-block;
 					position: relative;
-					white-space: nowrap;
 					cursor: pointer;
 					font-family: var(--font-base-medium);
 					font-size: 14px;
@@ -95,8 +126,69 @@
 					}
 				}
 		}
+		/*
+		Radio
+		 */
+		&-radio{
+			@extend .input-checkbox;
+				&-icon{
+					position: absolute;
+					width: 16px;
+					height: 16px;
+					border-radius: 50%;
+					top: 2px;
+					border: 1px var(--color-gray-700) solid;
+						&:before{
+							content: '';
+							position: absolute;
+							inset: 3px;
+							background-color: var(--color-primary);
+							border-radius: 50%;
+							opacity: 0;
+						}
+				}
+				&-title{
+					display: inline-block;
+					position: relative;
+					cursor: pointer;
+					font-family: var(--font-base-medium);
+					font-size: 14px;
+				}
+				& ~ .input-radio-title{
+					padding-left: 32px;
+				}
+				&:checked{
+					& ~ .input-radio-icon{
+						border-color: var(--color-primary);
+							&:before{
+								opacity: 1;
+							}
+					}
+				}
+		}
+		/*
+		Datepicker
+		 */
+		&-datepicker{
+			cursor: pointer;
+		}
 		&[disabled]{
 			color: var(--color-white);
 			pointer-events: none;
+		}
+		/*
+		Placeholder
+		 */
+		&::-webkit-input-placeholder {
+			color: inherit;
+		}
+		&::-moz-placeholder {
+			color: inherit;
+		}
+		&:-ms-input-placeholder {
+			color: inherit;
+		}
+		&:-moz-placeholder {
+			color: inherit;
 		}
 }

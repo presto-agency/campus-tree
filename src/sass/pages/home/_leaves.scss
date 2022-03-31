@@ -16,5 +16,9 @@
 		}
 		.box{
 			opacity: 0;
+			padding: 25px 30px 15px;
+				&-header{
+					padding: 16px 0 26px;
+				}
 		}
 }

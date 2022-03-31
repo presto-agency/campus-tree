@@ -12,6 +12,7 @@ import {searchDropdown} from "./common/dropdown/searchDropdown";
 import {treeNavigation} from "./common/tree/treeNavigation";
 import InnerRenderer from "./renderers/inner";
 import SearchResultRenderer from "./renderers/searchResult";
+import Branch from "./router-transitions/branch";
 
 /*
 Routing
@@ -29,6 +30,7 @@ const H = new Highway.Core({
 		default: Fade,
 		contextual: {
 			pagination: WithoutScrollToTop,
+			branch: Branch
 		}
 	}
 });
@@ -64,5 +66,3 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	treeNavigation();
 	console.log('init DOM');
 });
-
-console.log('ready');

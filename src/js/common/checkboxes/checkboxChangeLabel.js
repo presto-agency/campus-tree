@@ -6,7 +6,7 @@ export const checkboxChangeLabel = () => {
 	for (let i = 0; i < fieldsetList.length; i++) {
 		const fieldsetId = fieldsetList[i].dataset.fieldsetList;
 		const fieldsetLabel = document.querySelector(`[data-fieldset-label="${fieldsetId}"]`);
-		const defaultLabel = fieldsetLabel.dataset.label;
+		const defaultLabel = !! fieldsetLabel ? fieldsetLabel.dataset.label : null;
 		if (!!fieldsetId) {
 			const checkboxes = fieldsetList[i].querySelectorAll('.input-checkbox');
 			/*
@@ -15,6 +15,7 @@ export const checkboxChangeLabel = () => {
 			for (let j = 0; j < checkboxes.length; j++) {
 				checkboxes[j].addEventListener('change', (e) => {
 					const value = e.target.value;
+					console.log(value);
 					/*
 					Detect All checkbox
 					 */
@@ -27,12 +28,16 @@ export const checkboxChangeLabel = () => {
 					/*
 					Set checked checkbox to label
 					 */
-					if (getCheckedCheckboxes(checkboxes).length === 0) {
+					if (getCheckedCheckboxes(checkboxes).length === 0 && !!fieldsetLabel) {
 						fieldsetLabel.innerHTML = defaultLabel;
 					} else if (getCheckedCheckboxes(checkboxes).length === 1) {
-						fieldsetLabel.innerHTML = getCheckedCheckboxes(checkboxes)[0];
+						!!fieldsetLabel
+							? fieldsetLabel.innerHTML = getCheckedCheckboxes(checkboxes)[0]
+							: null;
 					} else {
-						fieldsetLabel.innerHTML = `${getCheckedCheckboxes(checkboxes)[0]} +${getCheckedCheckboxes(checkboxes).length}`;
+						!!fieldsetLabel
+							? fieldsetLabel.innerHTML = `${getCheckedCheckboxes(checkboxes)[0]} +${getCheckedCheckboxes(checkboxes).length}`
+							: null;
 					}
 				});
 			}

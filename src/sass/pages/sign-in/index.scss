@@ -8,38 +8,55 @@
 .sign-in{
   display: flex;
   height: 100vh;
+  overflow-y: auto;
   &-left-side{
     position: relative;
     display: flex;
     flex: 0 1 47%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    &:before{
-      content: '';
-      position: absolute;
-      background: var(--color-primary);
-      width: 100vw;
-      height: 100vh;
-      right: 0;
-      top: 0;
-    }
+    height: 100%;
+    background: var(--color-primary);
     .section-title{
       position: relative;
       z-index: 2;
       margin: 73px 0 0 0;
+      padding: 0 50px;
       text-align: center;
     }
   }
+  &-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 50px 0;
+    transform: translate(-50%, -50%);
+    max-width: 596px;
+    max-height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
   &-right-side{
+    position: relative;
     flex: 0 1 53%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     .section-title{
       margin: 0 0 48px 0;
+    }
+    .sign-form{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 50px;
+      transform: translate(-50%, -50%);
+      max-width: 466px;
+      max-height: 100%;
+      width: 100%;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
   &-img{
@@ -47,8 +64,6 @@
     z-index: 2;
     padding: 44px 0 0 0;
     box-sizing: content-box;
-    max-width: 596px;
-    max-height: 490px;
     img{
       width: 100%;
       height: 100%;
@@ -57,7 +72,6 @@
   }
   .sign-form{
     width: 100%;
-    max-width: 416px;
     &-content{
 
     }

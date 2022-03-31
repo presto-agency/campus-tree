@@ -1,0 +1,23 @@
+.branch-filter{
+	margin-top: -27px;
+		&-box{
+			@extend .leaves;
+			margin-top: -20px;
+			padding-left: 0;
+				.box{
+					opacity: 1;
+						&-bg{
+							&:before{
+								left: 15px;
+								height: 182px;
+								background-image: url(../images/abstract/box-trees-2.svg);
+							}
+						}
+						&-header{
+								&-row{
+									margin-bottom: 15px;
+								}
+						}
+				}
+		}
+}

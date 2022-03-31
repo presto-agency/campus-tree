@@ -92,6 +92,7 @@
 		Open theme
 		 */
 		&.is-active{
+			z-index: 2;
 			.dropdown{
 					&-trigger{
 							&:after{

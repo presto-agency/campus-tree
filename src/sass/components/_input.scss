@@ -34,6 +34,31 @@
 							right: 25px;
 						}
 				}
+				&-datepicker{
+					&.__bottom{
+						.datepicker-dropdown{
+							bottom: 100%;
+							top: auto !important;
+						}
+					}
+					&.__right{
+						.datepicker-dropdown{
+							right: 0;
+							left: auto !important;
+						}
+					}
+					&.__left{
+						.datepicker-dropdown{
+							left: 0;
+							right: auto;
+						}
+					}
+					&.__top{
+						.datepicker-dropdown{
+							top: 100%;
+						}
+					}
+				}
 		}
 		& ~ .input-container-icon{
 			.svg{

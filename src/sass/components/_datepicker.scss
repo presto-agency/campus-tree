@@ -1,5 +1,5 @@
 .datepicker{
-	width: 350px;
+	width: 414px;
 		&-main{
 			padding: 0;
 		}
@@ -42,8 +42,8 @@
 				}
 		}
 		&-grid{
-			//width: 350px;
 			width: 100%;
+			padding: 0 32px;
 		}
 		&-title{
 			box-shadow: none;
@@ -51,11 +51,25 @@
 		&-header{
 			border-bottom: 1px var(--color-primary) solid;
 			.datepicker{
-				&-controls{
-					.button{
-						font-weight: normal;
+					&-controls{
+						padding: 0 32px;
+						display: flex;
+						align-items: center;
+							.button{
+								font-weight: normal;
+								transition: opacity var(--hover-duration) var(--hover-ease);
+									&:not(.view-switch):hover{
+										opacity: .5;
+										background-color: transparent;
+									}
+									&.view-switch{
+										&:hover{
+											background-color: transparent;
+											color: var(--color-black);
+										}
+									}
+							}
 					}
-				}
 			}
 		}
 		&-controls{
@@ -64,7 +78,41 @@
 					font-family: var(--font-base-medium);
 					font-size: 18px;
 					line-height: 1.2em;
+					padding: 20px 0 18px;
+					height: auto;
 					color: var(--color-primary);
+				}
+				.button{
+					border: none;
+					border-radius: 50px;
+				}
+				.prev-btn,
+				.next-btn{
+					width: 40px;
+					height: 40px;
+					padding: 0;
+					font-size: 0;
+						&:before{
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							background-repeat: no-repeat;
+							background-size: 24px;
+							background-position: center;
+						}
+				}
+				.prev-btn{
+					&:before{
+						background-image: url(../images/chevron-left.svg);
+					}
+				}
+				.next-btn{
+					&:before{
+						background-image: url(../images/chevron-right.svg);
+					}
 				}
 		}
 		&-view{
@@ -77,12 +125,25 @@
 					text-transform: uppercase;
 					margin: 0;
 				}
-				.days-of-week{
-					padding: 8px 0;
-					margin: 8px 0;
+				.days{
+					flex-basis: auto;
+						&-of-week{
+							padding: 8px 32px;
+							margin: 8px 0;
+						}
+				}
+				&.datepicker-grid{
+						.datepicker-cell{
+							height: 60px;
+							width: 60px;
+							min-width: 60px;
+							line-height: 60px;
+						}
 				}
 		}
 		&-dropdown{
+			top: auto;
+			left: auto;
 				.datepicker{
 						&-picker{
 							background: linear-gradient(174.37deg, rgba(255, 255, 255, 0.4) 1.7%, rgba(255, 255, 255, 0.1) 96.97%);

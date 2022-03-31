@@ -67,11 +67,25 @@
 		}
 }
 
+/*
+Home page
+ */
 [data-router-view="home"]{
 	.pagination{
 		padding-top: 8px;
 			&-list{
 				padding-left: 53px;
+			}
+	}
+}
+/*
+Category page
+ */
+[data-router-view="branch"]{
+	.pagination {
+		margin-top: -112px;
+			&-list {
+				justify-content: flex-start;
 			}
 	}
 }

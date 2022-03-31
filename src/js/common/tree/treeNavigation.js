@@ -13,15 +13,17 @@ export const treeNavigation = () => {
 		 */
 		const branches = document.querySelectorAll('.tree .branch');
 		const branchLink = document.querySelector('#branch-link');
-		const branchLinkHref = branchLink.getAttribute('href');
-		for (let i = 0; i < branches.length; i++) {
-			branches[i].addEventListener('click', () => {
-				const branchUrlParam = branches[i].getAttribute('data-url-param');
-				if (!!branchUrlParam) {
-					branchLink.setAttribute('href', `${branchLinkHref}?${branchUrlParam}`);
-					document.querySelector('#branch-link').click();
-				}
-			});
+		if (!!branches.length && !!branchLink) {
+			const branchLinkHref = branchLink.getAttribute('href');
+			for (let i = 0; i < branches.length; i++) {
+				branches[i].addEventListener('click', () => {
+					const branchUrlParam = branches[i].getAttribute('data-url-param');
+					if (!!branchUrlParam) {
+						branchLink.setAttribute('href', `${branchLinkHref}?branch=${branchUrlParam}`);
+						document.querySelector('#branch-link').click();
+					}
+				});
+			}
 		}
 
 		/*

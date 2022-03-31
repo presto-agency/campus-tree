@@ -1,7 +1,5 @@
 .tree{
 	position: relative;
-	margin-top: -33px;
-	margin-right: -27px;
 		&-title{
 			position: absolute;
 			top: 64px;
@@ -74,6 +72,38 @@
 							max-width: 80%;
 							word-break: break-word;
 						}
+				}
+		}
+		&-svg{
+			width: 100%;
+			position: relative;
+		}
+}
+
+.branch,
+.stem{
+	fill: var(--color-black-100);
+}
+
+.branch{
+	cursor: pointer;
+}
+.leaf{
+	cursor: pointer;
+}
+
+/*
+Home page
+ */
+[data-router-view="home"]{
+	.tree{
+		margin-top: -33px;
+		margin-right: -27px;
+			&-svg{
+				max-width: 892px;
+			}
+			&-events{
+					&-item{
 						&:nth-child(1){
 							span{
 								transform: rotate(-50deg);
@@ -109,23 +139,22 @@
 								transform: rotate(32deg);
 							}
 						}
-				}
-		}
-		&-svg{
-			max-width: 892px;
-			width: 100%;
-			position: relative;
-		}
+					}
+			}
+	}
 }
-
-.branch,
-.stem{
-	fill: var(--color-black-100);
-}
-
-.branch{
-	cursor: pointer;
-}
-.leaf{
-	cursor: pointer;
+/*
+Category page
+ */
+[data-router-view="branch"]{
+	.tree{
+		margin-right: -10px;
+		height: 500px;
+			&-svg{
+				position: absolute;
+				top: -226px;
+				right: 0;
+				width: 1420px;
+			}
+	}
 }

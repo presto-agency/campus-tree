@@ -1,5 +1,7 @@
 import Highway from '@dogstudio/highway';
 import {initDatepicker} from "../common/datepicker/initDatepicker";
+import {updatePaginationNumbers} from "../common/pagination/updatePaginationNumbers";
+import {setLabelsPosition} from "../common/tree/setLabelsPosition";
 
 class BranchRenderer extends Highway.Renderer {
 	onEnter() {
@@ -8,6 +10,8 @@ class BranchRenderer extends Highway.Renderer {
 	}
 	onEnterCompleted() {
 		console.log('enter completed to branch');
+		setLabelsPosition();
+		updatePaginationNumbers();
 	}
 }
 

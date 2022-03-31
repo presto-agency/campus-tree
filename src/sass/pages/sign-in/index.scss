@@ -72,10 +72,8 @@
   }
   .sign-form{
     width: 100%;
-    &-content{
-
-    }
     &-input{
+      position: relative;
       margin: 0 0 32px 0;
       input{
         width: 100%;
@@ -91,6 +89,15 @@
         &:focus{
           border: 1px solid var(--color-local);
         }
+      }
+      img{
+        position: absolute;
+        cursor: pointer;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
       }
     }
     &-buttons-group{

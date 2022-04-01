@@ -29,8 +29,7 @@ export const treeNavigation = () => {
 		/*
 		Leaf
 		 */
-		const leaves = document.querySelectorAll('.tree .leaf');
-		const leafLink = document.querySelector('#leaf-link');
+		const leaves = document.querySelectorAll('.tree .leaf-scroll');
 		for (let i = 0; i < leaves.length; i++) {
 			leaves[i].addEventListener('click', () => {
 				let leafId = leaves[i].dataset.eventId;
@@ -45,8 +44,6 @@ export const treeNavigation = () => {
 							eventDOM.classList.add('is-active');
 						}
 					});
-				} else {
-					leafLink.click();
 				}
 			});
 		}

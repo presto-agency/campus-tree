@@ -130,15 +130,19 @@ body{
 .date{
 	font-size: 12px;
 	display: inline-flex;
-	align-items: center;
+	align-items: flex-start;
 		&-icon{
 			display: inline-flex;
 			align-items: center;
+			margin-top: 1px;
 			.svg{
 				color: var(--color-primary);
 			}
 			& ~ .date-label{
 				margin-left: 8px;
 			}
+		}
+		&-label{
+			line-height: 1.3em;
 		}
 }

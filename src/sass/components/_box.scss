@@ -3,9 +3,10 @@
 	border-radius: 20px;
 	background: linear-gradient(174.37deg, rgba(255, 255, 255, 0.4) 1.7%, rgba(255, 255, 255, 0.1) 96.97%);
 	box-shadow: 0 9px 18px -1px rgba(6, 73, 35, 0.12);
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(20px);
 	padding: 15px 30px;
 	z-index: 1;
+	border: 2px var(--color-white) solid;
 		&-bg{
 			&:before{
 				content: '';
@@ -51,6 +52,17 @@
 				.fieldset{
 					padding: 16px 0;
 				}
+		}
+		&-thumb{
+			height: 170px;
+			border-radius: 10px;
+			overflow: hidden;
+				img{
+					@include imageCover(center);
+				}
+		}
+		&-action{
+			padding-top: 10px;
 		}
 		.event{
 			margin: 0 -10px;

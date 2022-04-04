@@ -1,11 +1,11 @@
 import Highway from '@dogstudio/highway';
 
-class SignInRenderer extends Highway.Renderer {
+class authorizationRenderer extends Highway.Renderer {
     onEnter() {
-        console.log('enter to sign-in page');
+        console.log('enter to authorization page');
     }
     onEnterCompleted() {
-        console.log('enter completed to sign-in page');
+        console.log('enter completed to authorization page');
             (function showPassword() {
                 let eyePictures = document.querySelectorAll('.eye-password');
                 eyePictures.forEach(eye => {
@@ -22,4 +22,4 @@ class SignInRenderer extends Highway.Renderer {
     }
 }
 
-export default SignInRenderer;
+export default authorizationRenderer;

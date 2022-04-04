@@ -7,3 +7,10 @@
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
 */
+
+/*!
+ * Splide.js
+ * Version  : 3.6.12
+ * License  : MIT
+ * Copyright: 2022 Naotoshi Fujita
+ */

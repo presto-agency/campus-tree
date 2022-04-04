@@ -5,6 +5,13 @@
 			top: 64px;
 			left: 0;
 			max-width: 150px;
+				@include d($xl){
+					max-width: 100%;
+					top: -34px;
+				}
+				@include d($sm){
+					display: none;
+				}
 		}
 		&-links{
 			position: absolute;
@@ -22,35 +29,147 @@
 					text-transform: uppercase;
 					color: var(--color-white);
 					opacity: 0;
+					pointer-events: auto;
 						&[data-branch-id="branch-1"]{
 							top: 35.4%;
 							left: 34.2%;
 							transform: rotate(24deg);
+								@include d($sm){
+									border-color: var(--color-alumni);
+									transform: rotate(0deg);
+									top: 32.4%;
+									left: 18.2%;
+										.svg{
+											color: var(--color-alumni);
+										}
+								}
+								@include d($xs){
+									top: 29.4%;
+									left: 1.2%;
+								}
 						}
 						&[data-branch-id="branch-2"]{
 							top: 40.6%;
 							left: 50.8%;
 							transform: rotate(-6deg);
+								@include d($md){
+									top: 39.6%;
+								}
+								@include d($sm){
+									border-color: var(--color-local);
+									transform: rotate(0deg);
+									top: 34.6%;
+									left: 60%;
+										.svg{
+											color: var(--color-local);
+										}
+								}
+								@include d($xs){
+									top: 30.6%;
+									left: 62%;
+								}
 						}
 						&[data-branch-id="branch-3"]{
 							top: 58%;
 							left: 31.2%;
 							transform: rotate(14deg);
+								@include d($md){
+									top: 57.7%;
+									left: 29.2%;
+								}
+								@include d($sm){
+									transform: rotate(0deg);
+									border-color: var(--color-greek);
+									top: 56.7%;
+									left: 11.2%;
+										.svg{
+											color: var(--color-greek);
+										}
+								}
+								@include d($xs){
+									top: 53.7%;
+									left: -2.8%;
+								}
 						}
 						&[data-branch-id="branch-4"]{
 							top: 58.2%;
 							left: 58.8%;
 							transform: rotate(-16deg);
+								@include d($md){
+									top: 57.2%;
+								}
+								@include d($sm){
+									transform: rotate(0deg);
+									border-color: var(--color-events);
+									top: 54.2%;
+									left: 68%;
+										.svg{
+											color: var(--color-events);
+										}
+								}
+								@include d($xs){
+									top: 50.2%;
+									left: 62%;
+								}
 						}
 						&[data-branch-id="branch-5"]{
 							left: 34.8%;
 							top: 79.2%;
 							transform: rotate(-13deg);
+								@include d($md){
+									top: 78.2%;
+								}
+								@include d($sm){
+									transform: rotate(0deg);
+									border-color: var(--color-clubs);
+									top: 77%;
+									left: 22%;
+										.svg{
+											color: var(--color-clubs);
+										}
+								}
+								@include d($xs){
+									top: 75%;
+									left: 12%;
+								}
 						}
 						&[data-branch-id="branch-6"]{
 							top: 78%;
 							left: 61.4%;
 							transform: rotate(-11deg);
+								@include d($md){
+									top: 77%;
+								}
+								@include d($sm){
+									transform: rotate(0deg);
+									border-color: var(--color-majors);
+									top: 74%;
+									left: 71%;
+										.svg{
+											color: var(--color-majors);
+										}
+								}
+								@include d($xs){
+									top: 73%;
+									left: 64%;
+								}
+						}
+						.svg{
+							margin-right: 8px;
+								@include m($sm + 1){
+									display: none;
+								}
+						}
+						@include d($sm){
+							height: 33px;
+							line-height: 33px;
+							padding: 0 16px;
+							border-radius: 40px;
+							background-color: var(--color-white);
+							color: var(--color-black);
+							border: 1px transparent solid;
+							display: inline-flex;
+							align-items: center;
 						}
 				}
 		}
@@ -129,6 +248,9 @@
 			display: inline-block;
 			max-width: 80%;
 			word-break: break-word;
+				@include d($xl){
+					line-height: 1em;
+				}
 		}
 		&-link{
 			position: absolute;
@@ -145,6 +267,13 @@ Home page
 		margin-right: -27px;
 			&-svg{
 				max-width: 892px;
+					@include d($xl){
+						margin: 0 auto;
+					}
+					@include d($sm){
+						width: 115vw;
+						margin-left: -44px;
+					}
 			}
 			&-events{
 					&-item{
@@ -184,6 +313,18 @@ Home page
 							}
 						}
 					}
+					@include d($sm){
+						display: none;
+					}
+			}
+			@include d($xl){
+				max-width: 892px;
+				margin-top: 70px;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			@include d($sm){
+				margin-top: 36px;
 			}
 	}
 }

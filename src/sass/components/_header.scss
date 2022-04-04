@@ -12,12 +12,22 @@
 					padding-left: 66px;
 						.search{
 							.input{
-								& ~ .input-container-icon{
-									.svg{
-										color: var(--color-primary);
+								padding-right: 0;
+									& ~ .input-container-icon{
+										.svg{
+											color: var(--color-primary);
+										}
 									}
-								}
 							}
+						}
+						@include d($xl){
+							padding-left: 33px;
+							padding-bottom: 7px;
+						}
+						@include d($sm){
+							display: flex;
+							justify-content: flex-end;
+							padding-bottom: 9px;
 						}
 				}
 				&-nav{
@@ -48,11 +58,18 @@
 									margin-right: 0;
 								}
 						}
+						@include d($lg){
+							padding-right: 20px;
+						}
+						@include d($xl){
+							display: none;
+						}
 				}
 				&-action{
 					flex: 1;
 					display: flex;
 					align-items: center;
+					justify-content: flex-end;
 					padding-left: 40px;
 					padding-bottom: 5px;
 					transition: opacity var(--hover-duration) var(--hover-ease), transform var(--hover-duration) var(--hover-ease);
@@ -64,12 +81,26 @@
 								&:last-child{
 									margin-right: 0;
 								}
+								@include d($lg){
+									margin: 0 15px;
+								}
 						}
 						.personal-tree{
 							margin-right: 0;
 						}
 						.dropdown{
 							display: inherit;
+						}
+						@include d($lg){
+							padding-left: 20px;
+						}
+						@include d($xl){
+							padding-bottom: 7px;
+						}
+						@include d($sm){
+							padding-bottom: 10px;
+							padding-left: 0;
+							max-width: 63px;
 						}
 				}
 				&-filters{
@@ -81,6 +112,13 @@
 					height: 100%;
 					transform: translateY(-20px);
 					transition: opacity var(--hover-duration) var(--hover-ease), transform var(--hover-duration) var(--hover-ease);
+				}
+				@include d($xl){
+					margin-bottom: 2px;
+				}
+				@include d($sm){
+					justify-content: flex-end;
+					margin-bottom: -3px;
 				}
 		}
 		/*
@@ -118,5 +156,12 @@
 							}
 						}
 				}
+		}
+		@include d($xl){
+			padding-top: 10px;
+		}
+		@include d($sm){
+			padding-top: 5px;
+			margin-bottom: 25px;
 		}
 }

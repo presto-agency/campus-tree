@@ -38,11 +38,21 @@ body{
 			background-position: center top;
 			background-image: url(../images/bg-bottom.jpg);
 		}
+		@include d($xl){
+			padding-bottom: 100px;
+		}
 }
 
 [data-router-wrapper]{
 	position: relative;
 	z-index: 1;
+}
+
+.logo{
+		@include d($xl){
+			width: 80px;
+			height: 80px;
+		}
 }
 
 .border {
@@ -144,5 +154,73 @@ body{
 		}
 		&-label{
 			line-height: 1.3em;
+		}
+}
+
+.burger{
+	padding: 5px;
+	margin: -5px -5px -5px 20px;
+	color: var(--color-primary);
+		&-box{
+			position: relative;
+			width: 24px;
+			height: 25px;
+				&-arrow{
+					position: absolute;
+					background-color: currentColor;
+					height: 3px;
+					width: 100%;
+						&:nth-child(1){
+							top: 0;
+						}
+						&:nth-child(2){
+							top: 11px;
+								@include d($sm){
+									top: 8px;
+								}
+						}
+						&:nth-child(3){
+							bottom: 0;
+						}
+				}
+				@include d($sm){
+					width: 22px;
+					height: 19px;
+				}
+		}
+		@include m($xl + 1){
+			display: none;
+		}
+		@include d($sm){
+			margin: -5px -5px -5px 10px;
+		}
+}
+
+.search{
+		@include d($sm){
+			width: 40px;
+		}
+}
+
+.tabs{
+	display: flex;
+	align-items: center;
+		&-item{
+			height: 32px;
+			line-height: 30px;
+			flex: 1;
+			font-size: 12px;
+			font-family: var(--font-base-medium);
+			text-align: center;
+			color: var(--color-gray-700);
+			border: 1px var(--color-gray-700) solid;
+				&.is-active{
+					background-color: var(--color-primary);
+					border-color: transparent;
+					color: var(--color-white);
+				}
+		}
+		@include d($sm){
+			margin: 19px 0;
 		}
 }

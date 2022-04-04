@@ -22,6 +22,11 @@
 				&.is-active{
 					background-color: var(--color-primary);
 					color: var(--color-white);
+						@include d($sm){
+							background-color: transparent;
+							color: var(--color-primary);
+							font-family: var(--font-base-medium);
+						}
 				}
 				&[href]{
 					@include hover($md){
@@ -30,6 +35,19 @@
 							color: var(--color-white);
 						}
 					}
+				}
+				@include d($xl){
+					width: 42px;
+					height: 42px;
+					line-height: 42px;
+					font-size: 12px;
+				}
+				@include d($sm){
+					width: auto;
+					height: auto;
+					line-height: 1.2em;
+					padding: 0 5px;
+					margin: 0 5px;
 				}
 		}
 		&-arrow{
@@ -75,6 +93,9 @@ Home page
 		padding-top: 8px;
 			&-list{
 				padding-left: 53px;
+					@include d($xl){
+						padding-left: 0;
+					}
 			}
 	}
 }

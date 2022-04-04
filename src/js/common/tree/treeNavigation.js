@@ -1,5 +1,6 @@
 import Tween, { gsap } from 'gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
+import {leavesCarousel} from "../general/leavesTabletCarousel";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -35,7 +36,7 @@ export const treeNavigation = () => {
 				let leafId = leaves[i].dataset.eventId;
 				let eventDOM = document.querySelector(`.event[data-event-id="${leafId}"]`);
 				clearActiveEvents();
-				if (!!eventDOM) {
+				if (!!eventDOM && window.innerWidth >= 1200) {
 					Tween.to(document.querySelector('.leaves .scroll-wrap'), {
 						scrollTo: eventDOM,
 						duration: 0.4,
@@ -44,6 +45,8 @@ export const treeNavigation = () => {
 							eventDOM.classList.add('is-active');
 						}
 					});
+				} else if (!!eventDOM) {
+					!!leavesCarousel ? leavesCarousel.go(i) : null;
 				}
 			});
 		}

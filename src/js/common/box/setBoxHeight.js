@@ -12,7 +12,7 @@ export const setBoxHeight = () => {
 			},
 			{
 				opacity: 1,
-				height: ( treeHeight - 33 - 37 ),
+				height: window.innerWidth >= 1200 ? ( treeHeight - 33 - 37 ) : 'auto',
 				duration: 0,
 				ease: 'none'
 			});

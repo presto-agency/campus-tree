@@ -65,4 +65,9 @@
 			color: var(--color-gray-800);
 			pointer-events: none;
 		}
+		@include d($xl){
+			height: 42px;
+			line-height: 42px;
+			padding: 0 20px;
+		}
 }

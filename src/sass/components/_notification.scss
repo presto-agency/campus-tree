@@ -105,4 +105,11 @@
 			left: auto;
 			right: -78px;
 		}
+		@include d($xl){
+			margin-right: 24px;
+		}
+		@include d($sm){
+			margin-right: 2px;
+			margin-left: 0;
+		}
 }

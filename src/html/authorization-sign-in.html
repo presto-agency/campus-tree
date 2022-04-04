@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Campus Tree | FAQ</title>
+    <title>Campus Tree | Sign in</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png"/>
@@ -33,35 +33,33 @@
 <body>
 <main class="wrapper-sign-in" id="wrapper">
     <header class="header-s">
-        <div class="container">
-            <div class="header-s-panel">
-                <div class="header-s-panel-logo">
-                    <a href="index.html" class="logo">
-                        <img src="../images/sign-in/logo-b.svg" alt="Campus Tree"/>
+        <div class="header-s-panel">
+            <div class="header-s-panel-logo">
+                <img src="../images/sign-in/logo-b.svg" alt="Campus Tree"/>
+            </div>
+            <div class="header-s-panel-link">
+                <p class="h-4">
+                    Don’t have an account?
+                    <a href="#">
+                        Sign Up Now!
                     </a>
-                </div>
-                <div class="header-s-panel-link">
-                    <p class="h-4">
-                        Don’t have an account?
-                        <a href="#">
-                            Sign Up Now!
-                        </a>
-                    </p>
-                </div>
+                </p>
             </div>
         </div>
     </header>
     <div data-router-wrapper>
-        <div data-router-view="signIn">
+        <div data-router-view="authorization">
             <section class="section sign-in">
                 <div class="sign-in-left-side">
-                    <div class="sign-in-img">
-                        <img src="../images/sign-in/bg-people.svg" alt="people">
-                    </div>
-                    <div class="section-title">
-                        <h2 class="h-2">
-                            Welcome to Campus Tree
-                        </h2>
+                    <div class="sign-in-content">
+                        <div class="sign-in-img">
+                            <img src="../images/sign-in/bg-people.svg" alt="people">
+                        </div>
+                        <div class="section-title">
+                            <h2 class="h-2">
+                                Welcome to Campus Tree
+                            </h2>
+                        </div>
                     </div>
                 </div>
                 <div class="sign-in-right-side">
@@ -76,7 +74,8 @@
                                 <input placeholder="E-mail" type="email">
                             </div>
                             <div class="sign-form-input">
-                                <input placeholder="Password" type="password">
+                                <img class="eye-password" src="../images/sign-in/eye.svg" alt="picture">
+                                <input class="password-input" placeholder="Password" type="password">
                             </div>
                             <div class="sign-form-buttons-group">
                                 <button class="btn">

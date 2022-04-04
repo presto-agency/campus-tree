@@ -3,6 +3,7 @@
   margin: 119px 0 50px 0;
   &-wrapper{
   position: relative;
+  margin: 40px 0 0 0;
   }
   &-green-leaf{
     position: absolute;
@@ -18,13 +19,7 @@
     width: 180px;
     height: 180px;
   }
-  .section-description{
-    p{
-      margin: 6px 0 40px 0;
-      font-size: 14px;
-      line-height: 140%;
-    }
-  }
+
 }
 
 @media (max-width: 1023px) {

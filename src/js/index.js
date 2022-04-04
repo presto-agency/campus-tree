@@ -14,7 +14,7 @@ import InnerRenderer from "./renderers/inner";
 import EditorRenderer from "./renderers/editor";
 import SearchResultRenderer from "./renderers/searchResult";
 import Branch from "./router-transitions/branch";
-import SignInRenderer from "./renderers/signIn";
+import authorizationRenderer from "./renderers/authorization";
 
 /*
 Routing
@@ -28,7 +28,7 @@ const H = new Highway.Core({
 		inner: InnerRenderer,
 		searchResult: SearchResultRenderer,
 		editor: EditorRenderer,
-		signIn: SignInRenderer,
+		authorization: authorizationRenderer,
 	},
 	transitions: {
 		default: Fade,

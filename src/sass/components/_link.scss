@@ -41,4 +41,22 @@
 						}
 				}
 		}
+		/*
+		Types
+		 */
+		&-column{
+			flex-direction: column;
+			color: var(--color-gray-800);
+			font-family: var(--font-base);
+				.link{
+						&-icon{
+								& ~ .link-title{
+									margin-left: 0;
+								}
+								.svg{
+									color: var(--color-gray-700);
+								}
+						}
+				}
+		}
 }

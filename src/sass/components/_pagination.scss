@@ -97,6 +97,9 @@ Home page
 						padding-left: 0;
 					}
 			}
+			@include d($sm){
+				padding-top: 15px;
+			}
 	}
 }
 /*

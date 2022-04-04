@@ -187,12 +187,14 @@
 					justify-content: center;
 					opacity: 0;
 					pointer-events: auto;
-					cursor: pointer;
 						&:hover{
 							z-index: 2;
 								.tree-modal{
 									display: block;
 								}
+						}
+						@include m($xl + 1){
+							cursor: pointer;
 						}
 				}
 		}
@@ -243,7 +245,6 @@
 	cursor: pointer;
 }
 .leaf{
-	cursor: pointer;
 		&-title{
 			display: inline-block;
 			max-width: 80%;
@@ -255,6 +256,9 @@
 		&-link{
 			position: absolute;
 			inset: 0;
+		}
+		@include m($xl + 1){
+			cursor: pointer;
 		}
 }
 

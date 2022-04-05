@@ -59,6 +59,10 @@ body{
 	width: 100%;
 	height: 1px;
 	background-color: var(--color-gray-700);
+		&-vertical{
+			width: 1px;
+			height: 100%;
+		}
 }
 
 .list{
@@ -161,6 +165,8 @@ body{
 	padding: 5px;
 	margin: -5px -5px -5px 20px;
 	color: var(--color-primary);
+	position: relative;
+	z-index: 1;
 		&-box{
 			position: relative;
 			width: 24px;
@@ -170,6 +176,7 @@ body{
 					background-color: currentColor;
 					height: 3px;
 					width: 100%;
+					transition: all var(--hover-duration) var(--hover-ease);
 						&:nth-child(1){
 							top: 0;
 						}
@@ -186,6 +193,30 @@ body{
 				@include d($sm){
 					width: 22px;
 					height: 19px;
+				}
+		}
+		&.is-active{
+			color: var(--color-black);
+				.burger-box{
+					&-arrow{
+						&:nth-child(1){
+							transform: rotate(45deg);
+							top: 11px;
+								@include d($sm){
+									top: 8px;
+								}
+						}
+						&:nth-child(2){
+							opacity: 0;
+						}
+						&:nth-child(3){
+							transform: rotate(-45deg);
+							bottom: 11px;
+								@include d($sm){
+									bottom: 8px;
+								}
+						}
+					}
 				}
 		}
 		@include m($xl + 1){

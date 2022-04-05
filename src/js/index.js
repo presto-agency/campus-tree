@@ -8,13 +8,16 @@ import PeopleRenderer from "./renderers/people";
 import LeafRenderer from "./renderers/leaf";
 import {initInnerDropdowns, initStaticDropdowns} from "./common/dropdown/toggleDropdown";
 import {checkboxChangeLabel} from "./common/checkboxes/checkboxChangeLabel";
-import {searchDropdown} from "./common/dropdown/searchDropdown";
+import {closeSearchPanel, searchDropdown} from "./common/dropdown/searchDropdown";
 import {treeNavigation} from "./common/tree/treeNavigation";
 import InnerRenderer from "./renderers/inner";
 import EditorRenderer from "./renderers/editor";
 import SearchResultRenderer from "./renderers/searchResult";
 import Branch from "./router-transitions/branch";
 import authorizationRenderer from "./renderers/authorization";
+import {headerMobileFilters} from "./common/general/headerMobileFilters";
+import {resetFilters} from "./common/general/resetFilters";
+import {toggleNav} from "./common/general/toggleNav";
 
 /*
 Routing
@@ -54,7 +57,7 @@ Init scripts on Highway enter
 H.on('NAVIGATE_IN', () => {
 	initInnerDropdowns();
 	checkboxChangeLabel();
-	// searchDropdown();
+	closeSearchPanel();
 	treeNavigation();
 	console.log('init highway');
 });
@@ -68,5 +71,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	checkboxChangeLabel();
 	searchDropdown();
 	treeNavigation();
+	headerMobileFilters();
+	resetFilters();
+	toggleNav();
 	console.log('init DOM');
 });

@@ -22,6 +22,9 @@
 					padding-right: 140px;
 					line-height: 1em;
 					margin-bottom: 3px;
+						@include d($sm){
+							padding-right: 95px;
+						}
 				}
 				&-categories{
 					display: flex;
@@ -33,6 +36,10 @@
 					top: 0;
 					right: -3px;
 					text-align: right;
+						@include d($sm){
+							max-width: 95px;
+							right: 0;
+						}
 				}
 				&-item{
 					margin-top: 8px;

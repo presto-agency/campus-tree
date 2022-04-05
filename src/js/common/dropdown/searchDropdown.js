@@ -1,8 +1,11 @@
+import {closeAllDropdowns} from "./toggleDropdown";
+
 export const searchDropdown = () => {
 	const searchInput = document.querySelector('.search .input');
 	const header = document.querySelector('.header');
 	const closeBtn = document.querySelector('.close-filters');
 	const activeClassName = 'is-filters-active';
+	const mobileActiveClassName = 'is-mobile-filters-active';
 	if (!!searchInput && !!header) {
 		/*
 		Show search result on dropdown
@@ -24,17 +27,25 @@ export const searchDropdown = () => {
 		/*
 		Hide header filters
 		 */
-		searchInput.addEventListener('blur', () => {
-			!searchInput.value ? header.classList.remove(activeClassName) : null;
-		});
+		// searchInput.addEventListener('blur', () => {
+		// 	!searchInput.value ? header.classList.remove(activeClassName) : null;
+		// });
 		/*
 		Close filters on click
 		 */
 		if (!!closeBtn) {
 			closeBtn.addEventListener('click', () => {
-				header.classList.remove(activeClassName);
-				searchInput.value = '';
+				closeSearchPanel();
 			});
 		}
 	}
+}
+
+export const closeSearchPanel = () => {
+	const searchInput = document.querySelector('.search .input');
+	const header = document.querySelector('.header');
+	header.classList.remove('is-filters-active');
+	header.classList.remove('is-mobile-filters-active');
+	searchInput.value = '';
+	closeAllDropdowns();
 }

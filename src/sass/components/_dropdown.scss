@@ -89,6 +89,26 @@
 			}
 		}
 		/*
+		Types
+		 */
+		&-static{
+			.dropdown{
+				&-body{
+					opacity: 1;
+					position: relative;
+					pointer-events: auto;
+					top: 0;
+						&-item{
+							padding: 0;
+							background-color: transparent;
+							border-radius: 0;
+							border: none;
+							box-shadow: none;
+						}
+				}
+			}
+		}
+		/*
 		Open theme
 		 */
 		&.is-active{

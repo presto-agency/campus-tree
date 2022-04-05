@@ -31,7 +31,7 @@ export const initInnerDropdowns = () => {
 const switchDropdowns = (dropdowns) => {
 	for (let i = 0; i < dropdowns.length; i++) {
 		const trigger = dropdowns[i].querySelector('.dropdown-trigger');
-		if (!!trigger) {
+		if (!!trigger && !dropdowns[i].classList.contains('dropdown-static')) {
 			trigger.addEventListener('click', () => {
 				dropdowns[i].classList.contains('is-active')
 					? dropdowns[i].classList.remove('is-active')

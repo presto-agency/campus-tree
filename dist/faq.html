@@ -80,7 +80,7 @@
 					</a>
 				</div>
 				<div class="header-panel-action">
-					<a href="#" class="link personal-tree">
+					<a href="#" class="link personal-tree d-none d-xl-inline-flex">
 						<span class="link-icon">
 							<svg class="svg svg__64">
 								<use xlink:href="../images/sprite/sprite.svg#tree"></use>
@@ -166,7 +166,7 @@
 							</div>
 						</div>
 					</div>
-					<button class="link">
+					<button class="link d-none d-xl-inline-flex">
 						<span class="link-icon">
 							<svg class="svg svg__24">
 								<use xlink:href="../images/sprite/sprite.svg#sign-out"></use>
@@ -174,7 +174,7 @@
 						</span>
 						<span class="link-title">Sign out</span>
 					</button>
-					<button class="btn">
+					<button class="btn d-none d-md-inline-flex">
 						<span class="btn-icon">
 							<svg class="svg svg__32">
 								<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
@@ -182,6 +182,13 @@
 						</span>
 						<span class="btn-title">Create a leaf</span>
 					</button>
+					<div class="burger">
+						<div class="burger-box">
+							<div class="burger-box-arrow"></div>
+							<div class="burger-box-arrow"></div>
+							<div class="burger-box-arrow"></div>
+						</div>
+					</div>
 				</div>
 				<div class="header-panel-filters">
 					<div class="filters">
@@ -195,7 +202,7 @@
 								<div class="link-title">Filters</div>
 							</div>
 						</div>
-						<div class="filters-item">
+						<div class="filters-item d-none d-xl-flex">
 							<div class="dropdown">
 								<p class="dropdown-trigger-label">Branches</p>
 								<p class="dropdown-trigger dropdown-trigger-title" data-fieldset-label="filter-branches" data-label="Select branch">Select branch</p>
@@ -270,7 +277,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="filters-item">
+						<div class="filters-item d-none d-xl-flex">
 							<div class="dropdown">
 								<p class="dropdown-trigger-label">Interests</p>
 								<p class="dropdown-trigger dropdown-trigger-title" data-fieldset-label="filter-interests" data-label="Select interest">Select interest</p>
@@ -345,7 +352,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="filters-item">
+						<div class="filters-item d-none d-xl-flex">
 							<label class="input-container">
 								<input type="checkbox" class="input input-checkbox input-checkbox-sm">
 								<span class="input-checkbox-icon">
@@ -366,6 +373,11 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="header-panel-filters __mobile">
+					mobile filters
+					<div class="border"></div>
+					mobile filters
 				</div>
 			</div>
 			<div class="border"></div>

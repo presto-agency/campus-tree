@@ -1,11 +1,11 @@
 import {closeAllDropdowns} from "./toggleDropdown";
+import {closeNav} from "../general/toggleNav";
 
 export const searchDropdown = () => {
 	const searchInput = document.querySelector('.search .input');
 	const header = document.querySelector('.header');
 	const closeBtn = document.querySelector('.close-filters');
 	const activeClassName = 'is-filters-active';
-	const mobileActiveClassName = 'is-mobile-filters-active';
 	if (!!searchInput && !!header) {
 		/*
 		Show search result on dropdown
@@ -23,6 +23,7 @@ export const searchDropdown = () => {
 		 */
 		searchInput.addEventListener('focus', () => {
 			header.classList.add(activeClassName);
+			closeNav();
 		});
 		/*
 		Hide header filters

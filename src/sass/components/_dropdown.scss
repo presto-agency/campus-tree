@@ -78,14 +78,17 @@
 		 */
 		&-lg{
 			.dropdown{
-					&-body{
-							&-item{
-								min-width: 416px;
-								background: linear-gradient(174.37deg, rgba(255, 255, 255, 0.4) 1.7%, rgba(255, 255, 255, 0.1) 96.97%);
-								backdrop-filter: blur(70px);
-								padding: 32px 30px 15px;
+				&-body{
+					&-item{
+						min-width: 416px;
+						background: linear-gradient(174.37deg, rgba(255, 255, 255, 0.4) 1.7%, rgba(255, 255, 255, 0.1) 96.97%);
+						backdrop-filter: blur(70px);
+						padding: 32px 30px 15px;
+							@include d($sm){
+								padding: 25px 20px;
 							}
 					}
+				}
 			}
 		}
 		/*

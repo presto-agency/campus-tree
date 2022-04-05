@@ -104,6 +104,9 @@
 		& ~ .dropdown-body{
 			left: auto;
 			right: -78px;
+				@include d($sm){
+					right: -38px;
+				}
 		}
 		@include d($xl){
 			margin-right: 24px;
@@ -112,4 +115,15 @@
 			margin-right: 2px;
 			margin-left: 0;
 		}
+}
+
+.dropdown-lg{
+	.notification{
+		& ~ .dropdown-body .dropdown-body-item{
+			@include d($sm){
+				min-width: 0;
+				width: calc(100vw - 48px);
+			}
+		}
+	}
 }

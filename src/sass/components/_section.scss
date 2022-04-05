@@ -14,5 +14,11 @@
 		 */
 		&-inner{
 			padding-top: 120px;
+				@include d($xl){
+					padding-top: 60px;
+				}
+				@include d($sm){
+					padding-top: 23px;
+				}
 		}
 }

@@ -1,4 +1,6 @@
 .pagination{
+	position: relative;
+	z-index: 1;
 		&-list{
 			display: flex;
 			align-items: center;
@@ -107,9 +109,12 @@ Category page
  */
 [data-router-view="branch"]{
 	.pagination {
-		margin-top: -112px;
+		margin-top: 40px;
 			&-list {
 				justify-content: flex-start;
+			}
+			@include d($xl){
+				margin-top: 30px;
 			}
 	}
 }

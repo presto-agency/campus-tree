@@ -177,7 +177,7 @@
 			position: absolute;
 			inset: 0;
 			pointer-events: none;
-			z-index: 2;
+			z-index: 1;
 				&-item{
 					position: absolute;
 					max-width: 90px;
@@ -196,6 +196,9 @@
 						@include m($xl + 1){
 							cursor: pointer;
 						}
+				}
+				&:hover{
+					z-index: 2;
 				}
 		}
 		&-svg{
@@ -242,6 +245,7 @@
 					}
 					&-events{
 						position: relative;
+						padding-top: 50px;
 							&-item{
 								position: relative;
 								max-width: 100%;
@@ -456,13 +460,17 @@ Category page
 			&-modal{
 				.box{
 					&-thumb{
-						position: absolute;
-						width: 64px;
-						height: 64px;
-						min-width: 64px;
+						@include d($sm){
+							position: absolute;
+							width: 64px;
+							height: 64px;
+							min-width: 64px;
+						}
 					}
 					&-body{
-						padding: 0 0 10px 84px;
+						@include d($sm){
+							padding: 0 0 10px 84px;
+						}
 					}
 					@include d($sm){
 						padding: 16px;

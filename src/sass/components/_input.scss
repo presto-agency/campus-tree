@@ -45,6 +45,9 @@
 						.datepicker-dropdown{
 							right: 0;
 							left: auto !important;
+								@include d($xs){
+									right: -30px;
+								}
 						}
 					}
 					&.__left{

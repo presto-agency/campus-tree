@@ -31,34 +31,38 @@ export const setLabelsPosition = () => {
 			let y = leaves[i].getBoundingClientRect().y;
 			let width = leaves[i].getBoundingClientRect().width;
 			let height = leaves[i].getBoundingClientRect().height;
-			Tween.fromTo(events[i],
-				{
-					x: 0,
-					y: 0,
-					width: 0,
-					height: 0,
-					opacity: 0,
-				},
-				{
-					x: x - treeX,
-					y: y - treeY,
-					width,
-					height,
-					duration: 0.1,
-					ease: 'none',
-					onComplete: () => {
-						Tween.to(events, {
-							opacity: 1,
-							duration: transition.opacity.duration,
-							ease: transition.opacity.ease,
-						});
-						Tween.to(categories, {
-							opacity: 1,
-							duration: transition.opacity.duration,
-							ease: transition.opacity.ease,
-						});
-					}
-			});
+			if (!!events[i]) {
+				Tween.fromTo(events[i],
+					{
+						x: 0,
+						y: 0,
+						width: 0,
+						height: 0,
+						opacity: 0,
+					},
+					{
+						x: x - treeX,
+						y: y - treeY,
+						width,
+						height,
+						duration: 0.1,
+						ease: 'none',
+						onComplete: () => {
+							Tween.to(events, {
+								opacity: 1,
+								duration: transition.opacity.duration,
+								ease: transition.opacity.ease,
+							});
+							Tween.to(categories, {
+								opacity: 1,
+								duration: transition.opacity.duration,
+								ease: transition.opacity.ease,
+							});
+						}
+					});
+			} else {
+				leaves[i].style.display = 'none';
+			}
 		}
 	}
 }

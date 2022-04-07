@@ -52,6 +52,30 @@
 					}
 				}
 		}
+		&-gray{
+			border-color: var(--color-gray-500);
+			background-color: var(--color-gray-400);
+			color: var(--color-black);
+			font-family: var(--font-base);
+				.btn{
+					&-title{
+						font-size: 12px;
+					}
+				}
+				.svg{
+					color: var(--color-primary);
+				}
+				@include hover($md){
+					&:hover{
+						background-color: var(--color-primary);
+						border-color: var(--color-primary);
+						color: var(--color-white);
+							.svg{
+								color: var(--color-white);
+							}
+					}
+				}
+		}
 		/*
 		Button sizes
 		 */

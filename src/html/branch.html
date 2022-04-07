@@ -81,7 +81,7 @@
 					</a>
 				</div>
 				<div class="header-panel-action">
-					<a href="#" class="link personal-tree">
+					<a href="#" class="link personal-tree d-none d-xl-inline-flex">
 						<span class="link-icon">
 							<svg class="svg svg__64">
 								<use xlink:href="../images/sprite/sprite.svg#tree"></use>
@@ -120,11 +120,11 @@
 												</div>
 											</div>
 											<div class="notification-description">
-												<p>You’ve been invited by <a href="#">Joey Tribbiani</a></p>
+												<p>You’ve been invited by <a href="#">Joey Tribbiani</a> to <a href="#">Some event</a></p>
 											</div>
 										</div>
 										<div class="notification-list-item">
-											<div class="notification-avatar">
+											<div class="notification-avatar __event">
 												<img src="https://images.pexels.com/photos/307847/pexels-photo-307847.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Avatar"/>
 												<div class="notification-avatar-label">
 													<svg class="svg svg__16">
@@ -167,7 +167,7 @@
 							</div>
 						</div>
 					</div>
-					<button class="link">
+					<button class="link d-none d-xl-inline-flex">
 						<span class="link-icon">
 							<svg class="svg svg__24">
 								<use xlink:href="../images/sprite/sprite.svg#sign-out"></use>
@@ -175,7 +175,7 @@
 						</span>
 						<span class="link-title">Sign out</span>
 					</button>
-					<button class="btn">
+					<button class="btn d-none d-md-inline-flex">
 						<span class="btn-icon">
 							<svg class="svg svg__32">
 								<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
@@ -183,11 +183,18 @@
 						</span>
 						<span class="btn-title">Create a leaf</span>
 					</button>
+					<div class="burger">
+						<div class="burger-box">
+							<div class="burger-box-arrow"></div>
+							<div class="burger-box-arrow"></div>
+							<div class="burger-box-arrow"></div>
+						</div>
+					</div>
 				</div>
 				<div class="header-panel-filters">
 					<div class="filters">
 						<div class="filters-item">
-							<div class="link">
+							<div class="link" id="toggle-header-mobile-filters">
 								<div class="link-icon">
 									<svg class="svg svg__24">
 										<use xlink:href="../images/sprite/sprite.svg#filter"></use>
@@ -196,7 +203,7 @@
 								<div class="link-title">Filters</div>
 							</div>
 						</div>
-						<div class="filters-item">
+						<div class="filters-item d-none d-xl-flex">
 							<div class="dropdown">
 								<p class="dropdown-trigger-label">Branches</p>
 								<p class="dropdown-trigger dropdown-trigger-title"
@@ -273,7 +280,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="filters-item">
+						<div class="filters-item d-none d-xl-flex">
 							<div class="dropdown">
 								<p class="dropdown-trigger-label">Interests</p>
 								<p class="dropdown-trigger dropdown-trigger-title"
@@ -350,7 +357,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="filters-item">
+						<div class="filters-item d-none d-xl-flex">
 							<label class="input-container">
 								<input type="checkbox" class="input input-checkbox input-checkbox-sm"/>
 								<span class="input-checkbox-icon">
@@ -372,8 +379,271 @@
 						</div>
 					</div>
 				</div>
+				<div class="header-panel-filters __mobile" id="header-mobile-filters">
+					<div class="row pb-4">
+						<div class="col-6 d-flex align-items-center">
+							<label class="input-container">
+								<input type="checkbox" class="input input-checkbox input-checkbox-sm"/>
+								<span class="input-checkbox-icon">
+									<svg class="svg svg__16">
+										<use xlink:href="../images/sprite/sprite.svg#check"></use>
+									</svg>
+								</span>
+								<span class="input-checkbox-title">Only with my friends</span>
+							</label>
+						</div>
+						<div class="col-6">
+							<div class="d-flex justify-content-end">
+								<button class="btn reset-btn" data-reset-box="#header-mobile-filters">
+									<span class="btn-title">Reset filter</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="border"></div>
+					<div class="row pt-4">
+						<div class="col-12 d-flex">
+							<div class="dropdown dropdown-static">
+								<p class="dropdown-trigger-label">Branches</p>
+								<p class="dropdown-trigger dropdown-trigger-title"
+									 data-fieldset-label="filter-branches-mobile"
+									 data-label="Select branch">Select branch</p>
+								<div class="dropdown-body">
+									<div class="dropdown-body-item">
+										<fieldset class="fieldset" data-fieldset-list="filter-branches-mobile">
+											<label class="input-container">
+												<input type="checkbox" value="all" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">All</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Greek Life" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Greek Life</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Alumni" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Alumni</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Local" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Local</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Events" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Events</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Majors" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Majors</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Clubs" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Clubs</span>
+											</label>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+							<div class="dropdown dropdown-static">
+								<p class="dropdown-trigger-label">Interests</p>
+								<p class="dropdown-trigger dropdown-trigger-title"
+									 data-fieldset-label="filter-interests-mobile"
+									 data-label="Select interest">Select interest</p>
+								<div class="dropdown-body">
+									<div class="dropdown-body-item">
+										<fieldset class="fieldset" data-fieldset-list="filter-interests-mobile">
+											<label class="input-container">
+												<input type="checkbox" value="all" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">All</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Greek Life" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Greek Life</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Alumni" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Alumni</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Local" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Local</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Events" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Events</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Majors" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Majors</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Clubs" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Clubs</span>
+											</label>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="border"></div>
+		</div>
+		<!--	Tablet, phone nav menu	-->
+		<div class="header-nav">
+			<div class="border"></div>
+			<div class="header-nav-tablet">
+				<a href="#" class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#friends"></use>
+							</svg>
+						</span>
+					<span class="link-title">My friends</span>
+				</a>
+				<a href="people.html" class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#people"></use>
+							</svg>
+						</span>
+					<span class="link-title">people catalog</span>
+				</a>
+				<div class="border border-vertical"></div>
+				<a href="#" class="link personal-tree">
+						<span class="link-icon">
+							<svg class="svg svg__64">
+								<use xlink:href="../images/sprite/sprite.svg#tree"></use>
+							</svg>
+						</span>
+					<span class="link-title">My personal tree</span>
+				</a>
+				<button class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#sign-out"></use>
+							</svg>
+						</span>
+					<span class="link-title">Sign out</span>
+				</button>
+			</div>
+			<div class="scroll-wrap">
+				<div class="header-nav-phone">
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+						</svg>
+					</span>
+						<span class="link-title">Create a leaf</span>
+					</a>
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#shield"></use>
+						</svg>
+					</span>
+						<span class="link-title">Privacy Policy</span>
+					</a>
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#faq"></use>
+						</svg>
+					</span>
+						<span class="link-title">FAQ</span>
+					</a>
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#support"></use>
+						</svg>
+					</span>
+						<span class="link-title">Support</span>
+					</a>
+					<button class="link link-absolute">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#sign-out"></use>
+						</svg>
+					</span>
+						<span class="link-title">Sign out</span>
+					</button>
+					<div class="header-copyright">
+						<p>&copy; Campus Tree 2022</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
   <div data-router-wrapper>
@@ -397,56 +667,231 @@
 						<div class="col-md-6">
 							<div class="branch-filter">
 								<div class="filters">
-<!--								<div class="filters-item">-->
-<!--									<button class="btn btn-outline btn-md">-->
-<!--										<span class="btn-title">Change view</span>-->
-<!--									</button>-->
-<!--								</div>-->
-								<div class="filters-item">
-									<button class="link">
-										<span class="link-icon">
-											<svg class="svg svg__24">
-												<use xlink:href="../images/sprite/sprite.svg#filter"></use>
-											</svg>
-										</span>
-										<span class="link-title">Filters</span>
-									</button>
+									<div class="filters-item d-none d-md-block">
+										<button class="btn btn-outline btn-md change-view-trigger">
+											<span class="btn-title">Change view</span>
+										</button>
+									</div>
+									<div class="filters-item d-xl-none">
+										<button class="link toggle-filters" data-filter-id="#category-filters">
+											<span class="link-icon">
+												<svg class="svg svg__24">
+													<use xlink:href="../images/sprite/sprite.svg#filter"></use>
+												</svg>
+											</span>
+											<span class="link-title">Filters</span>
+										</button>
+									</div>
+									<div class="filters-item">
+										<div class="dropdown">
+											<p class="dropdown-trigger-label">Sort by</p>
+											<p class="dropdown-trigger dropdown-trigger-title"
+												 data-fieldset-label="filter-sort"
+												 data-label="Popular">Popular</p>
+											<div class="dropdown-body">
+												<div class="dropdown-body-item">
+													<fieldset class="fieldset" data-fieldset-list="filter-sort">
+														<label class="input-container">
+															<input type="radio" name="sort" value="Popular" class="input input-checkbox" checked/>
+															<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+															<span class="input-checkbox-title">Popular</span>
+														</label>
+														<label class="input-container">
+															<input type="radio" name="sort" value="Name" class="input input-checkbox"/>
+															<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+															<span class="input-checkbox-title">Name</span>
+														</label>
+														<label class="input-container">
+															<input type="radio" name="sort" value="Date" class="input input-checkbox"/>
+															<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+															<span class="input-checkbox-title">Date</span>
+														</label>
+													</fieldset>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="filters-item">
-									<div class="dropdown">
-										<p class="dropdown-trigger-label">Sort by</p>
-										<p class="dropdown-trigger dropdown-trigger-title"
-											 data-fieldset-label="filter-sort"
-											 data-label="Popular">Popular</p>
-										<div class="dropdown-body">
-											<div class="dropdown-body-item">
-												<fieldset class="fieldset" data-fieldset-list="filter-sort">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-4 order-xl-2">
+							<div class="branch-filter-box" id="category-filters">
+								<div class="box box-bg" id="branch-filter">
+									<div class="box-header">
+										<div class="box-header-row">
+											<h3 class="h-3 color-primary">Filter</h3>
+											<div class="box-header-action">
+												<button class="btn btn-outline btn-md reset-btn" data-reset-box="#branch-filter">
+													<span class="btn-title">Reset filters</span>
+												</button>
+												<div class="link ml-3 d-xl-none toggle-filters" data-filter-id="#category-filters">
+													<div class="link-icon">
+														<svg class="svg svg__16">
+															<use xlink:href="../images/sprite/sprite.svg#close"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<label class="input-container">
+											<input type="text" class="input input-transparent" placeholder="Events Search"/>
+											<span class="input-container-icon">
+												<svg class="svg svg__24">
+													<use xlink:href="../images/sprite/sprite.svg#search"></use>
+												</svg>
+											</span>
+										</label>
+									</div>
+									<hr class="hr"/>
+									<div class="box-body">
+										<div class="row">
+											<div class="col-sm-6">
+												<p class="paragraph paragraph-medium">Interests</p>
+												<fieldset class="fieldset" data-fieldset-list="branch-interest">
 													<label class="input-container">
-														<input type="radio" name="sort" value="Popular" class="input input-checkbox" checked/>
+														<input type="checkbox" value="all" class="input input-checkbox"/>
 														<span class="input-checkbox-icon">
-															<svg class="svg svg__16">
-																<use xlink:href="../images/sprite/sprite.svg#check"></use>
-															</svg>
-														</span>
-														<span class="input-checkbox-title">Popular</span>
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+														<span class="input-checkbox-title">All</span>
 													</label>
 													<label class="input-container">
-														<input type="radio" name="sort" value="Name" class="input input-checkbox"/>
+														<input type="checkbox" value="Art" class="input input-checkbox"/>
 														<span class="input-checkbox-icon">
-															<svg class="svg svg__16">
-																<use xlink:href="../images/sprite/sprite.svg#check"></use>
-															</svg>
-														</span>
-														<span class="input-checkbox-title">Name</span>
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+														<span class="input-checkbox-title">Art</span>
 													</label>
 													<label class="input-container">
-														<input type="radio" name="sort" value="Date" class="input input-checkbox"/>
+														<input type="checkbox" value="Computer Science and Cybernetics" class="input input-checkbox"/>
 														<span class="input-checkbox-icon">
-															<svg class="svg svg__16">
-																<use xlink:href="../images/sprite/sprite.svg#check"></use>
-															</svg>
-														</span>
-														<span class="input-checkbox-title">Date</span>
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+														<span class="input-checkbox-title">Computer Science and Cybernetics</span>
+													</label>
+													<label class="input-container">
+														<input type="checkbox" value="Economics" class="input input-checkbox"/>
+														<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+														<span class="input-checkbox-title">Economics</span>
+													</label>
+													<label class="input-container">
+														<input type="checkbox" value="Geography" class="input input-checkbox"/>
+														<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+														<span class="input-checkbox-title">Geography</span>
+													</label>
+													<label class="input-container">
+														<input type="checkbox" value="History" class="input input-checkbox"/>
+														<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+														<span class="input-checkbox-title">History</span>
+													</label>
+													<label class="input-container">
+														<input type="checkbox" value="Law" class="input input-checkbox"/>
+														<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+														<span class="input-checkbox-title">Law</span>
+													</label>
+													<label class="input-container">
+														<input type="checkbox" value="Mechanics and Mathematics" class="input input-checkbox"/>
+														<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+														<span class="input-checkbox-title">Mechanics and Mathematics</span>
+													</label>
+													<label class="input-container">
+														<input type="checkbox" value="Philosophy" class="input input-checkbox"/>
+														<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+														<span class="input-checkbox-title">Philosophy</span>
+													</label>
+													<label class="input-container">
+														<input type="checkbox" value="Physics" class="input input-checkbox"/>
+														<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+														<span class="input-checkbox-title">Physics</span>
+													</label>
+												</fieldset>
+											</div>
+											<div class="col-sm-6">
+												<p class="paragraph paragraph-medium">Time Rage</p>
+												<fieldset class="fieldset" data-fieldset-list="branch-time">
+													<label class="input-container">
+														<input type="radio" name="time" value="Week" class="input input-radio"/>
+														<span class="input-radio-icon"></span>
+														<span class="input-radio-title">Week</span>
+													</label>
+													<label class="input-container">
+														<input type="radio" name="time" value="Month" class="input input-radio"/>
+														<span class="input-radio-icon"></span>
+														<span class="input-radio-title">Month</span>
+													</label>
+													<label class="input-container">
+														<input type="radio" name="time" value="Quarter" class="input input-radio"/>
+														<span class="input-radio-icon"></span>
+														<span class="input-radio-title">Quarter</span>
+													</label>
+													<label class="input-container">
+														<input type="radio" name="time" value="Year" class="input input-radio"/>
+														<span class="input-radio-icon"></span>
+														<span class="input-radio-title">Year</span>
+													</label>
+												</fieldset>
+												<p class="paragraph paragraph-medium">Date</p>
+												<fieldset class="fieldset">
+													<label class="input-container input-container-datepicker __bottom __right">
+														<input
+															type="text"
+															name="date"
+															class="input input-datepicker"
+															placeholder="Date"
+															readonly/>
+														<span class="input-container-icon __16 __right">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#calendar-xs"></use>
+																</svg>
+															</span>
 													</label>
 												</fieldset>
 											</div>
@@ -454,15 +899,19 @@
 									</div>
 								</div>
 							</div>
-							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-8">
+						<div class="col-xl-8 order-xl-1">
 							<div class="tree">
 								<div class="tree-links">
 									<a href="leaf.html" id="leaf-link"></a>
 									<a href="index.html" data-transition="pagination" id="pagination-link"></a>
+								</div>
+								<div class="tree-labels">
+									<div class="tree-labels-item">Title</div>
+									<div class="tree-labels-item">Description</div>
+									<div class="tree-labels-item">Date</div>
+									<div class="tree-labels-item">Location</div>
+									<div class="tree-labels-item">Action</div>
 								</div>
 								<div class="tree-events">
 									<div class="tree-events-item tree-modal-toggle" data-event-id="1">
@@ -475,10 +924,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">AEPI</p>
-														<div class="event-description-categories">
-															<p class="tag tag-events">Events</p>
+														<div>
+															<p class="event-description-title h-3">AEPI</p>
+															<div class="event-description-categories">
+																<p class="tag tag-events">Events</p>
+															</div>
 														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -487,7 +939,14 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
@@ -513,10 +972,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">AXA</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">AXA</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -525,7 +987,14 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
@@ -551,10 +1020,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">BYOB</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">BYOB</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -563,16 +1035,23 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
 													<a href="leaf.html" class="btn btn-outline fullwidth">
-												<span class="btn-icon">
-													<svg class="svg svg__32">
-														<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-													</svg>
-												</span>
+														<span class="btn-icon">
+															<svg class="svg svg__32">
+																<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+															</svg>
+														</span>
 														<span class="btn-title">Visit event</span>
 													</a>
 												</div>
@@ -589,10 +1068,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">Taco Tuesday</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">Taco Tuesday</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -601,16 +1083,23 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
 													<a href="leaf.html" class="btn btn-outline fullwidth">
-												<span class="btn-icon">
-													<svg class="svg svg__32">
-														<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-													</svg>
-												</span>
+														<span class="btn-icon">
+															<svg class="svg svg__32">
+																<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+															</svg>
+														</span>
 														<span class="btn-title">Visit event</span>
 													</a>
 												</div>
@@ -627,10 +1116,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">Movie Theatre Showing</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">Movie Theatre Showing</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -639,16 +1131,23 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
 													<a href="leaf.html" class="btn btn-outline fullwidth">
-												<span class="btn-icon">
-													<svg class="svg svg__32">
-														<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-													</svg>
-												</span>
+														<span class="btn-icon">
+															<svg class="svg svg__32">
+																<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+															</svg>
+														</span>
 														<span class="btn-title">Visit event</span>
 													</a>
 												</div>
@@ -665,10 +1164,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">Drive in Movie</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">Drive in Movie</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -677,16 +1179,23 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
 													<a href="leaf.html" class="btn btn-outline fullwidth">
-												<span class="btn-icon">
-													<svg class="svg svg__32">
-														<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-													</svg>
-												</span>
+														<span class="btn-icon">
+															<svg class="svg svg__32">
+																<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+															</svg>
+														</span>
 														<span class="btn-title">Visit event</span>
 													</a>
 												</div>
@@ -703,10 +1212,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">Interships</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">Interships</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -715,16 +1227,23 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
 													<a href="leaf.html" class="btn btn-outline fullwidth">
-												<span class="btn-icon">
-													<svg class="svg svg__32">
-														<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-													</svg>
-												</span>
+														<span class="btn-icon">
+															<svg class="svg svg__32">
+																<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+															</svg>
+														</span>
 														<span class="btn-title">Visit event</span>
 													</a>
 												</div>
@@ -741,10 +1260,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">Q&A</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">Q&A</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -753,16 +1275,23 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
 													<a href="leaf.html" class="btn btn-outline fullwidth">
-												<span class="btn-icon">
-													<svg class="svg svg__32">
-														<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-													</svg>
-												</span>
+														<span class="btn-icon">
+															<svg class="svg svg__32">
+																<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+															</svg>
+														</span>
 														<span class="btn-title">Visit event</span>
 													</a>
 												</div>
@@ -779,10 +1308,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">Drive in Movie</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">Drive in Movie</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -791,16 +1323,23 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
 													<a href="leaf.html" class="btn btn-outline fullwidth">
-												<span class="btn-icon">
-													<svg class="svg svg__32">
-														<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-													</svg>
-												</span>
+														<span class="btn-icon">
+															<svg class="svg svg__32">
+																<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+															</svg>
+														</span>
 														<span class="btn-title">Visit event</span>
 													</a>
 												</div>
@@ -817,10 +1356,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">Drive in Movie</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">Drive in Movie</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -829,16 +1371,23 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
 													<a href="leaf.html" class="btn btn-outline fullwidth">
-												<span class="btn-icon">
-													<svg class="svg svg__32">
-														<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-													</svg>
-												</span>
+														<span class="btn-icon">
+															<svg class="svg svg__32">
+																<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+															</svg>
+														</span>
 														<span class="btn-title">Visit event</span>
 													</a>
 												</div>
@@ -855,10 +1404,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">Silent DJ</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">Silent DJ</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -867,16 +1419,23 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
 													<a href="leaf.html" class="btn btn-outline fullwidth">
-												<span class="btn-icon">
-													<svg class="svg svg__32">
-														<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-													</svg>
-												</span>
+														<span class="btn-icon">
+															<svg class="svg svg__32">
+																<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+															</svg>
+														</span>
 														<span class="btn-title">Visit event</span>
 													</a>
 												</div>
@@ -893,10 +1452,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">Silent DJ</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">Silent DJ</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -905,16 +1467,23 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
 													<a href="leaf.html" class="btn btn-outline fullwidth">
-												<span class="btn-icon">
-													<svg class="svg svg__32">
-														<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-													</svg>
-												</span>
+														<span class="btn-icon">
+															<svg class="svg svg__32">
+																<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+															</svg>
+														</span>
 														<span class="btn-title">Visit event</span>
 													</a>
 												</div>
@@ -931,10 +1500,13 @@
 												</div>
 												<div class="box-body">
 													<div class="event-description">
-														<p class="event-description-title h-3">Dance</p>
-														<div class="event-description-categories">
+														<div>
+															<p class="event-description-title h-3">Dance</p>
+															<div class="event-description-categories">
 															<p class="tag tag-events">Events</p>
 														</div>
+														</div>
+														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
 														<div class="event-description-date date">
 															<div class="date-icon">
 																<svg class="svg svg__16">
@@ -943,16 +1515,23 @@
 															</div>
 															<div class="date-label">20 Feb 2022 05:30 PM</div>
 														</div>
-														<p class="event-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews</p>
+														<div class="event-description-location location">
+															<div class="location-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#location"></use>
+																</svg>
+															</div>
+															<div class="location-label">Instytuts'ka St, 11, Khmelnytskyi, KNU</div>
+														</div>
 													</div>
 												</div>
 												<div class="box-action">
 													<a href="leaf.html" class="btn btn-outline fullwidth">
-												<span class="btn-icon">
-													<svg class="svg svg__32">
-														<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-													</svg>
-												</span>
+														<span class="btn-icon">
+															<svg class="svg svg__32">
+																<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+															</svg>
+														</span>
 														<span class="btn-title">Visit event</span>
 													</a>
 												</div>
@@ -1072,178 +1651,6 @@
 									</defs>
 								</svg>
 							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="branch-filter-box">
-								<div class="box box-bg" id="branch-filter">
-									<div class="box-header">
-										<div class="box-header-row">
-											<h3 class="h-3 color-primary">Filter</h3>
-											<div class="box-header-action">
-<!--												<button class="btn btn-md">-->
-<!--													<span class="btn-title">Hide filter</span>-->
-<!--												</button>-->
-												<button class="btn btn-outline btn-md reset-btn" data-reset-box="#branch-filter">
-													<span class="btn-title">Reset filter</span>
-												</button>
-											</div>
-										</div>
-										<label class="input-container">
-											<input type="text" class="input input-transparent" placeholder="Events Search"/>
-											<span class="input-container-icon">
-												<svg class="svg svg__24">
-													<use xlink:href="../images/sprite/sprite.svg#search"></use>
-												</svg>
-											</span>
-										</label>
-									</div>
-									<hr class="hr"/>
-									<div class="box-body">
-										<div class="row">
-												<div class="col-md-6">
-													<p class="paragraph paragraph-medium">Interests</p>
-													<fieldset class="fieldset" data-fieldset-list="branch-interest">
-														<label class="input-container">
-															<input type="checkbox" value="all" class="input input-checkbox"/>
-															<span class="input-checkbox-icon">
-																<svg class="svg svg__16">
-																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
-																</svg>
-															</span>
-															<span class="input-checkbox-title">All</span>
-														</label>
-														<label class="input-container">
-															<input type="checkbox" value="Art" class="input input-checkbox"/>
-															<span class="input-checkbox-icon">
-																<svg class="svg svg__16">
-																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
-																</svg>
-															</span>
-															<span class="input-checkbox-title">Art</span>
-														</label>
-														<label class="input-container">
-															<input type="checkbox" value="Computer Science and Cybernetics" class="input input-checkbox"/>
-															<span class="input-checkbox-icon">
-																<svg class="svg svg__16">
-																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
-																</svg>
-															</span>
-															<span class="input-checkbox-title">Computer Science and Cybernetics</span>
-														</label>
-														<label class="input-container">
-															<input type="checkbox" value="Economics" class="input input-checkbox"/>
-															<span class="input-checkbox-icon">
-																<svg class="svg svg__16">
-																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
-																</svg>
-															</span>
-															<span class="input-checkbox-title">Economics</span>
-														</label>
-														<label class="input-container">
-															<input type="checkbox" value="Geography" class="input input-checkbox"/>
-															<span class="input-checkbox-icon">
-																<svg class="svg svg__16">
-																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
-																</svg>
-															</span>
-															<span class="input-checkbox-title">Geography</span>
-														</label>
-														<label class="input-container">
-															<input type="checkbox" value="History" class="input input-checkbox"/>
-															<span class="input-checkbox-icon">
-																<svg class="svg svg__16">
-																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
-																</svg>
-															</span>
-															<span class="input-checkbox-title">History</span>
-														</label>
-														<label class="input-container">
-															<input type="checkbox" value="Law" class="input input-checkbox"/>
-															<span class="input-checkbox-icon">
-																<svg class="svg svg__16">
-																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
-																</svg>
-															</span>
-															<span class="input-checkbox-title">Law</span>
-														</label>
-														<label class="input-container">
-															<input type="checkbox" value="Mechanics and Mathematics" class="input input-checkbox"/>
-															<span class="input-checkbox-icon">
-																<svg class="svg svg__16">
-																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
-																</svg>
-															</span>
-															<span class="input-checkbox-title">Mechanics and Mathematics</span>
-														</label>
-														<label class="input-container">
-															<input type="checkbox" value="Philosophy" class="input input-checkbox"/>
-															<span class="input-checkbox-icon">
-																<svg class="svg svg__16">
-																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
-																</svg>
-															</span>
-															<span class="input-checkbox-title">Philosophy</span>
-														</label>
-														<label class="input-container">
-															<input type="checkbox" value="Physics" class="input input-checkbox"/>
-															<span class="input-checkbox-icon">
-																<svg class="svg svg__16">
-																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
-																</svg>
-															</span>
-															<span class="input-checkbox-title">Physics</span>
-														</label>
-													</fieldset>
-												</div>
-												<div class="col-md-6">
-													<p class="paragraph paragraph-medium">Time Rage</p>
-													<fieldset class="fieldset" data-fieldset-list="branch-time">
-														<label class="input-container">
-															<input type="radio" name="time" value="Week" class="input input-radio"/>
-															<span class="input-radio-icon"></span>
-															<span class="input-radio-title">Week</span>
-														</label>
-														<label class="input-container">
-															<input type="radio" name="time" value="Month" class="input input-radio"/>
-															<span class="input-radio-icon"></span>
-															<span class="input-radio-title">Month</span>
-														</label>
-														<label class="input-container">
-															<input type="radio" name="time" value="Quarter" class="input input-radio"/>
-															<span class="input-radio-icon"></span>
-															<span class="input-radio-title">Quarter</span>
-														</label>
-														<label class="input-container">
-															<input type="radio" name="time" value="Year" class="input input-radio"/>
-															<span class="input-radio-icon"></span>
-															<span class="input-radio-title">Year</span>
-														</label>
-													</fieldset>
-													<p class="paragraph paragraph-medium">Date</p>
-													<fieldset class="fieldset">
-														<label class="input-container input-container-datepicker __bottom __right">
-															<input
-																type="text"
-																name="date"
-																class="input input-datepicker"
-																placeholder="Date"
-																readonly/>
-															<span class="input-container-icon __16 __right">
-																<svg class="svg svg__16">
-																	<use xlink:href="../images/sprite/sprite.svg#calendar-xs"></use>
-																</svg>
-															</span>
-														</label>
-													</fieldset>
-												</div>
-											</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-8">
 							<div class="pagination" data-total-count="230" data-visible-count="13">
 								<div class="pagination-list">
 									<a href="#"
@@ -1271,7 +1678,7 @@
 				</div>
 				<div class="col-6">
 					<div class="footer-nav">
-						<a href="#" class="link link-sm">
+						<a href="faq.html" class="link link-sm">
 							<span class="link-icon">
 								<svg class="svg svg__16">
 									<use xlink:href="../images/sprite/sprite.svg#faq"></use>
@@ -1288,6 +1695,34 @@
 							<span class="link-title">Support</span>
 						</a>
 					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="footer-panel">
+					<a href="index.html" class="link link-column">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+							</svg>
+						</span>
+						<span class="link-title">Home tree</span>
+					</a>
+					<a href="people.html" class="link link-column">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#people"></use>
+							</svg>
+						</span>
+						<span class="link-title">User list</span>
+					</a>
+					<a href="#" class="link link-column">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#tree"></use>
+							</svg>
+						</span>
+						<span class="link-title">Personal tree</span>
+					</a>
 				</div>
 			</div>
 		</div>

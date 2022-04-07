@@ -44,6 +44,9 @@
 		&-grid{
 			width: 100%;
 			padding: 0 32px;
+				@include d($xs){
+					padding: 0 19px;
+				}
 		}
 		&-title{
 			box-shadow: none;
@@ -130,6 +133,9 @@
 						&-of-week{
 							padding: 8px 32px;
 							margin: 8px 0;
+								@include d($xs){
+									padding: 8px 19px;
+								}
 						}
 				}
 				&.datepicker-grid{
@@ -153,5 +159,8 @@
 							border-radius: 20px;
 						}
 				}
+		}
+		@include d($xs){
+			width: 338px;
 		}
 }

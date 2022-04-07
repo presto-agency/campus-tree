@@ -41,7 +41,19 @@
 
 .color{
     &-primary{
-      color: var(--color-primary);
+      color: var(--color-primary) !important;
+    }
+    &-alumni{
+      color: var(--color-alumni) !important;
+        &-dark{
+          color: var(--color-alumni-dark) !important;
+        }
+    }
+    &-greek{
+      color: var(--color-greek) !important;
+        &-dark{
+          color: var(--color-greek-dark) !important;
+        }
     }
 }
 

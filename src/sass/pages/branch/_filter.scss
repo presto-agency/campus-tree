@@ -1,16 +1,19 @@
 .branch-filter{
 	margin-top: -27px;
+	position: relative;
+	z-index: 2;
 		&-box{
 			margin-top: -20px;
 			padding-left: 0;
 			margin-bottom: 50px;
 			height: auto;
 			position: relative;
+			z-index: 2;
 				&:before{
 					content: '';
 					position: absolute;
 					right: -52px;
-					top: 54%;
+					top: 220px;
 					width: 100px;
 					height: 100px;
 					background-repeat: no-repeat;
@@ -31,6 +34,39 @@
 									margin-bottom: 15px;
 								}
 						}
+						@include d($xl){
+							background-color: var(--color-white);
+						}
 				}
+				@include m($xl + 1){
+					display: block !important;
+				}
+				@include d($xl){
+					margin-top: 0;
+					margin-bottom: 0;
+					position: absolute;
+					right: 0;
+					top: 10px;
+					width: 100%;
+					z-index: 3;
+					display: none;
+				}
+		}
+		.filters{
+				&-item{
+					@include d($sm){
+						padding: 0;
+					}
+				}
+				@include d($sm){
+					//flex-direction: row-reverse;
+					justify-content: space-between;
+				}
+		}
+		&:hover{
+			z-index: 3;
+		}
+		@include d($sm){
+			margin-top: 25px;
 		}
 }

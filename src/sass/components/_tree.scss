@@ -177,7 +177,7 @@
 			position: absolute;
 			inset: 0;
 			pointer-events: none;
-			z-index: 2;
+			z-index: 1;
 				&-item{
 					position: absolute;
 					max-width: 90px;
@@ -196,6 +196,9 @@
 						@include m($xl + 1){
 							cursor: pointer;
 						}
+				}
+				&:hover{
+					z-index: 2;
 				}
 		}
 		&-svg{
@@ -232,6 +235,128 @@
 									padding-right: 95px;
 								}
 						}
+				}
+		}
+		&-labels{
+			display: none;
+			align-items: center;
+				&-item{
+					flex: 1;
+					font-size: 14px;
+					font-family: var(--font-base-medium);
+						&:nth-child(1){
+							max-width: 177px;
+						}
+						&:nth-child(2){
+							max-width: 165px;
+								@include d($xl){
+									max-width: 39%;
+								}
+						}
+						&:nth-child(3){
+							max-width: 145px;
+								@include d($xl){
+									max-width: 12%;
+								}
+						}
+						&:nth-child(4){
+								@include d($xl){
+									max-width: 22%;
+								}
+						}
+						&:last-child{
+							max-width: 120px;
+						}
+				}
+		}
+		&[data-view-mode="list"]{
+			height: auto !important;
+				.tree{
+					&-svg{
+						display: none;
+					}
+					&-events{
+						position: relative;
+						padding-top: 45px;
+							&-item{
+								position: relative;
+								max-width: 100%;
+								height: auto !important;
+								width: 100% !important;
+								transform: none !important;
+									&:not(:last-child){
+										margin-bottom: 8px;
+									}
+							}
+					}
+					&-modal{
+						position: relative;
+						width: 100%;
+						top: 0;
+						left: 0;
+						display: block;
+							.box{
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+								padding: 16px;
+									&-thumb{
+										width: 64px;
+										height: 64px;
+										min-width: 64px;
+									}
+									&-body{
+										padding: 0 16px;
+									}
+							}
+							.event{
+								&-description{
+									display: flex;
+									align-items: center;
+										&-title{
+											padding-right: 10px;
+											max-width: 80px;
+											width: 100vw;
+											font-size: 14px;
+												@include d($md){
+													max-width: 70px;
+												}
+										}
+										&-location{
+											display: inline-flex;
+											padding-left: 10px;
+										}
+										&-date{
+											position: relative;
+											max-width: 100%;
+											text-align: left;
+											padding-left: 10px;
+										}
+										&-item{
+											max-width: 155px;
+												@include d($xl){
+													max-width: 100%;
+												}
+												@include d($md){
+													max-width: 100px;
+												}
+										}
+								}
+							}
+					}
+					//&-labels{
+					//	display: flex;
+					//	margin-top: 40px;
+					//		@include d($sm){
+					//			display: none;
+					//		}
+					//}
+				}
+				.leaf{
+					&-title,
+					&-link{
+						display: none;
+					}
 				}
 		}
 }
@@ -344,6 +469,73 @@ Category page
 				top: -230px;
 				right: 0;
 				width: 1420px;
+					@include d($lg){
+						width: 100vw;
+					}
+					@include d($xl){
+						width: 140vw;
+						top: -20vw;
+					}
+					@include d($sm){
+						display: none;
+					}
+			}
+			&-events{
+					&-item{
+						@include d($sm){
+							position: relative;
+							width: 100% !important;
+							height: auto !important;
+							transform: none !important;
+							max-width: 100%;
+							margin-bottom: 16px;
+						}
+					}
+					@include d($sm){
+						position: relative;
+						padding-top: 15px;
+					}
+			}
+			&-modal{
+				.box{
+					&-thumb{
+						@include d($sm){
+							position: absolute;
+							width: 64px;
+							height: 64px;
+							min-width: 64px;
+						}
+					}
+					&-body{
+						@include d($sm){
+							padding: 0 0 10px 84px;
+						}
+					}
+					@include d($sm){
+						padding: 16px;
+					}
+				}
+				@include d($sm){
+					position: relative;
+					width: 100%;
+					left: 0;
+					top: 0;
+					display: block;
+				}
+			}
+			.leaf{
+				&-title,
+				&-link{
+					@include d($sm){
+						display: none;
+					}
+				}
+			}
+			@include d($xl){
+				height: 50vw;
+			}
+			@include d($sm){
+				height: auto;
 			}
 	}
 }

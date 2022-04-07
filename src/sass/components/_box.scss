@@ -59,6 +59,13 @@
 				.splide__track{
 					height: 100%;
 				}
+				.paragraph{
+					p{
+						&:not(:last-child){
+							margin-bottom: 20px;
+						}
+					}
+				}
 				@include d($xl){
 					height: auto;
 					padding: 13px 0 10px;
@@ -75,10 +82,19 @@
 		&-action{
 			padding-top: 10px;
 		}
+		&-banner{
+			height: 255px;
+			overflow: hidden;
+			border-radius: 20px;
+			margin-bottom: 33px;
+				img{
+					@include imageCover(center);
+				}
+		}
 		.event{
 			margin: 0 -10px;
 			padding: 10px;
-				&:not(:last-child){
+				&:not(:last-child):not(.event-open){
 					margin-bottom: 12px;
 				}
 		}
@@ -90,4 +106,13 @@
 					padding: 0;
 				}
 		}
+}
+
+/*
+Event page
+ */
+[data-router-view="leaf"]{
+	.box{
+		padding: 20px 25px;
+	}
 }

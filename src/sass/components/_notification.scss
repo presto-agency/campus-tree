@@ -71,6 +71,12 @@
 							color: var(--color-white);
 						}
 				}
+				&.__event{
+					border-radius: 10px;
+						img{
+							border-radius: 10px;
+						}
+				}
 		}
 		&-description{
 			padding-left: 35px;

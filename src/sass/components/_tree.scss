@@ -237,6 +237,38 @@
 						}
 				}
 		}
+		&-labels{
+			display: none;
+			align-items: center;
+				&-item{
+					flex: 1;
+					font-size: 14px;
+					font-family: var(--font-base-medium);
+						&:nth-child(1){
+							max-width: 177px;
+						}
+						&:nth-child(2){
+							max-width: 165px;
+								@include d($xl){
+									max-width: 39%;
+								}
+						}
+						&:nth-child(3){
+							max-width: 145px;
+								@include d($xl){
+									max-width: 12%;
+								}
+						}
+						&:nth-child(4){
+								@include d($xl){
+									max-width: 22%;
+								}
+						}
+						&:last-child{
+							max-width: 120px;
+						}
+				}
+		}
 		&[data-view-mode="list"]{
 			height: auto !important;
 				.tree{
@@ -245,7 +277,7 @@
 					}
 					&-events{
 						position: relative;
-						padding-top: 50px;
+						padding-top: 45px;
 							&-item{
 								position: relative;
 								max-width: 100%;
@@ -312,6 +344,13 @@
 								}
 							}
 					}
+					//&-labels{
+					//	display: flex;
+					//	margin-top: 40px;
+					//		@include d($sm){
+					//			display: none;
+					//		}
+					//}
 				}
 				.leaf{
 					&-title,

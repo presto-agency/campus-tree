@@ -159,6 +159,12 @@ body{
 		}
 		&-label{
 			line-height: 1.3em;
+				&-lg{
+					font-size: 36px;
+					line-height: 1em;
+					white-space: nowrap;
+					font-family: var(--font-base-medium);
+				}
 		}
 }
 

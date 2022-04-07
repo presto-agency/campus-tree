@@ -45,6 +45,10 @@
 							left: auto;
 							right: 25px;
 						}
+						&.__click-trigger{
+							pointer-events: initial;
+						}
+
 				}
 				&-datepicker{
 					&.__bottom{

@@ -1,5 +1,5 @@
 export const showPassword = () => {
-    let eyePictures = document.querySelectorAll('.eye');
+    let eyePictures = document.querySelectorAll('.__click-trigger');
     eyePictures.forEach(eye => {
         eye.onclick = () => {
             let x = eye.previousElementSibling;

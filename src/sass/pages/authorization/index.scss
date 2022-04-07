@@ -100,7 +100,6 @@
   &-right-side{
     position: relative;
     flex: 0 1 53%;
-    //min-height: 800px;
     .section-title{
       margin: 0 0 48px 0;
     }
@@ -182,6 +181,15 @@
         }
         &.space{
           justify-content: space-between;
+        }
+      }
+      &-inputs{
+        margin: 28px 0 0 0;
+        label{
+          margin: 0 0 32px 0;
+          &:last-child{
+            margin: 0;
+          }
         }
       }
     }

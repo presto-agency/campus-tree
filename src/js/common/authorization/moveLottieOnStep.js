@@ -22,5 +22,7 @@ export const initRegistrationLottie = () =>{
 };
 
 export const moveLottieToStep = (step, reverse) => {
-	reverse ? tree.playSegments(iframesReverse[step], true) : tree.playSegments(iframes[step], true);
+	reverse
+		? tree.playSegments(iframesReverse[step], true)
+		: tree.playSegments(iframes[step], true);
 };

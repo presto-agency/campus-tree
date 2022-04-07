@@ -13,28 +13,3 @@ export const authorizationNav = () => {
 	}))
 };
 
-// (function showPassword() {
-//     let eyePictures = document.querySelectorAll('.eye-password');
-//     eyePictures.forEach(eye => {
-//         eye.onclick = () => {
-//             let x = eye.nextElementSibling;
-//             if (x.type === "password") {
-//                 x.type = "text";
-//             } else {
-//                 x.type = "password";
-//             }
-//         }
-//     })
-// }())
-//     (function lottieTree() {
-//         LottieInteractivity.create({
-//             player: '#lottie-1',
-//             mode:"scroll",
-//             actions: [
-//                 {
-//                     visibility: [0.50, 1.0],
-//                     type: "play"
-//                 }
-//             ]
-//         });
-// }())

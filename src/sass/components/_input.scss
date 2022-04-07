@@ -74,6 +74,21 @@
 						}
 					}
 				}
+				&-select{
+					&:before{
+						content: '';
+						position: absolute;
+						right: 28px;
+						top: 52%;
+						transform: translateY(-50%);
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 7px 4px 0 4px;
+						border-color: currentColor transparent transparent transparent;
+						pointer-events: none;
+					}
+				}
 		}
 		& ~ .input-container-icon{
 			.svg{
@@ -231,4 +246,11 @@
 		&:-moz-placeholder {
 			color: inherit;
 		}
+}
+
+/*
+Select
+ */
+.select{
+	@extend .input;
 }

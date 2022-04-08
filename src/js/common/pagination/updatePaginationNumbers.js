@@ -2,7 +2,7 @@ export const updatePaginationNumbers = () => {
 	const pagination = document.querySelector('.pagination');
 	if (!!pagination) {
 		const url = new URL(window.location);
-		const currentPageNumber = parseInt(url.searchParams.get('pageID'));
+		const currentPageNumber = parseInt(url.searchParams.get('pagenum'));
 		const paginationListNumbers = document.querySelector('.pagination-list-numbers');
 		/*
 		Set and append numbers
@@ -89,13 +89,13 @@ const generateURL = (pageNumber) => {
 			let searchString = searchArray[i].replace('?','');
 			let searchValue = searchString.substring(searchString.indexOf('=') + 1);
 			let searchLabel = searchString.substring(0, searchString.indexOf('='));
-			if (searchLabel !== 'pageID') {
+			if (searchLabel !== 'pagenum') {
 				params += `&${searchLabel}=${searchValue}`;
 			}
 		}
-		return `?pageID=${pageNumber}${params}`;
+		return `?pagenum=${pageNumber}${params}`;
 	}
-	return `?pageID=${pageNumber}`;
+	return `?pagenum=${pageNumber}`;
 }
 
 const getActivePaginationLink = (pagination, currentPageNumber) => {

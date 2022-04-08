@@ -253,8 +253,11 @@ body{
 	background: linear-gradient(174.37deg, rgba(255, 255, 255, 0.4) 1.7%, rgba(255, 255, 255, 0.1) 96.97%);
 	box-shadow: 0 9px 18px -1px rgba(6, 73, 35, 0.12);
 	backdrop-filter: blur(10px);
-	z-index: 1;
 	border-top: 2px var(--color-white) solid;
+	transform: translateY(100%);
+	z-index: -3;
+	opacity: 0;
+	transition: transform var(--hover-duration) var(--hover-ease), opacity var(--hover-duration) var(--hover-ease);
 		&-panel{
 			display: flex;
 			align-items: center;
@@ -269,5 +272,10 @@ body{
 		.container,
 		.row{
 			height: 100%;
+		}
+		&.is-active{
+			transform: translateY(0);
+			z-index: 1;
+			opacity: 1;
 		}
 }

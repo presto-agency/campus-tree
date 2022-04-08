@@ -93,6 +93,14 @@
 						pointer-events: none;
 					}
 				}
+				&-file{
+					.upload-file + .upload-text {
+						margin-left: 50px;
+					}
+					.upload-text + .upload-file{
+						margin-right: 50px;
+					}
+				}
 		}
 		& ~ .input-container-icon{
 			.svg{
@@ -257,4 +265,13 @@ Select
  */
 .select{
 	@extend .input;
+}
+
+/*
+Textarea
+ */
+.textarea{
+	@extend .input;
+	padding: 16px 24px;
+	min-height: 104px;
 }

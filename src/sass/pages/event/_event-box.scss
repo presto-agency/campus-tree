@@ -151,3 +151,9 @@
 			}
 		}
 }
+
+[data-router-view="leaf"]{
+	.scroll-wrap{
+		height: 375px;
+	}
+}

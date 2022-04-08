@@ -715,7 +715,7 @@
 												</span>
 												<span class="btn-title">Add event to calendar</span>
 											</a>
-											<div class="tooltip">
+											<div class="tooltip tooltip-click">
 												<button class="btn btn-md btn-gray copyToClipboard">
 													<span class="btn-icon">
 														<svg class="svg svg__16">
@@ -763,7 +763,75 @@
 											<div class="tabs-content">
 												<div class="tabs-content-item" data-tab-content="0" data-tab-segment="0">
 													<label class="input-container">
-														<input type="text" class="input input-transparent" placeholder="Search friends">
+														<input type="text" class="input input-transparent mt-2 mb-2" placeholder="Search who already going">
+														<span class="input-container-icon">
+															<svg class="svg svg__24">
+																<use xlink:href="../images/sprite/sprite.svg#search"></use>
+															</svg>
+														</span>
+													</label>
+													<div class="scroll-wrap">
+														<div class="person">
+															<div class="person-thumb" data-thumb-title="Rachel Green">
+																<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Rachel Green">
+															</div>
+															<div class="person-description">
+																<p class="person-description-title paragraph-medium">Rachel Green</p>
+																<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to popular festivals</p>
+															</div>
+														</div>
+														<div class="person">
+															<div class="person-thumb" data-thumb-title="Joey Tribbiani">
+																<img src="" alt="Joey Tribbiani">
+															</div>
+															<div class="person-description">
+																<p class="person-description-title paragraph-medium">Joey Tribbiani</p>
+																<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to...</p>
+															</div>
+														</div>
+														<div class="person">
+															<div class="person-thumb" data-thumb-title="Phoebe Buffay"></div>
+															<div class="person-description">
+																<p class="person-description-title paragraph-medium">Phoebe Buffay</p>
+																<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to...</p>
+															</div>
+														</div>
+														<div class="person">
+															<div class="person-thumb">
+																<div class="person-thumb-upload">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#upload"></use>
+																	</svg>
+																</div>
+															</div>
+															<div class="person-description">
+																<p class="person-description-title paragraph-medium">Chandler Bing</p>
+																<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to...</p>
+															</div>
+														</div>
+														<div class="person">
+															<div class="person-thumb" data-thumb-title="Ross Geller">
+																<img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Ross Geller">
+															</div>
+															<div class="person-description">
+																<p class="person-description-title paragraph-medium">Ross Geller</p>
+																<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to...</p>
+															</div>
+														</div>
+														<div class="person">
+															<div class="person-thumb" data-thumb-title="Ross Geller">
+																<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Ross Geller">
+															</div>
+															<div class="person-description">
+																<p class="person-description-title paragraph-medium">Ross Geller</p>
+																<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to...</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tabs-content-item" data-tab-content="1" data-tab-segment="0">
+													<label class="input-container">
+														<input type="text" class="input input-transparent mt-2 mb-2" placeholder="Search yours friends">
 														<span class="input-container-icon">
 															<svg class="svg svg__24">
 																<use xlink:href="../images/sprite/sprite.svg#search"></use>
@@ -772,28 +840,162 @@
 													</label>
 													<div class="scroll-wrap">
 														<form id="already-going">
-															<div class="person">
-																<div class="person-thumb" data-thumb-title="Rachel Green">
-
+															<fieldset data-alert-trigger="friends-already-going" data-alert-label="friends selected" data-alert-label-single="friend selected">
+																<div class="person">
+																	<div class="person-checkbox">
+																		<label class="input-container input-container-checkbox">
+																			<input type="checkbox" class="input input-checkbox input-checkbox-sm">
+																			<span class="input-checkbox-icon">
+																				<svg class="svg svg__16">
+																					<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																				</svg>
+																			</span>
+																		</label>
+																	</div>
+																	<div class="person-thumb" data-thumb-title="Elliott Goddard">
+																		<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Rachel Green">
+																	</div>
+																	<div class="person-description">
+																		<p class="person-description-title paragraph-medium">Elliott Goddard</p>
+																		<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to popular festivals</p>
+																	</div>
 																</div>
-																<div class="person-description">
-																	<p class="person-description-title paragraph-medium">Rachel Green</p>
-																	<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to popular festivals</p>
+																<div class="person">
+																	<div class="person-checkbox">
+																		<label class="input-container input-container-checkbox">
+																			<input type="checkbox" class="input input-checkbox input-checkbox-sm">
+																			<span class="input-checkbox-icon">
+																				<svg class="svg svg__16">
+																					<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																				</svg>
+																			</span>
+																		</label>
+																	</div>
+																	<div class="person-thumb" data-thumb-title="Zander Morrison">
+																		<img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="Zander Morrison">
+																	</div>
+																	<div class="person-description">
+																		<p class="person-description-title paragraph-medium">Zander Morrison</p>
+																		<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to popular festivals</p>
+																	</div>
 																</div>
-															</div>
+																<div class="person">
+																	<div class="person-checkbox">
+																		<label class="input-container input-container-checkbox">
+																			<input type="checkbox" class="input input-checkbox input-checkbox-sm">
+																			<span class="input-checkbox-icon">
+																				<svg class="svg svg__16">
+																					<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																				</svg>
+																			</span>
+																		</label>
+																	</div>
+																	<div class="person-thumb" data-thumb-title="Giovanni Castillo">
+																		<img src="https://images.unsplash.com/photo-1528763380143-65b3ac89a3ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Giovanni Castillo">
+																	</div>
+																	<div class="person-description">
+																		<p class="person-description-title paragraph-medium">Giovanni Castillo</p>
+																		<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to popular festivals</p>
+																	</div>
+																</div>
+																<div class="person">
+																	<div class="person-checkbox">
+																		<label class="input-container input-container-checkbox">
+																			<input type="checkbox" class="input input-checkbox input-checkbox-sm">
+																			<span class="input-checkbox-icon">
+																				<svg class="svg svg__16">
+																					<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																				</svg>
+																			</span>
+																		</label>
+																	</div>
+																	<div class="person-thumb" data-thumb-title="Cynthia Traynor">
+																		<img src="" alt="Cynthia Traynor">
+																	</div>
+																	<div class="person-description">
+																		<p class="person-description-title paragraph-medium">Cynthia Traynor</p>
+																		<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to popular festivals</p>
+																	</div>
+																</div>
+																<div class="person">
+																	<div class="person-checkbox">
+																		<label class="input-container input-container-checkbox">
+																			<input type="checkbox" class="input input-checkbox input-checkbox-sm">
+																			<span class="input-checkbox-icon">
+																				<svg class="svg svg__16">
+																					<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																				</svg>
+																			</span>
+																		</label>
+																	</div>
+																	<div class="person-thumb" data-thumb-title="Dani Cope">
+																		<img src="https://images.unsplash.com/photo-1599566147214-ce487862ea4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Dani Cope">
+																	</div>
+																	<div class="person-description">
+																		<p class="person-description-title paragraph-medium">Dani Cope</p>
+																		<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to popular festivals</p>
+																	</div>
+																</div>
+																<div class="person">
+																	<div class="person-checkbox">
+																		<label class="input-container input-container-checkbox">
+																			<input type="checkbox" class="input input-checkbox input-checkbox-sm">
+																			<span class="input-checkbox-icon">
+																				<svg class="svg svg__16">
+																					<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																				</svg>
+																			</span>
+																		</label>
+																	</div>
+																	<div class="person-thumb" data-thumb-title="Anoushka Dean">
+																		<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Anoushka Dean">
+																	</div>
+																	<div class="person-description">
+																		<p class="person-description-title paragraph-medium">Anoushka Dean</p>
+																		<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to popular festivals</p>
+																	</div>
+																</div>
+																<div class="person">
+																	<div class="person-checkbox">
+																		<label class="input-container input-container-checkbox">
+																			<input type="checkbox" class="input input-checkbox input-checkbox-sm">
+																			<span class="input-checkbox-icon">
+																				<svg class="svg svg__16">
+																					<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																				</svg>
+																			</span>
+																		</label>
+																	</div>
+																	<div class="person-thumb" data-thumb-title="Francesco Rudd">
+																		<img src="" alt="Francesco Rudd">
+																	</div>
+																	<div class="person-description">
+																		<p class="person-description-title paragraph-medium">Francesco Rudd</p>
+																		<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to popular festivals</p>
+																	</div>
+																</div>
+																<div class="person">
+																	<div class="person-checkbox">
+																		<label class="input-container input-container-checkbox">
+																			<input type="checkbox" class="input input-checkbox input-checkbox-sm">
+																			<span class="input-checkbox-icon">
+																				<svg class="svg svg__16">
+																					<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																				</svg>
+																			</span>
+																		</label>
+																	</div>
+																	<div class="person-thumb" data-thumb-title="Saqlain Fraser">
+																		<img src="https://images.unsplash.com/photo-1632922267756-9b71242b1592?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Saqlain Fraser">
+																	</div>
+																	<div class="person-description">
+																		<p class="person-description-title paragraph-medium">Saqlain Fraser</p>
+																		<p class="person-description-item paragraph-md">Short bio text are popular at music festivals as they allow dancing to popular festivals</p>
+																	</div>
+																</div>
+															</fieldset>
 														</form>
 													</div>
-												</div>
-												<div class="tabs-content-item" data-tab-content="1" data-tab-segment="0">
-													<label class="input-container">
-														<input type="text" class="input input-transparent" placeholder="Search yours friends">
-														<span class="input-container-icon">
-															<svg class="svg svg__24">
-																<use xlink:href="../images/sprite/sprite.svg#search"></use>
-															</svg>
-														</span>
-													</label>
-													Invite your friends!
 												</div>
 											</div>
 										</div>
@@ -886,6 +1088,37 @@
 			</div>
 		</div>
 	</footer>
+	<div class="alert">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<div class="alert-panel __start">
+						<div class="tooltip tooltip-hover" data-default-label="Select All" data-active-label="Deselect All">
+							<label class="input-container">
+								<input type="checkbox" class="input input-checkbox" data-alert-checkbox="friends-already-going">
+								<span class="input-checkbox-icon">
+										<svg class="svg svg__16">
+											<use xlink:href="../images/sprite/sprite.svg#check"></use>
+										</svg>
+									</span>
+								<span class="input-checkbox-title">friend selected</span>
+							</label>
+							<div class="tooltip-body">
+								<p class="tooltip-body-item">Select All</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="alert-panel __end">
+						<button class="btn">
+							<span class="btn-title">Invite selected friends</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </main>
 </body>
 </html>

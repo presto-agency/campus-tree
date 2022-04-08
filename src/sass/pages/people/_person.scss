@@ -1,13 +1,76 @@
 .person{
 	display: flex;
 	align-items: flex-start;
+	margin-bottom: 24px;
 		&-thumb{
 			width: 48px;
 			height: 48px;
 			min-width: 48px;
 			border-radius: 50%;
-			overflow: hidden;
 			margin-right: 14px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center bottom;
+			background-image: url(../images/avatar.svg);
+			background-color: var(--color-primary);
+			position: relative;
+				&-mask{
+					position: absolute;
+					inset: 0;
+					background-color: var(--color-primary);
+					font-size: 24px;
+					line-height: 24px;
+					text-align: center;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-family: var(--font-base-medium);
+					border-radius: 50%;
+				}
+				&-upload{
+					position: absolute;
+					bottom: -16px;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 32px;
+					height: 32px;
+					min-width: 32px;
+					border-radius: 50%;
+					background-color: var(--color-white);
+					box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16);
+					z-index: 1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+						.svg{
+							color: var(--color-primary);
+						}
+				}
+				img{
+					@include imageCover(center);
+					border-radius: 50%;
+				}
+				&.__80,
+				&.__90{
+					.person{
+						&-thumb{
+							&-mask{
+								font-size: 36px;
+								line-height: 36px;
+							}
+						}
+					}
+				}
+				&.__80{
+					width: 80px;
+					height: 80px;
+					min-width: 80px;
+				}
+				&.__90{
+					width: 90px;
+					height: 90px;
+					min-width: 90px;
+				}
 		}
 		&-description{
 				&-title{
@@ -19,5 +82,11 @@
 					-webkit-line-clamp: 2;
 					overflow: hidden;
 				}
+		}
+		&-checkbox{
+			height: 48px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
 		}
 }

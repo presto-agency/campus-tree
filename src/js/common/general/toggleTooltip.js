@@ -1,5 +1,5 @@
 export const toggleTooltip = () => {
-	const tooltips = document.querySelectorAll('.tooltip');
+	const tooltips = document.querySelectorAll('.tooltip-click');
 	for (let i = 0; i < tooltips.length; i++) {
 		tooltips[i].addEventListener('click', () => {
 			if (tooltips[i].classList.contains('is-active')) {

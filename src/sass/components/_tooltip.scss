@@ -16,6 +16,7 @@
 					display: flex;
 					align-items: center;
 					white-space: nowrap;
+					position: relative;
 				}
 				&-close{
 					height: 16px;
@@ -32,10 +33,42 @@
 					margin-right: 8px;
 				}
 		}
+		/*
+		Types
+		 */
+		&-hover{
+			.tooltip{
+				&-body{
+					top: auto;
+					bottom: calc(100% + 10px);
+					border-radius: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					box-shadow: 0 10px 14px rgba(0, 0, 0, 0.07);
+						&:before{
+							content: '';
+							position: absolute;
+							width: 12px;
+							height: 12px;
+							transform: rotate(45deg) translateX(-50%);
+							background-color: inherit;
+							left: 50%;
+							bottom: -10px;
+						}
+				}
+			}
+		}
 		&.is-active{
 			.tooltip{
 				&-body{
 					display: flex;
+				}
+			}
+		}
+		&:hover{
+			.tooltip{
+				&-body{
+					display: block;
 				}
 			}
 		}

@@ -243,26 +243,3 @@ body{
 			width: 40px;
 		}
 }
-
-.tabs{
-	display: flex;
-	align-items: center;
-		&-item{
-			height: 32px;
-			line-height: 30px;
-			flex: 1;
-			font-size: 12px;
-			font-family: var(--font-base-medium);
-			text-align: center;
-			color: var(--color-gray-700);
-			border: 1px var(--color-gray-700) solid;
-				&.is-active{
-					background-color: var(--color-primary);
-					border-color: transparent;
-					color: var(--color-white);
-				}
-		}
-		@include d($sm){
-			margin: 19px 0;
-		}
-}

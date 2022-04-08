@@ -14,7 +14,7 @@ export const updatePaginationNumbers = () => {
 		for (let i = 0; i < paginationArray.length; i++) {
 			let link = document.createElement('a');
 			link.setAttribute('class', 'pagination-list-item pagination-link');
-			link.setAttribute('data-transition', 'pagination');
+			// link.setAttribute('data-transition', 'pagination');
 			// link.setAttribute('data-page', `${i+1}`);
 			typeof paginationArray[i] === 'number' ? link.setAttribute('href', generateURL(paginationArray[i])) : null;
 			link.innerHTML = `${paginationArray[i]}`;
@@ -23,18 +23,18 @@ export const updatePaginationNumbers = () => {
 		/*
 		Detect numbers click
 		 */
-		const links = document.querySelectorAll('.pagination-link');
-		const linkDefault = document.querySelector('#pagination-link');
-		if(!!links.length && !!linkDefault) {
-			for (let i = 0; i < links.length; i++) {
-				links[i].addEventListener('click', (e) => {
-					e.preventDefault();
-					let href = links[i].getAttribute('href');
-					linkDefault.setAttribute('href', href);
-					linkDefault.click();
-				});
-			}
-		}
+		// const links = document.querySelectorAll('.pagination-link');
+		// const linkDefault = document.querySelector('#pagination-link');
+		// if(!!links.length && !!linkDefault) {
+		// 	for (let i = 0; i < links.length; i++) {
+		// 		links[i].addEventListener('click', (e) => {
+		// 			e.preventDefault();
+		// 			let href = links[i].getAttribute('href');
+		// 			linkDefault.setAttribute('href', href);
+		// 			linkDefault.click();
+		// 		});
+		// 	}
+		// }
 
 		/*
 		Arrows

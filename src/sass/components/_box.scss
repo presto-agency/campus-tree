@@ -86,10 +86,19 @@
 			height: 255px;
 			overflow: hidden;
 			border-radius: 20px;
-			margin-bottom: 33px;
+			margin-bottom: 30px;
 				img{
 					@include imageCover(center);
 				}
+		}
+		/*
+		Types
+		 */
+		&-dotted{
+			background: transparent;
+			backdrop-filter: none;
+			border: 1px var(--color-gray-700) dashed;
+			box-shadow: none;
 		}
 		.event{
 			margin: 0 -10px;
@@ -114,5 +123,6 @@ Event page
 [data-router-view="leaf"]{
 	.box{
 		padding: 20px 25px;
+		margin-bottom: 30px;
 	}
 }

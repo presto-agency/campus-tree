@@ -45,6 +45,10 @@
 							left: auto;
 							right: 25px;
 						}
+						&.__click-trigger{
+							pointer-events: initial;
+						}
+
 				}
 				&-checkbox{
 					width: 30px;
@@ -91,6 +95,14 @@
 						border-width: 7px 4px 0 4px;
 						border-color: currentColor transparent transparent transparent;
 						pointer-events: none;
+					}
+				}
+				&-file{
+					.upload-file + .upload-text {
+						margin-left: 50px;
+					}
+					.upload-text + .upload-file{
+						margin-right: 50px;
 					}
 				}
 		}
@@ -257,4 +269,13 @@ Select
  */
 .select{
 	@extend .input;
+}
+
+/*
+Textarea
+ */
+.textarea{
+	@extend .input;
+	padding: 16px 24px;
+	min-height: 104px;
 }

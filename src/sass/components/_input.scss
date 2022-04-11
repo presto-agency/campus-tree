@@ -243,6 +243,72 @@
 					}
 				}
 		}
+			/*
+		Search-tags-input
+		 */
+		&-tags{
+			@extend .input;
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin: 0 0 32px 0;
+			&-text{
+				background: transparent;
+				border: none;
+				height: 100%;
+			}
+			&-suggestions{
+				position: absolute;
+				z-index: 2;
+				width: 100%;
+				top: 64px;
+				left: 0;
+			}
+			&-body{
+				&.has-suggestions{
+					background: var(--color-white);
+					border: 1px solid var(--color-gray-700);
+					border-radius: 20px;
+					box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.05);
+					padding: 24px;
+				}
+				li{
+					@extend h4;
+					margin: 16px 0 0 0;
+					&:first-child{
+						margin: 0;
+					}
+					strong{
+						@extend  h4;
+						color: var(--color-primary);
+					}
+				}
+			}
+			&-results{
+				display: flex;
+				flex-wrap: wrap;
+				margin: -2px 0;
+				li{
+					@extend h5;
+					position: relative;
+					text-transform: uppercase;
+					color: var(--color-white);
+					background: var(--color-events);
+					border-radius: 500px;
+					padding: 0 15px 0 5px;
+					margin: 2px 8px 2px 0;
+					span{
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						right: 5px;
+						width: 8px;
+						height: 8px;
+						background: url('../images/sign-in/cross.svg');
+					}
+				}
+			}
+		}
 		/*
 		Datepicker
 		 */

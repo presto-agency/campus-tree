@@ -53,8 +53,8 @@
                 <section class="section sign-in">
                     <div class="sign-in-left-side">
                         <div class="sign-in-content">
-                            <div class="sign-in-img" id="register-movie">
-                                <!--                            <lottie-player src="lottie/tree.json" id="lottie-1"></lottie-player>-->
+                            <div class="sign-in-img">
+                                <div class="sign-in-img-lottie" id="register-movie"></div>
                             </div>
                             <div class="section-title">
                                 <h2 class="h-2">
@@ -174,7 +174,8 @@
                                         <use xlink:href="../images/sprite/sprite.svg#arrows"></use>
                                     </svg>
                                 </a>
-                                <button data-register-go="0" data-register-reverse="true" class="btn btn-outline trigger-obj">
+                                <button data-register-go="0" data-register-reverse="true"
+                                        class="btn btn-outline trigger-obj">
                                     <span class="btn-title">Back</span>
                                 </button>
                             </div>
@@ -271,7 +272,8 @@
                                 <button data-register-go="3" class="btn trigger-obj">
                                     <span class="btn-title">Next</span>
                                 </button>
-                                <button data-register-go="1" data-register-reverse="true" class="btn btn-outline trigger-obj">
+                                <button data-register-go="1" data-register-reverse="true"
+                                        class="btn btn-outline trigger-obj">
                                     <span class="btn-title">Back</span>
                                 </button>
                             </div>
@@ -315,24 +317,36 @@
                                 </div>
                                 <div class="steps-inputs">
                                     <label class="input-container">
-                                        <textarea class="textarea" placeholder="About yourself" name="" id="" cols="30" rows="10"></textarea>
+                                        <textarea class="textarea" placeholder="About yourself" name="" id="" cols="30"
+                                                  rows="10"></textarea>
                                     </label>
                                     <label class="input-container input-container-file">
-                                    <span class="upload-file">
+                                        <span class="upload-file">
 
-                                    </span>
+                                        </span>
                                         <span class="upload-text h-4">
-                                        Upload a photo
-                                    </span>
+                                            Upload a photo
+                                        </span>
                                     </label>
+                                    <div class="input-tags">
+                                        <ul class="input-tags-results"></ul>
+                                        <input class="input-tags-text" type="text" name="fruit" id="objects" placeholder="Text">
+                                        <div class="input-tags-suggestions">
+                                            <ul class="input-tags-body">
+                                                <li>potato</li>
+                                                <li>tomato</li>
+                                                <li>orange</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <div class="steps-inputs-wrapper">
                                         <label class="input-container">
                                             <input placeholder="Password" type="text" class="input">
                                             <span class="input-container-icon __right __click-trigger __16">
-                                        <svg class="svg svg__16">
-                                            <use xlink:href="../images/sprite/sprite.svg#eye"></use>
-                                        </svg>
-                                    </span>
+                                                <svg class="svg svg__16">
+                                                    <use xlink:href="../images/sprite/sprite.svg#eye"></use>
+                                                </svg>
+                                            </span>
                                         </label>
                                         <label class="input-container">
                                             <input placeholder="Password" type="text" class="input">
@@ -349,7 +363,8 @@
                                 <button data-register-go="4" class="btn trigger-obj">
                                     <span class="btn-title">Finish</span>
                                 </button>
-                                <button data-register-go="2" data-register-reverse="true" class="btn btn-outline trigger-obj">
+                                <button data-register-go="2" data-register-reverse="true"
+                                        class="btn btn-outline trigger-obj">
                                     <span class="btn-title">Back</span>
                                 </button>
                             </div>
@@ -396,7 +411,7 @@
                                 </div>
                             </div>
                             <div class="steps-buttons">
-                                <button  class="btn">
+                                <button class="btn">
                                     <span class="btn-title">I did’t got email</span>
                                 </button>
                             </div>

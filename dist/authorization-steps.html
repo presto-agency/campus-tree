@@ -52,8 +52,8 @@
                 <section class="section sign-in">
                     <div class="sign-in-left-side">
                         <div class="sign-in-content">
-                            <div class="sign-in-img" id="register-movie">
-                                <!--                            <lottie-player src="lottie/tree.json" id="lottie-1"></lottie-player>-->
+                            <div class="sign-in-img">
+                                <div class="sign-in-img-lottie" id="register-movie"></div>
                             </div>
                             <div class="section-title">
                                 <h2 class="h-2">
@@ -235,7 +235,7 @@
                                             </label>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="input-container input-container-datepicker __top __right">
+                                            <label class="input-container input-container-datepicker __bottom __right">
                                                 <input type="text" name="Birthday" class="input input-datepicker" placeholder="Date" readonly="readonly">
                                                 <span class="input-container-icon __16 __right">
                                                                 <svg class="svg svg__16">
@@ -312,21 +312,29 @@
                                         <textarea class="textarea" placeholder="About yourself" name="" id="" cols="30" rows="10"></textarea>
                                     </label>
                                     <label class="input-container input-container-file">
-                                    <span class="upload-file">
+                                        <span class="upload-file">
 
-                                    </span>
+                                        </span>
                                         <span class="upload-text h-4">
-                                        Upload a photo
-                                    </span>
+                                            Upload a photo
+                                        </span>
                                     </label>
+                                    <div class="input-search-tags">
+                                        <div class="search-container">
+                                            <input type="text" name="fruit" id="fruit" placeholder="Text">
+                                            <div class="suggestions">
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="steps-inputs-wrapper">
                                         <label class="input-container">
                                             <input placeholder="Password" type="text" class="input">
                                             <span class="input-container-icon __right __click-trigger __16">
-                                        <svg class="svg svg__16">
-                                            <use xlink:href="../images/sprite/sprite.svg#eye"></use>
-                                        </svg>
-                                    </span>
+                                                <svg class="svg svg__16">
+                                                    <use xlink:href="../images/sprite/sprite.svg#eye"></use>
+                                                </svg>
+                                            </span>
                                         </label>
                                         <label class="input-container">
                                             <input placeholder="Password" type="text" class="input">

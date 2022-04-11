@@ -19,7 +19,26 @@
 					display: block;
 				}
 		}
+		&-tree{
+			@include d($xl){
+				order: 2;
+			}
+		}
 		&.is-active{
 			display: block;
+				@include d($xl){
+					display: flex;
+					justify-content: space-around;
+				}
 		}
+}
+
+[data-router-view="leaf"]{
+	.box{
+		&-dotted{
+			@include m($xl + 1){
+				margin-top: -140px;
+			}
+		}
+	}
 }

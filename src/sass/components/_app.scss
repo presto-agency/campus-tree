@@ -31,12 +31,18 @@ body{
 			height: 154px;
 			background-position: center top;
 			background-image: url(../images/bg-top.jpg);
+				@include d($sm){
+					background-position: left top;
+				}
 		}
 		&:after{
 			bottom: 0;
 			height: 348px;
 			background-position: center top;
 			background-image: url(../images/bg-bottom.jpg);
+				@include d($sm){
+					background-position: right tom;
+				}
 		}
 		@include d($xl){
 			padding-bottom: 100px;
@@ -164,12 +170,22 @@ body{
 					line-height: 1em;
 					white-space: nowrap;
 					font-family: var(--font-base-medium);
+					margin-bottom: 7px;
+						@include d($sm){
+							font-size: 18px;
+						}
 				}
 		}
 }
 
 .location{
 	@extend .date;
+		&-label{
+			font-family: var(--font-base-medium);
+				@include d($sm){
+					font-size: 14px;
+				}
+		}
 }
 
 .burger{
@@ -264,6 +280,9 @@ body{
 			height: 100%;
 				&.__start{
 					justify-content: flex-start;
+						@include d($sm){
+							padding-right: 10px;
+						}
 				}
 				&.__end{
 					justify-content: flex-end;

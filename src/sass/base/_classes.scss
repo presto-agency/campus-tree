@@ -165,3 +165,17 @@
 .fullwidth{
   width: 100%;
 }
+
+.phone{
+    &-block{
+      @include d($sm){
+        display: block !important;
+      }
+    }
+}
+
+.sm-d-none{
+  @include d($sm){
+    display: none;
+  }
+}

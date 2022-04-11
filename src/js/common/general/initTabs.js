@@ -1,4 +1,5 @@
 import Tween from 'gsap';
+import {scrollToBottomComments} from "./scrollToBottomComments";
 
 export const initTabs = () => {
 	const tabs = document.querySelectorAll('.tabs');
@@ -24,6 +25,11 @@ export const initTabs = () => {
 					 */
 					hideContents(tabSegment);
 					!!tabSegmentContent ? tabSegmentContent.style.display = 'block' : tabContent.style.display = 'block';
+
+					/*
+					Scroll to bottom comments
+					 */
+					scrollToBottomComments();
 				});
 			}
 		}

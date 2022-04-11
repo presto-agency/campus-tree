@@ -298,3 +298,48 @@ body{
 			opacity: 1;
 		}
 }
+
+.attention{
+	display: flex;
+	align-items: center;
+	padding: 10px 16px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+	color: var(--color-alumni);
+	margin-bottom: 15px;
+		&:before{
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-color: var(--color-alumni);
+			opacity: .3;
+			pointer-events: none;
+		}
+		&-icon{
+			margin-right: 8px;
+		}
+		&-description{
+			font-family: var(--font-base-medium);
+		}
+}
+
+.group{
+		&-buttons{
+			display: flex;
+			align-items: center;
+				& > *{
+					margin: 0 8px;
+						&:nth-child(1){
+							margin-left: 0;
+						}
+						&:last-child{
+							margin-right: 0;
+						}
+				}
+				.btn{
+					max-width: 210px;
+					width: 100%;
+				}
+		}
+}

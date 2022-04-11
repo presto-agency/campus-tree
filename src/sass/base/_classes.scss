@@ -41,6 +41,31 @@
     &-medium{
       font-family: var(--font-base-medium);
     }
+    &-status{
+      position: relative;
+      padding-left: 16px;
+        &:before{
+          content: '';
+          position: absolute;
+          top: 5px;
+          left: 0;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: var(--color-primary);
+          pointer-events: none;
+        }
+        &.approved{
+          &:before{
+            background-color: var(--color-primary);
+          }
+        }
+        &.__not-approved{
+          &:before{
+            background-color: var(--color-alumni);
+          }
+        }
+    }
 }
 
 .color{

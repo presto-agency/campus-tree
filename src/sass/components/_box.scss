@@ -86,6 +86,32 @@
 			overflow: hidden;
 			border-radius: 20px;
 			margin-bottom: 30px;
+				&-drop{
+					height: 255px;
+					background-color: var(--color-gray-400);
+					position: relative;
+					margin-bottom: 15px;
+						.input-container-file{
+							position: absolute;
+							inset: 18px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							justify-content: center;
+							background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23333' stroke-width='1' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+								.paragraph{
+									margin: 15px auto 0;
+									max-width: 488px;
+									text-align: center;
+								}
+						}
+						.person-thumb-upload{
+							position: relative;
+							bottom: 0;
+							left: 0;
+							transform: none;
+						}
+				}
 				img{
 					@include imageCover(center);
 				}

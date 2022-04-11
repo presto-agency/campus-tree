@@ -81,7 +81,7 @@
 					}
 					&.__top{
 						.datepicker-dropdown{
-							top: 100%;
+							top: 100% !important;
 						}
 					}
 				}
@@ -107,6 +107,9 @@
 					.upload-text + .upload-file{
 						margin-right: 50px;
 					}
+				}
+				&-group{
+					margin-bottom: 32px;
 				}
 		}
 		& ~ .input-container-icon{

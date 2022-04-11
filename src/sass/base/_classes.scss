@@ -29,6 +29,10 @@
       font-size: 12px;
       line-height: 1.31em;
     }
+    &-lg{
+      font-size: 18px;
+      line-height: 1.11em;
+    }
     &-italic{
       font-size: 14px;
       line-height: 1.4em;
@@ -42,17 +46,118 @@
 .color{
     &-primary{
       color: var(--color-primary) !important;
+        /*
+        Open event leaf
+         */
+        .event-leaf{
+          &-body{
+            fill: var(--color-primary);
+          }
+          &-stroke{
+            fill: var(--color-primary-dark);
+          }
+        }
     }
     &-alumni{
       color: var(--color-alumni) !important;
         &-dark{
           color: var(--color-alumni-dark) !important;
         }
+        /*
+        Open event leaf
+         */
+        .event-leaf{
+          &-body{
+            fill: var(--color-alumni);
+          }
+          &-stroke{
+            fill: var(--color-alumni-dark);
+          }
+        }
     }
-    &-greek{
+    &-greek-life{
       color: var(--color-greek) !important;
         &-dark{
           color: var(--color-greek-dark) !important;
+        }
+        /*
+        Open event leaf
+         */
+        .event-leaf{
+          &-body{
+            fill: var(--color-greek);
+          }
+          &-stroke{
+            fill: var(--color-greek-dark);
+          }
+        }
+    }
+    &-majors{
+      color: var(--color-majors) !important;
+        &-dark{
+          color: var(--color-majors-dark) !important;
+        }
+        /*
+        Open event leaf
+         */
+        .event-leaf{
+          &-body{
+            fill: var(--color-majors);
+          }
+          &-stroke{
+            fill: var(--color-majors-dark);
+          }
+        }
+    }
+    &-events{
+      color: var(--color-events) !important;
+        &-dark{
+          color: var(--color-events-dark) !important;
+        }
+        /*
+        Open event leaf
+         */
+        .event-leaf{
+          &-body{
+            fill: var(--color-events);
+          }
+          &-stroke{
+            fill: var(--color-events-dark);
+          }
+        }
+    }
+    &-local{
+      color: var(--color-local) !important;
+        &-dark{
+          color: var(--color-primary) !important;
+        }
+        /*
+        Open event leaf
+         */
+        .event-leaf{
+          &-body{
+            fill: var(--color-local);
+          }
+          &-stroke{
+            fill: var(--color-primary);
+          }
+        }
+    }
+    &-clubs{
+      color: var(--color-clubs) !important;
+        &-dark{
+          color: var(--color-clubs-black) !important;
+        }
+        /*
+        Open event leaf
+         */
+        .event-leaf{
+          &-body{
+            fill: var(--color-clubs);
+          }
+          &-stroke{
+            fill: var(--color-clubs-black);
+          }
         }
     }
 }

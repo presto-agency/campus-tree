@@ -57,18 +57,34 @@
 						}
 				}
 			}
+			&:hover{
+				.tooltip{
+					&-body{
+						display: block;
+					}
+				}
+			}
+		}
+		&-fixed{
+			position: fixed;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
+				&.__bottom{
+					bottom: 20px;
+				}
+				.tooltip{
+						&-body{
+							top: 0;
+							position: relative;
+							box-shadow: 0 9px 18px -1px rgba(6, 73, 35, 0.12);
+						}
+				}
 		}
 		&.is-active{
 			.tooltip{
 				&-body{
 					display: flex;
-				}
-			}
-		}
-		&:hover{
-			.tooltip{
-				&-body{
-					display: block;
 				}
 			}
 		}

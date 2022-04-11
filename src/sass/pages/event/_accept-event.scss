@@ -1,0 +1,25 @@
+.accept-event{
+	display: none;
+		&-success{
+			display: none;
+			text-align: center;
+				.event{
+					&-leaf{
+						position: relative;
+						top: 0;
+						right: 0;
+						margin: 0 auto;
+					}
+				}
+				.paragraph{
+					max-width: 200px;
+					margin: 0 auto;
+				}
+				&.is-active{
+					display: block;
+				}
+		}
+		&.is-active{
+			display: block;
+		}
+}

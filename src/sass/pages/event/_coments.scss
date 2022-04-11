@@ -1,3 +1,29 @@
 .comments{
-
+	padding-top: 32px;
+		&-list{
+			border-top: 1px var(--color-gray-700) solid;
+			border-bottom: 1px var(--color-gray-700) solid;
+			margin-bottom: 13px;
+		}
+		&-form{
+			display: flex;
+				.person{
+						&-thumb{
+							margin-right: 8px;
+						}
+				}
+				.input-container{
+					width: 100%;
+				}
+		}
+		.person{
+				&-description{
+						&-item{
+							display: block;
+						}
+				}
+		}
+		.scroll-wrap{
+			height: 352px;
+		}
 }

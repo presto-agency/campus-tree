@@ -14,6 +14,16 @@ export const toggleTooltip = () => {
 	}
 
 	/*
+	Close current tooltip
+	 */
+	const closeButtons = document.querySelectorAll('.tooltip-body-close');
+	for (let i = 0; i < closeButtons.length; i++) {
+		closeButtons[i].addEventListener('click', () => {
+			closeButtons[i].parentNode.parentNode.classList.remove('is-active');
+		});
+	}
+
+	/*
 	Close all tooltips by click anywhere
 	 */
 	document.addEventListener('mouseup', function(e) {

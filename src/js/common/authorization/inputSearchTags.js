@@ -40,7 +40,7 @@ export const inputSearchTags = () =>{
             for (let i = 0; i < results.length; i++) {
                 let item = results[i];
                 const match = item.match(new RegExp(inputVal, 'i'));
-                item = item.replace(match[0], `<strong>${match[0]}</strong>`);
+                item = item.replace(match[0], match[0]);
                 suggestions.innerHTML += `<li>${item}</li>`;
             }
             suggestions.classList.add('has-suggestions');
@@ -49,18 +49,45 @@ export const inputSearchTags = () =>{
             suggestions.innerHTML = '';
             suggestions.classList.remove('has-suggestions');
         }
+
     }
 
-    function useSuggestion(e) {
+    function createDiv(current) {
         let newEl = document.createElement('li');
         let result = document.querySelector('.input-tags-results');
-        newEl.innerHTML =  `<span></span>${e.target.innerText}`;
+        newEl.innerHTML =  `<span></span>${current}`;
         result.appendChild(newEl);
         suggestions.innerHTML = '';
         suggestions.classList.remove('has-suggestions');
         input.value = '';
     }
 
+    function useSuggestion(e) {
+        createDiv(e.target.innerText)
+        removeTag();
+    }
+
+    function removeTag() {
+        let existTags = document.querySelectorAll('.input-tags-results>li>span');
+        if (existTags.length > 0){
+            for (let existTag of existTags){
+                existTag.onclick = () => {
+                    existTag.parentNode.remove()
+                }
+            }
+        }
+    }
+
+    function createTag(e) {
+        if (e.keyCode === 13){
+            e.preventDefault();
+            createDiv(input.value);
+            removeTag();
+        }
+    }
+
     input.addEventListener('keyup', searchHandler);
+    input.addEventListener('keydown', createTag);
     suggestions.addEventListener('click', useSuggestion);
+
 };

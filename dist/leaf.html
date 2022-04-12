@@ -51,10 +51,10 @@
 							<span class="dropdown-body">
 								<span class="dropdown-body-item">
 									<span class="list">
-										<a href="search-result.html" class="list-item">Mathpapa</a>
-										<a href="search-result.html" class="list-item">Mathway</a>
-										<a href="search-result.html" class="list-item">Mathematica</a>
-										<a href="search-result.html" class="list-item">Math games</a>
+										<span class="list-item">Mathpapa</span>
+										<span class="list-item">Mathway</span>
+										<span class="list-item">Mathematica</span>
+										<span class="list-item">Math games</span>
 									</span>
 								</span>
 							</span>
@@ -748,14 +748,6 @@
 										<p>Are you always in search of English language practice? Save some time in order to join our weekly Virtual English Club! It’s a great way to learn about important topics that are worthy of discussion and debate.</p>
 										<p>Grab this chance and join some fruitful conversations with other participants and our English Language Resident Claire Manning.</p>
 									</div>
-									<div class="input-container input-container-select">
-										<select name="test" class="select">
-											<option value="1">1 test</option>
-											<option value="2">2 test</option>
-											<option value="3">3 test</option>
-											<option value="4">4 test</option>
-										</select>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -1239,15 +1231,19 @@
 
 <!--For example, invite friends, success event -->
 <script>
-	document.querySelector('#invite').addEventListener('click', () => {
-		document.querySelector('[data-tooltip-id="success"]').classList.add('is-active');
-		document.querySelector('.alert').classList.remove('is-active');
-	});
+	if (!!document.querySelector('#invite')) {
+		document.querySelector('#invite').addEventListener('click', () => {
+			document.querySelector('[data-tooltip-id="success"]').classList.add('is-active');
+			document.querySelector('.alert').classList.remove('is-active');
+		});
+	}
 </script>
 <!--For example, accept event, success event-->
 <script>
-	document.querySelector('#accept').addEventListener('click', () => {
-		document.querySelector('.accept-event').classList.remove('is-active');
-		document.querySelector('.accept-event-success').classList.add('is-active');
-	});
+	if (!!document.querySelector('#accept')) {
+		document.querySelector('#accept').addEventListener('click', () => {
+			document.querySelector('.accept-event').classList.remove('is-active');
+			document.querySelector('.accept-event-success').classList.add('is-active');
+		});
+	}
 </script>

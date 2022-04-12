@@ -10,6 +10,11 @@
 	transition: border-color var(--hover-duration) var(--hover-ease);
 		&:focus{
 			border-color: var(--color-primary);
+				& ~ .input-container-icon{
+					.svg{
+						color: var(--color-primary);
+					}
+				}
 		}
 		@include hover($md){
 			&:hover{

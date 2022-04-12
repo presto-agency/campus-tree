@@ -7,6 +7,7 @@ import {checkboxAlertToggle} from "../common/alert/checkboxAlertToggle";
 import {scrollToBottomComments} from "../common/general/scrollToBottomComments";
 import {loadImages} from "../common/general/loadImages";
 import {initDatepicker} from "../common/datepicker/initDatepicker";
+import {initTimepicker} from "../common/datepicker/initTimepicker";
 
 class LeafRenderer extends Highway.Renderer {
 	onEnter() {
@@ -22,6 +23,7 @@ class LeafRenderer extends Highway.Renderer {
 		scrollToBottomComments();
 		loadImages();
 		initDatepicker();
+		initTimepicker();
 	}
 }
 

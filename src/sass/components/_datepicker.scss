@@ -164,3 +164,191 @@
 			width: 338px;
 		}
 }
+
+/*
+Timepicker
+ */
+div[id^="tp_"].timepicker__wrapper {
+	opacity: 0;
+	height: auto;
+	min-width: 150px;
+	max-height: 0;
+	overflow: hidden;
+	top: 100%;
+	right: 0;
+	position: absolute;
+	border-radius: 20px;
+	border: 2px var(--color-white) solid;
+	text-align: center;
+	background-color: var(--color-white);
+	box-shadow: 0 9px 18px -1px rgba(6, 73, 35, 0.12);
+	backdrop-filter: blur(10px);
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	pointer-events: none;
+	padding: 50px 15px 35px;
+		&:before{
+			content: 'Enter time';
+			position: absolute;
+			left: 15px;
+			top: 15px;
+			font-family: var(--font-base-medium);
+			color: var(--color-primary);
+		}
+		&-active {
+			opacity: 1;
+			max-height: 150px;
+			max-width: 241px;
+			z-index: 1;
+			pointer-events: auto;
+		}
+		&-full {
+			> div {
+				width: 64px;
+				position: relative;
+			}
+		}
+		> div {
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			text-align: center;
+				.display {
+					font-size: 36px;
+					margin: 0;
+					text-transform: uppercase;
+					user-select: none;
+					height: 48px;
+					width: 100%;
+					line-height: 48px;
+					border-radius: 4px;
+					border: 1px transparent solid;
+					padding-right: 15px;
+					font-family: var(--font-base-medium);
+					color: var(--color-gray-800);
+					background-color: var(--color-gray-400);
+					transition: all var(--hover-duration) var(--hover-ease);
+				}
+				.timepicker__button {
+					padding: 0;
+					cursor: pointer;
+					background: transparent;
+					border: solid 5px transparent;
+					position: absolute;
+					right: -1px;
+						&__up {
+							top: 12px;
+								& > div {
+									width: 0;
+									height: 0;
+									margin: auto;
+									border-left: solid 4px transparent;
+									border-right: solid 4px transparent;
+									border-bottom: solid 5px currentColor;
+								}
+						}
+						&__down {
+							top: 22px;
+								& > div {
+									width: 0;
+									height: 0;
+									margin: auto;
+									border-left: solid 4px transparent;
+									border-right: solid 4px transparent;
+									border-top: solid 5px currentColor;
+								}
+						}
+				}
+				&.timepicker{
+						&__hour{
+							margin-right: 23px;
+								&:before{
+									content: ':';
+									position: absolute;
+									right: -15px;
+									top: 12px;
+									font-size: 36px;
+									color: var(--color-black);
+								}
+								&:after{
+									content: 'Hour';
+								}
+						}
+						&__minute{
+							margin-right: 8px;
+								&:after{
+									content: 'Minute';
+								}
+						}
+						&__meridiem{
+							width: 48px;
+							height: 48px;
+								.display{
+									font-size: 18px;
+								}
+								//.timepicker__button{
+								//	width: 100%;
+								//	right: 0;
+								//	height: 50%;
+								//	border: none;
+								//		&:before{
+								//			position: absolute;
+								//			text-align: center;
+								//			width: 100%;
+								//			height: 100%;
+								//			left: 0;
+								//			display: flex;
+								//			align-items: center;
+								//			justify-content: center;
+								//			color: var(--color-gray-800);
+								//			transition: color var(--hover-duration) var(--hover-ease);
+								//		}
+								//		&__up{
+								//			top: 0;
+								//			border-bottom: 1px var(--color-gray-400) solid;
+								//				&:before{
+								//					content: 'AM';
+								//				}
+								//		}
+								//		&__down{
+								//			bottom: 0;
+								//				&:before{
+								//					content: 'PM';
+								//				}
+								//		}
+								//		& > div{
+								//			display: none;
+								//		}
+								//		@include hover($md) {
+								//			&:hover {
+								//				&:before{
+								//					color: var(--color-primary);
+								//				}
+								//			}
+								//		}
+								//}
+						}
+						&__hour,
+						&__minute{
+							&:after{
+								position: absolute;
+								bottom: -23px;
+								left: 0;
+								font-size: 12px;
+								color: var(--color-gray-800);
+							}
+						}
+				}
+				@include hover($md){
+					&:hover{
+						color: var(--color-primary);
+						.display{
+							background-color: transparent;
+							border-color: var(--color-primary);
+							color: var(--color-primary);
+						}
+					}
+				}
+		}
+}

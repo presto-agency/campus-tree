@@ -40,7 +40,7 @@ export const inputSearchTags = () =>{
             for (let i = 0; i < results.length; i++) {
                 let item = results[i];
                 const match = item.match(new RegExp(inputVal, 'i'));
-                item = item.replace(match[0], `<strong>${match[0]}</strong>`);
+                item = item.replace(match[0], match[0]);
                 suggestions.innerHTML += `<li>${item}</li>`;
             }
             suggestions.classList.add('has-suggestions');
@@ -59,8 +59,21 @@ export const inputSearchTags = () =>{
         suggestions.innerHTML = '';
         suggestions.classList.remove('has-suggestions');
         input.value = '';
+        removeTag();
+    }
+
+    function removeTag() {
+        let existTags = document.querySelectorAll('.input-tags-results>li>span');
+        if (existTags.length > 0){
+            for (let existTag of existTags){
+                existTag.onclick = () => {
+                    existTag.parentNode.remove()
+                }
+            }
+        }
     }
 
     input.addEventListener('keyup', searchHandler);
     suggestions.addEventListener('click', useSuggestion);
+
 };

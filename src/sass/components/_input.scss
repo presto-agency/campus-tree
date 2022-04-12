@@ -265,6 +265,7 @@
 				li{
 					@extend h4;
 					margin: 16px 0 0 0;
+					cursor: pointer;
 					&:first-child{
 						margin: 0;
 					}
@@ -289,6 +290,7 @@
 					margin: 2px 8px 2px 0;
 					span{
 						position: absolute;
+						cursor: pointer;
 						top: 50%;
 						transform: translateY(-50%);
 						right: 5px;

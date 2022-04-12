@@ -243,6 +243,7 @@
 			align-items: center;
 			margin: 0 0 32px 0;
 			&-text{
+				flex-grow: 1;
 				background: transparent;
 				border: none;
 				height: 100%;

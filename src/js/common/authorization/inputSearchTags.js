@@ -49,16 +49,21 @@ export const inputSearchTags = () =>{
             suggestions.innerHTML = '';
             suggestions.classList.remove('has-suggestions');
         }
+
     }
 
-    function useSuggestion(e) {
+    function createDiv(current) {
         let newEl = document.createElement('li');
         let result = document.querySelector('.input-tags-results');
-        newEl.innerHTML =  `<span></span>${e.target.innerText}`;
+        newEl.innerHTML =  `<span></span>${current}`;
         result.appendChild(newEl);
         suggestions.innerHTML = '';
         suggestions.classList.remove('has-suggestions');
         input.value = '';
+    }
+
+    function useSuggestion(e) {
+        createDiv(e.target.innerText)
         removeTag();
     }
 
@@ -73,7 +78,16 @@ export const inputSearchTags = () =>{
         }
     }
 
+    function createTag(e) {
+        if (e.keyCode === 13){
+            e.preventDefault();
+            createDiv(input.value);
+            removeTag();
+        }
+    }
+
     input.addEventListener('keyup', searchHandler);
+    input.addEventListener('keydown', createTag);
     suggestions.addEventListener('click', useSuggestion);
 
 };

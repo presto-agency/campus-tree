@@ -1,0 +1,20 @@
+.upload-container{
+	.input-container-file{
+		& ~ .input-container-checkbox{
+			margin-left: 80px;
+				@include d($xl){
+					margin-left: 20px;
+				}
+				@include d($sm){
+					margin-left: 0;
+					margin-top: 40px;
+				}
+		}
+	}
+	@include d($xl){
+		margin-bottom: 40px;
+	}
+	@include d($sm){
+		padding-top: 8px;
+	}
+}

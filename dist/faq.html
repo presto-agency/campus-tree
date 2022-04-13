@@ -119,11 +119,11 @@
 												</div>
 											</div>
 											<div class="notification-description">
-												<p>You’ve been invited by <a href="#">Joey Tribbiani</a></p>
+												<p>You’ve been invited by <a href="#">Joey Tribbiani</a> to <a href="#">Some event</a></p>
 											</div>
 										</div>
 										<div class="notification-list-item">
-											<div class="notification-avatar">
+											<div class="notification-avatar __event">
 												<img src="https://images.pexels.com/photos/307847/pexels-photo-307847.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Avatar">
 												<div class="notification-avatar-label">
 													<svg class="svg svg__16">
@@ -193,7 +193,7 @@
 				<div class="header-panel-filters">
 					<div class="filters">
 						<div class="filters-item">
-							<div class="link">
+							<div class="link" id="toggle-header-mobile-filters">
 								<div class="link-icon">
 									<svg class="svg svg__24">
 										<use xlink:href="../images/sprite/sprite.svg#filter"></use>
@@ -374,13 +374,267 @@
 						</div>
 					</div>
 				</div>
-				<div class="header-panel-filters __mobile">
-					mobile filters
+				<div class="header-panel-filters __mobile" id="header-mobile-filters">
+					<div class="row pb-4">
+						<div class="col-6 d-flex align-items-center">
+							<label class="input-container">
+								<input type="checkbox" class="input input-checkbox input-checkbox-sm">
+								<span class="input-checkbox-icon">
+									<svg class="svg svg__16">
+										<use xlink:href="../images/sprite/sprite.svg#check"></use>
+									</svg>
+								</span>
+								<span class="input-checkbox-title">Only with my friends</span>
+							</label>
+						</div>
+						<div class="col-6">
+							<div class="d-flex justify-content-end">
+								<button class="btn reset-btn" data-reset-box="#header-mobile-filters">
+									<span class="btn-title">Reset filter</span>
+								</button>
+							</div>
+						</div>
+					</div>
 					<div class="border"></div>
-					mobile filters
+					<div class="row pt-4">
+						<div class="col-12 d-flex">
+							<div class="dropdown dropdown-static">
+								<p class="dropdown-trigger-label">Branches</p>
+								<p class="dropdown-trigger dropdown-trigger-title" data-fieldset-label="filter-branches-mobile" data-label="Select branch">Select branch</p>
+								<div class="dropdown-body">
+									<div class="dropdown-body-item">
+										<fieldset class="fieldset" data-fieldset-list="filter-branches-mobile">
+											<label class="input-container">
+												<input type="checkbox" value="all" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">All</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Greek Life" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Greek Life</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Alumni" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Alumni</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Local" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Local</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Events" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Events</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Majors" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Majors</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Clubs" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Clubs</span>
+											</label>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+							<div class="dropdown dropdown-static">
+								<p class="dropdown-trigger-label">Interests</p>
+								<p class="dropdown-trigger dropdown-trigger-title" data-fieldset-label="filter-interests-mobile" data-label="Select interest">Select interest</p>
+								<div class="dropdown-body">
+									<div class="dropdown-body-item">
+										<fieldset class="fieldset" data-fieldset-list="filter-interests-mobile">
+											<label class="input-container">
+												<input type="checkbox" value="all" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">All</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Greek Life" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Greek Life</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Alumni" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Alumni</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Local" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Local</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Events" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Events</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Majors" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Majors</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Clubs" class="input input-checkbox">
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Clubs</span>
+											</label>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="border"></div>
+		</div>
+		<!--	Tablet, phone nav menu	-->
+		<div class="header-nav">
+			<div class="border"></div>
+			<div class="header-nav-tablet">
+				<a href="#" class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#friends"></use>
+							</svg>
+						</span>
+					<span class="link-title">My friends</span>
+				</a>
+				<a href="people.html" class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#people"></use>
+							</svg>
+						</span>
+					<span class="link-title">people catalog</span>
+				</a>
+				<div class="border border-vertical"></div>
+				<a href="#" class="link personal-tree">
+						<span class="link-icon">
+							<svg class="svg svg__64">
+								<use xlink:href="../images/sprite/sprite.svg#tree"></use>
+							</svg>
+						</span>
+					<span class="link-title">My personal tree</span>
+				</a>
+				<button class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#sign-out"></use>
+							</svg>
+						</span>
+					<span class="link-title">Sign out</span>
+				</button>
+			</div>
+			<div class="scroll-wrap">
+				<div class="header-nav-phone">
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+						</svg>
+					</span>
+						<span class="link-title">Create a leaf</span>
+					</a>
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#shield"></use>
+						</svg>
+					</span>
+						<span class="link-title">Privacy Policy</span>
+					</a>
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#faq"></use>
+						</svg>
+					</span>
+						<span class="link-title">FAQ</span>
+					</a>
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#support"></use>
+						</svg>
+					</span>
+						<span class="link-title">Support</span>
+					</a>
+					<button class="link link-absolute">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#sign-out"></use>
+						</svg>
+					</span>
+						<span class="link-title">Sign out</span>
+					</button>
+					<div class="header-copyright">
+						<p>&copy; Campus Tree 2022</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
     <div data-router-wrapper>

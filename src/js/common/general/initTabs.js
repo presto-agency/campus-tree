@@ -1,4 +1,5 @@
 import Tween from 'gsap';
+import {scrollToBottomComments} from "./scrollToBottomComments";
 
 export const initTabs = () => {
 	const tabs = document.querySelectorAll('.tabs');
@@ -9,14 +10,26 @@ export const initTabs = () => {
 				tabsButtons[j].addEventListener('click', () => {
 					resetActiveClasses(tabsButtons);
 					tabsButtons[j].classList.add('is-active');
+					/*
+					Get id content & segment
+					 */
 					let tabId = tabsButtons[j].dataset.tabId;
-					let tabContent = document.querySelectorAll(`[data-tab-content="${tabId}"]`);
-					if (!!tabs && !!tabContent) {
-						hideContents();
-						for (let i = 0; i < tabContent.length; i++) {
-							tabContent[i].style.display = 'block';
-						}
-					}
+					let tabSegment = tabsButtons[j].dataset.tabSegment;
+					/*
+					Get tab content & segment
+					 */
+					let tabContent = document.querySelector(`[data-tab-content="${tabId}"]`);
+					let tabSegmentContent = document.querySelector(`[data-tab-segment="${tabSegment}"][data-tab-content="${tabId}"]`);
+					/*
+					Switch tab content || segment
+					 */
+					hideContents(tabSegment);
+					!!tabSegmentContent ? tabSegmentContent.style.display = 'block' : tabContent.style.display = 'block';
+
+					/*
+					Scroll to bottom comments
+					 */
+					scrollToBottomComments();
 				});
 			}
 		}
@@ -29,8 +42,13 @@ const resetActiveClasses = (buttons) => {
 	}
 };
 
-const hideContents = () => {
-	const contents = document.querySelectorAll('[data-tab-content]');
+const hideContents = (tabSegment) => {
+	let contents;
+	if (!!tabSegment) {
+		contents = document.querySelectorAll(`[data-tab-segment="${tabSegment}"][data-tab-content]`);
+	} else {
+		contents = document.querySelectorAll('[data-tab-content]');
+	}
 	for (let i = 0; i < contents.length; i++) {
 		contents[i].style.display = 'none';
 	}

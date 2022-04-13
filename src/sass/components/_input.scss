@@ -10,11 +10,19 @@
 	transition: border-color var(--hover-duration) var(--hover-ease);
 		&:focus{
 			border-color: var(--color-primary);
+				& ~ .input-container-icon{
+					.svg{
+						color: var(--color-primary);
+					}
+				}
 		}
 		@include hover($md){
 			&:hover{
 				border-color: var(--color-primary);
 			}
+		}
+		@include d($sm){
+			height: 48px;
 		}
 		&-container{
 			position: relative;
@@ -26,6 +34,9 @@
 					transform: translateY(-50%);
 					pointer-events: none;
 					height: 24px;
+					padding: 0;
+					border: none;
+					background-color: transparent;
 						&.__16{
 							height: 16px;
 						}
@@ -49,6 +60,11 @@
 							pointer-events: initial;
 						}
 
+				}
+				&-checkbox{
+					width: 30px;
+					height: 20px;
+					position: relative;
 				}
 				&-datepicker{
 					&.__bottom{
@@ -74,7 +90,7 @@
 					}
 					&.__top{
 						.datepicker-dropdown{
-							top: 100%;
+							top: 100% !important;
 						}
 					}
 				}
@@ -94,12 +110,20 @@
 					}
 				}
 				&-file{
-					.upload-file + .upload-text {
-						margin-left: 50px;
-					}
-					.upload-text + .upload-file{
-						margin-right: 50px;
-					}
+					display: flex;
+					align-items: center;
+						.upload-file + .upload-text {
+							margin-left: 30px;
+						}
+						.upload-text + .upload-file{
+							margin-right: 30px;
+						}
+				}
+				&-group{
+					margin-bottom: 32px;
+						@include d($sm){
+							margin-bottom: 8px;
+						}
 				}
 		}
 		& ~ .input-container-icon{
@@ -136,6 +160,9 @@
 			position: absolute;
 			padding: 0;
 			opacity: 0;
+				& ~ .input-checkbox-title{
+					padding-left: 32px;
+				}
 				&-icon{
 					position: absolute;
 					width: 16px;
@@ -164,8 +191,29 @@
 					font-family: var(--font-base-medium);
 					font-size: 14px;
 				}
-				& ~ .input-checkbox-title{
-					padding-left: 32px;
+				&-switcher{
+					display: inline-block;
+					position: absolute;
+					width: 32px;
+					height: 22px;
+					background-color: var(--color-gray-700);
+					border-radius: 24px;
+					top: -2px;
+					transition: background-color var(--hover-duration) var(--hover-ease);
+						&:before{
+							content: '';
+							position: absolute;
+							width: 18px;
+							height: 18px;
+							border-radius: 50%;
+							background-color: var(--color-white);
+							top: 2px;
+							left: 2px;
+							transition: left var(--hover-duration) var(--hover-ease);
+						}
+						& ~ .input-checkbox-title{
+							padding-left: 46px;
+						}
 				}
 				&:checked{
 					& ~ .input-checkbox-icon{
@@ -174,6 +222,12 @@
 							}
 							.svg{
 								opacity: 1;
+							}
+					}
+					& ~ .input-checkbox-switcher{
+						background-color: var(--color-primary);
+							&:before{
+								left: 11px;
 							}
 					}
 				}
@@ -245,45 +299,45 @@
 			display: flex;
 			align-items: center;
 			margin: 0 0 32px 0;
-			&-text{
-				flex-grow: 1;
-				background: transparent;
-				border: none;
-				height: 100%;
-			}
-			&-suggestions{
-				position: absolute;
-				z-index: 2;
-				width: 100%;
-				top: 64px;
-				left: 0;
-			}
-			&-body{
-				&.has-suggestions{
-					background: var(--color-white);
-					border: 1px solid var(--color-gray-700);
-					border-radius: 20px;
-					box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.05);
-					padding: 24px;
+				&-text{
+					flex-grow: 1;
+					background: transparent;
+					border: none;
+					height: 100%;
 				}
-				li{
-					@extend h4;
-					margin: 16px 0 0 0;
-					cursor: pointer;
-					&:first-child{
-						margin: 0;
+				&-suggestions{
+					position: absolute;
+					z-index: 2;
+					width: 100%;
+					top: 64px;
+					left: 0;
+				}
+				&-body{
+					&.has-suggestions{
+						background: var(--color-white);
+						border: 1px solid var(--color-gray-700);
+						border-radius: 20px;
+						box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.05);
+						padding: 24px;
 					}
-					strong{
-						@extend  h4;
-						color: var(--color-primary);
+					li{
+						@extend h4;
+						margin: 16px 0 0 0;
+						cursor: pointer;
+						&:first-child{
+							margin: 0;
+						}
+						strong{
+							@extend  h4;
+							color: var(--color-primary);
+						}
 					}
 				}
-			}
-			&-results{
-				display: flex;
-				flex-wrap: wrap;
-				margin: -2px 0;
-				padding: 10px 0;
+				&-results{
+					display: flex;
+					flex-wrap: wrap;
+					margin: -2px 0;
+					padding: 10px 0;
 				li{
 					@extend h5;
 					position: relative;

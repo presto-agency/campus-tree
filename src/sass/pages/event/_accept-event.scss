@@ -1,0 +1,44 @@
+.accept-event{
+	display: none;
+		&-success{
+			display: none;
+			text-align: center;
+				.event{
+					&-leaf{
+						position: relative;
+						top: 0;
+						right: 0;
+						margin: 0 auto;
+					}
+				}
+				.paragraph{
+					max-width: 200px;
+					margin: 0 auto;
+				}
+				&.is-active{
+					display: block;
+				}
+		}
+		&-tree{
+			@include d($xl){
+				order: 2;
+			}
+		}
+		&.is-active{
+			display: block;
+				@include d($xl){
+					display: flex;
+					justify-content: space-around;
+				}
+		}
+}
+
+[data-router-view="leaf"]{
+	.box{
+		&-dotted{
+			@include m($xl + 1){
+				margin-top: -140px;
+			}
+		}
+	}
+}

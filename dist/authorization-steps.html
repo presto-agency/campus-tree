@@ -47,8 +47,8 @@
         </div>
     </header>
     <div data-router-wrapper>
-        <form action="#">
-            <div data-router-view="authorization">
+        <div data-router-view="authorization">
+            <form action="#">
                 <section class="section sign-in">
                     <div class="sign-in-left-side">
                         <div class="sign-in-content">
@@ -235,7 +235,7 @@
                                             </label>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="input-container input-container-datepicker __bottom __right">
+                                            <label class="input-container input-container-datepicker __top __right">
                                                 <input type="text" name="Birthday" class="input input-datepicker" placeholder="Date" readonly="readonly">
                                                 <span class="input-container-icon __16 __right">
                                                                 <svg class="svg svg__16">
@@ -313,7 +313,15 @@
                                     </label>
                                     <label class="input-container input-container-file">
                                         <span class="upload-file">
-
+                                            <input type="file" class="input" hidden>
+                                            <span class="person-thumb">
+                                                <img src="" alt="Joey Tribbiani">
+                                                <span class="person-thumb-upload">
+                                                    <svg class="svg svg__16">
+                                                        <use xlink:href="../images/sprite/sprite.svg#upload"></use>
+                                                    </svg>
+                                                </span>
+                                            </span>
                                         </span>
                                         <span class="upload-text h-4">
                                             Upload a photo
@@ -327,6 +335,7 @@
                                                 <li>potato</li>
                                                 <li>tomato</li>
                                                 <li>orange</li>
+                                                <li>apple</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -408,8 +417,8 @@
                         </div>
                     </div>
                 </section>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </main>
 </body>

@@ -4,6 +4,7 @@ import {initRegistrationLottie, moveLottieToStep} from "../common/authorization/
 import {showPassword} from "../common/authorization/showPassword";
 import {initDatepicker} from '../common/datepicker/initDatepicker';
 import {inputSearchTags} from '../common/authorization/inputSearchTags';
+import {initAvatarFirstLastName} from "../common/general/initAvatarFirstLastName";
 
 class authorizationRenderer extends Highway.Renderer {
     onEnter() {
@@ -16,6 +17,7 @@ class authorizationRenderer extends Highway.Renderer {
     }
     onEnterCompleted() {
         console.log('enter completed to authorization page');
+        initAvatarFirstLastName();
     }
 }
 

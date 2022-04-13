@@ -1,5 +1,5 @@
 export const toggleTooltip = () => {
-	const tooltips = document.querySelectorAll('.tooltip');
+	const tooltips = document.querySelectorAll('.tooltip-click');
 	for (let i = 0; i < tooltips.length; i++) {
 		tooltips[i].addEventListener('click', () => {
 			if (tooltips[i].classList.contains('is-active')) {
@@ -10,6 +10,16 @@ export const toggleTooltip = () => {
 					closeAllTooltips();
 				}, 3000);
 			}
+		});
+	}
+
+	/*
+	Close current tooltip
+	 */
+	const closeButtons = document.querySelectorAll('.tooltip-body-close');
+	for (let i = 0; i < closeButtons.length; i++) {
+		closeButtons[i].addEventListener('click', () => {
+			closeButtons[i].parentNode.parentNode.classList.remove('is-active');
 		});
 	}
 

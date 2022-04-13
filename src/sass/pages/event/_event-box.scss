@@ -71,6 +71,15 @@
 			right: -98px;
 			z-index: -1;
 			pointer-events: none;
+				@include d($xl){
+					width: 120px;
+					height: 120px;
+					top: -44px;
+					right: -52px;
+				}
+				@include d($sm){
+					right: -25px;
+				}
 		}
 		&-action{
 			display: flex;
@@ -83,6 +92,9 @@
 						&:last-child{
 							margin-right: 0;
 						}
+				}
+				@include d($sm){
+					padding: 10px 0;
 				}
 		}
 		&-detail{
@@ -110,33 +122,70 @@
 									height: 50px;
 									background-color: var(--color-gray-700);
 								}
+								@include d($sm){
+									max-width: 100%;
+									padding-right: 15px;
+								}
 						}
 						&-location{
 							display: inline-flex;
 							font-size: 18px;
 							padding-left: 30px;
+								@include d($xl){
+									max-width: 250px;
+								}
+								@include d($sm){
+									padding-left: 15px;
+									flex: 1;
+								}
 						}
 					}
+				}
+				@include d($xl){
+					padding-top: 3px;
+					padding-bottom: 25px;
+				}
+				@include d($sm){
+					width: 100%;
 				}
 		}
 		/*
 		Types
 		 */
 		&-open{
-			.event{
-				&-thumb{
-					width: 48px;
-					height: 48px;
-					min-width: 48px;
-					margin-top: 18px;
-				}
-				&-description{
-					&-title{
-						margin-bottom: 5px;
-						padding-right: 0;
+			position: relative;
+				.event{
+					&-thumb{
+						width: 48px;
+						height: 48px;
+						min-width: 48px;
+						margin-top: 18px;
+							@include d($sm){
+								margin-top: 8px;
+							}
+					}
+					&-description{
+						&-title{
+							margin-bottom: 5px;
+							padding-right: 0;
+								@include d($sm){
+									font-size: 18px;
+								}
+						}
 					}
 				}
-			}
+				&-action{
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translateY(-50%);
+						@include m($sm + 1){
+							display: none;
+						}
+				}
+				@include d($sm){
+					width: calc(100% + 20px);
+				}
 		}
 		&.is-active{
 			border-color: var(--color-primary);
@@ -150,4 +199,10 @@
 				border-radius: 10px;
 			}
 		}
+}
+
+[data-router-view="leaf"]{
+	.scroll-wrap{
+		height: 375px;
+	}
 }

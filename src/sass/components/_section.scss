@@ -23,5 +23,8 @@
 		}
 		&-event{
 			padding-top: 30px;
+				@include d($sm){
+					padding-top: 0;
+				}
 		}
 }

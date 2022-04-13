@@ -51,7 +51,6 @@
 		}
 		&-body{
 			padding: 22px 0 10px;
-			height: calc(100% - 78px);
 			visibility: visible;
 				.fieldset{
 					padding: 16px 0;
@@ -86,16 +85,70 @@
 			height: 255px;
 			overflow: hidden;
 			border-radius: 20px;
-			margin-bottom: 33px;
+			margin-bottom: 30px;
 				img{
 					@include imageCover(center);
 				}
+				@include d($xl){
+					height: 190px;
+				}
+				@include d($sm){
+					height: 104px;
+				}
+				&-drop{
+					height: 255px;
+					background-color: var(--color-gray-400);
+					position: relative;
+					margin-bottom: 15px;
+						.input-container-file{
+							position: absolute;
+							inset: 18px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							justify-content: center;
+							background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23333' stroke-width='1' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+								.paragraph{
+									margin: 15px auto 0;
+									max-width: 488px;
+									text-align: center;
+										@include d($sm){
+											font-size: 14px;
+											padding: 0 30px;
+											max-width: 250px;
+										}
+								}
+						}
+						.person-thumb-upload{
+						position: relative;
+						bottom: 0;
+						left: 0;
+						transform: none;
+					}
+						@include d($sm){
+							height: 212px;
+						}
+				}
+		}
+		/*
+		Types
+		 */
+		&-dotted{
+			background: transparent;
+			backdrop-filter: none;
+			box-shadow: none;
+			background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23333' stroke-width='1' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 		}
 		.event{
 			margin: 0 -10px;
 			padding: 10px;
 				&:not(:last-child):not(.event-open){
 					margin-bottom: 12px;
+				}
+				&.event-open{
+					@include d($sm){
+						padding-right: 130px;
+					}
 				}
 		}
 		.scroll-wrap{
@@ -114,5 +167,9 @@ Event page
 [data-router-view="leaf"]{
 	.box{
 		padding: 20px 25px;
+		margin-bottom: 30px;
+			@include d($sm){
+				padding: 20px 15px;
+			}
 	}
 }

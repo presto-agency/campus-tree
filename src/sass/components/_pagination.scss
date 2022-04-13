@@ -118,3 +118,16 @@ Category page
 			}
 	}
 }
+/*
+Search result page
+ */
+[data-router-view="searchResult"]{
+	.pagination{
+			@include m($sm + 1){
+				margin-bottom: 30px;
+			}
+			&-list{
+				justify-content: flex-start;
+			}
+	}
+}

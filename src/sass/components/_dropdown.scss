@@ -112,6 +112,23 @@
 			}
 		}
 		/*
+		Positions
+		 */
+		&.__left{
+			.dropdown-body{
+				left: 0 !important;
+				right: auto !important;
+			}
+			&-sm{
+				@include d($sm){
+					.dropdown-body{
+						left: 0 !important;
+						right: auto !important;
+					}
+				}
+			}
+		}
+		/*
 		Open theme
 		 */
 		&.is-active{

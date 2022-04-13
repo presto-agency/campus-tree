@@ -53,13 +53,21 @@ export const inputSearchTags = () =>{
     }
 
     function createDiv(current) {
-        let newEl = document.createElement('li');
-        let result = document.querySelector('.input-tags-results');
-        newEl.innerHTML =  `<span></span>${current}`;
-        result.appendChild(newEl);
-        suggestions.innerHTML = '';
-        suggestions.classList.remove('has-suggestions');
-        input.value = '';
+        if(checkoutTag(current)){
+            suggestions.innerHTML = '';
+            suggestions.classList.remove('has-suggestions');
+            input.value = '';
+            return;
+        }
+        else{
+            let newEl = document.createElement('li');
+            let result = document.querySelector('.input-tags-results');
+            newEl.innerHTML =  `<span></span>${current}`;
+            result.appendChild(newEl);
+            suggestions.innerHTML = '';
+            suggestions.classList.remove('has-suggestions');
+            input.value = '';
+        }
     }
 
     function useSuggestion(e) {
@@ -83,6 +91,15 @@ export const inputSearchTags = () =>{
             e.preventDefault();
             createDiv(input.value);
             removeTag();
+        }
+    }
+
+    function checkoutTag(value) {
+        let existTags = document.querySelectorAll('.input-tags-results>li');
+        for(let exist of existTags){
+            if(value == exist.textContent){
+                return(value == exist.textContent)
+            }
         }
     }
 

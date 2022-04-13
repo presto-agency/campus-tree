@@ -21,17 +21,17 @@ export const searchDropdown = () => {
 		/*
 		Fill search input on click by dropdown
 		 */
-		const searchDropdownList = document.querySelectorAll('.search .dropdown .list-item');
-		if (searchDropdownList.length) {
-			const searchInput = document.querySelector('.search .input');
-			for (let i = 0; i < searchDropdownList.length; i++) {
-				searchDropdownList[i].addEventListener('click', (e) => {
-					e.preventDefault();
-					searchInput.value = searchDropdownList[i].innerHTML;
-					closeAllDropdowns();
-				});
-			}
-		}
+		// const searchDropdownList = document.querySelectorAll('.search .dropdown .list-item');
+		// if (searchDropdownList.length) {
+		// 	const searchInput = document.querySelector('.search .input');
+		// 	for (let i = 0; i < searchDropdownList.length; i++) {
+		// 		searchDropdownList[i].addEventListener('click', (e) => {
+		// 			e.preventDefault();
+		// 			searchInput.value = searchDropdownList[i].innerHTML;
+		// 			closeAllDropdowns();
+		// 		});
+		// 	}
+		// }
 
 		/*
 		Show header filters

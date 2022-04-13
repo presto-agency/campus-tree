@@ -292,6 +292,9 @@
 		 */
 		&-tags{
 			@extend .input;
+			height: initial;
+			min-height: 56px;
+			max-height: 100%;
 			position: relative;
 			display: flex;
 			align-items: center;
@@ -334,26 +337,27 @@
 					display: flex;
 					flex-wrap: wrap;
 					margin: -2px 0;
-					li{
-						@extend h5;
-						position: relative;
-						text-transform: uppercase;
-						color: var(--color-white);
-						background: var(--color-events);
-						border-radius: 500px;
-						padding: 0 15px 0 5px;
-						margin: 2px 8px 2px 0;
-							span{
-								position: absolute;
-								cursor: pointer;
-								top: 50%;
-								transform: translateY(-50%);
-								right: 5px;
-								width: 8px;
-								height: 8px;
-								background: url('../images/sign-in/cross.svg');
-							}
+					padding: 10px 0;
+				li{
+					@extend h5;
+					position: relative;
+					text-transform: uppercase;
+					color: var(--color-white);
+					background: var(--color-events);
+					border-radius: 500px;
+					padding: 0 15px 0 5px;
+					margin: 2px 8px 2px 0;
+					span{
+						position: absolute;
+						cursor: pointer;
+						top: 50%;
+						transform: translateY(-50%);
+						right: 5px;
+						width: 8px;
+						height: 8px;
+						background: url('../images/sign-in/cross.svg');
 					}
+				}
 			}
 		}
 		/*

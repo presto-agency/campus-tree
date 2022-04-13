@@ -48,8 +48,8 @@
         </div>
     </header>
     <div data-router-wrapper>
-        <form action="#">
-            <div data-router-view="authorization">
+        <div data-router-view="authorization">
+            <form action="#">
                 <section class="section sign-in">
                     <div class="sign-in-left-side">
                         <div class="sign-in-content">
@@ -322,7 +322,15 @@
                                     </label>
                                     <label class="input-container input-container-file">
                                         <span class="upload-file">
-
+                                            <input type="file" class="input" hidden/>
+                                            <span class="person-thumb">
+                                                <img src="" alt="Joey Tribbiani"/>
+                                                <span class="person-thumb-upload">
+                                                    <svg class="svg svg__16">
+                                                        <use xlink:href="../images/sprite/sprite.svg#upload"></use>
+                                                    </svg>
+                                                </span>
+                                            </span>
                                         </span>
                                         <span class="upload-text h-4">
                                             Upload a photo
@@ -419,8 +427,8 @@
                         </div>
                     </div>
                 </section>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </main>
 </body>

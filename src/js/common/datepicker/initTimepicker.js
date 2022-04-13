@@ -379,7 +379,9 @@ function timepicker(element, args) {
 
 			this.active = true
 
-		} else if (e.target.className.indexOf('timepicker__') == -1 && e.target.parentElement.className.indexOf('timepicker__') == -1) {
+		} else
+			// if (e.target.className.indexOf('timepicker__') == -1 && e.target.parentElement.className.indexOf('timepicker__') == -1)
+			{
 
 			this.active = false
 

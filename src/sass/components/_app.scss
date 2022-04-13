@@ -336,10 +336,26 @@ body{
 						&:last-child{
 							margin-right: 0;
 						}
+						@include d($sm){
+							margin: 8px 0;
+								&:nth-child(1){
+									margin-top: 0;
+								}
+								&:last-child{
+									margin-bottom: 0;
+								}
+						}
 				}
 				.btn{
 					max-width: 210px;
 					width: 100%;
+						@include d($sm){
+							max-width: 100%;
+						}
+				}
+				@include d($sm){
+					flex-direction: column;
+					align-items: flex-start;
 				}
 		}
 }

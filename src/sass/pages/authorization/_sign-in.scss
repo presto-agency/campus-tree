@@ -33,6 +33,8 @@
       max-width: 596px;
       max-height: 100%;
       width: 100%;
+      padding: 0 48px 0 0;
+      box-sizing: content-box;
       .sign-in-img{
         position: relative;
         z-index: 2;
@@ -70,13 +72,15 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      padding: 100px 60px;
       transform: translate(-50%, -50%);
       max-width: 466px;
       max-height: 100%;
       width: 100%;
       .input-container{
         margin: 0 0 32px 0;
+      }
+      &-cover{
+        padding: 100px 0 100px 48px;
       }
       &-buttons-group{
         display: flex;
@@ -148,8 +152,10 @@
         &-right-side{
           flex: 0 1 100%;
           .sign-form{
-            padding: 150px 0;
             overflow-y: auto;
+            &-cover{
+              padding: 150px 0;
+            }
             &::-webkit-scrollbar {
               display: none;
             }

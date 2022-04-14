@@ -36,3 +36,24 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .sign-in{
+    &.approval{
+      &.sign-in-mobile{
+        .sign-form{
+          padding: 100px 48px;
+          &-content{
+            flex-direction: column;
+            .input-container{
+              flex: initial;
+            }
+            .btn{
+              flex: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

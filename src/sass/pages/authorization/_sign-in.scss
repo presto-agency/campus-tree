@@ -1,9 +1,6 @@
 .sign-in{
   overflow-y: auto;
-  background: linear-gradient(to right, #008037 50%, rgba(0,0,0,0) 50%);
-  @media (max-width: 1440px) {
-    background: linear-gradient(to right, #008037 48%, rgba(0,0,0,0) 48%);
-  }
+  background: linear-gradient(to right, #008037 48%, rgba(0,0,0,0) 48%);
   &-wrapper{
     display: flex;
     height: 100vh;
@@ -12,12 +9,9 @@
   &-left-side{
     position: relative;
     display: flex;
-    flex: 0 1 50%;
     flex-direction: column;
     height: 100%;
-    @media (max-width: 1440px) {
-      flex: 0 1 47%;
-    }
+    flex: 0 1 47%;
     .section-title{
       position: relative;
       z-index: 2;
@@ -61,10 +55,7 @@
   }
   &-right-side{
     position: relative;
-    flex: 0 1 50%;
-    @media (max-width: 1440px) {
-      flex: 0 1 53%;
-    }
+    flex: 0 1 53%;
     .section-title{
       margin: 0 0 48px 0;
     }

@@ -68,6 +68,48 @@
 							text-align: left;
 						}
 				}
+				&-modal{
+					position: absolute;
+					max-width: 416px;
+					width: 100vw;
+					top: 0;
+					left: 0;
+					background-color: var(--color-white);
+					display: none;
+						.box{
+								&-header{
+									.svg{
+										color: var(--color-black);
+									}
+								}
+						}
+						.person{
+							&-header{
+								display: flex;
+								align-items: center;
+								margin-bottom: 10px;
+							}
+							&-action{
+								padding-left: 0;
+								margin-top: 5px;
+								flex-direction: row;
+								flex-wrap: wrap;
+									.link{
+										&:not(:last-child){
+											margin-right: 16px;
+										}
+									}
+							}
+							&-description{
+								&-item{
+									display: block;
+								}
+							}
+						}
+						.tags{
+							padding: 5px 0;
+						}
+				}
 				@include d($xl){
 					margin: 8px;
 					width: calc(25% - 16px);
@@ -86,7 +128,7 @@
 								display: flex;
 								width: 100%;
 								align-items: center;
-								margin: 8px 16px;
+								margin: 8px 16px 0;
 							}
 							&-item{
 								@include m($sm + 1){
@@ -94,6 +136,14 @@
 										&:nth-child(2){
 											flex: 1;
 										}
+								}
+							}
+							&-modal{
+								.person{
+									&-action{
+										border-top: 1px var(--color-gray-700) solid;
+										padding-top: 14px;
+									}
 								}
 							}
 							@include d($xl){
@@ -151,6 +201,25 @@
 					flex-direction: column;
 					width: 100%;
 				}
+		}
+		&-fullwidth{
+			.people{
+				&-row{
+					width: calc(16.66% - 32px);
+						@include d($xl){
+							width: calc(25% - 16px);
+						}
+						@include d($md){
+							width: calc(33.33% - 16px);
+						}
+						@include d($md){
+							width: calc(50% - 16px);
+						}
+						@include d($xs){
+							width: calc(100% - 16px);
+						}
+				}
+			}
 		}
 		@include d($xl){
 			margin: 0 -8px;

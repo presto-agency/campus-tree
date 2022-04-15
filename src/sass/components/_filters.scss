@@ -38,6 +38,10 @@
 						margin-bottom: 16px;
 					}
 				}
+				&-default{
+					padding-top: 0;
+					border-bottom: none;
+				}
 				@include d($xs){
 					flex-direction: column;
 					align-items: flex-start;

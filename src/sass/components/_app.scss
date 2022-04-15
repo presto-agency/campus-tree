@@ -117,8 +117,29 @@ body{
 	background-color: var(--color-gray-700);
 }
 
+.tags{
+	padding: 16px 0 8px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+		&-list{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			padding-right: 8px;
+		}
+		.tag{
+			margin-bottom: 8px;
+				&:not(:last-child){
+					margin-right: 8px;
+				}
+		}
+}
+
 .tag{
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	white-space: nowrap;
 	font-size: 10px;
 	line-height: 1.2em;
 	text-transform: uppercase;
@@ -126,24 +147,78 @@ body{
 	letter-spacing: .1em;
 	padding: 0 5px;
 	border-radius: 20px;
-	color: var(--color-white);
+	background-color: var(--color-gray-400);
+	color: var(--color-gray-800);
+		svg{
+			width: 8px;
+			height: 8px;
+			margin-left: 2px;
+		}
+		path{
+			stroke: var(--color-gray-800);
+		}
+		/*
+		Colors
+		 */
 		&-events{
 			background-color: var(--color-events);
+			color: var(--color-white);
+				path{
+					stroke: var(--color-white);
+				}
 		}
 		&-alumni{
 			background-color: var(--color-alumni);
+			color: var(--color-white);
+				path{
+					stroke: var(--color-white);
+				}
 		}
 		&-majors{
 			background-color: var(--color-majors);
+			color: var(--color-white);
+				path{
+					stroke: var(--color-white);
+				}
 		}
 		&-greek-life{
 			background-color: var(--color-greek);
+			color: var(--color-white);
+				path{
+					stroke: var(--color-white);
+				}
 		}
 		&-clubs{
 			background-color: var(--color-clubs);
+			color: var(--color-white);
+				path{
+					stroke: var(--color-white);
+				}
 		}
 		&-local{
 			background-color: var(--color-local);
+			color: var(--color-white);
+				path{
+					stroke: var(--color-white);
+				}
+		}
+		/*
+		Types
+		 */
+		&.enable-remove{
+			cursor: pointer;
+		}
+		&.clear-tags{
+			background-color: transparent;
+			color: var(--color-black);
+			cursor: pointer;
+				svg{
+					margin-left: 0;
+					margin-right: 2px;
+				}
+				path{
+					stroke: var(--color-black);
+				}
 		}
 }
 

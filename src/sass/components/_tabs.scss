@@ -11,6 +11,7 @@
 			color: var(--color-gray-800);
 			border: 1px var(--color-gray-700) solid;
 			position: relative;
+			white-space: nowrap;
 				&.is-active{
 					background-color: var(--color-primary);
 					border-color: transparent;
@@ -62,5 +63,33 @@
 		}
 		@include d($sm){
 			margin: 19px 0;
+		}
+		/*
+		Types
+		 */
+		&-inline{
+			display: inline-flex;
+				@include d($xs){
+					width: 100%;
+				}
+				@include d($sm){
+					margin: 0;
+				}
+		}
+		/*
+		Sizes
+		 */
+		&-md{
+			.tabs{
+				&-item{
+					padding: 0 10px;
+						@include m($xs + 1){
+							font-size: 14px;
+							height: 40px;
+							line-height: 40px;
+							padding: 0 22px;
+						}
+				}
+			}
 		}
 }

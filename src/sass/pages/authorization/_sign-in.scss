@@ -1,4 +1,5 @@
 .sign-in{
+  position: relative;
   overflow-y: auto;
   background: linear-gradient(to right, #008037 48%, rgba(0,0,0,0) 48%);
   &-wrapper{
@@ -27,10 +28,8 @@
       max-width: 596px;
       max-height: 100%;
       width: 100%;
-      box-sizing: content-box;
-      @media (max-width: 1199px) {
       padding: 0 48px 0 0;
-      }
+      box-sizing: content-box;
       .sign-in-img{
         position: relative;
         z-index: 2;
@@ -137,7 +136,7 @@
   .sign-in{
     &.sign-in-mobile{
         background: initial;
-        overflow-y: initial;
+        //overflow-y: initial;
       .sign-in{
         &-left-side{
           display: none;
@@ -145,7 +144,7 @@
         &-right-side{
           flex: 0 1 100%;
           .sign-form{
-            overflow-y: auto;
+            //overflow-y: auto;
             &-cover{
               padding: 150px 0;
             }

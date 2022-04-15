@@ -1,8 +1,8 @@
 import lottie from 'lottie-web';
 
 let tree;
-const iframes = [[0,50],[50,110],[110,170],[170,216]];
-const iframesReverse = [[110,50],[170,110],[216,170]];
+const iframes = [[0,50],[50,110],[110,170],[170,216],[216]];
+const iframesReverse = [[110,50],[170,110],[216,170],[216]];
 
 export const initRegistrationLottie = () =>{
 	if (!!document.querySelector('#register-movie')) {

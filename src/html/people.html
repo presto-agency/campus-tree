@@ -81,7 +81,7 @@
 					</a>
 				</div>
 				<div class="header-panel-action">
-					<a href="#" class="link personal-tree">
+					<a href="#" class="link personal-tree d-none d-xl-inline-flex">
 						<span class="link-icon">
 							<svg class="svg svg__64">
 								<use xlink:href="../images/sprite/sprite.svg#tree"></use>
@@ -120,11 +120,11 @@
 												</div>
 											</div>
 											<div class="notification-description">
-												<p>You’ve been invited by <a href="#">Joey Tribbiani</a></p>
+												<p>You’ve been invited by <a href="#">Joey Tribbiani</a> to <a href="#">Some event</a></p>
 											</div>
 										</div>
 										<div class="notification-list-item">
-											<div class="notification-avatar">
+											<div class="notification-avatar __event">
 												<img src="https://images.pexels.com/photos/307847/pexels-photo-307847.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Avatar"/>
 												<div class="notification-avatar-label">
 													<svg class="svg svg__16">
@@ -167,7 +167,7 @@
 							</div>
 						</div>
 					</div>
-					<button class="link">
+					<button class="link d-none d-xl-inline-flex">
 						<span class="link-icon">
 							<svg class="svg svg__24">
 								<use xlink:href="../images/sprite/sprite.svg#sign-out"></use>
@@ -175,7 +175,7 @@
 						</span>
 						<span class="link-title">Sign out</span>
 					</button>
-					<button class="btn">
+					<button class="btn d-none d-md-inline-flex">
 						<span class="btn-icon">
 							<svg class="svg svg__32">
 								<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
@@ -183,11 +183,18 @@
 						</span>
 						<span class="btn-title">Create a leaf</span>
 					</button>
+					<div class="burger">
+						<div class="burger-box">
+							<div class="burger-box-arrow"></div>
+							<div class="burger-box-arrow"></div>
+							<div class="burger-box-arrow"></div>
+						</div>
+					</div>
 				</div>
 				<div class="header-panel-filters">
 					<div class="filters">
 						<div class="filters-item">
-							<div class="link">
+							<div class="link" id="toggle-header-mobile-filters">
 								<div class="link-icon">
 									<svg class="svg svg__24">
 										<use xlink:href="../images/sprite/sprite.svg#filter"></use>
@@ -196,7 +203,7 @@
 								<div class="link-title">Filters</div>
 							</div>
 						</div>
-						<div class="filters-item">
+						<div class="filters-item d-none d-xl-flex">
 							<div class="dropdown">
 								<p class="dropdown-trigger-label">Branches</p>
 								<p class="dropdown-trigger dropdown-trigger-title"
@@ -273,7 +280,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="filters-item">
+						<div class="filters-item d-none d-xl-flex">
 							<div class="dropdown">
 								<p class="dropdown-trigger-label">Interests</p>
 								<p class="dropdown-trigger dropdown-trigger-title"
@@ -350,7 +357,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="filters-item">
+						<div class="filters-item d-none d-xl-flex">
 							<label class="input-container">
 								<input type="checkbox" class="input input-checkbox input-checkbox-sm"/>
 								<span class="input-checkbox-icon">
@@ -372,8 +379,271 @@
 						</div>
 					</div>
 				</div>
+				<div class="header-panel-filters __mobile" id="header-mobile-filters">
+					<div class="row pb-4">
+						<div class="col-6 d-flex align-items-center">
+							<label class="input-container">
+								<input type="checkbox" class="input input-checkbox input-checkbox-sm"/>
+								<span class="input-checkbox-icon">
+									<svg class="svg svg__16">
+										<use xlink:href="../images/sprite/sprite.svg#check"></use>
+									</svg>
+								</span>
+								<span class="input-checkbox-title">Only with my friends</span>
+							</label>
+						</div>
+						<div class="col-6">
+							<div class="d-flex justify-content-end">
+								<button class="btn reset-btn" data-reset-box="#header-mobile-filters">
+									<span class="btn-title">Reset filter</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="border"></div>
+					<div class="row pt-4">
+						<div class="col-12 d-flex">
+							<div class="dropdown dropdown-static">
+								<p class="dropdown-trigger-label">Branches</p>
+								<p class="dropdown-trigger dropdown-trigger-title"
+									 data-fieldset-label="filter-branches-mobile"
+									 data-label="Select branch">Select branch</p>
+								<div class="dropdown-body">
+									<div class="dropdown-body-item">
+										<fieldset class="fieldset" data-fieldset-list="filter-branches-mobile">
+											<label class="input-container">
+												<input type="checkbox" value="all" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">All</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Greek Life" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Greek Life</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Alumni" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Alumni</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Local" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Local</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Events" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Events</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Majors" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Majors</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Clubs" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Clubs</span>
+											</label>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+							<div class="dropdown dropdown-static">
+								<p class="dropdown-trigger-label">Interests</p>
+								<p class="dropdown-trigger dropdown-trigger-title"
+									 data-fieldset-label="filter-interests-mobile"
+									 data-label="Select interest">Select interest</p>
+								<div class="dropdown-body">
+									<div class="dropdown-body-item">
+										<fieldset class="fieldset" data-fieldset-list="filter-interests-mobile">
+											<label class="input-container">
+												<input type="checkbox" value="all" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">All</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Greek Life" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Greek Life</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Alumni" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Alumni</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Local" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Local</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Events" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Events</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Majors" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Majors</span>
+											</label>
+											<label class="input-container">
+												<input type="checkbox" value="Clubs" class="input input-checkbox"/>
+												<span class="input-checkbox-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#check"></use>
+													</svg>
+												</span>
+												<span class="input-checkbox-title">Clubs</span>
+											</label>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="border"></div>
+		</div>
+		<!--	Tablet, phone nav menu	-->
+		<div class="header-nav">
+			<div class="border"></div>
+			<div class="header-nav-tablet">
+				<a href="#" class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#friends"></use>
+							</svg>
+						</span>
+					<span class="link-title">My friends</span>
+				</a>
+				<a href="people.html" class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#people"></use>
+							</svg>
+						</span>
+					<span class="link-title">people catalog</span>
+				</a>
+				<div class="border border-vertical"></div>
+				<a href="#" class="link personal-tree">
+						<span class="link-icon">
+							<svg class="svg svg__64">
+								<use xlink:href="../images/sprite/sprite.svg#tree"></use>
+							</svg>
+						</span>
+					<span class="link-title">My personal tree</span>
+				</a>
+				<button class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#sign-out"></use>
+							</svg>
+						</span>
+					<span class="link-title">Sign out</span>
+				</button>
+			</div>
+			<div class="scroll-wrap">
+				<div class="header-nav-phone">
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+						</svg>
+					</span>
+						<span class="link-title">Create a leaf</span>
+					</a>
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#shield"></use>
+						</svg>
+					</span>
+						<span class="link-title">Privacy Policy</span>
+					</a>
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#faq"></use>
+						</svg>
+					</span>
+						<span class="link-title">FAQ</span>
+					</a>
+					<a href="#" class="link">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#support"></use>
+						</svg>
+					</span>
+						<span class="link-title">Support</span>
+					</a>
+					<button class="link link-absolute">
+					<span class="link-icon">
+						<svg class="svg svg__24">
+							<use xlink:href="../images/sprite/sprite.svg#sign-out"></use>
+						</svg>
+					</span>
+						<span class="link-title">Sign out</span>
+					</button>
+					<div class="header-copyright">
+						<p>&copy; Campus Tree 2022</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
   <div data-router-wrapper>
@@ -384,6 +654,612 @@
 						<div class="col-12">
 							<div class="section-title">
 								<h1 class="h-1">People Catalog</h1>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-8">
+							<div class="filters-panel">
+								<div class="filters-panel-item">
+									<label class="input-container">
+										<input type="text" class="input input-transparent" placeholder="Events Search"/>
+										<span class="input-container-icon">
+											<svg class="svg svg__24">
+												<use xlink:href="../images/sprite/sprite.svg#search"></use>
+											</svg>
+										</span>
+									</label>
+								</div>
+								<div class="filters-panel-item">
+									<div class="filters">
+										<div class="filters-item d-xl-none">
+											<button class="link toggle-filters" data-filter-id="#people-filter">
+											<span class="link-icon">
+												<svg class="svg svg__24">
+													<use xlink:href="../images/sprite/sprite.svg#filter"></use>
+												</svg>
+											</span>
+												<span class="link-title">Filters</span>
+											</button>
+										</div>
+										<div class="filters-item d-none d-md-block">
+											<div class="view-switcher">
+												<p class="view-switcher-title">View</p>
+												<div class="view-switcher-item">
+													<div class="view-mode view-mode-box" data-view-trigger="default">
+														<svg viewBox="0 0 16 16" fill="none">
+															<rect width="7.11111" height="7.11111" rx="2"/>
+															<rect y="8.88867" width="7.11111" height="7.11111" rx="2"/>
+															<rect x="8.88892" width="7.11111" height="7.11111" rx="2"/>
+															<rect x="8.88892" y="8.88867" width="7.11111" height="7.11111" rx="2"/>
+														</svg>
+													</div>
+													<div class="view-mode view-mode-list is-active" data-view-trigger="list">
+														<svg viewBox="0 0 15 15" fill="none">
+															<rect y="6" width="15" height="3" rx="1.5"/>
+															<rect width="15" height="3" rx="1.5"/>
+															<rect y="12" width="15" height="3" rx="1.5"/>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="filters-item">
+											<div class="dropdown">
+												<p class="dropdown-trigger-label">Sort by</p>
+												<p class="dropdown-trigger dropdown-trigger-title"
+													 data-fieldset-label="filter-sort"
+													 data-label="Popular">New friends</p>
+												<div class="dropdown-body">
+													<div class="dropdown-body-item">
+														<fieldset class="fieldset" data-fieldset-list="filter-sort">
+															<label class="input-container">
+																<input type="radio" name="sort" value="New friends" class="input input-checkbox" checked/>
+																<span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+																<span class="input-checkbox-title">New friends</span>
+															</label>
+															<label class="input-container">
+																<input type="radio" name="sort" value="New friends 2" class="input input-checkbox"/>
+																<span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+																<span class="input-checkbox-title">New friends 2</span>
+															</label>
+														</fieldset>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4">
+							<div class="people-filter">
+								<div class="box box-bg" id="people-filter">
+								<div class="box-header pb-3">
+									<div class="box-header-row">
+										<h3 class="h-3 color-primary">Filter</h3>
+										<div class="box-header-action">
+											<button class="btn btn-md reset-btn" data-reset-box="#people-filter">
+												<span class="btn-title">Reset filters</span>
+											</button>
+											<div class="link ml-3 d-xl-none toggle-filters" data-filter-id="#people-filter">
+												<div class="link-icon">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#close"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr class="hr"/>
+								<div class="box-body">
+									<div class="row">
+										<div class="col-sm-6">
+											<p class="paragraph paragraph-medium">Sex</p>
+											<fieldset class="fieldset" data-fieldset-list="people-sex">
+												<label class="input-container">
+													<input type="radio" name="sex" value="male" class="input input-radio"/>
+													<span class="input-radio-icon"></span>
+													<span class="input-radio-title">Male</span>
+												</label>
+												<label class="input-container">
+													<input type="radio" name="sex" value="female" class="input input-radio"/>
+													<span class="input-radio-icon"></span>
+													<span class="input-radio-title">Female</span>
+												</label>
+											</fieldset>
+											<p class="paragraph paragraph-medium">Faculty</p>
+											<fieldset class="fieldset" data-fieldset-list="people-faculty">
+												<label class="input-container">
+													<input type="checkbox" value="all" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">All</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Chemistry" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Chemistry</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Computer Science and Cybernetics" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Computer Science and Cybernetics</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Economics" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Economics</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Geography" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Geography</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="History" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">History</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Law" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Law</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Mechanics and Mathematics" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Mechanics and Mathematics</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Philosophy" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Philosophy</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Physics" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Physics</span>
+												</label>
+											</fieldset>
+										</div>
+										<div class="col-sm-6">
+											<p class="paragraph paragraph-medium">Time Rage</p>
+											<fieldset class="fieldset" data-fieldset-list="people-time">
+												<label class="input-container">
+													<input type="radio" name="time" value="Week" class="input input-radio"/>
+													<span class="input-radio-icon"></span>
+													<span class="input-radio-title">Week</span>
+												</label>
+												<label class="input-container">
+													<input type="radio" name="time" value="Month" class="input input-radio"/>
+													<span class="input-radio-icon"></span>
+													<span class="input-radio-title">Month</span>
+												</label>
+												<label class="input-container">
+													<input type="radio" name="time" value="Quarter" class="input input-radio"/>
+													<span class="input-radio-icon"></span>
+													<span class="input-radio-title">Quarter</span>
+												</label>
+												<label class="input-container">
+													<input type="radio" name="time" value="Year" class="input input-radio"/>
+													<span class="input-radio-icon"></span>
+													<span class="input-radio-title">Year</span>
+												</label>
+											</fieldset>
+											<p class="paragraph paragraph-medium">Branches</p>
+											<fieldset class="fieldset" data-fieldset-list="people-branches">
+												<label class="input-container">
+													<input type="checkbox" value="all" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">All</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Greek Life" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Greek Life</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Alumni" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Alumni</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Local" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Local</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Events" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Events</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Majors" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Majors</span>
+												</label>
+												<label class="input-container">
+													<input type="checkbox" value="Clubs" class="input input-checkbox"/>
+													<span class="input-checkbox-icon">
+																<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																</svg>
+															</span>
+													<span class="input-checkbox-title">Clubs</span>
+												</label>
+											</fieldset>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-8">
+							<div class="tree">
+								<div class="tree-links">
+									<a href="index.html" data-transition="pagination" id="pagination-link"></a>
+								</div>
+								<div class="people" data-empty-label="You search was not successful!" data-view-mode="list">
+									<div class="people-row">
+										<div class="people-row-item">
+											<div class="person-header">
+												<div class="person-thumb" data-thumb-title="Charmaine Delarosa">
+													<img src="https://cdn.stocksnap.io/img-thumbs/280h/urban-female_COOWAKH2W5.jpg" alt="Charmaine Delarosa"/>
+												</div>
+												<p class="person-description-title paragraph-medium">Charmaine Delarosa</p>
+											</div>
+										</div>
+										<div class="people-row-item">
+											<p class="person-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews. Similar events are "mobile clubbing"</p>
+										</div>
+										<div class="people-row-item">
+											<div class="person-action">
+												<button class="link">
+													<span class="link-icon">
+														<svg class="svg svg__24">
+															<use xlink:href="../images/sprite/sprite.svg#plus-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Accept request</span>
+												</button>
+												<button class="link color-alumni-hover">
+													<span class="link-icon">
+														<svg class="svg svg__24 color-alumni">
+															<use xlink:href="../images/sprite/sprite.svg#remove-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Reject request</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="people-row">
+										<div class="people-row-item">
+											<div class="person-header">
+												<div class="person-thumb" data-thumb-title="Ziva Moon">
+													<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Charmaine Delarosa"/>
+												</div>
+												<p class="person-description-title paragraph-medium">Ziva Moon</p>
+											</div>
+										</div>
+										<div class="people-row-item">
+											<p class="person-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews. Similar events are "mobile clubbing"</p>
+										</div>
+										<div class="people-row-item">
+											<div class="person-action">
+												<button class="link">
+													<span class="link-icon">
+														<svg class="svg svg__24">
+															<use xlink:href="../images/sprite/sprite.svg#plus-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Accept request</span>
+												</button>
+												<button class="link color-alumni-hover">
+													<span class="link-icon">
+														<svg class="svg svg__24 color-alumni">
+															<use xlink:href="../images/sprite/sprite.svg#remove-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Reject request</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="people-row">
+										<div class="people-row-item">
+											<div class="person-header">
+												<div class="person-thumb" data-thumb-title="Mae Norris">
+													<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Charmaine Delarosa"/>
+												</div>
+												<p class="person-description-title paragraph-medium">Mae Norris</p>
+											</div>
+										</div>
+										<div class="people-row-item">
+											<p class="person-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews. Similar events are "mobile clubbing"</p>
+										</div>
+										<div class="people-row-item">
+											<div class="person-action">
+												<button class="link">
+													<span class="link-icon">
+														<svg class="svg svg__24">
+															<use xlink:href="../images/sprite/sprite.svg#plus-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Accept request</span>
+												</button>
+												<button class="link color-alumni-hover">
+													<span class="link-icon">
+														<svg class="svg svg__24 color-alumni">
+															<use xlink:href="../images/sprite/sprite.svg#remove-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Reject request</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="people-row">
+										<div class="people-row-item">
+											<div class="person-header">
+												<div class="person-thumb" data-thumb-title="Glenn Craig">
+													<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Charmaine Delarosa"/>
+												</div>
+												<p class="person-description-title paragraph-medium">Glenn Craig</p>
+											</div>
+										</div>
+										<div class="people-row-item">
+											<p class="person-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews. Similar events are "mobile clubbing"</p>
+										</div>
+										<div class="people-row-item">
+											<div class="person-action">
+												<button class="link">
+													<span class="link-icon">
+														<svg class="svg svg__24">
+															<use xlink:href="../images/sprite/sprite.svg#plus-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Accept request</span>
+												</button>
+												<button class="link color-alumni-hover">
+													<span class="link-icon">
+														<svg class="svg svg__24 color-alumni">
+															<use xlink:href="../images/sprite/sprite.svg#remove-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Reject request</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="people-row">
+										<div class="people-row-item">
+											<div class="person-header">
+												<div class="person-thumb" data-thumb-title="Blythe Barnett">
+													<img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Charmaine Delarosa"/>
+												</div>
+												<p class="person-description-title paragraph-medium">Blythe Barnett</p>
+											</div>
+										</div>
+										<div class="people-row-item">
+											<p class="person-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews. Similar events are "mobile clubbing"</p>
+										</div>
+										<div class="people-row-item">
+											<div class="person-action">
+												<button class="link">
+													<span class="link-icon">
+														<svg class="svg svg__24">
+															<use xlink:href="../images/sprite/sprite.svg#plus-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Accept request</span>
+												</button>
+												<button class="link color-alumni-hover">
+													<span class="link-icon">
+														<svg class="svg svg__24 color-alumni">
+															<use xlink:href="../images/sprite/sprite.svg#remove-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Reject request</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="people-row">
+										<div class="people-row-item">
+											<div class="person-header">
+												<div class="person-thumb" data-thumb-title="Neha Wickens">
+													<img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Charmaine Delarosa"/>
+												</div>
+												<p class="person-description-title paragraph-medium">Neha Wickens</p>
+											</div>
+										</div>
+										<div class="people-row-item">
+											<p class="person-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews. Similar events are "mobile clubbing"</p>
+										</div>
+										<div class="people-row-item">
+											<div class="person-action">
+												<button class="link">
+													<span class="link-icon">
+														<svg class="svg svg__24">
+															<use xlink:href="../images/sprite/sprite.svg#plus-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Accept request</span>
+												</button>
+												<button class="link color-alumni-hover">
+													<span class="link-icon">
+														<svg class="svg svg__24 color-alumni">
+															<use xlink:href="../images/sprite/sprite.svg#remove-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Reject request</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="people-row">
+										<div class="people-row-item">
+											<div class="person-header">
+												<div class="person-thumb" data-thumb-title="Zion Bouvet">
+													<img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Charmaine Delarosa"/>
+												</div>
+												<p class="person-description-title paragraph-medium">Zion Bouvet</p>
+											</div>
+										</div>
+										<div class="people-row-item">
+											<p class="person-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews. Similar events are "mobile clubbing"</p>
+										</div>
+										<div class="people-row-item">
+											<div class="person-action">
+												<button class="link">
+													<span class="link-icon">
+														<svg class="svg svg__24">
+															<use xlink:href="../images/sprite/sprite.svg#plus-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Accept request</span>
+												</button>
+												<button class="link color-alumni-hover">
+													<span class="link-icon">
+														<svg class="svg svg__24 color-alumni">
+															<use xlink:href="../images/sprite/sprite.svg#remove-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Reject request</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="people-row">
+										<div class="people-row-item">
+											<div class="person-header">
+												<div class="person-thumb" data-thumb-title="Deen Naylor">
+													<img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Charmaine Delarosa"/>
+												</div>
+												<p class="person-description-title paragraph-medium">Deen Naylor</p>
+											</div>
+										</div>
+										<div class="people-row-item">
+											<p class="person-description-item paragraph-md">Silent discos are popular at music festivals as they allow dancing to continue past noise curfews. Similar events are "mobile clubbing"</p>
+										</div>
+										<div class="people-row-item">
+											<div class="person-action">
+												<button class="link">
+													<span class="link-icon">
+														<svg class="svg svg__24">
+															<use xlink:href="../images/sprite/sprite.svg#plus-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Accept request</span>
+												</button>
+												<button class="link color-alumni-hover">
+													<span class="link-icon">
+														<svg class="svg svg__24 color-alumni">
+															<use xlink:href="../images/sprite/sprite.svg#remove-circle"></use>
+														</svg>
+													</span>
+													<span class="link-title">Reject request</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="mt-5 d-flex justify-content-between align-items-center">
+								<div class="pagination" data-total-count="35" data-visible-count="8">
+									<div class="pagination-list">
+										<a href="#"
+											 class="pagination-list-item pagination-arrow"
+											 data-transition="pagination"></a>
+										<div class="pagination-list-numbers"></div>
+										<a href="#"
+											 class="pagination-list-item pagination-arrow"
+											 data-transition="pagination"></a>
+									</div>
+								</div>
+								<button class="btn btn-outline d-none d-md-inline-flex">
+									<span class="btn-title">Show me more</span>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -401,7 +1277,7 @@
 				</div>
 				<div class="col-6">
 					<div class="footer-nav">
-						<a href="#" class="link link-sm">
+						<a href="faq.html" class="link link-sm">
 							<span class="link-icon">
 								<svg class="svg svg__16">
 									<use xlink:href="../images/sprite/sprite.svg#faq"></use>
@@ -420,8 +1296,97 @@
 					</div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="footer-panel">
+					<a href="index.html" class="link link-column">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+							</svg>
+						</span>
+						<span class="link-title">Home tree</span>
+					</a>
+					<a href="people.html" class="link link-column">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#people"></use>
+							</svg>
+						</span>
+						<span class="link-title">User list</span>
+					</a>
+					<a href="#" class="link link-column">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#tree"></use>
+							</svg>
+						</span>
+						<span class="link-title">Personal tree</span>
+					</a>
+				</div>
+			</div>
 		</div>
 	</footer>
+	<div class="alert">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<div class="alert-panel __start">
+						<div class="tooltip tooltip-hover" data-default-label="Select All" data-active-label="Deselect All">
+							<label class="input-container">
+								<input type="checkbox" class="input input-checkbox" data-alert-checkbox="friends-already-going"/>
+								<span class="input-checkbox-icon">
+										<svg class="svg svg__16">
+											<use xlink:href="../images/sprite/sprite.svg#check"></use>
+										</svg>
+									</span>
+								<span class="input-checkbox-title">friend selected</span>
+							</label>
+							<div class="tooltip-body">
+								<p class="tooltip-body-item">Select All</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="alert-panel __end">
+						<button class="btn" id="invite">
+							<span class="btn-title">Invite selected friends</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tooltip tooltip-fixed __bottom" data-tooltip-id="success">
+		<div class="tooltip-body">
+			<div class="tooltip-body-item">
+				<svg class="svg svg__16">
+					<use xlink:href="../images/sprite/sprite.svg#check-circle"></use>
+				</svg>
+				Invitations successfully sended to your friends
+			</div>
+			<div class="tooltip-body-close">
+				<svg class="svg svg__16">
+					<use xlink:href="../images/sprite/sprite.svg#close"></use>
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="tooltip tooltip-fixed __bottom" data-tooltip-id="create-success">
+		<div class="tooltip-body">
+			<div class="tooltip-body-item">
+				<svg class="svg svg__16">
+					<use xlink:href="../images/sprite/sprite.svg#check-circle"></use>
+				</svg>
+				Thank you! Your event succsesfuly sent to rewiev!
+			</div>
+			<div class="tooltip-body-close">
+				<svg class="svg svg__16">
+					<use xlink:href="../images/sprite/sprite.svg#close"></use>
+				</svg>
+			</div>
+		</div>
+	</div>
 </main>
 </body>
 </html>

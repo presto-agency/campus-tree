@@ -1,0 +1,10 @@
+[data-router-view="people"]{
+	.section{
+		&-inner{
+			min-height: 900px;
+		}
+		&-title{
+			margin-bottom: 30px;
+		}
+	}
+}

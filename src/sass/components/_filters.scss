@@ -20,4 +20,27 @@
 						}
 				}
 		}
+		&-panel{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px var(--color-gray-700) solid;
+			padding: 10px 0 13px;
+				&-item{
+					.filters{
+						@include d($xs){
+							width: 100%;
+							justify-content: space-between;
+						}
+					}
+					@include d($xs){
+						width: 100%;
+						margin-bottom: 16px;
+					}
+				}
+				@include d($xs){
+					flex-direction: column;
+					align-items: flex-start;
+				}
+		}
 }

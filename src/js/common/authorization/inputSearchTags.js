@@ -8,7 +8,7 @@ export const inputSearchTags = () =>{
         objects.push(el.innerHTML)
     })
 
-    suggestions.innerHTML = '';
+    !!suggestions ? suggestions.innerHTML = '' : null;
 
     function search(str) {
         let results = [];
@@ -103,8 +103,10 @@ export const inputSearchTags = () =>{
         }
     }
 
-    input.addEventListener('keyup', searchHandler);
-    input.addEventListener('keydown', createTag);
-    suggestions.addEventListener('click', useSuggestion);
+    if (!!input && !!suggestions) {
+        input.addEventListener('keyup', searchHandler);
+        input.addEventListener('keydown', createTag);
+        suggestions.addEventListener('click', useSuggestion);
+    }
 
 };

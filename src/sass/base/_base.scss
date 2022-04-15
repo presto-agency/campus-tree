@@ -141,6 +141,10 @@ select {
   appearance: none;
 }
 
+select:focus{
+  outline: none;
+}
+
 button,
 [type='button'],
 [type='reset'],

@@ -11,13 +11,18 @@ export const changeView = () => {
 			}
 		});
 	}
-	if (!!switcher && !!tree) {
+	if (!!switcher) {
 		const switcherTriggers = switcher.querySelectorAll('.view-mode');
+		const switcherBox = document.querySelector('[data-view-mode]');
 		for (let i = 0; i < switcherTriggers.length; i++) {
 			switcherTriggers[i].addEventListener('click', () => {
 				switcher.querySelector('.view-mode.is-active').classList.remove('is-active');
 				let viewMode = switcherTriggers[i].dataset.viewTrigger;
-				tree.setAttribute('data-view-mode', viewMode);
+				if (!!switcherBox) {
+					switcherBox.setAttribute('data-view-mode', viewMode);
+				} else {
+					tree.setAttribute('data-view-mode', viewMode);
+				}
 				switcherTriggers[i].classList.add('is-active');
 			});
 		}

@@ -24,6 +24,7 @@
 		}
 		&-header{
 			padding: 5px 0;
+			position: relative;
 				&-row{
 					display: flex;
 					align-items: center;
@@ -54,6 +55,7 @@
 			visibility: visible;
 				.fieldset{
 					padding: 16px 0;
+					margin-bottom: 10px;
 				}
 				.splide__track{
 					height: 100%;

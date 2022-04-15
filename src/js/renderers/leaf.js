@@ -8,6 +8,7 @@ import {scrollToBottomComments} from "../common/general/scrollToBottomComments";
 import {loadImages} from "../common/general/loadImages";
 import {initDatepicker} from "../common/datepicker/initDatepicker";
 import {initTimepicker} from "../common/datepicker/initTimepicker";
+import {inputSearchTags} from "../common/authorization/inputSearchTags";
 
 class LeafRenderer extends Highway.Renderer {
 	onEnter() {
@@ -17,6 +18,7 @@ class LeafRenderer extends Highway.Renderer {
 		initTabs();
 		initAvatarFirstLastName();
 		checkboxAlertToggle();
+		inputSearchTags();
 	}
 	onEnterCompleted() {
 		console.log('enter completed to leaf');

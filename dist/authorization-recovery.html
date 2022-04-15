@@ -32,75 +32,83 @@
 <body>
 <main class="wrapper-sign-in" id="wrapper">
     <header class="header-s">
-        <div class="header-s-panel">
-            <div class="header-s-panel-logo">
-                <img src="../images/sign-in/logo-b.svg" alt="Campus Tree">
-            </div>
-            <div class="header-s-panel-link">
-                <p class="h-4">
-                    Don’t have an account?
-                    <a href="#">
-                        Sign Up Now!
-                    </a>
-                </p>
+        <div class="container">
+            <div class="header-s-panel">
+                <div class="header-s-panel-logo">
+                    <img src="../images/sign-in/logo-b.svg" alt="Campus Tree">
+                </div>
+                <div class="header-s-panel-link">
+                    <p class="h-4">
+                        Don’t have an account?
+                        <a href="#">
+                            Sign Up Now!
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </header>
     <div data-router-wrapper>
         <div data-router-view="authorization">
-            <section class="section sign-in recovery">
-                <div class="sign-in-left-side">
-                    <div class="sign-in-content">
-                        <div class="sign-in-img">
-                            <img src="../images/sign-in/bg-people.svg" alt="people">
-                        </div>
-                        <div class="section-title">
-                            <h2 class="h-2">
-                                Welcome to Campus Tree
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="sign-in-right-side">
-                    <div class="sign-form">
-                        <div class="sign-form-img">
-                            <img src="../images/sign-in/recovery.svg" alt="people">
-                        </div>
-                        <div class="section-title">
-                            <h1 class="h-1">
-                                Password Recovery
-                            </h1>
-                        </div>
-                        <div class="section-description">
-                            <p class="h-4">
-                                Your application is under consideration. Wait for your email notification
-                            </p>
-                        </div>
-                        <form class="sign-form-content">
-                            <div class="sign-form-wrapper">
-                                <label class="input-container">
-                                    <input placeholder="Password" type="password" class="input">
-                                    <span class="input-container-icon __right __click-trigger __16">
-                                        <svg class="svg svg__16">
-                                            <use xlink:href="../images/sprite/sprite.svg#eye"></use>
-                                        </svg>
-							        </span>
-                                </label>
-                                <label class="input-container">
-                                    <input placeholder="Password" type="password" class="input">
-                                    <span class="input-container-icon __right __click-trigger __16">
-                                        <svg class="svg svg__16">
-                                            <use xlink:href="../images/sprite/sprite.svg#eye"></use>
-                                        </svg>
-							        </span>
-                                </label>
+            <section class="section sign-in recovery sign-in-mobile">
+                <div class="container">
+                    <div class="sign-in-wrapper">
+                        <div class="sign-in-left-side">
+                            <div class="sign-in-content">
+                                <div class="sign-in-img">
+                                    <img src="../images/sign-in/bg-people.svg" alt="people">
+                                </div>
+                                <div class="section-title">
+                                    <h2 class="h-2">
+                                        Welcome to Campus Tree
+                                    </h2>
+                                </div>
                             </div>
-                            <button class="btn">
-                                    <span>
-                                        Confirm
-                                    </span>
-                            </button>
-                        </form>
+                        </div>
+                        <div class="sign-in-right-side">
+                            <div class="sign-form">
+                                <div class="sign-form-cover">
+                                    <div class="sign-form-img">
+                                        <img src="../images/sign-in/recovery.svg" alt="people">
+                                    </div>
+                                    <div class="section-title">
+                                        <h1 class="h-1">
+                                            Password Recovery
+                                        </h1>
+                                    </div>
+                                    <div class="section-description">
+                                        <p class="h-4">
+                                            Your application is under consideration. Wait for your email notification
+                                        </p>
+                                    </div>
+                                    <form class="sign-form-content">
+                                        <div class="sign-form-wrapper">
+                                            <label class="input-container">
+                                                <input placeholder="Password" type="password" class="input">
+                                                <span class="input-container-icon __right __click-trigger __16">
+                                                    <svg class="svg svg__16">
+                                                        <use xlink:href="../images/sprite/sprite.svg#eye"></use>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                            <label class="input-container">
+                                                <input placeholder="Password" type="password" class="input">
+                                                <span class="input-container-icon __right __click-trigger __16">
+                                                    <svg class="svg svg__16">
+                                                        <use xlink:href="../images/sprite/sprite.svg#eye"></use>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <button class="btn">
+                                                <span>
+                                                    Confirm
+                                                </span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

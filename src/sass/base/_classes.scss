@@ -52,17 +52,42 @@
           width: 8px;
           height: 8px;
           border-radius: 50%;
-          background-color: var(--color-primary);
+          background-color: var(--color-gray-700);
           pointer-events: none;
         }
-        &.approved{
+        &.primary{
           &:before{
             background-color: var(--color-primary);
           }
         }
-        &.__not-approved{
+        &.alumni{
           &:before{
             background-color: var(--color-alumni);
+          }
+        }
+        &.clubs{
+          &:before{
+            background-color: var(--color-clubs);
+          }
+        }
+        &.local{
+          &:before{
+            background-color: var(--color-local);
+          }
+        }
+        &.greek-life{
+          &:before{
+            background-color: var(--color-greek);
+          }
+        }
+        &.majors{
+          &:before{
+            background-color: var(--color-majors);
+          }
+        }
+        &.events{
+          &:before{
+            background-color: var(--color-events);
           }
         }
     }

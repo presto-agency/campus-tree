@@ -361,7 +361,7 @@
 											&-description{
 												&-item{
 														@include m($sm + 1){
-															max-width: 45%;
+															max-width: 40%;
 														}
 														@include d($md){
 															max-width: 28%;
@@ -432,6 +432,11 @@
 												max-width: 100%;
 												text-align: left;
 												padding-left: 10px;
+											}
+										}
+										&-status{
+											@include m($sm + 1){
+												margin: 0 5px 0 10px;
 											}
 										}
 										&-item{

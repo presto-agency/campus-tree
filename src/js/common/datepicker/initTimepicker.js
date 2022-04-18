@@ -33,9 +33,9 @@ var args = {
 
 let tpicker;
 
-if (!!document.querySelector('.input-timepicker')) {
-	tpicker = new timepicker(document.querySelector('.input-timepicker'), args);
-}
+// if (!!document.querySelector('.input-timepicker')) {
+// 	tpicker = new timepicker(document.querySelector('.input-timepicker'), args);
+// }
 
 /*
  *  Starts our Timepicker Functionality
@@ -554,5 +554,8 @@ function timepicker(element, args) {
  */
 
 export const initTimepicker = () => {
-	!!document.querySelector('.input-timepicker') ? tpicker.updateSettings({minTime: '2:00 am'}) : null;
+	// !!document.querySelector('.input-timepicker') ? tpicker.updateSettings({minTime: '2:00 am'}) : null;
+	if (!!document.querySelector('.input-timepicker')) {
+		tpicker = new timepicker(document.querySelector('.input-timepicker'), args);
+	}
 };

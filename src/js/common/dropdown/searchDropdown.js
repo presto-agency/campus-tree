@@ -3,6 +3,7 @@ import {closeNav} from "../general/toggleNav";
 
 export const searchDropdown = () => {
 	const searchInput = document.querySelector('.search .input');
+	const searchResultList = document.querySelector('.search .dropdown .list');
 	const header = document.querySelector('.header');
 	const closeBtn = document.querySelector('.close-filters');
 	const activeClassName = 'is-filters-active';
@@ -10,13 +11,16 @@ export const searchDropdown = () => {
 		/*
 		Show search result on dropdown
 		 */
-		// searchInput.addEventListener('keypress', () => {
-		// 	if (!!searchInput.value) {
-		// 		setTimeout(() => {
-		// 			searchInput.parentElement.classList.contains('dropdown') ? searchInput.parentElement.classList.add('is-active') : null;
-		// 		}, 1000);
-		// 	}
-		// });
+		searchInput.addEventListener('keypress', () => {
+			if (!!searchInput.value) {
+				// setTimeout(() => {
+				// 	searchInput.parentElement.classList.contains('dropdown') ? searchInput.parentElement.classList.add('is-active') : null;
+				// }, 1000);
+				setTimeout(() => {
+					!!searchResultList.innerHTML ? searchInput.parentElement.classList.add('is-active') : null;
+				}, 1000);
+			}
+		});
 
 		/*
 		Fill search input on click by dropdown

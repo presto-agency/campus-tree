@@ -47,6 +47,9 @@
 							color: var(--color-primary);
 						}
 				}
+				&.person-toggle-modal{
+					cursor: pointer;
+				}
 				img{
 					@include imageCover(center);
 					border-radius: 50%;
@@ -84,6 +87,14 @@
 		&-description{
 				&-title{
 					margin-bottom: 4px;
+						&.person-toggle-modal{
+							cursor: pointer;
+								@include hover($md){
+									&:hover{
+										text-decoration: underline;
+									}
+								}
+						}
 				}
 				&-item{
 					display: -webkit-box;

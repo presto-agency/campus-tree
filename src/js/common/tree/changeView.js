@@ -1,3 +1,5 @@
+import {saveToLocalStorage} from "../../localStorage/saveToLocalStorage";
+
 export const changeView = () => {
 	const btn = document.querySelector('.change-view-trigger');
 	const tree = document.querySelector('.tree');
@@ -23,6 +25,7 @@ export const changeView = () => {
 				} else {
 					tree.setAttribute('data-view-mode', viewMode);
 				}
+				saveToLocalStorage('viewMode', viewMode);
 				switcherTriggers[i].classList.add('is-active');
 			});
 		}

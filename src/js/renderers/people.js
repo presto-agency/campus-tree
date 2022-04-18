@@ -4,6 +4,8 @@ import {toggleCategoryFilters} from "../common/general/toggleCategoryFilters";
 import {initAvatarFirstLastName} from "../common/general/initAvatarFirstLastName";
 import {changeView} from "../common/tree/changeView";
 import {updatePaginationNumbers} from "../common/pagination/updatePaginationNumbers";
+import {switchPersonModal} from "../common/modal/switchPersonModal";
+import {setListViewMode} from "../common/general/setListViewMode";
 
 class PeopleRenderer extends Highway.Renderer {
 	onEnter() {
@@ -16,6 +18,8 @@ class PeopleRenderer extends Highway.Renderer {
 		initAvatarFirstLastName();
 		changeView();
 		updatePaginationNumbers();
+		switchPersonModal();
+		setListViewMode();
 	}
 }
 

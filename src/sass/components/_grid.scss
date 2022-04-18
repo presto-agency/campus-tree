@@ -1,5 +1,6 @@
 .container{
 	max-width: 1342px;
+	position: relative;
 		@include d($xl){
 			padding-left: 48px;
 			padding-right: 48px;

@@ -31,27 +31,27 @@
 <script defer="defer" src="bundle.js"></script><link href="styles.css" rel="stylesheet"></head>
 <body>
 <main class="wrapper-sign-in" id="wrapper">
-    <header class="header-s">
-        <div class="container">
-            <div class="header-s-panel">
-                <div class="header-s-panel-logo">
-                    <img src="../images/sign-in/logo-b.svg" alt="Campus Tree">
-                </div>
-                <div class="header-s-panel-link">
-                    <p class="h-4">
-                        Don’t have an account?
-                        <a href="#">
-                            Sign Up Now!
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </header>
     <div data-router-wrapper>
         <div data-router-view="authorization">
             <form action="#">
-                <section class="section sign-in sign-in-mobile">
+                <section class="section sign-in steps-mobile">
+                    <header class="header-s">
+                        <div class="container">
+                            <div class="header-s-panel">
+                                <div class="header-s-panel-logo">
+                                    <img src="../images/sign-in/logo-b.svg" alt="Campus Tree">
+                                </div>
+                                <div class="header-s-panel-link">
+                                    <p class="h-4">
+                                        Don’t have an account?
+                                        <a href="#">
+                                            Sign Up Now!
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
                     <div class="container">
                         <div class="sign-in-wrapper">
                             <div class="sign-in-left-side">
@@ -111,10 +111,10 @@
                                         </div>
                                     </div>
                                     <div class="steps-buttons">
-                                        <button data-register-go="1" class="btn trigger-obj">
+                                        <button data-register-go="1" class="btn trigger-obj trigger-mob">
                                             <span class="btn-title">Next</span>
                                         </button>
-                                        <a data-register-go="1" href="#" class="sign-form-btn-forgot trigger-obj">
+                                        <a data-register-go="1" href="#" class="sign-form-btn-forgot trigger-obj trigger-mob">
                                             <span class="h-4">Skip This Question</span>
                                             <svg>
                                                 <use xlink:href="../images/sprite/sprite.svg#arrows"></use>
@@ -166,10 +166,10 @@
                                         </div>
                                     </div>
                                     <div class="steps-buttons space">
-                                        <button data-register-go="2" class="btn trigger-obj">
+                                        <button data-register-go="2" class="btn trigger-obj trigger-mob">
                                             <span class="btn-title">Next</span>
                                         </button>
-                                        <a data-register-go="2" href="#" class="sign-form-btn-forgot trigger-obj">
+                                        <a data-register-go="2" href="#" class="sign-form-btn-forgot trigger-obj trigger-mob">
                                         <span class="h-4">
                                             Skip This Question
                                         </span>
@@ -177,7 +177,7 @@
                                                 <use xlink:href="../images/sprite/sprite.svg#arrows"></use>
                                             </svg>
                                         </a>
-                                        <button data-register-go="0" data-register-reverse="true" class="btn btn-outline trigger-obj">
+                                        <button data-register-go="0" data-register-reverse="true" class="btn btn-outline trigger-obj trigger-mob">
                                             <span class="btn-title">Back</span>
                                         </button>
                                     </div>
@@ -221,7 +221,7 @@
                                         </div>
                                         <div class="steps-inputs">
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-12 col-xl-6">
                                                     <label class="input-container">
                                                         <input placeholder="First name" type="text" class="input">
                                                     </label>
@@ -238,7 +238,7 @@
                                                         <input placeholder="Linkedin" type="text" class="input">
                                                     </label>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-12 col-xl-6">
                                                     <label class="input-container input-container-datepicker __top __right">
                                                         <input type="text" name="Birthday" class="input input-datepicker" placeholder="Date" readonly="readonly">
                                                         <span class="input-container-icon __16 __right">
@@ -266,10 +266,10 @@
                                         </div>
                                     </div>
                                     <div class="steps-buttons space">
-                                        <button data-register-go="3" class="btn trigger-obj">
+                                        <button data-register-go="3" class="btn trigger-obj trigger-mob">
                                             <span class="btn-title">Next</span>
                                         </button>
-                                        <button data-register-go="1" data-register-reverse="true" class="btn btn-outline trigger-obj">
+                                        <button data-register-go="1" data-register-reverse="true" class="btn btn-outline trigger-obj trigger-mob">
                                             <span class="btn-title">Back</span>
                                         </button>
                                     </div>
@@ -367,7 +367,7 @@
                                         <button data-register-go="4" class="btn trigger-obj">
                                             <span class="btn-title">Finish</span>
                                         </button>
-                                        <button data-register-go="2" data-register-reverse="true" class="btn btn-outline trigger-obj">
+                                        <button data-register-go="2" data-register-reverse="true" class="btn btn-outline trigger-obj trigger-mob">
                                             <span class="btn-title">Back</span>
                                         </button>
                                     </div>

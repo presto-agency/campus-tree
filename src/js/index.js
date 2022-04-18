@@ -54,7 +54,7 @@ requireAll(require.context('../images/icons/', true, /\.svg$/));
 /*
 Init scripts on Highway enter
  */
-H.on('NAVIGATE_IN', () => {
+H.on('NAVIGATE_IN', ({ to, location }) => {
 	initInnerDropdowns();
 	checkboxChangeLabel();
 	closeSearchPanel();

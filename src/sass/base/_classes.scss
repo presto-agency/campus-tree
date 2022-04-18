@@ -88,6 +88,13 @@
         &-dark{
           color: var(--color-alumni-dark) !important;
         }
+        &-hover{
+          @include hover($md){
+            &:hover{
+              color: var(--color-alumni) !important;
+            }
+          }
+        }
         /*
         Open event leaf
          */

@@ -75,7 +75,7 @@ module.exports = {
 		port: 3000,
 	},
 	plugins: [
-		...buildHTML(['index', 'branch', 'people', 'leaf', 'faq', 'search-result', 'editor', 'authorization-sign-in', 'authorization-approval', 'authorization-recovery', 'authorization-steps', 'leaf-creation']),
+		...buildHTML(['index', 'branch', 'people', 'leaf', 'faq', 'search-result', 'editor', 'authorization-sign-in', 'authorization-approval', 'authorization-recovery', 'authorization-steps', 'leaf-creation', 'friends', 'friends-requests']),
 		// new CleanWebpackPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new MiniCssExtractPlugin({

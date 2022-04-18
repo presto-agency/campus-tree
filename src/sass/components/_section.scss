@@ -9,6 +9,16 @@
 			position: relative;
 			z-index: 1;
 		}
+		&-bg{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			pointer-events: none;
+				img{
+					@include imageContain(center left);
+				}
+		}
 		/*
 		Types
 		 */
@@ -27,4 +37,18 @@
 					padding-top: 0;
 				}
 		}
+}
+
+[data-router-view="searchResult"]{
+	.section{
+		&-bg{
+			//height: 70vh;
+			height: 890px;
+			left: -535px;
+			top: -35px;
+				@include d($sm){
+					display: none;
+				}
+		}
+	}
 }

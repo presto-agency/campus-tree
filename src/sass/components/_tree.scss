@@ -200,6 +200,66 @@
 				&:hover{
 					z-index: 2;
 				}
+				/*
+				Default list
+				 */
+				&-default{
+					position: relative;
+					pointer-events: auto;
+					display: flex;
+					flex-wrap: wrap;
+					margin: 0 -16px 40px;
+						.tree{
+								&-events{
+										&-item{
+											position: relative;
+											opacity: 1;
+											pointer-events: auto;
+											max-width: 100%;
+											width: 25%;
+											padding: 16px;
+												@include d($xl){
+													width: 33.33%;
+												}
+												@include d($md){
+													width: 50%;
+												}
+												@include d($sm){
+													width: 100%;
+												}
+										}
+								}
+								&-modal{
+									position: relative;
+									width: 100%;
+									left: 0;
+									top: 0;
+									display: block;
+										.box{
+											padding: 16px;
+												&-thumb{
+													@include d($sm){
+														position: absolute;
+														width: 64px;
+														height: 64px;
+														min-width: 64px;
+													}
+												}
+												&-body{
+													@include d($sm){
+														padding: 0 0 10px 84px;
+													}
+												}
+										}
+								}
+						}
+						.leaf{
+								&-title,
+								&-link{
+									display: none;
+								}
+						}
+				}
 		}
 		&-svg{
 			width: 100%;
@@ -276,17 +336,44 @@
 						display: none;
 					}
 					&-events{
-						position: relative;
-						padding-top: 45px;
-							&-item{
+							@include m($sm + 1){
 								position: relative;
-								max-width: 100%;
-								height: auto !important;
-								width: 100% !important;
-								transform: none !important;
+								padding-top: 45px;
+								margin: 0 0 50px;
+							}
+							&-item{
+								@include m($sm + 1){
+									position: relative;
+									max-width: 100%;
+									height: auto !important;
+									width: 100% !important;
+									transform: none !important;
+									padding: 0;
 									&:not(:last-child){
 										margin-bottom: 8px;
 									}
+								}
+							}
+							&-default{
+								.tree{
+									&-modal{
+										.event{
+											&-description{
+												&-item{
+														@include m($sm + 1){
+															max-width: 45%;
+														}
+														@include d($md){
+															max-width: 28%;
+														}
+														@include d($sm){
+															max-width: 100%;
+														}
+												}
+											}
+										}
+									}
+								}
 							}
 					}
 					&-modal{
@@ -296,44 +383,61 @@
 						left: 0;
 						display: block;
 							.box{
-								display: flex;
-								align-items: center;
-								justify-content: space-between;
-								padding: 16px;
+									@include m($sm + 1){
+										display: flex;
+										align-items: center;
+										justify-content: space-between;
+										padding: 16px;
+									}
 									&-thumb{
-										width: 64px;
-										height: 64px;
-										min-width: 64px;
+										@include m($sm + 1){
+											width: 64px;
+											height: 64px;
+											min-width: 64px;
+										}
 									}
 									&-body{
-										padding: 0 16px;
+										@include m($sm + 1){
+											padding: 0 16px;
+											width: 100%;
+										}
 									}
 							}
 							.event{
 								&-description{
-									display: flex;
-									align-items: center;
+										@include m($sm + 1){
+											display: flex;
+											align-items: center;
+										}
 										&-title{
-											padding-right: 10px;
-											max-width: 80px;
-											width: 100vw;
-											font-size: 14px;
+												@include m($sm + 1){
+													padding-right: 10px;
+													max-width: 80px;
+													width: 100vw;
+													font-size: 14px;
+												}
 												@include d($md){
 													max-width: 70px;
 												}
 										}
 										&-location{
-											display: inline-flex;
-											padding-left: 10px;
+											@include m($sm + 1){
+												display: inline-flex;
+												padding-left: 10px;
+											}
 										}
 										&-date{
-											position: relative;
-											max-width: 100%;
-											text-align: left;
-											padding-left: 10px;
+											@include m($sm + 1){
+												position: relative;
+												max-width: 100%;
+												text-align: left;
+												padding-left: 10px;
+											}
 										}
 										&-item{
-											max-width: 155px;
+												@include m($sm + 1){
+													max-width: 155px;
+												}
 												@include d($xl){
 													max-width: 100%;
 												}

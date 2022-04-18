@@ -1,0 +1,228 @@
+.people{
+	min-height: 300px;
+	width: calc(100% + 32px);
+	position: relative;
+	margin: 0 -16px;
+	display: flex;
+	flex-wrap: wrap;
+		&:empty{
+			&:before{
+				content: attr(data-empty-label);
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				text-align: center;
+				@extend h2;
+			}
+		}
+		&-filter{
+			position: absolute;
+			top: 0;
+			left: 15px;
+			right: 15px;
+				.box{
+					@include m($xl + 1){
+						display: block !important;
+					}
+					@include d($xl){
+						display: none;
+					}
+				}
+				@include d($xl){
+					z-index: 2;
+				}
+		}
+		&-row{
+			@extend .box;
+			padding: 16px;
+			margin: 16px;
+			width: calc(25% - 32px);
+				&-item{
+					text-align: center;
+						.person{
+							&-thumb{
+								width: 96px;
+								height: 96px;
+								min-width: 96px;
+								margin: 0 auto 17px;
+									@include d($sm){
+										width: 48px;
+										height: 48px;
+										min-width: 48px;
+										margin: 0 16px 0 0;
+									}
+							}
+							&-description{
+									&-title{
+										@include m($sm + 1){
+											margin-bottom: 8px;
+										}
+									}
+									&-item{
+										-webkit-line-clamp: 4;
+									}
+							}
+					}
+						@include d($sm){
+							text-align: left;
+						}
+				}
+				&-modal{
+					position: absolute;
+					max-width: 416px;
+					width: 100vw;
+					top: 0;
+					left: 0;
+					background-color: var(--color-white);
+					display: none;
+						.box{
+								&-header{
+									.svg{
+										color: var(--color-black);
+									}
+								}
+						}
+						.person{
+							&-header{
+								display: flex;
+								align-items: center;
+								margin-bottom: 10px;
+							}
+							&-action{
+								padding-left: 0;
+								margin-top: 5px;
+								flex-direction: row;
+								flex-wrap: wrap;
+									.link{
+										&:not(:last-child){
+											margin-right: 16px;
+										}
+									}
+							}
+							&-description{
+								&-item{
+									display: block;
+								}
+							}
+						}
+						.tags{
+							padding: 5px 0;
+						}
+				}
+				@include d($xl){
+					margin: 8px;
+					width: calc(25% - 16px);
+				}
+				@include d($sm){
+					width: calc(50% - 16px);
+				}
+				@include d($xs){
+					width: calc(100% - 16px);
+				}
+		}
+		&[data-view-mode="list"]{
+				.people{
+					&-row{
+							@include m($sm + 1){
+								display: flex;
+								width: 100%;
+								align-items: center;
+								margin: 8px 16px 0;
+							}
+							&-item{
+								@include m($sm + 1){
+									text-align: left;
+										&:nth-child(2){
+											flex: 1;
+										}
+								}
+							}
+							&-modal{
+								.person{
+									&-action{
+										border-top: 1px var(--color-gray-700) solid;
+										padding-top: 14px;
+									}
+								}
+							}
+							@include d($xl){
+								margin: 8px;
+							}
+					}
+				}
+				.person{
+					&-header{
+						@include m($sm + 1){
+							display: flex;
+							align-items: center;
+							padding-right: 40px;
+						}
+					}
+					&-thumb{
+						@include m($sm + 1){
+							width: 48px;
+							height: 48px;
+							min-width: 48px;
+							margin-bottom: 0;
+							margin-right: 16px;
+						}
+					}
+					&-description{
+							&-title{
+								@include m($sm + 1){
+									margin-bottom: 0;
+								}
+							}
+							&-item{
+								@include m($sm + 1){
+									-webkit-line-clamp: 2;
+								}
+							}
+					}
+					&-action{
+						@include m($sm + 1){
+							flex-direction: row;
+							border-top: none;
+							padding-top: 0;
+							margin: 0;
+						}
+							.link{
+								&:not(:last-child){
+									@include m($sm + 1){
+										margin-right: 20px;
+										margin-bottom: 0;
+									}
+								}
+							}
+					}
+				}
+				@include m($sm + 1){
+					flex-direction: column;
+					width: 100%;
+				}
+		}
+		&-fullwidth{
+			.people{
+				&-row{
+					width: calc(16.66% - 32px);
+						@include d($xl){
+							width: calc(25% - 16px);
+						}
+						@include d($md){
+							width: calc(33.33% - 16px);
+						}
+						@include d($md){
+							width: calc(50% - 16px);
+						}
+						@include d($xs){
+							width: calc(100% - 16px);
+						}
+				}
+			}
+		}
+		@include d($xl){
+			margin: 0 -8px;
+			width: calc(100% + 16px);
+		}
+}

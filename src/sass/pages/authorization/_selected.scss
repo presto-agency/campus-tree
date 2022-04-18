@@ -16,7 +16,7 @@
     position: absolute;
     z-index: 10;
     top: 50%;
-    left: calc(50% + 20px);
+    left: 50%;
     transform: translate(-50%, -50%);
     max-width: 419px;
     height: 100%;
@@ -94,6 +94,7 @@
       display: flex;
       align-items: center;
       max-height: 24px;
+      cursor: pointer;
     }
     &-name{
       margin: 0 0 0 16px;

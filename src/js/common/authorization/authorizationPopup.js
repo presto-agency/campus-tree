@@ -6,7 +6,7 @@ export const authorizationPopUp = () => {
         let attr = this.getAttribute('data-attr');
         let modalWindow = document.getElementById(attr);
         modalWindow.classList.add('active');
-        signIn.classList.add('active');
+        signIn.classList.add('popup');
         }))
     }
     let close = () => {
@@ -17,7 +17,7 @@ export const authorizationPopUp = () => {
         let attr = this.getAttribute('data-close');
         let popup = document.getElementById(attr);
         popup.classList.remove('active');
-        signIn.classList.remove('active');
+        signIn.classList.remove('popup');
         }))
     }
     // let closeOutside = () => {
@@ -31,7 +31,16 @@ export const authorizationPopUp = () => {
     //         }
     //     }
     // }
+    let removeEvent = () => {
+        let removeLinks = document.querySelectorAll('.selected-link-remove');
+        removeLinks.forEach(link => {
+            link.onclick = () => {
+               link.parentNode.remove();
+            }
+        })
+    }
         open();
         close();
+    removeEvent();
 };
 

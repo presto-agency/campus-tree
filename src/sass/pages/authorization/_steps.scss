@@ -1,6 +1,7 @@
 .sign-in{
   .steps{
     &-content{
+      position: relative;
       display: none;
       min-height: 100%;
       flex-direction: column;

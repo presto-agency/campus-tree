@@ -1,0 +1,148 @@
+.selected{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  &.active{
+    opacity: 1;
+    pointer-events: initial;
+  }
+  &-wrapper{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: calc(50% + 20px);
+    transform: translate(-50%, -50%);
+    max-width: 419px;
+    height: 100%;
+    max-height: 609px;
+    width: 100%;
+    box-sizing: content-box;
+  }
+  &-content{
+    overflow: hidden;
+    padding: 27px 32px;
+    position: relative;
+    background: linear-gradient(174.37deg, rgba(255, 255, 255, 0.4) 1.7%, rgba(255, 255, 255, 0.1) 96.97%);
+    box-shadow: 0px 9px 18px -1px rgba(6, 73, 35, 0.12);
+    backdrop-filter: blur(100px);
+    border-radius: 20px;
+  }
+  &-bg{
+    position: absolute;
+    top: -10px;
+    left: 151px;
+    width: 510px;
+    height: 197px;
+  }
+  &-top{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid var(--color-gray-700);
+    .section-title{
+      margin: 0!important;
+      color: var(--color-primary);
+    }
+  }
+  &-cross{
+    position: relative;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    padding: 3px;
+    box-sizing: content-box;
+    span{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 3px;
+      background: var(--color-black-100);
+      &:first-child{
+        transform: translateY(-50%) rotate(45deg);
+      }
+      &:last-child{
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+  &-list{
+    position: relative;
+    z-index: 2;
+    margin: 41px 0 0 0;
+    height: 395px;
+    overflow-y: auto;
+  }
+  &-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 0 0;
+    &:first-child{
+      margin: 0;
+    }
+    &-remove{
+      display: flex;
+      align-items: center;
+      max-height: 24px;
+    }
+    &-name{
+      margin: 0 0 0 16px;
+      .section-title{
+        margin: 0!important;
+      }
+    }
+    &-event{
+
+    }
+    &-text{
+      padding: 0 8px;
+    }
+    &-cross{
+      width: 24px;
+      height: 24px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-img{
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+      overflow: hidden;
+      img{
+        border-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &-club{
+      display: flex;
+      align-items: center;
+    }
+  }
+  &-buttons{
+    position: relative;
+    z-index: 2;
+    padding: 18px 0 0 0;
+    border-top: 1px solid var(--color-gray-700);
+    .btn{
+      width: 100%;
+      max-width: 184px;
+      height: 56px;
+    }
+  }
+}

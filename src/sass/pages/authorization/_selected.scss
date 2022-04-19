@@ -26,12 +26,7 @@
   }
   &-content{
     overflow: hidden;
-    padding: 27px 32px;
-    position: relative;
-    background: linear-gradient(174.37deg, rgba(255, 255, 255, 0.4) 1.7%, rgba(255, 255, 255, 0.1) 96.97%);
-    box-shadow: 0px 9px 18px -1px rgba(6, 73, 35, 0.12);
-    backdrop-filter: blur(100px);
-    border-radius: 20px;
+    margin: 0 20px;
   }
   &-bg{
     position: absolute;
@@ -151,19 +146,15 @@
 @media (max-width: 1023px) {
   .selected{
     margin: 0 0 0 10px;
-  }
-}
-@media (max-width: 767px) {
-  .selected{
-    margin: 0;
-  }
-}
-@media (max-width: 474px) {
-  .selected{
     &-link{
       &-text{
         display: none;
       }
     }
+  }
+}
+@media (max-width: 767px) {
+  .selected{
+    margin: 0;
   }
 }

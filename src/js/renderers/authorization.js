@@ -8,22 +8,28 @@ import {authorizationPopUp} from '../common/authorization/authorizationPopup';
 import {scrollHeight} from '../common/authorization/scrollHeightBg';
 import {mobileTree} from '../common/authorization/mobileTree';
 import {initAvatarFirstLastName} from "../common/general/initAvatarFirstLastName";
+import {toggleCategoryFilters} from "../common/general/toggleCategoryFilters";
+import {resetFilters} from "../common/general/resetFilters";
+
+
 
 class authorizationRenderer extends Highway.Renderer {
     onEnter() {
         console.log('enter to authorization page');
-        authorizationNav();
         showPassword();
         initDatepicker();
         initRegistrationLottie();
         inputSearchTags();
         mobileTree();
         authorizationPopUp();
-        scrollHeight();
+        toggleCategoryFilters();
+        resetFilters();
     }
     onEnterCompleted() {
         console.log('enter completed to authorization page');
         initAvatarFirstLastName();
+        scrollHeight();
+        authorizationNav();
     }
 }
 

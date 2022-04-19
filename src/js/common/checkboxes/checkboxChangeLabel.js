@@ -15,7 +15,6 @@ export const checkboxChangeLabel = () => {
 			for (let j = 0; j < checkboxes.length; j++) {
 				checkboxes[j].addEventListener('change', (e) => {
 					const value = e.target.value;
-					console.log(value);
 					/*
 					Detect All checkbox
 					 */
@@ -43,6 +42,11 @@ export const checkboxChangeLabel = () => {
 			}
 		}
 	}
+
+	/*
+	Set checked options to dropdown trigger labels
+	 */
+	setCheckedOptionOnSelect();
 }
 
 const switchAllCheckboxes = (checkboxes, status) => {
@@ -57,4 +61,20 @@ const getCheckedCheckboxes = (checkboxes) => {
 		checkboxes[j].checked ? arr.push(checkboxes[j].value) : null;
 	}
 	return arr.filter(checkbox => checkbox.toLocaleString() !== 'all');
+}
+
+const setCheckedOptionOnSelect = () => {
+	const selects = document.querySelectorAll('.dropdown-select');
+	if (selects.length) {
+		for (let i = 0; i < selects.length; i++) {
+			const fieldset = selects[i].querySelector('.fieldset');
+			const selectTitle = selects[i].querySelector('.dropdown-trigger-title');
+			if (!!fieldset) {
+				const inputs = fieldset.querySelectorAll('input');
+				for (let j = 0; j < inputs.length; j++) {
+					inputs[j].checked ? selectTitle.innerHTML = inputs[j].value : null;
+				}
+			}
+		}
+	}
 }

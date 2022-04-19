@@ -26,6 +26,7 @@ export const initStaticDropdowns = () => {
 export const initInnerDropdowns = () => {
 	const dropdowns = document.querySelectorAll('[data-router-view] .dropdown');
 	switchDropdowns(dropdowns);
+	hideAllDropdownOnMouseLeave();
 };
 
 const switchDropdowns = (dropdowns) => {
@@ -45,5 +46,14 @@ export const closeAllDropdowns = () => {
 	const dropdowns = document.querySelectorAll('.dropdown');
 	for (let i = 0; i < dropdowns.length; i++) {
 		dropdowns[i].classList.remove('is-active');
+	}
+};
+
+const hideAllDropdownOnMouseLeave = () => {
+	const elements = document.querySelectorAll('.tree-events-item');
+	for (let i = 0; i < elements.length; i++) {
+		elements[i].addEventListener('mouseleave', () => {
+			closeAllDropdowns();
+		});
 	}
 };

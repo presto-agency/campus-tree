@@ -296,6 +296,20 @@
 								}
 						}
 				}
+				.dropdown{
+						&-select{
+							@include d($sm){
+								width: 100%;
+							}
+						}
+						&-trigger{
+								&-title{
+									@include d($sm){
+										width: 100%;
+									}
+								}
+						}
+				}
 		}
 		&-labels{
 			display: none;
@@ -467,6 +481,16 @@
 						display: none;
 					}
 				}
+		}
+		&[data-view-mode="default"]{
+			.dropdown{
+				width: 100%;
+					&-trigger{
+							&-title{
+								width: 100%;
+							}
+					}
+			}
 		}
 }
 

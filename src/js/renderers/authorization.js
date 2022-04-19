@@ -5,6 +5,7 @@ import {showPassword} from "../common/authorization/showPassword";
 import {initDatepicker} from '../common/datepicker/initDatepicker';
 import {inputSearchTags} from '../common/authorization/inputSearchTags';
 import {authorizationPopUp} from '../common/authorization/authorizationPopup';
+import {scrollHeight} from '../common/authorization/scrollHeightBg';
 import {mobileTree} from '../common/authorization/mobileTree';
 import {initAvatarFirstLastName} from "../common/general/initAvatarFirstLastName";
 
@@ -18,6 +19,7 @@ class authorizationRenderer extends Highway.Renderer {
         inputSearchTags();
         mobileTree();
         authorizationPopUp();
+        scrollHeight();
     }
     onEnterCompleted() {
         console.log('enter completed to authorization page');

@@ -2,7 +2,8 @@ export const authorizationPopUp = () => {
     let signIn = document.querySelector('.sign-in');
     let open = () =>{
         let elementsLink = document.querySelectorAll('.modal-trigger');
-        elementsLink.forEach(link => link.addEventListener('click', function () {
+        elementsLink.forEach(link => link.addEventListener('click', function (e) {
+        e.preventDefault();
         let attr = this.getAttribute('data-attr');
         let modalWindow = document.getElementById(attr);
         modalWindow.classList.add('active');

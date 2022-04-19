@@ -147,3 +147,23 @@
     }
   }
 }
+
+@media (max-width: 1023px) {
+  .selected{
+    margin: 0 0 0 10px;
+  }
+}
+@media (max-width: 767px) {
+  .selected{
+    margin: 0;
+  }
+}
+@media (max-width: 474px) {
+  .selected{
+    &-link{
+      &-text{
+        display: none;
+      }
+    }
+  }
+}

@@ -1,11 +1,12 @@
 .sign-in{
   .steps{
     &-content{
+      position: relative;
       display: none;
       min-height: 100%;
       flex-direction: column;
       max-width: 660px;
-      padding: 0 20px;
+      padding: 0 0 0 40px;
       box-sizing: content-box;
       margin: 0 auto;
       &-wrapper{
@@ -14,7 +15,7 @@
         flex: 1 1 auto;
       }
       .section-title{
-        margin: 48px 0 37px 0;
+        margin: 51px 0 37px 0;
       }
       &.active{
         display: flex;
@@ -156,3 +157,205 @@
     }
   }
 }
+
+@media (max-width: 1439px) {
+  .sign-in{
+    &.steps-mobile{
+      .sign-in{
+        &-content{
+          .sign-in-img{
+            min-height: 500px;
+            box-sizing: content-box;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .sign-in{
+    &.steps-mobile{
+      .sign-in{
+        &-content{
+          .sign-in-img{
+            min-height: 400px;
+          }
+        }
+      }
+      .steps{
+        &-inputs-wrapper{
+          flex-direction: column;
+        }
+        &-buttons{
+          flex-direction: column;
+          margin: 24px 0;
+          .btn{
+            max-width: 100%;
+          }
+          .btn + .sign-form-btn-forgot{
+            margin: 16px 0 0 0;
+          }
+          .btn + .sign-form-btn-forgot + .btn-outline{
+            margin: 16px 0 0 0;
+          }
+          .btn + .btn-outline{
+            margin: 16px 0 0 0;
+          }
+        }
+        &-inputs{
+          margin: 0;
+          .input-container{
+            margin: 24px 0;
+            &:last-child{
+              margin: 0;
+            }
+          }
+          .input-tags{
+            margin: 36px 0 0 0;
+          }
+          &-wrapper{
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1023px){
+  .sign-in{
+    &.steps-mobile{
+      .sign-in{
+        &-content{
+          .sign-in-img{
+            min-height: 275px;
+          }
+        }
+        &-left-side{
+          .section-title{
+            padding: 0 10px 44px;
+          }
+        }
+      }
+      .steps{
+        &-item{
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        &-item-right{
+          width: 100%;
+          margin: 8px 0 0 0;
+          .btn{
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+        &-inputs{
+          .input-tags{
+            margin: 36px 0 24px 0;
+          }
+        }
+        &-inputs-wrapper{
+          .input-container{
+            margin: 0 0 24px 0;
+            &:last-child{
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 767px){
+  .sign-in{
+    &.steps-mobile{
+      background: initial;
+      &.active{
+        overflow-y: hidden;
+        .sign-in{
+          &-left-side{
+            animation: show-tree 2500ms linear forwards;
+            @keyframes show-tree{
+              0%{
+                opacity: 1;
+              }
+              90%{
+                opacity: 1;
+              }
+              100%{
+                opacity: 0;
+                pointer-events: none;
+              }
+            }
+          }
+        }
+      }
+      .steps{
+        &-content{
+          padding: 0;
+          &-wrapper > .section-title{
+            display: none;
+          }
+        }
+        &-positions{
+          margin: 106px 0 74px 0;
+        }
+      }
+      .sign-in{
+        &-left-side{
+          position: fixed;
+          opacity: 0;
+          pointer-events: none;
+          background: var(--color-primary);
+          z-index: 3;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+        &-right-side{
+          position: relative;
+          flex: 0 1 100%;
+        }
+        &-content{
+          padding: 0;
+          .sign-in-img{
+            height: 485px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .sign-in{
+    &.steps-mobile{
+      .sign-in{
+        &-content{
+          .sign-in-img{
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  .sign-in{
+    &.steps-mobile{
+      .sign-in{
+        &-content{
+          .sign-in-img{
+            height: 310px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

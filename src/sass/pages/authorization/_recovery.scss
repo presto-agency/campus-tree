@@ -26,3 +26,25 @@
     }
   }
 }
+
+@media (max-width: 1199px) {
+  .sign-in{
+    &.recovery{
+      &.sign-in-mobile{
+        .sign-form{
+          &-wrapper{
+            flex-direction: column;
+            margin: 0;
+            .input-container{
+              flex: initial;
+              margin: 0 0 24px 0;
+            }
+          }
+          .btn{
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

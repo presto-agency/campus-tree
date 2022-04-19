@@ -31,388 +31,480 @@
 <script defer="defer" src="bundle.js"></script><link href="styles.css" rel="stylesheet"></head>
 <body>
 <main class="wrapper-sign-in" id="wrapper">
-    <header class="header-s">
-        <div class="header-s-panel">
-            <div class="header-s-panel-logo">
-                <img src="../images/sign-in/logo-b.svg" alt="Campus Tree">
-            </div>
-            <div class="header-s-panel-link">
-                <p class="h-4">
-                    Don’t have an account?
-                    <a href="#">
-                        Sign Up Now!
-                    </a>
-                </p>
-            </div>
-        </div>
-    </header>
     <div data-router-wrapper>
         <div data-router-view="authorization">
             <form action="#">
-                <section class="section sign-in">
-                    <div class="sign-in-left-side">
-                        <div class="sign-in-content">
-                            <div class="sign-in-img">
-                                <div class="sign-in-img-lottie" id="register-movie"></div>
-                            </div>
-                            <div class="section-title">
-                                <h2 class="h-2">
-                                    Welcome to Campus Tree
-                                </h2>
+                <section class="section sign-in steps-mobile">
+                    <header class="header-s">
+                        <div class="container">
+                            <div class="header-s-panel">
+                                <div class="header-s-panel-logo">
+                                    <img src="../images/sign-in/logo-b.svg" alt="Campus Tree">
+                                </div>
+                                <div class="header-s-panel-link">
+                                    <p class="h-4">
+                                        Don’t have an account?
+                                        <a href="#">
+                                            Sign Up Now!
+                                        </a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="sign-in-right-side steps">
-                        <div data-register-step="0" class="steps-content active">
-                            <div class="steps-content-wrapper">
-                                <div class="section-title">
-                                    <h3 class="h-3">Sign Up</h3>
+                    </header>
+                    <div class="container">
+                        <div class="sign-in-wrapper">
+                            <div class="sign-in-left-side">
+                                <div class="sign-in-content">
+                                    <div class="sign-in-img">
+                                        <div class="sign-in-img-lottie" id="register-movie"></div>
+                                    </div>
+                                    <div class="section-title">
+                                        <h2 class="h-2">
+                                            Welcome to Campus Tree
+                                        </h2>
+                                    </div>
                                 </div>
-                                <div class="steps-positions">
-                                <span class="active">
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                </div>
-                                <div class="steps-item">
-                                    <div class="steps-item-left">
+                            </div>
+                            <div class="sign-in-right-side steps">
+                                <div data-register-step="0" class="steps-content active">
+                                    <div class="steps-content-wrapper">
                                         <div class="section-title">
-                                            <p class="h-1">1.Clubs</p>
+                                            <h3 class="h-3">Sign Up</h3>
                                         </div>
-                                        <div class="section-description">
-                                            <p class="h-4">Select clubs leaves you want to join</p>
+                                        <div class="steps-positions">
+                                        <span class="active">
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
                                         </div>
-                                    </div>
-                                    <div class="steps-item-right">
-                                        <button class="btn btn-md">
-                                            <span class="btn-title">Edit selected leaves</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="steps-buttons">
-                                <button data-register-go="1" class="btn trigger-obj">
-                                    <span class="btn-title">Next</span>
-                                </button>
-                                <a data-register-go="1" href="#" class="sign-form-btn-forgot trigger-obj">
-                                    <span class="h-4">Skip This Question</span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#arrows"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div data-register-step="1" class="steps-content">
-                            <div class="steps-content-wrapper">
-                                <div class="section-title">
-                                    <h3 class="h-3">Sign Up</h3>
-                                </div>
-                                <div class="steps-positions">
-                                <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span class="active">
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                </div>
-                                <div class="steps-item">
-                                    <div class="steps-item-left">
-                                        <div class="section-title">
-                                            <p class="h-1">2.Greek Life</p>
-                                        </div>
-                                        <div class="section-description">
-                                            <p class="h-4">Select clubs leaves you want to join</p>
-                                        </div>
-                                    </div>
-                                    <div class="steps-item-right">
-                                        <button class="btn btn-md">
-                                            <span class="btn-title">Edit selected leaves</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="steps-buttons space">
-                                <button data-register-go="2" class="btn trigger-obj">
-                                    <span class="btn-title">Next</span>
-                                </button>
-                                <a data-register-go="2" href="#" class="sign-form-btn-forgot trigger-obj">
-                                <span class="h-4">
-                                    Skip This Question
-                                </span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#arrows"></use>
-                                    </svg>
-                                </a>
-                                <button data-register-go="0" data-register-reverse="true" class="btn btn-outline trigger-obj">
-                                    <span class="btn-title">Back</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div data-register-step="2" class="steps-content">
-                            <div class="steps-content-wrapper">
-                                <div class="section-title">
-                                    <p class="h-3">Sign Up</p>
-                                </div>
-                                <div class="steps-positions">
-                                <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span class="active">
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                </div>
-                                <div class="steps-item">
-                                    <div class="steps-item-left">
-                                        <div class="section-title">
-                                            <p class="h-1">3.Personal Info</p>
-                                        </div>
-                                        <div class="section-description">
-                                            <p class="h-4">Select clubs leaves you want to join</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="steps-inputs">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label class="input-container">
-                                                <input placeholder="First name" type="text" class="input">
-                                            </label>
-                                            <label class="input-container">
-                                                <input placeholder="Second Name" type="text" class="input">
-                                            </label>
-                                            <label class="input-container">
-                                                <input placeholder="E-mail" type="text" class="input">
-                                            </label>
-                                            <label class="input-container">
-                                                <input placeholder="Instagram" type="text" class="input">
-                                            </label>
-                                            <label class="input-container">
-                                                <input placeholder="Linkedin" type="text" class="input">
-                                            </label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="input-container input-container-datepicker __top __right">
-                                                <input type="text" name="Birthday" class="input input-datepicker" placeholder="Date" readonly="readonly">
-                                                <span class="input-container-icon __16 __right">
-                                                                <svg class="svg svg__16">
-                                                                    <use xlink:href="../images/sprite/sprite.svg#calendar-xs"></use>
-                                                                </svg>
-                                                            </span>
-                                            </label>
-                                            <label class="input-container">
-                                                <input placeholder="Phone Number" type="number" class="input">
-                                            </label>
-                                            <div class="input-container input-container-select">
-                                                <select name="test" class="select">
-                                                    <option value="1">1 test</option>
-                                                    <option value="2">2 test</option>
-                                                    <option value="3">3 test</option>
-                                                    <option value="4">4 test</option>
-                                                </select>
+                                        <div class="steps-item">
+                                            <div class="steps-item-left">
+                                                <div class="section-title">
+                                                    <p class="h-1">1.Clubs</p>
+                                                </div>
+                                                <div class="section-description">
+                                                    <p class="h-4">Select clubs leaves you want to join</p>
+                                                </div>
                                             </div>
-                                            <label class="input-container">
-                                                <input placeholder="Facebook" type="text" class="input">
-                                            </label>
+                                            <div class="steps-item-right">
+                                                <button data-attr="leaves" class="btn btn-md modal-trigger">
+                                                    <span class="btn-title">Edit selected leaves</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="steps-buttons">
+                                        <button data-register-go="1" class="btn trigger-obj trigger-mob">
+                                            <span class="btn-title">Next</span>
+                                        </button>
+                                        <a data-register-go="1" href="#" class="sign-form-btn-forgot trigger-obj trigger-mob">
+                                            <span class="h-4">Skip This Question</span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#arrows"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div id="leaves" class="selected">
+                                        <div class="selected-wrapper">
+                                            <div class="selected-content">
+                                                <div class="selected-top">
+                                                    <div class="section-title">
+                                                        <h3 class="h-3">Selected Leaves</h3>
+                                                    </div>
+                                                    <div data-close="leaves" class="selected-cross modal-close">
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                                <ul class="selected-list">
+                                                    <li class="selected-link">
+                                                        <div class="selected-link-club">
+                                                            <div class="selected-link-img">
+                                                                <img src="../images/sign-in/club-img.jpg" alt="club">
+                                                            </div>
+                                                            <div class="selected-link-name">
+                                                                <div class="section-title">
+                                                                    <h4 class="h-4">Silent DJ</h4>
+                                                                </div>
+                                                                <p class="tag tag-events">Events</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="selected-link-remove">
+                                                            <div class="selected-link-cross">
+                                                                <img src="../images/sign-in/x-circle.svg" alt="cross">
+                                                            </div>
+                                                            <p class="selected-link-text">
+                                                                Delete from selected
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selected-link">
+                                                        <div class="selected-link-club">
+                                                            <div class="selected-link-img">
+                                                                <img src="../images/sign-in/club-img.jpg" alt="club">
+                                                            </div>
+                                                            <div class="selected-link-name">
+                                                                <div class="section-title">
+                                                                    <h4 class="h-4">Silent DJ</h4>
+                                                                </div>
+                                                                <p class="tag tag-greek-life">Events</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="selected-link-remove">
+                                                            <div class="selected-link-cross">
+                                                                <img src="../images/sign-in/x-circle.svg" alt="cross">
+                                                            </div>
+                                                            <p class="selected-link-text">
+                                                                Delete from selected
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selected-link">
+                                                        <div class="selected-link-club">
+                                                            <div class="selected-link-img">
+                                                                <img src="../images/sign-in/club-img.jpg" alt="club">
+                                                            </div>
+                                                            <div class="selected-link-name">
+                                                                <div class="section-title">
+                                                                    <h4 class="h-4">Silent DJ</h4>
+                                                                </div>
+                                                                <p class="tag tag-majors">Events</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="selected-link-remove">
+                                                            <div class="selected-link-cross">
+                                                                <img src="../images/sign-in/x-circle.svg" alt="cross">
+                                                            </div>
+                                                            <p class="selected-link-text">
+                                                                Delete from selected
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="selected-buttons">
+                                                    <button class="btn">
+                                                        <span class="btn-title">Save</span>
+                                                    </button>
+                                                </div>
+                                                <img class="selected-bg" src="../images/sign-in/flowers-bg.svg" alt="bg">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="steps-buttons space">
-                                <button data-register-go="3" class="btn trigger-obj">
-                                    <span class="btn-title">Next</span>
-                                </button>
-                                <button data-register-go="1" data-register-reverse="true" class="btn btn-outline trigger-obj">
-                                    <span class="btn-title">Back</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div data-register-step="3" class="steps-content">
-                            <div class="steps-content-wrapper">
-                                <div class="section-title">
-                                    <p class="h-3">Sign Up</p>
-                                </div>
-                                <div class="steps-positions">
-                                <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span class="active">
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                </div>
-                                <div class="steps-item">
-                                    <div class="steps-item-left">
+                                <div data-register-step="1" class="steps-content">
+                                    <div class="steps-content-wrapper">
                                         <div class="section-title">
-                                            <p class="h-1">4.Personal Info</p>
+                                            <h3 class="h-3">Sign Up</h3>
                                         </div>
-                                        <div class="section-description">
-                                            <p class="h-4">Select clubs leaves you want to join</p>
+                                        <div class="steps-positions">
+                                        <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span class="active">
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
                                         </div>
+                                        <div class="steps-item">
+                                            <div class="steps-item-left">
+                                                <div class="section-title">
+                                                    <p class="h-1">2.Greek Life</p>
+                                                </div>
+                                                <div class="section-description">
+                                                    <p class="h-4">Select clubs leaves you want to join</p>
+                                                </div>
+                                            </div>
+                                            <div class="steps-item-right">
+                                                <button class="btn btn-md">
+                                                    <span class="btn-title">Edit selected leaves</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="steps-buttons space">
+                                        <button data-register-go="2" class="btn trigger-obj trigger-mob">
+                                            <span class="btn-title">Next</span>
+                                        </button>
+                                        <a data-register-go="2" href="#" class="sign-form-btn-forgot trigger-obj trigger-mob">
+                                        <span class="h-4">
+                                            Skip This Question
+                                        </span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#arrows"></use>
+                                            </svg>
+                                        </a>
+                                        <button data-register-go="0" data-register-reverse="true" class="btn btn-outline trigger-obj trigger-mob">
+                                            <span class="btn-title">Back</span>
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="steps-inputs">
-                                    <label class="input-container">
-                                        <textarea class="textarea" placeholder="About yourself" name="" id="" cols="30" rows="10"></textarea>
-                                    </label>
-                                    <label class="input-container input-container-file">
-                                        <span class="upload-file">
-                                            <input type="file" class="input" hidden>
-                                            <span class="person-thumb">
-                                                <img src="" alt="Joey Tribbiani">
-                                                <span class="person-thumb-upload">
-                                                    <svg class="svg svg__16">
-                                                        <use xlink:href="../images/sprite/sprite.svg#upload"></use>
-                                                    </svg>
-                                                </span>
-                                            </span>
+                                <div data-register-step="2" class="steps-content">
+                                    <div class="steps-content-wrapper">
+                                        <div class="section-title">
+                                            <p class="h-3">Sign Up</p>
+                                        </div>
+                                        <div class="steps-positions">
+                                        <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
                                         </span>
-                                        <span class="upload-text h-4">
-                                            Upload a photo
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
                                         </span>
-                                    </label>
-                                    <div class="input-tags">
-                                        <ul class="input-tags-results"></ul>
-                                        <input class="input-tags-text" type="text" name="fruit" id="objects" placeholder="Text">
-                                        <div class="input-tags-suggestions">
-                                            <ul class="input-tags-body">
-                                                <li>potato</li>
-                                                <li>tomato</li>
-                                                <li>orange</li>
-                                                <li>apple</li>
-                                            </ul>
+                                            <span class="active">
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                        </div>
+                                        <div class="steps-item">
+                                            <div class="steps-item-left">
+                                                <div class="section-title">
+                                                    <p class="h-1">3.Personal Info</p>
+                                                </div>
+                                                <div class="section-description">
+                                                    <p class="h-4">Select clubs leaves you want to join</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="steps-inputs">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-6">
+                                                    <label class="input-container">
+                                                        <input placeholder="First name" type="text" class="input">
+                                                    </label>
+                                                    <label class="input-container">
+                                                        <input placeholder="Second Name" type="text" class="input">
+                                                    </label>
+                                                    <label class="input-container">
+                                                        <input placeholder="E-mail" type="text" class="input">
+                                                    </label>
+                                                    <label class="input-container">
+                                                        <input placeholder="Instagram" type="text" class="input">
+                                                    </label>
+                                                    <label class="input-container">
+                                                        <input placeholder="Linkedin" type="text" class="input">
+                                                    </label>
+                                                </div>
+                                                <div class="col-12 col-xl-6">
+                                                    <label class="input-container input-container-datepicker __top __right">
+                                                        <input type="text" name="Birthday" class="input input-datepicker" placeholder="Date" readonly="readonly">
+                                                        <span class="input-container-icon __16 __right">
+                                                                        <svg class="svg svg__16">
+                                                                            <use xlink:href="../images/sprite/sprite.svg#calendar-xs"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                    </label>
+                                                    <label class="input-container">
+                                                        <input placeholder="Phone Number" type="number" class="input">
+                                                    </label>
+                                                    <div class="input-container input-container-select">
+                                                        <select name="test" class="select">
+                                                            <option value="1">1 test</option>
+                                                            <option value="2">2 test</option>
+                                                            <option value="3">3 test</option>
+                                                            <option value="4">4 test</option>
+                                                        </select>
+                                                    </div>
+                                                    <label class="input-container">
+                                                        <input placeholder="Facebook" type="text" class="input">
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="steps-inputs-wrapper">
-                                        <label class="input-container">
-                                            <input placeholder="Password" type="password" class="input">
-                                            <span class="input-container-icon __right __click-trigger __16">
+                                    <div class="steps-buttons space">
+                                        <button data-register-go="3" class="btn trigger-obj trigger-mob">
+                                            <span class="btn-title">Next</span>
+                                        </button>
+                                        <button data-register-go="1" data-register-reverse="true" class="btn btn-outline trigger-obj trigger-mob">
+                                            <span class="btn-title">Back</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div data-register-step="3" class="steps-content">
+                                    <div class="steps-content-wrapper">
+                                        <div class="section-title">
+                                            <p class="h-3">Sign Up</p>
+                                        </div>
+                                        <div class="steps-positions">
+                                        <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span class="active">
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                        </div>
+                                        <div class="steps-item">
+                                            <div class="steps-item-left">
+                                                <div class="section-title">
+                                                    <p class="h-1">4.Personal Info</p>
+                                                </div>
+                                                <div class="section-description">
+                                                    <p class="h-4">Select clubs leaves you want to join</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="steps-inputs">
+                                            <label class="input-container">
+                                                <textarea class="textarea" placeholder="About yourself" name="" id="" cols="30" rows="10"></textarea>
+                                            </label>
+                                            <label class="input-container input-container-file">
+                                                <span class="upload-file">
+                                                    <input type="file" class="input" hidden>
+                                                    <span class="person-thumb">
+                                                        <img src="" alt="Joey Tribbiani">
+                                                        <span class="person-thumb-upload">
+                                                            <svg class="svg svg__16">
+                                                                <use xlink:href="../images/sprite/sprite.svg#upload"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <span class="upload-text h-4">
+                                                    Upload a photo
+                                                </span>
+                                            </label>
+                                            <div class="input-tags">
+                                                <ul class="input-tags-results"></ul>
+                                                <input class="input-tags-text" type="text" name="fruit" id="objects" placeholder="Text">
+                                                <div class="input-tags-suggestions">
+                                                    <ul class="input-tags-body">
+                                                        <li>potato</li>
+                                                        <li>tomato</li>
+                                                        <li>orange</li>
+                                                        <li>apple</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="steps-inputs-wrapper">
+                                                <label class="input-container">
+                                                    <input placeholder="Password" type="password" class="input">
+                                                    <span class="input-container-icon __right __click-trigger __16">
+                                                        <svg class="svg svg__16">
+                                                            <use xlink:href="../images/sprite/sprite.svg#eye"></use>
+                                                        </svg>
+                                                    </span>
+                                                </label>
+                                                <label class="input-container">
+                                                    <input placeholder="Password" type="password" class="input">
+                                                    <span class="input-container-icon __right __click-trigger __16">
                                                 <svg class="svg svg__16">
                                                     <use xlink:href="../images/sprite/sprite.svg#eye"></use>
                                                 </svg>
                                             </span>
-                                        </label>
-                                        <label class="input-container">
-                                            <input placeholder="Password" type="password" class="input">
-                                            <span class="input-container-icon __right __click-trigger __16">
-                                        <svg class="svg svg__16">
-                                            <use xlink:href="../images/sprite/sprite.svg#eye"></use>
-                                        </svg>
-                                    </span>
-                                        </label>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="steps-buttons space">
+                                        <button data-register-go="4" class="btn trigger-obj">
+                                            <span class="btn-title">Finish</span>
+                                        </button>
+                                        <button data-register-go="2" data-register-reverse="true" class="btn btn-outline trigger-obj trigger-mob">
+                                            <span class="btn-title">Back</span>
+                                        </button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="steps-buttons space">
-                                <button data-register-go="4" class="btn trigger-obj">
-                                    <span class="btn-title">Finish</span>
-                                </button>
-                                <button data-register-go="2" data-register-reverse="true" class="btn btn-outline trigger-obj">
-                                    <span class="btn-title">Back</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div data-register-step="4" class="steps-content">
-                            <div class="steps-content-wrapper">
-                                <div class="section-title">
-                                    <p class="h-3">Sign Up</p>
-                                </div>
-                                <div class="steps-positions">
-                                <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                    <span>
-                                    <svg>
-                                        <use xlink:href="../images/sprite/sprite.svg#check"></use>
-                                    </svg>
-                                </span>
-                                </div>
-                                <div class="steps-congratulation">
-                                    <div class="steps-img">
-                                        <img src="../images/sign-in/congrats.svg" alt="people">
+                                <div data-register-step="4" class="steps-content">
+                                    <div class="steps-content-wrapper">
+                                        <div class="section-title">
+                                            <p class="h-3">Sign Up</p>
+                                        </div>
+                                        <div class="steps-positions">
+                                        <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                            <span>
+                                            <svg>
+                                                <use xlink:href="../images/sprite/sprite.svg#check"></use>
+                                            </svg>
+                                        </span>
+                                        </div>
+                                        <div class="steps-congratulation">
+                                            <div class="steps-img">
+                                                <img src="../images/sign-in/congrats.svg" alt="people">
+                                            </div>
+                                            <div class="section-title">
+                                                <p class="h-1">Congratulation!</p>
+                                            </div>
+                                            <div class="section-description">
+                                                <p>
+                                                    Your application is under consideration. Wait for your email notification
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="section-title">
-                                        <p class="h-1">Congratulation!</p>
-                                    </div>
-                                    <div class="section-description">
-                                        <p>
-                                            Your application is under consideration. Wait for your email notification
-                                        </p>
+                                    <div class="steps-buttons">
+                                        <button class="btn">
+                                            <span class="btn-title">I did’t got email</span>
+                                        </button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="steps-buttons">
-                                <button class="btn">
-                                    <span class="btn-title">I did’t got email</span>
-                                </button>
                             </div>
                         </div>
                     </div>

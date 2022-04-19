@@ -1,15 +1,28 @@
 .sign-in{
-  display: flex;
-  height: 100vh;
-  width: 100vw;
+  position: relative;
   overflow-y: auto;
-  background: linear-gradient(to right, #008037 47%, rgba(0,0,0,0) 47%);
+  &-wrapper{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  &-green-bg{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background: var(--color-primary);
+  }
+  &.popup{
+    overflow-y: hidden;
+  }
   &-left-side{
     position: relative;
     display: flex;
-    flex: 0 1 47%;
     flex-direction: column;
     height: 100%;
+    flex: 0 1 47%;
     .section-title{
       position: relative;
       z-index: 2;
@@ -19,19 +32,20 @@
     }
     .sign-in-content{
       position: absolute;
+      z-index: 2;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       max-width: 596px;
       max-height: 100%;
       width: 100%;
+      box-sizing: content-box;
       .sign-in-img{
         position: relative;
         z-index: 2;
         padding: 44px 0 0 0;
         box-sizing: content-box;
         height: 100%;
-        max-height: 612px;
         min-height: 514px;
         &-lottie{
           width: 100%;
@@ -59,13 +73,15 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      padding: 60px;
       transform: translate(-50%, -50%);
       max-width: 466px;
       max-height: 100%;
       width: 100%;
       .input-container{
         margin: 0 0 32px 0;
+      }
+      &-cover{
+        padding: 100px 0 100px 48px;
       }
       &-buttons-group{
         display: flex;
@@ -78,6 +94,72 @@
       }
       &-btn-forgot{
         padding: 0 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .sign-in{
+    &.sign-in-mobile{
+      .sign-in{
+        &-img{
+          min-height: initial;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1023px){
+  .sign-in{
+    &.sign-in-mobile{
+      .sign-in{
+        &-left-side{
+          .section-title{
+            padding: 0 10px 44px;
+          }
+        }
+        &-right-side{
+          .sign-form{
+            &-buttons-group{
+              flex-direction: column;
+            }
+            &-btn-forgot{
+              margin: 16px 0 0 0;
+            }
+            .btn{
+              max-width: 100%;
+            }
+            .input-container{
+              margin: 0 0 24px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .sign-in{
+    &.sign-in-mobile{
+        background: initial;
+      .sign-in{
+        &-left-side{
+          display: none;
+        }
+        &-right-side{
+          flex: 0 1 100%;
+          .sign-form{
+            &-cover{
+              padding: 150px 0;
+            }
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

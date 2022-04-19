@@ -31,66 +31,74 @@
 <script defer="defer" src="bundle.js"></script><link href="styles.css" rel="stylesheet"></head>
 <body>
 <main class="wrapper-sign-in" id="wrapper">
-    <header class="header-s">
-        <div class="header-s-panel">
-            <div class="header-s-panel-logo">
-                <img src="../images/sign-in/logo-b.svg" alt="Campus Tree">
-            </div>
-            <div class="header-s-panel-link">
-                <p class="h-4">
-                    Don’t have an account?
-                    <a href="#">
-                        Sign Up Now!
-                    </a>
-                </p>
-            </div>
-        </div>
-    </header>
     <div data-router-wrapper>
         <div data-router-view="authorization">
-            <section class="section sign-in">
-                <div class="sign-in-left-side">
-                    <div class="sign-in-content">
-                        <div class="sign-in-img">
-                            <img src="../images/sign-in/bg-people.svg" alt="people">
-                        </div>
-                        <div class="section-title">
-                            <h2 class="h-2">
-                                Welcome to Campus Tree
-                            </h2>
+            <section class="section sign-in sign-in-mobile">
+                <header class="header-s">
+                    <div class="container">
+                        <div class="header-s-panel">
+                            <div class="header-s-panel-logo">
+                                <img src="../images/sign-in/logo-b.svg" alt="Campus Tree">
+                            </div>
+                            <div class="header-s-panel-link">
+                                <p class="h-4">
+                                    Don’t have an account?
+                                    <a href="#">
+                                        Sign Up Now!
+                                    </a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="sign-in-right-side">
-                    <div class="sign-form">
-                        <div class="section-title">
-                            <h1 class="h-1">Sign in</h1>
-                        </div>
-                        <form class="sign-form-content">
-                            <label class="input-container">
-                                <input placeholder="E-mail" type="text" class="input">
-                            </label>
-                            <label class="input-container">
-                                <input placeholder="Password" type="password" class="input">
-                                    <span class="input-container-icon __right __16 __click-trigger">
-                                        <svg class="svg svg__16">
-                                            <use xlink:href="../images/sprite/sprite.svg#eye"></use>
-                                        </svg>
-                                    </span>
-                            </label>
-                            <div class="sign-form-buttons-group">
-                                <button class="btn">
-                                    <span>
-                                        Sign In
-                                    </span>
-                                </button>
-                                <a href="#" class="sign-form-btn-forgot">
-                                    <span class="h-4">
-                                        Forgot Password?
-                                    </span>
-                                </a>
+                </header>
+                <div class="container">
+                    <div class="sign-in-wrapper">
+                        <div class="sign-in-left-side">
+                            <div class="sign-in-content">
+                                <div class="sign-in-img">
+                                    <img src="../images/sign-in/bg-people.svg" alt="people">
+                                </div>
+                                <div class="section-title">
+                                    <h2 class="h-2">
+                                        Welcome to Campus Tree
+                                    </h2>
+                                </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="sign-in-right-side">
+                            <div class="sign-form">
+                                <div class="sign-form-cover">
+                                    <div class="section-title">
+                                        <h1 class="h-1">Sign in</h1>
+                                    </div>
+                                    <form class="sign-form-content">
+                                        <label class="input-container">
+                                            <input placeholder="E-mail" type="text" class="input">
+                                        </label>
+                                        <label class="input-container">
+                                            <input placeholder="Password" type="password" class="input">
+                                            <span class="input-container-icon __right __16 __click-trigger">
+                                                <svg class="svg svg__16">
+                                                    <use xlink:href="../images/sprite/sprite.svg#eye"></use>
+                                                </svg>
+                                            </span>
+                                        </label>
+                                        <div class="sign-form-buttons-group">
+                                            <button class="btn">
+                                            <span>
+                                                Sign In
+                                            </span>
+                                            </button>
+                                            <a href="#" class="sign-form-btn-forgot">
+                                            <span class="h-4">
+                                                Forgot Password?
+                                            </span>
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

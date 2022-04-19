@@ -36,3 +36,36 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .sign-in{
+    &.approval{
+      &.sign-in-mobile{
+        .sign-form{
+          &-content{
+            flex-direction: column;
+            .input-container{
+              flex: initial;
+            }
+            .btn{
+              flex: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 767px){
+  .sign-in{
+    &.approval{
+      &.sign-in-mobile{
+        .sign-form{
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
+

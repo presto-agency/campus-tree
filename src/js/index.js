@@ -18,6 +18,7 @@ import authorizationRenderer from "./renderers/authorization";
 import {headerMobileFilters} from "./common/general/headerMobileFilters";
 import {resetFilters} from "./common/general/resetFilters";
 import {toggleNav} from "./common/general/toggleNav";
+import {switchModals} from "./common/modal/switchModals";
 
 /*
 Routing
@@ -59,6 +60,7 @@ H.on('NAVIGATE_IN', ({ to, location }) => {
 	checkboxChangeLabel();
 	closeSearchPanel();
 	treeNavigation();
+	switchModals();
 	console.log('init highway');
 });
 
@@ -74,5 +76,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	headerMobileFilters();
 	resetFilters();
 	toggleNav();
+	switchModals();
 	console.log('init DOM');
 });

@@ -563,7 +563,7 @@
 		<div class="header-nav">
 			<div class="border"></div>
 			<div class="header-nav-tablet">
-				<a href="#" class="link">
+				<a href="friends.html" class="link">
 						<span class="link-icon">
 							<svg class="svg svg__24">
 								<use xlink:href="../images/sprite/sprite.svg#friends"></use>
@@ -580,7 +580,7 @@
 					<span class="link-title">people catalog</span>
 				</a>
 				<div class="border border-vertical"></div>
-				<a href="#" class="link personal-tree">
+				<a href="personal-tree.html" class="link personal-tree">
 						<span class="link-icon">
 							<svg class="svg svg__64">
 								<use xlink:href="../images/sprite/sprite.svg#tree"></use>
@@ -599,44 +599,44 @@
 			</div>
 			<div class="scroll-wrap">
 				<div class="header-nav-phone">
-					<a href="#" class="link">
-					<span class="link-icon">
-						<svg class="svg svg__24">
-							<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
-						</svg>
-					</span>
+					<a href="leaf-creation.html" class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#leaf"></use>
+							</svg>
+						</span>
 						<span class="link-title">Create a leaf</span>
 					</a>
-					<a href="#" class="link">
-					<span class="link-icon">
-						<svg class="svg svg__24">
-							<use xlink:href="../images/sprite/sprite.svg#shield"></use>
-						</svg>
-					</span>
+					<a href="editor.html" class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#shield"></use>
+							</svg>
+						</span>
 						<span class="link-title">Privacy Policy</span>
 					</a>
-					<a href="#" class="link">
-					<span class="link-icon">
-						<svg class="svg svg__24">
-							<use xlink:href="../images/sprite/sprite.svg#faq"></use>
-						</svg>
-					</span>
+					<a href="faq.html" class="link">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#faq"></use>
+							</svg>
+						</span>
 						<span class="link-title">FAQ</span>
 					</a>
-					<a href="#" class="link">
-					<span class="link-icon">
-						<svg class="svg svg__24">
-							<use xlink:href="../images/sprite/sprite.svg#support"></use>
-						</svg>
-					</span>
+					<button class="link" data-popup-trigger="#support">
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#support"></use>
+							</svg>
+						</span>
 						<span class="link-title">Support</span>
-					</a>
+					</button>
 					<button class="link link-absolute">
-					<span class="link-icon">
-						<svg class="svg svg__24">
-							<use xlink:href="../images/sprite/sprite.svg#sign-out"></use>
-						</svg>
-					</span>
+						<span class="link-icon">
+							<svg class="svg svg__24">
+								<use xlink:href="../images/sprite/sprite.svg#sign-out"></use>
+							</svg>
+						</span>
 						<span class="link-title">Sign out</span>
 					</button>
 					<div class="header-copyright">
@@ -1433,14 +1433,14 @@
 							</span>
 							<span class="link-title">FAQ</span>
 						</a>
-						<a href="#" class="link link-sm">
+						<button class="link link-sm" data-popup-trigger="#support">
 							<span class="link-icon">
 								<svg class="svg svg__16">
 									<use xlink:href="../images/sprite/sprite.svg#support"></use>
 								</svg>
 							</span>
 							<span class="link-title">Support</span>
-						</a>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -1532,6 +1532,173 @@
 				<svg class="svg svg__16">
 					<use xlink:href="../images/sprite/sprite.svg#close"></use>
 				</svg>
+			</div>
+		</div>
+	</div>
+	<!-- Popup display with class "is-active"	-->
+	<div class="popup" id="support">
+		<div class="popup-bg"></div>
+		<div class="popup-box">
+			<div class="popup-box-close" data-popup-trigger="#support"></div>
+			<div class="popup-box-item">
+				<div class="box box-bg">
+					<div class="box-header mb-2">
+						<div class="box-header-row">
+							<div>
+								<p class="h-3 color-primary">Need support?</p>
+								<p class="paragraph paragraph-md">Contact us if you need futher assistance</p>
+							</div>
+							<div class="box-header-action">
+								<div class="link ml-3" data-popup-trigger="#support">
+									<div class="link-icon">
+										<svg class="svg svg__16">
+											<use xlink:href="../images/sprite/sprite.svg#close"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr class="hr"/>
+					<div class="box-body">
+						<form>
+							<div class="row">
+								<div class="col-sm-6">
+									<label class="input-container">
+										<input type="text" class="input" placeholder="Name"/>
+									</label>
+								</div>
+								<div class="col-sm-6">
+									<label class="input-container">
+										<input type="email" class="input" placeholder="Email"/>
+									</label>
+								</div>
+								<div class="col-12">
+									<label class="input-container">
+										<textarea name="question" class="textarea" placeholder="Your question"></textarea>
+									</label>
+								</div>
+								<div class="col-12">
+									<div class="box-action">
+										<button class="btn"><span class="btn-title">Send request</span></button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="support-success">
+		<div class="popup-bg"></div>
+		<div class="popup-box">
+			<div class="popup-box-close" data-popup-trigger="#support-success"></div>
+			<div class="popup-box-item">
+				<div class="box box-bg">
+					<div class="box-header">
+						<div class="box-header-row">
+							<div>
+								<p class="h-3 color-primary mb-2">Thank you! We have received your request</p>
+								<p class="paragraph paragraph-md">We will try our best to resolve your issue as soon as possible</p>
+							</div>
+							<div class="box-header-action">
+								<div class="link ml-3" data-popup-trigger="#support-success">
+									<div class="link-icon">
+										<svg class="svg svg__16">
+											<use xlink:href="../images/sprite/sprite.svg#close"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="sign-out-confirm">
+		<div class="popup-bg"></div>
+		<div class="popup-box">
+			<div class="popup-box-close" data-popup-trigger="#sign-out-confirm"></div>
+			<div class="popup-box-item">
+				<div class="box box-bg">
+					<div class="box-header">
+						<div class="box-header-row">
+							<div>
+								<p class="h-3 color-primary mb-2">Are you sure you want to Sign out?</p>
+							</div>
+							<div class="box-header-action">
+								<div class="link ml-3" data-popup-trigger="#sign-out-confirm">
+									<div class="link-icon">
+										<svg class="svg svg__16">
+											<use xlink:href="../images/sprite/sprite.svg#close"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-body">
+							<div class="group-buttons">
+								<button class="btn" data-popup-trigger="#sign-out-confirm">
+									<span class="btn-title">No, stay logged in</span>
+								</button>
+								<button class="btn btn-outline">
+									<span class="btn-title">Yes, sign out</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="leave-message">
+		<div class="popup-bg"></div>
+		<div class="popup-box">
+			<div class="popup-box-close" data-popup-trigger="#leave-message"></div>
+			<div class="popup-box-item">
+				<div class="box box-bg">
+					<div class="box-header mb-2">
+						<div class="box-header-row">
+							<div>
+								<p class="h-3 color-primary">Leave a message to the leaf creator</p>
+								<p class="paragraph paragraph-md">Optional</p>
+							</div>
+							<div class="box-header-action">
+								<div class="link ml-3" data-popup-trigger="#leave-message">
+									<div class="link-icon">
+										<svg class="svg svg__16">
+											<use xlink:href="../images/sprite/sprite.svg#close"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr class="hr"/>
+					<div class="box-body">
+						<form>
+							<div class="row">
+								<div class="col-12">
+									<label class="input-container">
+										<textarea name="question" class="textarea" placeholder="Your message"></textarea>
+									</label>
+								</div>
+								<div class="col-12">
+									<div class="box-action">
+										<div class="group-buttons">
+											<button class="btn"><span class="btn-title">Submit</span></button>
+											<button class="btn btn-outline" data-popup-trigger="#leave-message">
+												<span class="btn-title">Cancel</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,61 @@
+.popup{
+	position: fixed;
+	inset: 0;
+	z-index: 5;
+	display: none;
+		&-bg{
+			background-color: var(--color-white);
+			opacity: .8;
+			position: absolute;
+			inset: 0;
+		}
+		&-box{
+			position: relative;
+			z-index: 1;
+			height: 100%;
+			display: flex;
+			padding: 30px 0;
+			overflow-y: auto;
+			opacity: 0;
+				&-close{
+					position: absolute;
+					inset: 0;
+				}
+				&-item{
+					max-width: 704px;
+					width: 94%;
+					margin: auto;
+					overflow: hidden;
+				}
+		}
+		&.is-active{
+			display: block;
+				.popup{
+						&-box{
+							opacity: 1;
+						}
+				}
+		}
+		/*
+		Content box
+		 */
+		.box{
+				&-header{
+						&-action{
+							.svg{
+								color: var(--color-black);
+									@include hover($md){
+										&:hover{
+											color: var(--color-primary);
+										}
+									}
+							}
+						}
+				}
+				.input{
+						&-container{
+							margin-bottom: 24px;
+						}
+				}
+		}
+}

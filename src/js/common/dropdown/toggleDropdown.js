@@ -34,9 +34,11 @@ const switchDropdowns = (dropdowns) => {
 		const trigger = dropdowns[i].querySelector('.dropdown-trigger');
 		if (!!trigger && !dropdowns[i].classList.contains('dropdown-static')) {
 			trigger.addEventListener('click', () => {
-				dropdowns[i].classList.contains('is-active')
-					? dropdowns[i].classList.remove('is-active')
-					: dropdowns[i].classList.add('is-active')
+				if (dropdowns[i].classList.contains('is-active')) {
+					dropdowns[i].classList.remove('is-active');
+				} else {
+					dropdowns[i].classList.add('is-active');
+				}
 			});
 		}
 	}

@@ -17,7 +17,7 @@ import Branch from "./router-transitions/branch";
 import authorizationRenderer from "./renderers/authorization";
 import {headerMobileFilters} from "./common/general/headerMobileFilters";
 import {resetFilters} from "./common/general/resetFilters";
-import {toggleNav} from "./common/general/toggleNav";
+import {closeNav, toggleNav} from "./common/general/toggleNav";
 import {switchModals} from "./common/modal/switchModals";
 
 /*
@@ -61,6 +61,7 @@ H.on('NAVIGATE_IN', ({ to, location }) => {
 	closeSearchPanel();
 	treeNavigation();
 	switchModals();
+	closeNav();
 	console.log('init highway');
 });
 

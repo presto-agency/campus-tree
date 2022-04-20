@@ -207,5 +207,8 @@
 [data-router-view="leaf"]{
 	.scroll-wrap{
 		height: 375px;
+			@include d($sm){
+				height: 60vh;
+			}
 	}
 }

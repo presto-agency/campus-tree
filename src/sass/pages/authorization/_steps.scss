@@ -166,9 +166,9 @@
           left: 50%;
           transform: translate(-50%, -50%);
           z-index: 2;
-          height: 100%;
-          max-height: 510px;
-          overflow-y: auto;
+          max-height: 100%;
+          //max-height: 510px;
+          //overflow-y: auto;
           max-width: 467px;
           width: 100%;
         }
@@ -333,6 +333,12 @@
         &-positions{
           margin: 106px 0 74px 0;
         }
+        .people-sign{
+          .box{
+            margin: 0;
+            overflow-y: auto;
+          }
+        }
       }
       .sign-in{
         &-left-side{
@@ -344,6 +350,9 @@
           top: 0;
           left: 0;
           width: 100%;
+          .section-title{
+            margin: 30px 0 0 0;
+          }
         }
         &-right-side{
           position: relative;
@@ -352,7 +361,9 @@
         &-content{
           padding: 0;
           .sign-in-img{
-            height: 485px;
+            padding: 0;
+            height: 70vh;
+            min-height: initial;
           }
         }
       }

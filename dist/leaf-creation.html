@@ -639,9 +639,57 @@
 	</header>
 	<div data-router-wrapper>
 		<div data-router-view="leaf">
-			<form>
-				<section class="section section-inner section-event">
-					<div class="container">
+			<section class="section section-inner section-event">
+				<div class="container">
+					<!--		BOX ONLY FOR ADMIN			-->
+					<div class="row">
+						<div class="col-12">
+							<form>
+								<div class="box create-row" id="event-creation">
+									<div class="create-row-item">
+										<div class="dropdown dropdown-select dropdown-select-lg">
+											<p class="dropdown-trigger dropdown-trigger-title" data-fieldset-label="event-create" data-label="Change status">Change status</p>
+											<div class="dropdown-body">
+												<div class="dropdown-body-item">
+													<fieldset class="fieldset" data-fieldset-list="event-create">
+														<label class="input-container">
+															<input type="radio" name="event-0-status" value="Edit" class="input input-checkbox">
+															<span class="paragraph paragraph-status">Edit</span>
+														</label>
+														<label class="input-container">
+															<input type="radio" name="event-0-status" value="Declive" class="input input-checkbox">
+															<span class="paragraph paragraph-status alumni">Declive</span>
+														</label>
+														<label class="input-container">
+															<input type="radio" name="event-0-status" value="Aprowe" class="input input-checkbox">
+															<span class="paragraph paragraph-status primary">Aprowe</span>
+														</label>
+														<label class="input-container">
+															<input type="radio" name="event-0-status" value="Request to edit" class="input input-checkbox">
+															<span class="paragraph paragraph-status clubs">Request to edit</span>
+														</label>
+													</fieldset>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="create-row-item __full">
+										<label class="input-container">
+											<input type="text" class="input" placeholder="Message to a leaf creator (optional)">
+										</label>
+									</div>
+									<div class="create-row-item">
+										<div class="group-buttons">
+											<button class="btn"><span class="btn-title">Submit</span></button>
+											<button class="btn btn-outline reset-btn" data-reset-box="#event-creation"><span class="btn-title">Cancel</span></button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!--		END BOX ONLY FOR ADMIN			-->
+					<form>
 						<div class="row">
 							<div class="col-12">
 								<div class="box-banner box-banner-drop">
@@ -670,117 +718,117 @@
 							</div>
 						</div>
 						<div class="box">
-							<div class="row">
-								<div class="col-12">
-									<p class="paragraph paragraph-status primary">Approved</p>
+						<div class="row">
+							<div class="col-12">
+								<p class="paragraph paragraph-status primary">Approved</p>
 <!--									<p class="paragraph paragraph-status __not-approved">Not approved</p>-->
-									<h1 class="h-1 mt-2 mb-4">Leaf creation</h1>
+								<h1 class="h-1 mt-2 mb-4">Leaf creation</h1>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="input-container input-container-group">
+									<input type="text" class="input" placeholder="Leaf Title">
+								</div>
+								<div class="input-container input-container-group">
+									<input type="text" class="input" placeholder="Branch">
+								</div>
+								<div class="input-container input-container-group">
+									<textarea name="" placeholder="About leaf" class="textarea"></textarea>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="input-container input-container-group">
-										<input type="text" class="input" placeholder="Leaf Title">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="input-container input-container-group">
+											<label class="input-container input-container-datepicker __top __right">
+												<input type="text" name="date" class="input input-datepicker" placeholder="Date" readonly="readonly">
+												<span class="input-container-icon __16 __right">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#calendar-xs"></use>
+													</svg>
+												</span>
+											</label>
+										</div>
 									</div>
-									<div class="input-container input-container-group">
-										<input type="text" class="input" placeholder="Branch">
+									<div class="col-lg-6">
+										<div class="input-container input-container-group">
+											<label class="input-container">
+												<input type="text" name="date" class="input input-timepicker" placeholder="Time" readonly="readonly">
+												<span class="input-container-icon __16 __right">
+													<svg class="svg svg__16">
+														<use xlink:href="../images/sprite/sprite.svg#clock"></use>
+													</svg>
+												</span>
+											</label>
+										</div>
 									</div>
-									<div class="input-container input-container-group">
-										<textarea name="" placeholder="About leaf" class="textarea"></textarea>
+									<div class="col-lg-6">
+										<div class="input-container input-container-group">
+											<input type="text" class="input" placeholder="Location">
+										</div>
 									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="row">
-										<div class="col-lg-6">
-											<div class="input-container input-container-group">
-												<label class="input-container input-container-datepicker __top __right">
-													<input type="text" name="date" class="input input-datepicker" placeholder="Date" readonly="readonly">
-													<span class="input-container-icon __16 __right">
-														<svg class="svg svg__16">
-															<use xlink:href="../images/sprite/sprite.svg#calendar-xs"></use>
-														</svg>
-													</span>
-												</label>
+									<div class="col-lg-6">
+										<div class="input-container input-container-group">
+											<input type="text" class="input" placeholder="Google map link">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="input-tags">
+											<ul class="input-tags-results"></ul>
+											<input class="input-tags-text" type="text" name="fruit" id="objects" placeholder="Text">
+											<div class="input-tags-suggestions">
+												<ul class="input-tags-body">
+													<li>potato</li>
+													<li>tomato</li>
+													<li>orange</li>
+													<li>apple</li>
+												</ul>
 											</div>
 										</div>
-										<div class="col-lg-6">
-											<div class="input-container input-container-group">
-												<label class="input-container">
-													<input type="text" name="date" class="input input-timepicker" placeholder="Time" readonly="readonly">
-													<span class="input-container-icon __16 __right">
-														<svg class="svg svg__16">
-															<use xlink:href="../images/sprite/sprite.svg#clock"></use>
-														</svg>
-													</span>
-												</label>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="input-container input-container-group">
-												<input type="text" class="input" placeholder="Location">
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="input-container input-container-group">
-												<input type="text" class="input" placeholder="Google map link">
-											</div>
-										</div>
-										<div class="col-12">
-											<div class="input-tags">
-												<ul class="input-tags-results"></ul>
-												<input class="input-tags-text" type="text" name="fruit" id="objects" placeholder="Text">
-												<div class="input-tags-suggestions">
-													<ul class="input-tags-body">
-														<li>potato</li>
-														<li>tomato</li>
-														<li>orange</li>
-														<li>apple</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="col-12">
-											<div class="upload-container">
-												<label class="input-container input-container-file">
-													<span class="upload-file">
-														<input type="file" class="input" hidden>
-														<span class="person-thumb __event">
-															<img src="" alt="Joey Tribbiani">
-															<span class="person-thumb-upload">
-																<svg class="svg svg__16">
-																		<use xlink:href="../images/sprite/sprite.svg#upload"></use>
-																</svg>
-															</span>
+									</div>
+									<div class="col-12">
+										<div class="upload-container">
+											<label class="input-container input-container-file">
+												<span class="upload-file">
+													<input type="file" class="input" hidden>
+													<span class="person-thumb __event">
+														<img src="" alt="Joey Tribbiani">
+														<span class="person-thumb-upload">
+															<svg class="svg svg__16">
+																	<use xlink:href="../images/sprite/sprite.svg#upload"></use>
+															</svg>
 														</span>
 													</span>
-													<span class="upload-text h-4">Upload a photo</span>
-												</label>
-												<label class="input-container-checkbox">
-													<input type="checkbox" class="input input-checkbox">
-													<span class="input-checkbox-switcher"></span>
-													<span class="input-checkbox-title">Ongoing</span>
-												</label>
-											</div>
+												</span>
+												<span class="upload-text h-4">Upload a photo</span>
+											</label>
+											<label class="input-container-checkbox">
+												<input type="checkbox" class="input input-checkbox">
+												<span class="input-checkbox-switcher"></span>
+												<span class="input-checkbox-title">Ongoing</span>
+											</label>
 										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-12">
-									<div class="group group-buttons">
-										<button class="btn">
-											<span class="btn-title">Save and send for review</span>
-										</button>
-										<button class="btn btn-outline">
-											<span class="btn-title">Cancel</span>
-										</button>
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-12">
+								<div class="group group-buttons">
+									<button class="btn">
+										<span class="btn-title">Save and send for review</span>
+									</button>
+									<button class="btn btn-outline">
+										<span class="btn-title">Cancel</span>
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
-				</section>
-			</form>
+					</form>
+				</div>
+			</section>
 		</div>
 	</div>
 	<footer class="footer">

@@ -2,7 +2,8 @@ export const resetFilters = () => {
 	const btn = document.querySelectorAll('.reset-btn');
 	if (!!btn.length) {
 		for (let i = 0; i < btn.length; i++) {
-			btn[i].addEventListener('click', () => {
+			btn[i].addEventListener('click', (e) => {
+				e.preventDefault();
 				let boxId = btn[i].dataset.resetBox;
 				const box = document.querySelector(boxId);
 				if (!!box) {

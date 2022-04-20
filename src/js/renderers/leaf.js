@@ -9,6 +9,7 @@ import {loadImages} from "../common/general/loadImages";
 import {initDatepicker} from "../common/datepicker/initDatepicker";
 import {initTimepicker} from "../common/datepicker/initTimepicker";
 import {inputSearchTags} from "../common/authorization/inputSearchTags";
+import {resetFilters} from "../common/general/resetFilters";
 
 class LeafRenderer extends Highway.Renderer {
 	onEnter() {
@@ -19,6 +20,7 @@ class LeafRenderer extends Highway.Renderer {
 		initAvatarFirstLastName();
 		checkboxAlertToggle();
 		inputSearchTags();
+		resetFilters();
 	}
 	onEnterCompleted() {
 		console.log('enter completed to leaf');

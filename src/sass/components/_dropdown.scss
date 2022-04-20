@@ -125,8 +125,23 @@
 					&-trigger{
 							&-title{
 								color: var(--color-black);
+								height: 100%;
+								display: flex;
+								align-items: center;
+									&:after{
+										top: 45%;
+									}
 							}
 					}
+				}
+				/*
+				Sizes
+				 */
+				&-lg{
+					height: 56px;
+						@include d($xl){
+							height: 48px;
+						}
 				}
 		}
 		/*
@@ -160,7 +175,6 @@
 			.dropdown{
 					&-trigger{
 							&:after{
-								top: 5px;
 								border-width: 0 4px 6px 4px;
 								border-color: transparent transparent var(--color-primary) transparent;
 							}

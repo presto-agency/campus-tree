@@ -22,3 +22,46 @@
 			align-items: flex-start;
 		}
 }
+
+.create{
+		&-row{
+			display: flex;
+			flex-wrap: wrap;
+				&-item{
+					padding: 0 16px;
+						&.__full{
+							flex: 1;
+						}
+						&:nth-child(1){
+							padding-left: 0;
+						}
+						&:last-child{
+							padding-right: 0;
+						}
+						.btn{
+							@include m($sm + 1){
+								max-width: 180px;
+								width: 100vw;
+							}
+						}
+						@include d($md){
+							padding: 8px 0;
+						}
+				}
+				@include d($md){
+					flex-direction: column;
+				}
+				.dropdown{
+						&-trigger{
+								&-title{
+									@include d($sm){
+										width: 100%;
+									}
+								}
+						}
+						@include d($sm){
+							width: 100%;
+						}
+				}
+		}
+}

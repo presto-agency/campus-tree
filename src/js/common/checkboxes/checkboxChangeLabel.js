@@ -1,3 +1,5 @@
+import {closeAllDropdowns} from "../dropdown/toggleDropdown";
+
 export const checkboxChangeLabel = () => {
 	const fieldsetList = document.querySelectorAll('.fieldset');
 	/*
@@ -6,6 +8,7 @@ export const checkboxChangeLabel = () => {
 	for (let i = 0; i < fieldsetList.length; i++) {
 		const fieldsetId = fieldsetList[i].dataset.fieldsetList;
 		const fieldsetLabel = document.querySelector(`[data-fieldset-label="${fieldsetId}"]`);
+		const dropdownParent = fieldsetLabel.parentNode;
 		const defaultLabel = !! fieldsetLabel ? fieldsetLabel.dataset.label : null;
 		if (!!fieldsetId) {
 			const checkboxes = fieldsetList[i].querySelectorAll('.input-checkbox');
@@ -37,6 +40,12 @@ export const checkboxChangeLabel = () => {
 						!!fieldsetLabel
 							? fieldsetLabel.innerHTML = `${getCheckedCheckboxes(checkboxes)[0]} +${getCheckedCheckboxes(checkboxes).length}`
 							: null;
+					}
+					/*
+					Close dropbox select after selected
+					 */
+					if (dropdownParent.classList.contains('dropdown-select')) {
+						dropdownParent.classList.remove('is-active');
 					}
 				});
 			}

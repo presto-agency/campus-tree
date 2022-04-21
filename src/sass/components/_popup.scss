@@ -58,4 +58,25 @@
 						}
 				}
 		}
+		.person{
+				&-header{
+					display: flex;
+					align-items: center;
+				}
+				&-action{
+					padding-left: 0;
+					flex-direction: row;
+					flex-wrap: wrap;
+						.link{
+							&:not(:last-child){
+								margin-right: 16px;
+							}
+						}
+				}
+				&-description{
+						&-item{
+							display: block;
+						}
+				}
+		}
 }

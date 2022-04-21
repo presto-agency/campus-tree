@@ -87,7 +87,10 @@ function newXHR() {
 	const realXHR = new oldXHR();
 	realXHR.addEventListener("readystatechange", function() {
 		if(realXHR.readyState === 4 && realXHR.status === 200){
-			switchModals();
+			setTimeout(() => {
+				switchModals();
+				console.log('init popups');
+			}, 1000);
 		}
 	}, false);
 	return realXHR;

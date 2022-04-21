@@ -7,6 +7,7 @@ export const switchModals = () => {
 		triggers[i].addEventListener('click', (e) => {
 			e.preventDefault();
 			const popup = document.querySelector(`${modalId}`);
+			console.log(popup);
 			if (!!popup) {
 				closeNav();
 				popup.classList.add('is-active');

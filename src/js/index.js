@@ -81,6 +81,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	console.log('init DOM');
 });
 
+/*
+Detect AJAX requests
+ */
 const oldXHR = window.XMLHttpRequest;
 
 function newXHR() {

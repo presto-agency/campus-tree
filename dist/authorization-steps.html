@@ -110,6 +110,233 @@
                                                 </button>
                                             </div>
                                         </div>
+                                        <div class="filters-wrapper">
+                                            <div class="people-sign">
+                                                <div class="box box-bg" id="people-filter">
+                                                    <div class="box-header pb-3">
+                                                        <div class="box-header-row">
+                                                            <h3 class="h-3 color-primary">Filter</h3>
+                                                            <div class="box-header-action">
+                                                                <button class="btn btn-md reset-btn" data-reset-box="#people-filter">
+                                                                    <span class="btn-title">Reset filters</span>
+                                                                </button>
+                                                                <div class="link ml-3 toggle-filters" data-filter-id="#people-filter">
+                                                                    <div class="link-icon">
+                                                                        <svg class="svg svg__16">
+                                                                            <use xlink:href="../images/sprite/sprite.svg#close"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="hr">
+                                                    <div class="box-body">
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <p class="paragraph paragraph-medium">Interests</p>
+                                                                <fieldset class="fieldset" data-fieldset-list="people-faculty">
+                                                                    <label class="input-container">
+                                                                        <input type="checkbox" value="all" class="input input-checkbox">
+                                                                        <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                        <span class="input-checkbox-title">All</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="checkbox" value="Chemistry" class="input input-checkbox">
+                                                                        <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                        <span class="input-checkbox-title">Art</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="checkbox" value="Computer Science and Cybernetics" class="input input-checkbox">
+                                                                        <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                        <span class="input-checkbox-title">Computer Science and Cybernetics</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="checkbox" value="Economics" class="input input-checkbox">
+                                                                        <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                        <span class="input-checkbox-title">Economics</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="checkbox" value="Geography" class="input input-checkbox">
+                                                                        <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                        <span class="input-checkbox-title">Geography</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="checkbox" value="History" class="input input-checkbox">
+                                                                        <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                        <span class="input-checkbox-title">History</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="checkbox" value="Law" class="input input-checkbox">
+                                                                        <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                        <span class="input-checkbox-title">Law</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="checkbox" value="Mechanics and Mathematics" class="input input-checkbox">
+                                                                        <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                        <span class="input-checkbox-title">Mechanics and Mathematics</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="checkbox" value="Philosophy" class="input input-checkbox">
+                                                                        <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                        <span class="input-checkbox-title">Philosophy</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="checkbox" value="Physics" class="input input-checkbox">
+                                                                        <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                        <span class="input-checkbox-title">Physics</span>
+                                                                    </label>
+                                                                </fieldset>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <p class="paragraph paragraph-medium">Another Filter</p>
+                                                                <fieldset class="fieldset" data-fieldset-list="people-sex">
+                                                                    <label class="input-container">
+                                                                        <input type="radio" name="sex" value="male" class="input input-radio">
+                                                                        <span class="input-radio-icon"></span>
+                                                                        <span class="input-radio-title">Week</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="radio" name="sex" value="female" class="input input-radio">
+                                                                        <span class="input-radio-icon"></span>
+                                                                        <span class="input-radio-title">Month</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="radio" name="sex" value="Non-binary" class="input input-radio">
+                                                                        <span class="input-radio-icon"></span>
+                                                                        <span class="input-radio-title">Quarter</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="radio" name="sex" value="Prefer not to say" class="input input-radio">
+                                                                        <span class="input-radio-icon"></span>
+                                                                        <span class="input-radio-title">Year</span>
+                                                                    </label>
+                                                                </fieldset>
+                                                                <p class="paragraph paragraph-medium">Time Rage</p>
+                                                                <fieldset class="fieldset" data-fieldset-list="people-sex">
+                                                                    <label class="input-container">
+                                                                        <input type="radio" name="sex" value="male" class="input input-radio">
+                                                                        <span class="input-radio-icon"></span>
+                                                                        <span class="input-radio-title">Filter</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="radio" name="sex" value="female" class="input input-radio">
+                                                                        <span class="input-radio-icon"></span>
+                                                                        <span class="input-radio-title">Filter</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="radio" name="sex" value="Non-binary" class="input input-radio">
+                                                                        <span class="input-radio-icon"></span>
+                                                                        <span class="input-radio-title">Filter</span>
+                                                                    </label>
+                                                                    <label class="input-container">
+                                                                        <input type="radio" name="sex" value="Prefer not to say" class="input input-radio">
+                                                                        <span class="input-radio-icon"></span>
+                                                                        <span class="input-radio-title">Filter</span>
+                                                                    </label>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="filters-panel">
+                                                <div class="filters-panel-item">
+                                                    <label class="input-container">
+                                                        <input type="text" class="input input-transparent" placeholder="Events Search">
+                                                        <span class="input-container-icon">
+											<svg class="svg svg__24">
+												<use xlink:href="../images/sprite/sprite.svg#search"></use>
+											</svg>
+										</span>
+                                                    </label>
+                                                </div>
+                                                <div class="filters-panel-item">
+                                                    <div class="filters">
+                                                        <div class="filters-item">
+                                                            <button class="link toggle-filters" data-filter-id="#people-filter">
+											<span class="link-icon">
+												<svg class="svg svg__24">
+													<use xlink:href="../images/sprite/sprite.svg#filter"></use>
+												</svg>
+											</span>
+                                                                <span class="link-title">Filters</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="filters-item">
+                                                            <div class="dropdown">
+                                                                <p class="dropdown-trigger-label">Sort by</p>
+                                                                <p class="dropdown-trigger dropdown-trigger-title" data-fieldset-label="filter-sort" data-label="Popular">New friends</p>
+                                                                <div class="dropdown-body">
+                                                                    <div class="dropdown-body-item">
+                                                                        <fieldset class="fieldset" data-fieldset-list="filter-sort">
+                                                                            <label class="input-container">
+                                                                                <input type="radio" name="sort" value="New friends" class="input input-checkbox" checked="checked">
+                                                                                <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                                <span class="input-checkbox-title">New friends</span>
+                                                                            </label>
+                                                                            <label class="input-container">
+                                                                                <input type="radio" name="sort" value="New friends 2" class="input input-checkbox">
+                                                                                <span class="input-checkbox-icon">
+																	<svg class="svg svg__16">
+																		<use xlink:href="../images/sprite/sprite.svg#check"></use>
+																	</svg>
+																</span>
+                                                                                <span class="input-checkbox-title">New friends 2</span>
+                                                                            </label>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="steps-buttons">
                                         <button data-register-go="1" class="btn trigger-obj trigger-mob">
@@ -124,7 +351,7 @@
                                     </div>
                                     <div id="leaves" class="selected">
                                         <div class="selected-wrapper">
-                                            <div class="selected-content">
+                                            <div class="selected-content box">
                                                 <div class="selected-top">
                                                     <div class="section-title">
                                                         <h3 class="h-3">Selected Leaves</h3>

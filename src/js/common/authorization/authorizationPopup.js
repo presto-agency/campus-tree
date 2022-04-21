@@ -7,7 +7,9 @@ export const authorizationPopUp = () => {
         let attr = this.getAttribute('data-attr');
         let modalWindow = document.getElementById(attr);
         modalWindow.classList.add('active');
-        signIn.classList.add('popup');
+        // if (window.screen.width > 767){
+        //     signIn.classList.add('popup');
+        // }
         }))
     }
     let close = () => {
@@ -18,7 +20,9 @@ export const authorizationPopUp = () => {
         let attr = this.getAttribute('data-close');
         let popup = document.getElementById(attr);
         popup.classList.remove('active');
-        signIn.classList.remove('popup');
+        // if (window.screen.width > 1024){
+        //     signIn.classList.remove('popup');
+        // }
         }))
     }
     // let closeOutside = () => {

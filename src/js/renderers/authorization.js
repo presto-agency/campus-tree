@@ -10,6 +10,9 @@ import {mobileTree} from '../common/authorization/mobileTree';
 import {initAvatarFirstLastName} from "../common/general/initAvatarFirstLastName";
 import {toggleCategoryFilters} from "../common/general/toggleCategoryFilters";
 import {resetFilters} from "../common/general/resetFilters";
+import {setLabelsPosition} from "../common/tree/setLabelsPosition";
+import {updatePaginationNumbers} from "../common/pagination/updatePaginationNumbers";
+import {changeView} from "../common/tree/changeView";
 
 
 
@@ -30,6 +33,8 @@ class authorizationRenderer extends Highway.Renderer {
         initAvatarFirstLastName();
         scrollHeight();
         authorizationNav();
+        setLabelsPosition();
+        updatePaginationNumbers();
     }
 }
 

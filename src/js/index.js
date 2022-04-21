@@ -80,3 +80,16 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	switchModals();
 	console.log('init DOM');
 });
+
+const oldXHR = window.XMLHttpRequest;
+
+function newXHR() {
+	const realXHR = new oldXHR();
+	realXHR.addEventListener("readystatechange", function() {
+		if(realXHR.readyState === 4 && realXHR.status === 200){
+			console.log('Ajax completed');
+		}
+	}, false);
+	return realXHR;
+}
+window.XMLHttpRequest = newXHR;

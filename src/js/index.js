@@ -87,7 +87,7 @@ function newXHR() {
 	const realXHR = new oldXHR();
 	realXHR.addEventListener("readystatechange", function() {
 		if(realXHR.readyState === 4 && realXHR.status === 200){
-			console.log('Ajax completed');
+			switchModals();
 		}
 	}, false);
 	return realXHR;

@@ -6,10 +6,22 @@ export const switchModals = () => {
 		let modalId = triggers[i].dataset.popupTrigger;
 		triggers[i].addEventListener('click', (e) => {
 			e.preventDefault();
-			const popup = document.querySelector(modalId);
+			const popup = document.querySelector(`${modalId}`);
 			if (!!popup) {
 				closeNav();
-				popup.classList.contains('is-active') ? popup.classList.remove('is-active') : popup.classList.add('is-active');
+				popup.classList.add('is-active');
+			}
+		});
+	}
+	/*
+	Close modals
+	 */
+	const closeElements = document.querySelectorAll('[data-popup-close]');
+	for (let j = 0; j < closeElements.length; j++) {
+		closeElements[j].addEventListener('click', () => {
+			const popups = document.querySelectorAll('.popup');
+			for (let l = 0; l < popups.length; l++) {
+				popups[l].classList.remove('is-active');
 			}
 		});
 	}

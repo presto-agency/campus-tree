@@ -12,6 +12,19 @@
 			border: 1px var(--color-gray-700) solid;
 			position: relative;
 			white-space: nowrap;
+				&-md{
+					font-size: 18px;
+					height: 44px;
+					line-height: 38px;
+						@include d($sm){
+							font-size: 16px;
+						}
+						@include d($xs){
+							font-size: 14px;
+							height: 36px;
+							line-height: 34px;
+						}
+				}
 				&.is-active{
 					background-color: var(--color-primary);
 					border-color: transparent;
@@ -51,15 +64,19 @@
 				}
 		}
 		&-content{
-			.tabs{
-				&-content{
-					&-item{
-						&:nth-child(n + 2){
-							display: none;
+			height: 100%;
+				.tabs{
+					&-content{
+						&-item{
+							&:nth-child(n + 2){
+								display: none;
+							}
 						}
 					}
 				}
-			}
+				&-item{
+					height: 100%;
+				}
 		}
 		@include d($sm){
 			margin: 19px 0;

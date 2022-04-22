@@ -102,6 +102,21 @@
 					-webkit-line-clamp: 2;
 					overflow: hidden;
 				}
+				&-subtitle{
+				
+				}
+				&-status{
+					display: flex;
+					align-items: center;
+					line-height: 1.6em;
+					font-size: 10px;
+					text-transform: uppercase;
+					font-family: var(--font-base-bold);
+					color: var(--color-gray-800);
+						.svg{
+							margin-right: 8px;
+						}
+				}
 		}
 		&-checkbox{
 			height: 48px;

@@ -53,6 +53,34 @@
 		&-body{
 			padding: 22px 0 10px;
 			visibility: visible;
+				&-action{
+					padding-top: 15px;
+					text-align: center;
+					position: relative;
+						&:before{
+							content: '';
+							position: absolute;
+							top: 0;
+							left: -30px;
+							right: -30px;
+							height: 1px;
+							background-color: var(--color-gray-700);
+								@include d($xl){
+									left: -5px;
+									right: -5px;
+								}
+								@include d($sm){
+									left: -17px;
+									right: -17px;
+								}
+						}
+						@include d($xl){
+							padding-bottom: 15px;
+						}
+						@include d($sm){
+							padding-bottom: 0;
+						}
+				}
 				.fieldset{
 					padding: 16px 0;
 					margin-bottom: 10px;
@@ -66,6 +94,12 @@
 							margin-bottom: 20px;
 						}
 					}
+				}
+				.tags{
+					padding: 5px 0;
+				}
+				.social{
+					margin-top: 5px;
 				}
 				@include d($xl){
 					height: auto;

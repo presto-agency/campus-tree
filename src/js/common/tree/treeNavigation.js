@@ -37,7 +37,7 @@ export const treeNavigation = () => {
 				let eventDOM = document.querySelector(`.event[data-event-id="${leafId}"]`);
 				clearActiveEvents();
 				if (!!eventDOM && window.innerWidth >= 1200) {
-					Tween.to(document.querySelector('.leaves .scroll-wrap'), {
+					Tween.to(document.querySelector('.leaves .scroll-wrap.splide__track'), {
 						scrollTo: eventDOM,
 						duration: 0.4,
 						ease: 'none',

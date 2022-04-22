@@ -1,5 +1,6 @@
 import Tween from 'gsap';
 import {scrollToBottomComments} from "./scrollToBottomComments";
+import {leavesTabletCarousel} from "./leavesTabletCarousel";
 
 export const initTabs = () => {
 	const tabs = document.querySelectorAll('.tabs');
@@ -18,18 +19,28 @@ export const initTabs = () => {
 					/*
 					Get tab content & segment
 					 */
-					let tabContent = document.querySelector(`[data-tab-content="${tabId}"]`);
-					let tabSegmentContent = document.querySelector(`[data-tab-segment="${tabSegment}"][data-tab-content="${tabId}"]`);
+					let tabContent = document.querySelectorAll(`[data-tab-content="${tabId}"]`);
+					let tabSegmentContent = document.querySelectorAll(`[data-tab-segment="${tabSegment}"][data-tab-content="${tabId}"]`);
 					/*
 					Switch tab content || segment
 					 */
 					hideContents(tabSegment);
-					!!tabSegmentContent ? tabSegmentContent.style.display = 'block' : tabContent.style.display = 'block';
+					!!tabSegmentContent
+						? Tween.set(tabSegmentContent, {
+							display: 'block',
+						})
+						: Tween.set(tabContent, {
+							display: 'block',
+						});
 
 					/*
 					Scroll to bottom comments
 					 */
 					scrollToBottomComments();
+					/*
+					Init carousel
+					 */
+					leavesTabletCarousel();
 				});
 			}
 		}

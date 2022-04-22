@@ -30,6 +30,11 @@
 					color: var(--color-white);
 					opacity: 0;
 					pointer-events: auto;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 1;
+					overflow: hidden;
+					max-width: 100px;
 						&[data-branch-id="branch-1"]{
 							top: 35.4%;
 							left: 34.2%;
@@ -343,6 +348,32 @@
 						}
 				}
 		}
+		&-checkboxes{
+			position: absolute;
+			inset: 0;
+				&-item{
+					position: absolute;
+					height: 16px;
+					text-align: center;
+					top: 20px;
+					opacity: 0;
+						@include d($sm){
+							top: 5px;
+						}
+						&:nth-child(n + 5){
+							bottom: 30px;
+							top: auto;
+								@include d($sm){
+									bottom: 5px;
+								}
+						}
+						.input-container{
+							position: absolute;
+							left: 50%;
+							margin-left: -8px;
+						}
+				}
+		}
 		&[data-view-mode="list"]{
 			height: auto !important;
 				.tree{
@@ -507,8 +538,16 @@
 			display: inline-block;
 			max-width: 80%;
 			word-break: break-word;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
 				@include d($xl){
 					line-height: 1em;
+				}
+				@include d($sm){
+					max-width: 100%;
+					min-width: 60px;
 				}
 		}
 		&-link{

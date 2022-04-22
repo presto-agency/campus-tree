@@ -29,13 +29,15 @@ const openNav = () => {
 export const closeNav = () => {
 	const burger = document.querySelector('.burger');
 	const nav = document.querySelector('.header-nav');
-	burger.classList.remove('is-active');
-	Tween.set(nav, {
-		opacity: 1,
-		onComplete: () => {
-			Tween.set(nav, {
-				display: 'none'
-			});
-		},
-	})
+	if (!!burger && !!nav) {
+		burger.classList.remove('is-active');
+		Tween.set(nav, {
+			opacity: 1,
+			onComplete: () => {
+				Tween.set(nav, {
+					display: 'none'
+				});
+			},
+		});
+	}
 };

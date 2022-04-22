@@ -80,3 +80,22 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	switchModals();
 	console.log('init DOM');
 });
+
+/*
+Detect AJAX requests
+ */
+const oldXHR = window.XMLHttpRequest;
+
+function newXHR() {
+	const realXHR = new oldXHR();
+	realXHR.addEventListener("readystatechange", function() {
+		if(realXHR.readyState === 4 && realXHR.status === 200){
+			setTimeout(() => {
+				switchModals();
+				console.log('init popups');
+			}, 1000);
+		}
+	}, false);
+	return realXHR;
+}
+window.XMLHttpRequest = newXHR;

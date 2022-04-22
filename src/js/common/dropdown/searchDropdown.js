@@ -64,8 +64,12 @@ export const searchDropdown = () => {
 export const closeSearchPanel = () => {
 	const searchInput = document.querySelector('.search .input');
 	const header = document.querySelector('.header');
-	header.classList.remove('is-filters-active');
-	header.classList.remove('is-mobile-filters-active');
-	searchInput.value = '';
+	if (!!header) {
+		header.classList.remove('is-filters-active');
+		header.classList.remove('is-mobile-filters-active');
+	}
+	if (!!searchInput) {
+		searchInput.value = '';
+	}
 	closeAllDropdowns();
 }

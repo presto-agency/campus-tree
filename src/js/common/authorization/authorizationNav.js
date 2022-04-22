@@ -1,5 +1,6 @@
 import {moveLottieToStep} from "./moveLottieOnStep";
-import {scrollHeight} from './scrollHeightBg';
+import {setLabelsPosition} from "../tree/setLabelsPosition";
+// import {scrollHeight} from './scrollHeightBg';
 
 export const authorizationNav = () => {
 	let elementsLink = document.querySelectorAll('.trigger-obj');
@@ -14,7 +15,7 @@ export const authorizationNav = () => {
 			!!activeStep ? activeStep.classList.remove('active') : null;
 			!!nextStep ? nextStep.classList.add('active') : null;
 			moveLottieToStep(parseInt(attr), !!reverse);
-			scrollHeight();
+			setLabelsPosition();
 		}
 	}));
 };

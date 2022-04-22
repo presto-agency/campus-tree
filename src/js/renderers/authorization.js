@@ -5,14 +5,13 @@ import {showPassword} from "../common/authorization/showPassword";
 import {initDatepicker} from '../common/datepicker/initDatepicker';
 import {inputSearchTags} from '../common/authorization/inputSearchTags';
 import {authorizationPopUp} from '../common/authorization/authorizationPopup';
-import {scrollHeight} from '../common/authorization/scrollHeightBg';
+// import {scrollHeight} from '../common/authorization/scrollHeightBg';
 import {mobileTree} from '../common/authorization/mobileTree';
 import {initAvatarFirstLastName} from "../common/general/initAvatarFirstLastName";
 import {toggleCategoryFilters} from "../common/general/toggleCategoryFilters";
 import {resetFilters} from "../common/general/resetFilters";
 import {setLabelsPosition} from "../common/tree/setLabelsPosition";
 import {updatePaginationNumbers} from "../common/pagination/updatePaginationNumbers";
-import {changeView} from "../common/tree/changeView";
 
 
 
@@ -31,7 +30,7 @@ class authorizationRenderer extends Highway.Renderer {
     onEnterCompleted() {
         console.log('enter completed to authorization page');
         initAvatarFirstLastName();
-        scrollHeight();
+        // scrollHeight();
         authorizationNav();
         setLabelsPosition();
         updatePaginationNumbers();

@@ -6,39 +6,48 @@
       min-height: 100%;
       flex-direction: column;
       max-width: 660px;
-      padding: 0 0 0 40px;
+      padding-left: 64px;
       box-sizing: content-box;
       margin: 0 auto;
-      &-wrapper{
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 auto;
-      }
-      .section-title{
-        margin: 51px 0 37px 0;
-      }
-      &.active{
-        display: flex;
-      }
+        &-wrapper{
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 auto;
+            .pagination{
+                &-static{
+                  margin-top: 25px;
+                }
+                &-list{
+                  justify-content: flex-start;
+                }
+            }
+        }
+        .section-title{
+          margin: 51px 0 30px 0;
+        }
+        &.active{
+          display: flex;
+        }
     }
     &-item{
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      &-left{
-        .section-title{
-          margin: 0 0 16px 0;
+      margin-bottom: 10px;
+        &-left{
+          .section-title{
+            margin: 0 0 10px 0;
+          }
+          .section-description{
+            padding: 0;
+          }
         }
-        .section-description{
-          padding: 0;
-        }
-      }
     }
     &-positions{
       position: relative;
       display: flex;
       justify-content: space-between;
-      margin: 0 0 74px 0;
+      margin-bottom: 72px;
       &:before{
         content: '';
         position: absolute;
@@ -177,13 +186,14 @@
     &-branch{
       position: relative;
       height: 387px;
-      svg{
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: 0;
-        height: 100%;
-      }
+        .tree-svg{
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: auto;
+        }
     }
   }
 }
@@ -408,6 +418,7 @@
       .steps{
         &-branch{
           height: 235px;
+          margin-right: -20px;
         }
         .people-sign{
           .box{

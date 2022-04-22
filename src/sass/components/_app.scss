@@ -482,3 +482,24 @@ body{
 			}
 	}
 }
+
+.social{
+	display: flex;
+	align-items: center;
+		&-link{
+			margin: 0 4px;
+			width: 24px;
+			height: 24px;
+				&:nth-child(1){
+					margin-left: 0;
+				}
+				&:last-child{
+					margin-right: 0;
+				}
+				@include hover($md){
+					&:hover{
+						color: var(--color-primary);
+					}
+				}
+		}
+}

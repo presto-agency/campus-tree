@@ -4,7 +4,7 @@
 			position: absolute;
 			top: 64px;
 			left: 0;
-			max-width: 150px;
+			max-width: 200px;
 				@include d($xl){
 					max-width: 100%;
 					top: -34px;
@@ -34,7 +34,6 @@
 					-webkit-box-orient: vertical;
 					-webkit-line-clamp: 1;
 					overflow: hidden;
-					max-width: 100px;
 						&[data-branch-id="branch-1"]{
 							top: 35.4%;
 							left: 34.2%;
@@ -165,9 +164,12 @@
 									display: none;
 								}
 						}
+						@include m($sm + 1){
+							max-width: 100px;
+						}
 						@include d($sm){
 							height: 33px;
-							line-height: 33px;
+							line-height: 1em;
 							padding: 0 16px;
 							border-radius: 40px;
 							background-color: var(--color-white);

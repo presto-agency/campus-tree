@@ -7,6 +7,7 @@ import {initTabs} from "../common/general/initTabs";
 import {hidePassword} from "../common/general/hidePassword";
 import {initDatepicker} from "../common/datepicker/initDatepicker";
 import {inputSearchTags} from "../common/authorization/inputSearchTags";
+import {inputMask} from "../common/general/inputMask";
 
 class HomeRenderer extends Highway.Renderer {
 	onEnter() {
@@ -22,6 +23,7 @@ class HomeRenderer extends Highway.Renderer {
 		updatePaginationNumbers();
 		initDatepicker();
 		inputSearchTags();
+		inputMask();
 	}
 }
 

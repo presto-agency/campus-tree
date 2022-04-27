@@ -11,13 +11,11 @@ import {inputMask} from "../common/general/inputMask";
 
 class HomeRenderer extends Highway.Renderer {
 	onEnter() {
-		console.log('enter to home');
 		leavesTabletCarousel();
 		initTabs();
 		hidePassword();
 	}
 	onEnterCompleted() {
-		console.log('enter completed to home');
 		setBoxHeight();
 		setLabelsPosition();
 		updatePaginationNumbers();

@@ -65,6 +65,9 @@
 					width: 30px;
 					height: 20px;
 					position: relative;
+						.input-message{
+							max-width: fit-content;
+						}
 				}
 				&-datepicker{
 					&.__bottom{
@@ -118,11 +121,21 @@
 						.upload-text + .upload-file{
 							margin-right: 30px;
 						}
+						.input-message{
+							bottom: -40px;
+						}
 				}
 				&-group{
 					margin-bottom: 32px;
 						@include d($sm){
 							margin-bottom: 8px;
+						}
+				}
+				&.has-error{
+						.input-message{
+								&.__error{
+									opacity: 1;
+								}
 						}
 				}
 		}
@@ -372,6 +385,24 @@
 		&[disabled]{
 			color: var(--color-white);
 			pointer-events: none;
+		}
+		/*
+		Messages
+		 */
+		&-message{
+			position: absolute;
+			bottom: -20px;
+			left: 10px;
+			font-size: 12px;
+			white-space: nowrap;
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			pointer-events: none;
+			opacity: 0;
+				&.__error{
+					color: var(--color-alumni);
+				}
 		}
 		/*
 		Placeholder

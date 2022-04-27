@@ -17,7 +17,6 @@ import {updatePaginationNumbers} from "../common/pagination/updatePaginationNumb
 
 class authorizationRenderer extends Highway.Renderer {
     onEnter() {
-        console.log('enter to authorization page');
         showPassword();
         initDatepicker();
         initRegistrationLottie();
@@ -28,7 +27,6 @@ class authorizationRenderer extends Highway.Renderer {
         resetFilters();
     }
     onEnterCompleted() {
-        console.log('enter completed to authorization page');
         initAvatarFirstLastName();
         // scrollHeight();
         authorizationNav();

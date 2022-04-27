@@ -9,12 +9,10 @@ import {setListViewMode} from "../common/general/setListViewMode";
 
 class PeopleRenderer extends Highway.Renderer {
 	onEnter() {
-		console.log('enter to people');
 		resetFilters();
 		toggleCategoryFilters();
 	}
 	onEnterCompleted() {
-		console.log('enter completed to people');
 		initAvatarFirstLastName();
 		changeView();
 		updatePaginationNumbers();

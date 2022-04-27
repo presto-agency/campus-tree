@@ -11,7 +11,7 @@ import {toggleCategoryFilters} from "../common/general/toggleCategoryFilters";
 import {resetFilters} from "../common/general/resetFilters";
 import {setLabelsPosition} from "../common/tree/setLabelsPosition";
 import {updatePaginationNumbers} from "../common/pagination/updatePaginationNumbers";
-import {getSelectedCategories, selectCategories} from "../common/authorization/selectCategories";
+import {selectCategories} from "../common/authorization/selectCategories";
 
 
 
@@ -32,7 +32,6 @@ class authorizationRenderer extends Highway.Renderer {
         authorizationNav();
         setLabelsPosition();
         updatePaginationNumbers();
-        getSelectedCategories();
     }
 }
 

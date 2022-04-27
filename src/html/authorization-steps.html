@@ -627,32 +627,10 @@
                                 <span></span>
                             </div>
                         </div>
-                        <ul class="selected-list scroll-wrap">
-	                        <!-- template -->
-                          <li class="selected-link hidden">
-                            <div class="selected-link-club">
-                              <div class="selected-link-img">
-                                <img src="" alt="club">
-                              </div>
-                              <div class="selected-link-name">
-                                <div class="section-title">
-                                  <h4 class="h-4"></h4>
-                                </div>
-                                <p class="tag tag-clubs">Clubs</p>
-                              </div>
-                            </div>
-                            <div class="selected-link-remove">
-                              <div class="selected-link-cross">
-                                <img src="../images/sign-in/x-circle.svg" alt="cross">
-                              </div>
-                              <p class="selected-link-text">Delete from selected</p>
-                            </div>
-                          </li>
-	                        <!-- end template -->
-                        </ul>
+                        <ul class="selected-list scroll-wrap"></ul>
                         <div class="selected-buttons">
-                            <button class="btn">
-                                <span class="btn-title">Save</span>
+                            <button class="btn modal-close" data-close="leaves">
+	                            <span class="btn-title">Save</span>
                             </button>
                         </div>
                         <img class="selected-bg" src="../images/sign-in/flowers-bg.svg" alt="bg"/>
@@ -934,122 +912,194 @@
                     <div class="steps-branch tree">
 	                    <div class="tree-events">
 		                    <label for="step-2-1" class="tree-events-item" data-event-id="1">
-			                    <span class="leaf-title">AEPI</span>
+			                    <span class="leaf-title">AEPI 2</span>
 		                    </label>
 		                    <label for="step-2-2" class="tree-events-item" data-event-id="2">
-			                    <span class="leaf-title">AXA</span>
+			                    <span class="leaf-title">AXA 2</span>
 		                    </label>
 		                    <label for="step-2-3" class="tree-events-item" data-event-id="3">
-			                    <span class="leaf-title">BYOB</span>
+			                    <span class="leaf-title">BYOB 2</span>
 		                    </label>
 		                    <label for="step-2-4" class="tree-events-item" data-event-id="4">
-			                    <span class="leaf-title">Taco Tuesday</span>
+			                    <span class="leaf-title">Taco Tuesday 2</span>
 		                    </label>
 		                    <label for="step-2-5" class="tree-events-item" data-event-id="5">
-			                    <span class="leaf-title">Movie Theatre Showing</span>
+			                    <span class="leaf-title">Movie Theatre Showing 2</span>
 		                    </label>
 		                    <label for="step-2-6" class="tree-events-item" data-event-id="6">
-			                    <span class="leaf-title">Drive in Movie</span>
+			                    <span class="leaf-title">Drive in Movie 2</span>
 		                    </label>
 		                    <label for="step-2-7" class="tree-events-item" data-event-id="7">
-			                    <span class="leaf-title">Interships</span>
+			                    <span class="leaf-title">Interships 2</span>
 		                    </label>
 		                    <label for="step-2-8" class="tree-events-item" data-event-id="8">
-			                    <span class="leaf-title">Q&A</span>
+			                    <span class="leaf-title">Q&A 2</span>
 		                    </label>
 		                    <label for="step-2-9" class="tree-events-item" data-event-id="9">
-			                    <span class="leaf-title">Drive in Movie</span>
+			                    <span class="leaf-title">Drive in Movie 2</span>
 		                    </label>
 	                    </div>
 	                    <div class="tree-checkboxes">
 		                    <div class="tree-checkboxes-item" data-event-id="step-2-1">
 			                    <label class="input-container">
-				                    <input type="checkbox" name="event" value="AEPI" class="input input-checkbox" id="step-2-1"/>
+				                    <input
+					                    type="checkbox"
+					                    name="event"
+					                    value="AEPI 2"
+					                    data-event-thumb="https://images.pexels.com/photos/2381596/pexels-photo-2381596.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					                    data-event-category="greek-life"
+					                    data-event-modal-id="#leavesnext"
+					                    class="input input-checkbox"
+					                    id="step-2-1"/>
 				                    <span class="input-checkbox-icon">
-									            <svg class="svg svg__16">
-									              <use xlink:href="../images/sprite/sprite.svg#check"></use>
-									            </svg>
-									          </span>
+										            <svg class="svg svg__16">
+										              <use xlink:href="../images/sprite/sprite.svg#check"></use>
+										            </svg>
+										          </span>
 			                    </label>
 		                    </div>
 		                    <div class="tree-checkboxes-item" data-event-id="step-2-2">
 			                    <label class="input-container">
-				                    <input type="checkbox" name="event" value="AEPI" class="input input-checkbox" id="step-2-2"/>
+				                    <input
+					                    type="checkbox"
+					                    name="event"
+					                    value="AXA 2"
+					                    data-event-thumb="https://images.pexels.com/photos/9638689/pexels-photo-9638689.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					                    data-event-category="greek-life"
+					                    data-event-modal-id="#leavesnext"
+					                    class="input input-checkbox"
+					                    id="step-2-2"/>
 				                    <span class="input-checkbox-icon">
-									            <svg class="svg svg__16">
-									              <use xlink:href="../images/sprite/sprite.svg#check"></use>
-									            </svg>
-									          </span>
+										            <svg class="svg svg__16">
+										              <use xlink:href="../images/sprite/sprite.svg#check"></use>
+										            </svg>
+										          </span>
 			                    </label>
 		                    </div>
 		                    <div class="tree-checkboxes-item" data-event-id="step-2-3">
 			                    <label class="input-container">
-				                    <input type="checkbox" name="event" value="AEPI" class="input input-checkbox" id="step-2-3"/>
+				                    <input
+					                    type="checkbox"
+					                    name="event"
+					                    value="BYOB 2"
+					                    data-event-thumb="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZXZlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+					                    data-event-category="greek-life"
+					                    data-event-modal-id="#leavesnext"
+					                    class="input input-checkbox"
+					                    id="step-2-3"/>
 				                    <span class="input-checkbox-icon">
-									            <svg class="svg svg__16">
-									              <use xlink:href="../images/sprite/sprite.svg#check"></use>
-									            </svg>
-									          </span>
+										            <svg class="svg svg__16">
+										              <use xlink:href="../images/sprite/sprite.svg#check"></use>
+										            </svg>
+										          </span>
 			                    </label>
 		                    </div>
 		                    <div class="tree-checkboxes-item" data-event-id="step-2-4">
 			                    <label class="input-container">
-				                    <input type="checkbox" name="event" value="AEPI" class="input input-checkbox" id="step-2-4"/>
+				                    <input
+					                    type="checkbox"
+					                    name="event"
+					                    value="Taco Tuesday 2"
+					                    data-event-thumb="https://images.unsplash.com/photo-1503428593586-e225b39bddfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZXZlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+					                    data-event-category="greek-life"
+					                    data-event-modal-id="#leavesnext"
+					                    class="input input-checkbox"
+					                    id="step-2-4"/>
 				                    <span class="input-checkbox-icon">
-									            <svg class="svg svg__16">
-									              <use xlink:href="../images/sprite/sprite.svg#check"></use>
-									            </svg>
-									          </span>
+										            <svg class="svg svg__16">
+										              <use xlink:href="../images/sprite/sprite.svg#check"></use>
+										            </svg>
+										          </span>
 			                    </label>
 		                    </div>
 		                    <div class="tree-checkboxes-item" data-event-id="step-2-5">
 			                    <label class="input-container">
-				                    <input type="checkbox" name="event" value="AEPI" class="input input-checkbox" id="step-2-5"/>
+				                    <input
+					                    type="checkbox"
+					                    name="event"
+					                    value="Movie Theatre Showing 2"
+					                    data-event-thumb="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+					                    data-event-category="greek-life"
+					                    data-event-modal-id="#leavesnext"
+					                    class="input input-checkbox"
+					                    id="step-2-5"/>
 				                    <span class="input-checkbox-icon">
-									            <svg class="svg svg__16">
-									              <use xlink:href="../images/sprite/sprite.svg#check"></use>
-									            </svg>
-									          </span>
+										            <svg class="svg svg__16">
+										              <use xlink:href="../images/sprite/sprite.svg#check"></use>
+										            </svg>
+										          </span>
 			                    </label>
 		                    </div>
 		                    <div class="tree-checkboxes-item" data-event-id="step-2-6">
 			                    <label class="input-container">
-				                    <input type="checkbox" name="event" value="AEPI" class="input input-checkbox" id="step-2-6"/>
+				                    <input
+					                    type="checkbox"
+					                    name="event"
+					                    value="Drive in Movie 2"
+					                    data-event-thumb="https://images.unsplash.com/photo-1472653431158-6364773b2a56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+					                    data-event-category="greek-life"
+					                    data-event-modal-id="#leavesnext"
+					                    class="input input-checkbox"
+					                    id="step-2-6"/>
 				                    <span class="input-checkbox-icon">
-									            <svg class="svg svg__16">
-									              <use xlink:href="../images/sprite/sprite.svg#check"></use>
-									            </svg>
-									          </span>
+										            <svg class="svg svg__16">
+										              <use xlink:href="../images/sprite/sprite.svg#check"></use>
+										            </svg>
+										          </span>
 			                    </label>
 		                    </div>
 		                    <div class="tree-checkboxes-item" data-event-id="step-2-7">
 			                    <label class="input-container">
-				                    <input type="checkbox" name="event" value="AEPI" class="input input-checkbox" id="step-2-7"/>
+				                    <input
+					                    type="checkbox"
+					                    name="event"
+					                    value="Interships 2"
+					                    data-event-thumb="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+					                    data-event-category="greek-life"
+					                    data-event-modal-id="#leavesnext"
+					                    class="input input-checkbox"
+					                    id="step-2-7"/>
 				                    <span class="input-checkbox-icon">
-									            <svg class="svg svg__16">
-									              <use xlink:href="../images/sprite/sprite.svg#check"></use>
-									            </svg>
-									          </span>
+										            <svg class="svg svg__16">
+										              <use xlink:href="../images/sprite/sprite.svg#check"></use>
+										            </svg>
+										          </span>
 			                    </label>
 		                    </div>
 		                    <div class="tree-checkboxes-item" data-event-id="step-2-8">
 			                    <label class="input-container">
-				                    <input type="checkbox" name="event" value="AEPI" class="input input-checkbox" id="step-2-8"/>
+				                    <input
+					                    type="checkbox"
+					                    name="event"
+					                    value="Q&A 2"
+					                    data-event-thumb="https://images.unsplash.com/photo-1550177977-ad69e8f3cae0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+					                    data-event-category="greek-life"
+					                    data-event-modal-id="#leavesnext"
+					                    class="input input-checkbox"
+					                    id="step-2-8"/>
 				                    <span class="input-checkbox-icon">
-									            <svg class="svg svg__16">
-									              <use xlink:href="../images/sprite/sprite.svg#check"></use>
-									            </svg>
-									          </span>
+										            <svg class="svg svg__16">
+										              <use xlink:href="../images/sprite/sprite.svg#check"></use>
+										            </svg>
+										          </span>
 			                    </label>
 		                    </div>
 		                    <div class="tree-checkboxes-item" data-event-id="step-2-9">
 			                    <label class="input-container">
-				                    <input type="checkbox" name="event" value="AEPI" class="input input-checkbox" id="step-2-9"/>
+				                    <input
+					                    type="checkbox"
+					                    name="event"
+					                    value="Drive in Movie 2"
+					                    data-event-thumb="https://images.unsplash.com/photo-1550305080-4e029753abcf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+					                    data-event-category="greek-life"
+					                    data-event-modal-id="#leavesnext"
+					                    class="input input-checkbox"
+					                    id="step-2-9"/>
 				                    <span class="input-checkbox-icon">
-									            <svg class="svg svg__16">
-									              <use xlink:href="../images/sprite/sprite.svg#check"></use>
-									            </svg>
-									          </span>
+										            <svg class="svg svg__16">
+										              <use xlink:href="../images/sprite/sprite.svg#check"></use>
+										            </svg>
+										          </span>
 			                    </label>
 		                    </div>
 	                    </div>

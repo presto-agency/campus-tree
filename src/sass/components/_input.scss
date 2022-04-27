@@ -130,6 +130,11 @@
 						@include d($sm){
 							margin-bottom: 8px;
 						}
+						&.has-error{
+							@include d($sm){
+								margin-bottom: 20px;
+							}
+						}
 				}
 				&.has-error{
 						.input-message{

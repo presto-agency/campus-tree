@@ -36,16 +36,7 @@ export const authorizationPopUp = () => {
     //         }
     //     }
     // }
-    let removeEvent = () => {
-        let removeLinks = document.querySelectorAll('.selected-link-remove');
-        removeLinks.forEach(link => {
-            link.onclick = () => {
-               link.parentNode.remove();
-            }
-        })
-    }
         open();
         close();
-    removeEvent();
 };
 

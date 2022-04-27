@@ -38,7 +38,7 @@ export const checkboxChangeLabel = () => {
 							: null;
 					} else {
 						!!fieldsetLabel
-							? fieldsetLabel.innerHTML = `${getCheckedCheckboxes(checkboxes)[0]} +${getCheckedCheckboxes(checkboxes).length}`
+							? fieldsetLabel.innerHTML = `${getCheckedCheckboxes(checkboxes)[0]} +${getCheckedCheckboxes(checkboxes).length - 1}`
 							: null;
 					}
 					/*
@@ -46,6 +46,14 @@ export const checkboxChangeLabel = () => {
 					 */
 					if (!!dropdownParent && dropdownParent.classList.contains('dropdown-select')) {
 						dropdownParent.classList.remove('is-active');
+					}
+
+					/*
+					Set checked options to input array
+					 */
+					const hiddenInput = document.querySelector(`input[data-fieldset-trigger="${fieldsetId}"]`);
+					if (!!hiddenInput) {
+						hiddenInput.value = getCheckedCheckboxes(checkboxes).join(', ');
 					}
 				});
 			}

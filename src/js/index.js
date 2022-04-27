@@ -19,6 +19,7 @@ import {headerMobileFilters} from "./common/general/headerMobileFilters";
 import {resetFilters} from "./common/general/resetFilters";
 import {closeNav, toggleNav} from "./common/general/toggleNav";
 import {switchModals} from "./common/modal/switchModals";
+import {setLabelsPosition} from "./common/tree/setLabelsPosition";
 
 /*
 Routing
@@ -62,7 +63,6 @@ H.on('NAVIGATE_IN', ({ to, location }) => {
 	treeNavigation();
 	switchModals();
 	closeNav();
-	console.log('init highway');
 });
 
 /*
@@ -78,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	resetFilters();
 	toggleNav();
 	switchModals();
-	console.log('init DOM');
 });
 
 /*
@@ -89,10 +88,11 @@ const oldXHR = window.XMLHttpRequest;
 function newXHR() {
 	const realXHR = new oldXHR();
 	realXHR.addEventListener("readystatechange", function() {
+		console.log(realXHR);
 		if(realXHR.readyState === 4 && realXHR.status === 200){
 			setTimeout(() => {
 				switchModals();
-				console.log('init popups');
+				setLabelsPosition();
 			}, 1000);
 		}
 	}, false);

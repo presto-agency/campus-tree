@@ -204,6 +204,7 @@
 						</div>
 						<div class="filters-item d-none d-xl-flex">
 							<div class="dropdown">
+								<input type="text" data-fieldset-trigger="filter-branches" name="filter-branches" hidden>
 								<p class="dropdown-trigger-label">Branches</p>
 								<p class="dropdown-trigger dropdown-trigger-title" data-fieldset-label="filter-branches" data-label="Select branch">Select branch</p>
 								<div class="dropdown-body">
@@ -279,6 +280,7 @@
 						</div>
 						<div class="filters-item d-none d-xl-flex">
 							<div class="dropdown">
+								<input type="text" data-fieldset-trigger="filter-interests" name="filter-branches" hidden>
 								<p class="dropdown-trigger-label">Interests</p>
 								<p class="dropdown-trigger dropdown-trigger-title" data-fieldset-label="filter-interests" data-label="Select interest">Select interest</p>
 								<div class="dropdown-body">
@@ -732,8 +734,15 @@
 									<input type="text" class="input" placeholder="Leaf Title" required>
 									<span class="input-message __error">This field is required!</span>
 								</label>
-								<label class="input-container input-container-group">
-									<input type="text" class="input" placeholder="Branch" required>
+								<label class="input-container input-container-group input-container-select">
+									<select class="select" required>
+										<option value="Alumni">Alumni</option>
+										<option value="Local">Local</option>
+										<option value="Greek life">Greek life</option>
+										<option value="Events">Events</option>
+										<option value="Clubs">Clubs</option>
+										<option value="Majors">Majors</option>
+									</select>
 									<span class="input-message __error">This field is required!</span>
 								</label>
 								<label class="input-container input-container-group">

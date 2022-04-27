@@ -154,13 +154,18 @@
 											max-width: 250px;
 										}
 								}
+								.input-message{
+									bottom: 5px;
+									left: 50%;
+									transform: translateX(-50%);
+								}
 						}
 						.person-thumb-upload{
-						position: relative;
-						bottom: 0;
-						left: 0;
-						transform: none;
-					}
+							position: relative;
+							bottom: 0;
+							left: 0;
+							transform: none;
+						}
 						@include d($sm){
 							height: 212px;
 						}

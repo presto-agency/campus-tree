@@ -8,13 +8,11 @@ import {changeView} from "../common/tree/changeView";
 
 class BranchRenderer extends Highway.Renderer {
 	onEnter() {
-		console.log('enter to branch');
 		initDatepicker();
 		resetFilters();
 		toggleCategoryFilters();
 	}
 	onEnterCompleted() {
-		console.log('enter completed to branch');
 		setLabelsPosition();
 		updatePaginationNumbers();
 		changeView();

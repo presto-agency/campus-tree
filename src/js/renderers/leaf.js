@@ -10,10 +10,10 @@ import {initDatepicker} from "../common/datepicker/initDatepicker";
 import {initTimepicker} from "../common/datepicker/initTimepicker";
 import {inputSearchTags} from "../common/authorization/inputSearchTags";
 import {resetFilters} from "../common/general/resetFilters";
+import {leafCreationValidation} from "../common/validation/leafCreationValidation";
 
 class LeafRenderer extends Highway.Renderer {
 	onEnter() {
-		console.log('enter to leaf');
 		toggleTooltip();
 		copyToClipboard();
 		initTabs();
@@ -21,9 +21,9 @@ class LeafRenderer extends Highway.Renderer {
 		checkboxAlertToggle();
 		inputSearchTags();
 		resetFilters();
+		leafCreationValidation();
 	}
 	onEnterCompleted() {
-		console.log('enter completed to leaf');
 		scrollToBottomComments();
 		loadImages();
 		initDatepicker();

@@ -2,10 +2,9 @@ import Highway from '@dogstudio/highway';
 
 class InnerRenderer extends Highway.Renderer {
     onEnter() {
-        console.log('enter to inner page');
+
     }
     onEnterCompleted() {
-        console.log('enter completed to inner page');
         (function turnCross() {
             let items = document.querySelectorAll('.faq-list');
             items.forEach(item => {

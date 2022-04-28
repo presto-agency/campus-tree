@@ -721,101 +721,107 @@
 										<div class="tabs-content">
 											<div class="tabs-content-item" data-tab-content="0" data-tab-segment="0">
 												<div class="box-body personal-content">
-													<div class="scroll-wrap">
-														<div class="mb-3">
-															<label class="input-container">
-																<input type="text" value="Blythe" class="input">
-															</label>
-														</div>
-														<div class="mb-3">
-															<label class="input-container">
-																<input type="text" value="Barnett" class="input">
-															</label>
-														</div>
-														<div class="mb-3">
-															<label class="input-container">
-																<textarea name="about" class="textarea">Short bio text are popular at music festivals as they allow dancing to. Short bio text are popular at music festivals as they allow dancing to. Short bio text are popular at music festivals as they allow dancing to. Short bio text are popular at music festivals as they allow dancing to.</textarea>
-															</label>
-														</div>
-														<div class="mb-3">
-															<label class="input-container input-container-datepicker">
-																<input type="text" name="date" class="input input-date-mask" value="13/04/2022">
-																<span class="input-container-icon __16 __right">
-																	<svg class="svg svg__16">
-																		<use xlink:href="../images/sprite/sprite.svg#calendar-xs"></use>
-																	</svg>
-																</span>
-															</label>
-														</div>
-														<div class="mb-3">
-															<label class="input-container input-container-select">
-																<select class="select">
-																	<option value="Philology" selected="selected">Philology</option>
-																	<option value="Mathematics">Mathematics</option>
-																</select>
-															</label>
-														</div>
-														<div class="mb-3">
-															<label class="input-container">
-																<input type="text" value="blythe2001@gmail.com" class="input">
-															</label>
-														</div>
-														<div class="mb-3">
-															<label class="input-container">
-																<input type="text" value="https://www.linkedin.com/feed/" class="input">
-															</label>
-														</div>
-														<div class="mb-3">
-															<label class="input-container">
-																<input type="text" value="https://www.instagram.com/" class="input">
-															</label>
-														</div>
-														<div class="mb-3">
-															<label class="input-container">
-																<input type="text" value="https://www.instagram.com/" class="input">
-															</label>
-														</div>
-														<div class="mb-3">
-															<div class="input-tags">
-																<ul class="input-tags-results"></ul>
-																<input class="input-tags-text" type="text" name="fruit" id="objects" placeholder="Tags">
-																<div class="input-tags-suggestions">
-																	<ul class="input-tags-body">
-																		<li><span></span>asdas</li>
-																		<li><span></span>as</li>
-																	</ul>
+													<form id="personal-tree-form">
+														<div class="scroll-wrap">
+															<div class="mb-3">
+																<label class="input-container">
+																	<input type="text" value="Blythe" class="input" required>
+																	<span class="input-message __error">This field is required!</span>
+																</label>
+															</div>
+															<div class="mb-3">
+																<label class="input-container">
+																	<input type="text" value="Barnett" class="input" required>
+																	<span class="input-message __error">This field is required!</span>
+																</label>
+															</div>
+															<div class="mb-3">
+																<label class="input-container">
+																	<textarea name="about" class="textarea">Short bio text are popular at music festivals as they allow dancing to. Short bio text are popular at music festivals as they allow dancing to. Short bio text are popular at music festivals as they allow dancing to. Short bio text are popular at music festivals as they allow dancing to.</textarea>
+																</label>
+															</div>
+															<div class="mb-3">
+																<label class="input-container input-container-datepicker">
+																	<input type="text" name="date" class="input input-date-mask" value="13/04/2022" required>
+																	<span class="input-container-icon __16 __right">
+																		<svg class="svg svg__16">
+																			<use xlink:href="../images/sprite/sprite.svg#calendar-xs"></use>
+																		</svg>
+																	</span>
+																	<span class="input-message __error">This field is required!</span>
+																</label>
+															</div>
+															<div class="mb-3">
+																<label class="input-container input-container-select">
+																	<select class="select">
+																		<option value="Philology" selected="selected">Philology</option>
+																		<option value="Mathematics">Mathematics</option>
+																	</select>
+																</label>
+															</div>
+															<div class="mb-3">
+																<label class="input-container">
+																	<input type="text" value="blythe2001@gmail.com" class="input" required>
+																	<span class="input-message __error">This field is required!</span>
+																</label>
+															</div>
+															<div class="mb-3">
+																<label class="input-container">
+																	<input type="text" value="https://www.linkedin.com/feed/" class="input">
+																</label>
+															</div>
+															<div class="mb-3">
+																<label class="input-container">
+																	<input type="text" value="https://www.instagram.com/" class="input">
+																</label>
+															</div>
+															<div class="mb-3">
+																<label class="input-container">
+																	<input type="text" value="https://www.instagram.com/" class="input">
+																</label>
+															</div>
+															<div class="mb-3">
+																<div class="input-tags input-container">
+																	<ul class="input-tags-results"></ul>
+																	<input class="input-tags-text" type="text" name="fruit" id="objects" placeholder="Tags">
+																	<div class="input-tags-suggestions">
+																		<ul class="input-tags-body">
+																			<li><span></span>asdas</li>
+																			<li><span></span>as</li>
+																		</ul>
+																	</div>
 																</div>
 															</div>
+															<div class="mb-3">
+																<label class="input-container">
+																	<input type="password" class="input" placeholder="Enter current password">
+																	<span class="input-container-icon __right __16 __click-trigger">
+	                                  <svg class="svg svg__16">
+	                                    <use xlink:href="../images/sprite/sprite.svg#eye"></use>
+	                                  </svg>
+	                                </span>
+																</label>
+															</div>
+															<div class="mb-3">
+																<label class="input-container">
+																	<input type="password" class="input" placeholder="Enter new password">
+																	<span class="input-container-icon __right __16 __click-trigger">
+	                                  <svg class="svg svg__16">
+	                                    <use xlink:href="../images/sprite/sprite.svg#eye"></use>
+	                                  </svg>
+	                                </span>
+																</label>
+															</div>
 														</div>
-														<div class="mb-3">
-															<label class="input-container">
-																<input type="password" class="input" placeholder="Enter current password">
-																<span class="input-container-icon __right __16 __click-trigger">
-                                  <svg class="svg svg__16">
-                                    <use xlink:href="../images/sprite/sprite.svg#eye"></use>
-                                  </svg>
-                                </span>
-															</label>
+														<div class="box-body-action d-flex align-items-center justify-content-between">
+															<button class="btn btn-md">
+																<span class="btn-title">Save changes</span>
+															</button>
+															<div class="btn btn-outline btn-md">
+																<span class="btn-title">Discard changes</span>
+															</div>
 														</div>
-														<div class="mb-3">
-															<label class="input-container">
-																<input type="password" class="input" placeholder="Enter new password">
-																<span class="input-container-icon __right __16 __click-trigger">
-                                  <svg class="svg svg__16">
-                                    <use xlink:href="../images/sprite/sprite.svg#eye"></use>
-                                  </svg>
-                                </span>
-															</label>
-														</div>
-													</div>
-													<div class="box-body-action d-flex align-items-center justify-content-between">
-														<button class="btn btn-md">
-															<span class="btn-title">Save changes</span>
-														</button>
-														<button class="btn btn-outline btn-md">
-															<span class="btn-title">Discard changes</span>
-														</button>
-													</div>
+													</form>
 												</div>
 											</div>
 											<div class="tabs-content-item" data-tab-content="1" data-tab-segment="0">

@@ -41,6 +41,12 @@ export const selectCategories = () => {
 					}
 					saveToLocalStorage('registration-step-0', arrayStep0);
 					saveToLocalStorage('registration-step-1', arrayStep1);
+
+					setTimeout(() => {
+						document.querySelector('#leaves .selected-list').innerHTML = '';
+						document.querySelector('#leavesnext .selected-list').innerHTML = '';
+						appendLeavesToModal();
+					}, 200);
 				});
 			}
 		}
@@ -73,43 +79,50 @@ export const getSelectedLeaves = () => {
 			!!document.getElementById(id) ? document.getElementById(id).checked = true : false;
 		}
 	}
+
+	appendLeavesToModal();
 };
 
-export const getSelectedCategories = () => {
-	const inputs = document.querySelectorAll('.tree-checkboxes .input:checked');
-	if (inputs.length) {
-		for (let i = 0; i < inputs.length; i++) {
-			const modal = document.querySelector(inputs[i].dataset.eventModalId);
-			const modalList = modal.querySelector('.selected-list');
-			const value = inputs[i].value;
-			const thumb = inputs[i].dataset.eventThumb;
-			const category = inputs[i].dataset.eventCategory;
-			const inputId = inputs[i].getAttribute('id');
-			const template = `<li class="selected-link">
-                            <div class="selected-link-club">
-                              <div class="selected-link-img">
-                                <img src="${thumb}" alt="${value}">
-                              </div>
-                              <div class="selected-link-name">
-                                <div class="section-title">
-                                  <h4 class="h-4">${value}</h4>
-                                </div>
-                                <p class="tag tag-clubs">${category}</p>
-                              </div>
-                            </div>
-                            <label for="${inputId}" class="selected-link-remove">
-                              <div class="link color-alumni-hover">
-																<span class="link-icon">
-																	<svg class="svg svg__24 color-alumni">
-																		<use xlink:href="../images/sprite/sprite.svg#remove-circle"></use>
-																	</svg>
-																</span>
-																<span class="link-title">Delete from selected</span>
-															</div>
-                            </label>
-                          </li>`;
+const appendLeavesToModal = () => {
+	const localStep0 = getDataFromLocalStorage('registration-step-0');
+	const localStep1 = getDataFromLocalStorage('registration-step-1');
+	const step0ModalList = document.querySelector('#leaves .selected-list');
+	const step1ModalList = document.querySelector('#leavesnext .selected-list');
 
-			modalList.insertAdjacentHTML('beforeend', template);
+	if (!!localStep0 || localStep0.length) {
+		for (let i = 0; i < localStep0.length; i++) {
+			let { value, thumb, category, id } = localStep0[i];
+			step0ModalList.insertAdjacentHTML('beforeend', getTemplate(value, thumb, category, id));
 		}
 	}
-};
+
+	if (!!localStep1 || localStep1.length) {
+		for (let i = 0; i < localStep1.length; i++) {
+			let { value, thumb, category, id } = localStep1[i];
+			step1ModalList.insertAdjacentHTML('beforeend', getTemplate(value, thumb, category, id));
+		}
+	}
+
+	function getTemplate(value, thumb, category, inputId) {
+		return `<li class="selected-link">
+							<div class="selected-link-club">
+								<div class="selected-link-img">
+									<img src="${thumb}" alt="${value}">
+								</div>
+								<div class="selected-link-name">
+									<div class="section-title">
+										<h4 class="h-4">${value}</h4>
+									</div>
+									<p class="tag tag-clubs">${category}</p>
+								</div>
+							</div>
+							<label for="${inputId}" class="selected-link-remove">
+								<div class="link color-alumni-hover">
+									<span class="link-icon"></span>
+									<span class="link-title">Delete from selected</span>
+								</div>
+							</label>
+						</li>`;
+	}
+
+}

@@ -44,13 +44,18 @@
 				display: block;
 			}
 		}
-		//&-content{
-		//	.scroll-wrap{
-		//		@include d($xl){
-		//			padding: 0 20px;
-		//		}
-		//	}
-		//}
+		&-content{
+			.input{
+					&-message{
+						bottom: -17px;
+					}
+			}
+			//.scroll-wrap{
+			//	@include d($xl){
+			//		padding: 0 20px;
+			//	}
+			//}
+		}
 		.person{
 				&-header{
 					display: flex;

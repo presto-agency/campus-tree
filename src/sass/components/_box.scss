@@ -101,6 +101,9 @@
 				.social{
 					margin-top: 5px;
 				}
+				form{
+					height: 100%;
+				}
 				@include d($xl){
 					height: auto;
 					padding: 13px 0 10px;
@@ -159,12 +162,25 @@
 									left: 50%;
 									transform: translateX(-50%);
 								}
+								& > *{
+									pointer-events: none;
+								}
 						}
 						.person-thumb-upload{
 							position: relative;
 							bottom: 0;
 							left: 0;
 							transform: none;
+						}
+						& .input-container > img{
+							position: absolute;
+							inset: -20px;
+							z-index: 1;
+							width: calc(100% + 40px);
+							height: calc(100% + 40px);
+							max-width: calc(100% + 40px);
+							max-height: calc(100% + 40px);
+							display: none;
 						}
 						@include d($sm){
 							height: 212px;

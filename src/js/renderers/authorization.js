@@ -12,8 +12,8 @@ import {resetFilters} from "../common/general/resetFilters";
 import {setLabelsPosition} from "../common/tree/setLabelsPosition";
 import {updatePaginationNumbers} from "../common/pagination/updatePaginationNumbers";
 import {getSelectedLeaves, selectCategories} from "../common/authorization/selectCategories";
-
-
+import {registrationStep3Validation} from "../common/validation/registrationStep3Validation";
+import {registrationStep4Validation} from "../common/validation/registrationStep4Validation";
 
 class authorizationRenderer extends Highway.Renderer {
     onEnter() {
@@ -26,6 +26,8 @@ class authorizationRenderer extends Highway.Renderer {
         toggleCategoryFilters();
         resetFilters();
         selectCategories();
+        registrationStep3Validation();
+        registrationStep4Validation();
     }
     onEnterCompleted() {
         initAvatarFirstLastName();

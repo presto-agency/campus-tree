@@ -107,6 +107,7 @@ export const inputSearchTags = () =>{
         input.addEventListener('keyup', searchHandler);
         input.addEventListener('keydown', createTag);
         suggestions.addEventListener('click', useSuggestion);
+        removeTag();
     }
 
 };

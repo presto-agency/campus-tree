@@ -1,6 +1,5 @@
 import {moveLottieToStep} from "./moveLottieOnStep";
 import {setLabelsPosition} from "../tree/setLabelsPosition";
-// import {scrollHeight} from './scrollHeightBg';
 
 export const authorizationNav = () => {
 	let elementsLink = document.querySelectorAll('.trigger-obj');
@@ -10,13 +9,16 @@ export const authorizationNav = () => {
 		let attr = this.getAttribute('data-register-go');
 		let reverse = this.getAttribute('data-register-reverse');
 		if (!!attr) {
-			const activeStep = document.querySelector('.steps-content.active');
-			let nextStep = document.querySelector(`[data-register-step="${attr}"]`);
-			!!activeStep ? activeStep.classList.remove('active') : null;
-			!!nextStep ? nextStep.classList.add('active') : null;
-			moveLottieToStep(parseInt(attr), !!reverse);
-			setLabelsPosition();
+			moveRegistrationTo(attr, reverse);
 		}
 	}));
 };
 
+export const moveRegistrationTo = (step, reverse) => {
+	const activeStep = document.querySelector('.steps-content.active');
+	let nextStep = document.querySelector(`[data-register-step="${step}"]`);
+	!!activeStep ? activeStep.classList.remove('active') : null;
+	!!nextStep ? nextStep.classList.add('active') : null;
+	moveLottieToStep(parseInt(step), !!reverse);
+	setLabelsPosition();
+}

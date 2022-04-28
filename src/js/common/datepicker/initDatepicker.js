@@ -7,5 +7,8 @@ export const initDatepicker = () => {
 			format: 'dd/mm/yyyy',
 			autohide: true,
 		});
+		inputs[i].addEventListener('changeDate', () => {
+			inputs[i].parentNode.classList.remove('has-error');
+		});
 	}
 };

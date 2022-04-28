@@ -101,6 +101,9 @@
 				.social{
 					margin-top: 5px;
 				}
+				form{
+					height: 100%;
+				}
 				@include d($xl){
 					height: auto;
 					padding: 13px 0 10px;

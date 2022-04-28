@@ -14,6 +14,9 @@ import {updatePaginationNumbers} from "../common/pagination/updatePaginationNumb
 import {getSelectedLeaves, selectCategories} from "../common/authorization/selectCategories";
 import {registrationStep3Validation} from "../common/validation/registrationStep3Validation";
 import {registrationStep4Validation} from "../common/validation/registrationStep4Validation";
+import {loginValidation} from "../common/validation/loginValidation";
+import {inputFileUploading} from "../common/uploading/inputFileUploading";
+import {passwordValidation} from "../common/validation/passwordValidation";
 
 class authorizationRenderer extends Highway.Renderer {
     onEnter() {
@@ -28,6 +31,9 @@ class authorizationRenderer extends Highway.Renderer {
         selectCategories();
         registrationStep3Validation();
         registrationStep4Validation();
+        passwordValidation();
+        loginValidation();
+        inputFileUploading();
     }
     onEnterCompleted() {
         initAvatarFirstLastName();

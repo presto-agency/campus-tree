@@ -21,7 +21,6 @@ export const treeNavigation = () => {
 					// const branchUrlParam = branches[i].getAttribute('data-url-param');
 					const branchId = branches[i].getAttribute('id');
 					const branchLabelLink = document.querySelector(`[data-branch-id="${branchId}"]`);
-					console.log(branchLabelLink);
 					if (!!branchLabelLink) {
 						let href = branchLabelLink.getAttribute('href');
 						branchLabelLink.setAttribute('href', `${href}`);

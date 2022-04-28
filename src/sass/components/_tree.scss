@@ -376,6 +376,20 @@
 						}
 				}
 		}
+		&-disable{
+				&-branches{
+					.branch{
+						pointer-events: none;
+					}
+					.tree{
+						&-categories{
+							&-item{
+								pointer-events: none;
+							}
+						}
+					}
+				}
+		}
 		&[data-view-mode="list"]{
 			height: auto !important;
 				.tree{

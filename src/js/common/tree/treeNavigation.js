@@ -13,18 +13,20 @@ export const treeNavigation = () => {
 		Branches
 		 */
 		const branches = document.querySelectorAll('.tree .branch');
-		const branchLink = document.querySelector('#branch-link');
-		if (!!branches.length && !!branchLink) {
+		// const branchLink = document.querySelector('#branch-link');
+		if (!!branches.length) {
 			// const branchLinkHref = branchLink.getAttribute('href');
 			for (let i = 0; i < branches.length; i++) {
 				branches[i].addEventListener('click', () => {
 					// const branchUrlParam = branches[i].getAttribute('data-url-param');
 					const branchId = branches[i].getAttribute('id');
 					const branchLabelLink = document.querySelector(`[data-branch-id="${branchId}"]`);
+					console.log(branchLabelLink);
 					if (!!branchLabelLink) {
 						let href = branchLabelLink.getAttribute('href');
-						branchLink.setAttribute('href', `${href}`);
-						document.querySelector('#branch-link').click();
+						branchLabelLink.setAttribute('href', `${href}`);
+						// document.querySelector('#branch-link').click();
+						branchLabelLink.click();
 					}
 				});
 			}

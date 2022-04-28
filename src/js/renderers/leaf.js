@@ -11,6 +11,8 @@ import {initTimepicker} from "../common/datepicker/initTimepicker";
 import {inputSearchTags} from "../common/authorization/inputSearchTags";
 import {resetFilters} from "../common/general/resetFilters";
 import {leafCreationValidation} from "../common/validation/leafCreationValidation";
+import {inputFileUploading} from "../common/uploading/inputFileUploading";
+import {dragAndDropUploading} from "../common/uploading/dragAndDropUploading";
 
 class LeafRenderer extends Highway.Renderer {
 	onEnter() {
@@ -22,6 +24,8 @@ class LeafRenderer extends Highway.Renderer {
 		inputSearchTags();
 		resetFilters();
 		leafCreationValidation();
+		inputFileUploading();
+		dragAndDropUploading();
 	}
 	onEnterCompleted() {
 		scrollToBottomComments();

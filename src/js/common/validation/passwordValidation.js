@@ -27,9 +27,9 @@ export const passwordValidation = () => {
 const detect = (pass1, pass2, parent, button) => {
 	if (pass1 !== pass2) {
 		parent.classList.add('has-error-password');
-		button.setAttribute('disabled', true);
+		!!button ? button.setAttribute('disabled', true) : null;
 	} else {
 		parent.classList.remove('has-error-password');
-		button.removeAttribute('disabled');
+		!!button ? button.removeAttribute('disabled') : null;
 	}
 }

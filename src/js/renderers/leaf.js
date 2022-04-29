@@ -13,6 +13,7 @@ import {resetFilters} from "../common/general/resetFilters";
 import {leafCreationValidation} from "../common/validation/leafCreationValidation";
 import {inputFileUploading} from "../common/uploading/inputFileUploading";
 import {dragAndDropUploading} from "../common/uploading/dragAndDropUploading";
+import {fileExistValidation} from "../common/validation/fileExistValidation";
 
 class LeafRenderer extends Highway.Renderer {
 	onEnter() {
@@ -23,8 +24,8 @@ class LeafRenderer extends Highway.Renderer {
 		checkboxAlertToggle();
 		inputSearchTags();
 		resetFilters();
-		leafCreationValidation();
 		inputFileUploading();
+		fileExistValidation();
 		dragAndDropUploading();
 	}
 	onEnterCompleted() {
@@ -32,6 +33,7 @@ class LeafRenderer extends Highway.Renderer {
 		loadImages();
 		initDatepicker();
 		initTimepicker();
+		leafCreationValidation();
 	}
 }
 

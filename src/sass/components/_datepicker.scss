@@ -23,6 +23,9 @@
 				}
 				&.selected{
 					background-color: var(--color-primary);
+					position: relative;
+					opacity: 1;
+					font-weight: normal;
 						&:hover{
 							background-color: var(--color-primary);
 						}

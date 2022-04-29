@@ -153,6 +153,20 @@
 										}
 								}
 						}
+						&-password{
+							.input{
+								border-color: var(--color-alumni);
+								color: var(--color-alumni);
+									&-message{
+										&.__error{
+											opacity: 0;
+										}
+										&.__password{
+											opacity: 1;
+										}
+									}
+							}
+						}
 				}
 		}
 		& ~ .input-container-icon{
@@ -435,7 +449,8 @@
 			pointer-events: none;
 			opacity: 0;
 			text-align: right;
-				&.__error{
+				&.__error,
+				&.__password{
 					color: var(--color-alumni);
 				}
 		}

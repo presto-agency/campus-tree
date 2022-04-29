@@ -185,6 +185,13 @@
 						& .input-container > img[src=""]{
 							display: none;
 						}
+						.btn{
+							position: absolute;
+							top: 5px;
+							right: 10px;
+							z-index: 1;
+							cursor: pointer;
+						}
 						@include d($sm){
 							height: 212px;
 						}

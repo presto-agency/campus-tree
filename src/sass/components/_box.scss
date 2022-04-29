@@ -183,7 +183,7 @@
 							max-height: calc(100% + 40px);
 						}
 						& .input-container > img[src=""]{
-							display: none;
+							display: none !important;
 						}
 						.btn{
 							position: absolute;

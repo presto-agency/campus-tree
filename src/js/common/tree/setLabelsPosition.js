@@ -50,6 +50,7 @@ export const setLabelsPosition = () => {
 							duration: 0.1,
 							ease: 'none',
 							onComplete: () => {
+								leaves[i].style.display = 'block';
 								Tween.to(events, {
 									opacity: 1,
 									duration: transition.opacity.duration,

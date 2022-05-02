@@ -88,7 +88,6 @@ const oldXHR = window.XMLHttpRequest;
 function newXHR() {
 	const realXHR = new oldXHR();
 	realXHR.addEventListener("readystatechange", function() {
-		console.log(realXHR);
 		if(realXHR.readyState === 4 && realXHR.status === 200){
 			setTimeout(() => {
 				switchModals();

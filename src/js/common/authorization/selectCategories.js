@@ -15,9 +15,9 @@ export const selectCategories = () => {
 				inputs[j].addEventListener('change', () => {
 					const modal = document.querySelector(inputs[j].dataset.eventModalId);
 					const modalList = modal.querySelector('.selected-list');
-					const value = inputs[j].value;
+					const value = inputs[j].dataset.eventTitle;
 					const thumb = inputs[j].dataset.eventThumb;
-					const category = inputs[j].dataset.eventCategory;
+					const category = inputs[j].dataset.eventLabel;
 					const inputId = inputs[j].getAttribute('id');
 					const selectedLeaf = { value, thumb, category, id: inputId };
 					if (inputs[j].checked) {
@@ -113,7 +113,7 @@ const appendLeavesToModal = () => {
 									<div class="section-title">
 										<h4 class="h-4">${value}</h4>
 									</div>
-									<p class="tag tag-clubs">${category}</p>
+									<p class="tag tag-${category}">${category}</p>
 								</div>
 							</div>
 							<label for="${inputId}" class="selected-link-remove">

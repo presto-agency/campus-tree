@@ -20,7 +20,7 @@ import {resetFilters} from "./common/general/resetFilters";
 import {closeNav, toggleNav} from "./common/general/toggleNav";
 import {switchModals} from "./common/modal/switchModals";
 import {setLabelsPosition} from "./common/tree/setLabelsPosition";
-import {checkboxAlertToggle} from "./common/alert/checkboxAlertToggle";
+import {checkboxAlertToggle, closeAlert} from "./common/alert/checkboxAlertToggle";
 
 /*
 Routing
@@ -64,6 +64,7 @@ H.on('NAVIGATE_IN', ({ to, location }) => {
 	treeNavigation();
 	switchModals();
 	closeNav();
+	closeAlert();
 });
 
 /*

@@ -69,3 +69,7 @@ const updateLabel = (box, triggerInputTitle, checkboxInputs, triggerInput) => {
 		getChecked(checkboxInputs) >= 1 ? alert.classList.add('is-active') : alert.classList.remove('is-active');
 	}
 }
+
+export const closeAlert = () => {
+	document.querySelector('.alert').classList.remove('is-active');
+};

@@ -20,6 +20,7 @@ import {resetFilters} from "./common/general/resetFilters";
 import {closeNav, toggleNav} from "./common/general/toggleNav";
 import {switchModals} from "./common/modal/switchModals";
 import {setLabelsPosition} from "./common/tree/setLabelsPosition";
+import {checkboxAlertToggle} from "./common/alert/checkboxAlertToggle";
 
 /*
 Routing
@@ -92,6 +93,7 @@ function newXHR() {
 			setTimeout(() => {
 				switchModals();
 				setLabelsPosition();
+				checkboxAlertToggle();
 			}, 1000);
 		}
 	}, false);

@@ -14,6 +14,7 @@ import {leafCreationValidation} from "../common/validation/leafCreationValidatio
 import {inputFileUploading} from "../common/uploading/inputFileUploading";
 import {dragAndDropUploading} from "../common/uploading/dragAndDropUploading";
 import {fileExistValidation} from "../common/validation/fileExistValidation";
+import {generateCalendarLink} from "../common/general/generateCalendarLink";
 
 class LeafRenderer extends Highway.Renderer {
 	onEnter() {
@@ -34,6 +35,7 @@ class LeafRenderer extends Highway.Renderer {
 		initDatepicker();
 		initTimepicker();
 		leafCreationValidation();
+		generateCalendarLink();
 	}
 }
 

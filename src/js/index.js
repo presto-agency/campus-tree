@@ -20,6 +20,7 @@ import {resetFilters} from "./common/general/resetFilters";
 import {closeNav, toggleNav} from "./common/general/toggleNav";
 import {switchModals} from "./common/modal/switchModals";
 import {setLabelsPosition} from "./common/tree/setLabelsPosition";
+import {checkboxAlertToggle, closeAlert} from "./common/alert/checkboxAlertToggle";
 
 /*
 Routing
@@ -63,6 +64,7 @@ H.on('NAVIGATE_IN', ({ to, location }) => {
 	treeNavigation();
 	switchModals();
 	closeNav();
+	closeAlert();
 });
 
 /*
@@ -88,11 +90,11 @@ const oldXHR = window.XMLHttpRequest;
 function newXHR() {
 	const realXHR = new oldXHR();
 	realXHR.addEventListener("readystatechange", function() {
-		console.log(realXHR);
 		if(realXHR.readyState === 4 && realXHR.status === 200){
 			setTimeout(() => {
 				switchModals();
 				setLabelsPosition();
+				checkboxAlertToggle();
 			}, 1000);
 		}
 	}, false);

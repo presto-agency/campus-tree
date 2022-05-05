@@ -161,6 +161,7 @@
 									bottom: 5px;
 									left: 50%;
 									transform: translateX(-50%);
+									text-align: center;
 								}
 								& > *{
 									pointer-events: none;
@@ -180,7 +181,16 @@
 							height: calc(100% + 40px);
 							max-width: calc(100% + 40px);
 							max-height: calc(100% + 40px);
-							display: none;
+						}
+						& .input-container > img[src=""]{
+							display: none !important;
+						}
+						.btn{
+							position: absolute;
+							top: 5px;
+							right: 10px;
+							z-index: 1;
+							cursor: pointer;
 						}
 						@include d($sm){
 							height: 212px;

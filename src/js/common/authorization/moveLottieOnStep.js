@@ -11,7 +11,8 @@ export const initRegistrationLottie = () =>{
 			render: 'canvas',
 			autoplay: true,
 			loop: false,
-			path: 'lottie/tree.json',
+			// path: 'lottie/tree.json',
+			path: '//campustree.live/wp-content/themes/campustree/lottie/tree.json',
 			initialSegment: iframes[0],
 			rendererSettings: {
 				progressiveLoad: true,

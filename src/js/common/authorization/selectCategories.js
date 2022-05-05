@@ -89,14 +89,14 @@ const appendLeavesToModal = () => {
 	const step0ModalList = document.querySelector('#leaves .selected-list');
 	const step1ModalList = document.querySelector('#leavesnext .selected-list');
 
-	if (!!localStep0 || localStep0.length) {
+	if (!!localStep0 || localStep0.length && !!step0ModalList) {
 		for (let i = 0; i < localStep0.length; i++) {
 			let { value, thumb, category, id } = localStep0[i];
 			step0ModalList.insertAdjacentHTML('beforeend', getTemplate(value, thumb, category, id));
 		}
 	}
 
-	if (!!localStep1 || localStep1.length) {
+	if (!!localStep1 || localStep1.length && step1ModalList) {
 		for (let i = 0; i < localStep1.length; i++) {
 			let { value, thumb, category, id } = localStep1[i];
 			step1ModalList.insertAdjacentHTML('beforeend', getTemplate(value, thumb, category, id));

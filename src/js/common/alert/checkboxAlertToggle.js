@@ -71,5 +71,6 @@ const updateLabel = (box, triggerInputTitle, checkboxInputs, triggerInput) => {
 }
 
 export const closeAlert = () => {
-	document.querySelector('.alert').classList.remove('is-active');
+	const alert = document.querySelector('.alert');
+	!!alert ? alert.classList.remove('is-active') : null;
 };

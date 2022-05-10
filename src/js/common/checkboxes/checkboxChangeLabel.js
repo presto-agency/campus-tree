@@ -75,7 +75,7 @@ const switchAllCheckboxes = (checkboxes, status) => {
 const getCheckedCheckboxes = (checkboxes) => {
 	let arr = [];
 	for (let j = 0; j < checkboxes.length; j++) {
-		checkboxes[j].checked ? arr.push(checkboxes[j].value) : null;
+		checkboxes[j].checked && !!checkboxes[j].dataset.value ? arr.push(checkboxes[j].dataset.value) : null;
 	}
 	return arr.filter(checkbox => checkbox.toLocaleString() !== 'all');
 }

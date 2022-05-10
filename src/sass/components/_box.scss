@@ -125,6 +125,11 @@
 			overflow: hidden;
 			border-radius: 20px;
 			margin-bottom: 30px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			background-image: url(../images/placeholder-image.png);
+			background-color: var(--color-gray-700);
 				img{
 					@include imageCover(center);
 				}
@@ -196,6 +201,15 @@
 							height: 212px;
 						}
 				}
+		}
+		&.static-height{
+			.box{
+				&-body{
+					height: calc(100% - 70px);
+					overflow-y: auto;
+					overflow-x: hidden;
+				}
+			}
 		}
 		/*
 		Types

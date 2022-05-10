@@ -6,6 +6,7 @@ import {changeView} from "../common/tree/changeView";
 import {updatePaginationNumbers} from "../common/pagination/updatePaginationNumbers";
 import {switchPersonModal} from "../common/modal/switchPersonModal";
 import {setListViewMode} from "../common/general/setListViewMode";
+import {setBoxHeight} from "../common/box/setBoxHeight";
 
 class PeopleRenderer extends Highway.Renderer {
 	onEnter() {
@@ -18,6 +19,7 @@ class PeopleRenderer extends Highway.Renderer {
 		updatePaginationNumbers();
 		switchPersonModal();
 		setListViewMode();
+		setBoxHeight();
 	}
 }
 

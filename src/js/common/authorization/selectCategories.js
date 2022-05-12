@@ -15,11 +15,12 @@ export const selectCategories = () => {
 				inputs[j].addEventListener('change', () => {
 					const modal = document.querySelector(inputs[j].dataset.eventModalId);
 					const modalList = modal.querySelector('.selected-list');
-					const value = inputs[j].dataset.eventTitle;
+					const value = inputs[j].value;
+					const title = inputs[j].dataset.eventTitle;
 					const thumb = inputs[j].dataset.eventThumb;
 					const category = inputs[j].dataset.eventLabel;
 					const inputId = inputs[j].getAttribute('id');
-					const selectedLeaf = { value, thumb, category, id: inputId };
+					const selectedLeaf = { value, thumb, category, id: inputId, title };
 					if (inputs[j].checked) {
 						switch (i) {
 							case 0:
@@ -66,14 +67,14 @@ export const getSelectedLeaves = () => {
 	const localStep0 = getDataFromLocalStorage('registration-step-0');
 	const localStep1 = getDataFromLocalStorage('registration-step-1');
 
-	if (!!localStep0 || localStep0.length) {
+	if (!!localStep0) {
 		for (let i = 0; i < localStep0.length; i++) {
 			let id = localStep0[i].id;
 			!!document.getElementById(id) ? document.getElementById(id).checked = true : false;
 		}
 	}
 
-	if (!!localStep1 || localStep1.length) {
+	if (!!localStep1) {
 		for (let i = 0; i < localStep1.length; i++) {
 			let id = localStep1[i].id;
 			!!document.getElementById(id) ? document.getElementById(id).checked = true : false;
@@ -89,14 +90,14 @@ const appendLeavesToModal = () => {
 	const step0ModalList = document.querySelector('#leaves .selected-list');
 	const step1ModalList = document.querySelector('#leavesnext .selected-list');
 
-	if (!!localStep0 || localStep0.length && !!step0ModalList) {
+	if (!!localStep0 && !!step0ModalList) {
 		for (let i = 0; i < localStep0.length; i++) {
 			let { value, thumb, category, id } = localStep0[i];
 			step0ModalList.insertAdjacentHTML('beforeend', getTemplate(value, thumb, category, id));
 		}
 	}
 
-	if (!!localStep1 || localStep1.length && step1ModalList) {
+	if (!!localStep1 && step1ModalList) {
 		for (let i = 0; i < localStep1.length; i++) {
 			let { value, thumb, category, id } = localStep1[i];
 			step1ModalList.insertAdjacentHTML('beforeend', getTemplate(value, thumb, category, id));

@@ -10,7 +10,6 @@ import {initDatepicker} from "../common/datepicker/initDatepicker";
 import {initTimepicker} from "../common/datepicker/initTimepicker";
 import {inputSearchTags} from "../common/authorization/inputSearchTags";
 import {resetFilters} from "../common/general/resetFilters";
-import {leafCreationValidation} from "../common/validation/leafCreationValidation";
 import {inputFileUploading} from "../common/uploading/inputFileUploading";
 import {dragAndDropUploading} from "../common/uploading/dragAndDropUploading";
 import {fileExistValidation} from "../common/validation/fileExistValidation";
@@ -34,8 +33,11 @@ class LeafRenderer extends Highway.Renderer {
 		loadImages();
 		initDatepicker();
 		initTimepicker();
-		leafCreationValidation();
 		generateCalendarLink();
+		/*
+		Use static file in /dist
+		 */
+		leafCreationValidation();
 	}
 }
 

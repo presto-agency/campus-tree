@@ -8,7 +8,6 @@ import {hidePassword} from "../common/general/hidePassword";
 import {initDatepicker} from "../common/datepicker/initDatepicker";
 import {inputSearchTags} from "../common/authorization/inputSearchTags";
 import {inputMask} from "../common/general/inputMask";
-import {personalTreeValidation} from "../common/validation/personalTreeValidation";
 
 class HomeRenderer extends Highway.Renderer {
 	onEnter() {
